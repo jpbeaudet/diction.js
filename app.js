@@ -7,8 +7,11 @@
 var path = require('path');
 var express = require('express');
 var http = require('http');
+var https = require('https');
+var MongoStore = require('connect-mongo')(express);
 var mongoose = require('mongoose');
 var passport = require('passport');
+var fs = require('fs');
 var LocalStrategy = require('passport-local').Strategy;
 
 
