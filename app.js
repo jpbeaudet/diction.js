@@ -18,7 +18,8 @@ var LocalStrategy = require('passport-local').Strategy;
 
 // main config
 var app = express();
-var server = require('http').Server(app);
+var server = http.createServer(app);
+//var server = require('http').Server(app);
 app.set('port', process.env.PORT || 3000);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
