@@ -65,7 +65,7 @@ app.listen(app.get('port'), function(){
   console.log(("Express server listening on port " + app.get('port')));
 });
 
-var io = require('socket.io').listen(server);
+var io = require('socket.io').listen(4000);
 io.on('connection', function(socket){ 
 	//here will go the initial load of the current saved user data (last diction)
 	io.on("request",function(){
@@ -74,5 +74,5 @@ io.on('connection', function(socket){
 	
 });
 
-
+server.listen(4000);
 server.listen(3000);
