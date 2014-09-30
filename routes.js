@@ -40,6 +40,9 @@ module.exports = function (app) {
   });
   
   app.get('/home', function(req, res) {
+	  res.render('home', { title: 'home', scripts: ['./app/speech.js']});
+	  res.render('home', { title: 'home', scripts: ['./app/controls.js']});
+	  res.render('home', { title: 'home', scripts: ['./app/data.js']});
       res.render('home', { user : req.user });
   });
 
