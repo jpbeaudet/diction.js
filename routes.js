@@ -40,10 +40,10 @@ module.exports = function (app) {
   });
   
   app.get('/home', function(req, res) {
-	  res.render('home', { title: 'home', scripts: ['./app/speech.js']});
-	  res.render('home', { title: 'home', scripts: ['./app/controls.js']});
-	  res.render('home', { title: 'home', scripts: ['./app/data.js']});
-      res.render('home', { user : req.user });
+	  res.render('home', { title: 'speech', scripts: ['./app/speech.js','./app/controls.js','./app/data.js'], user : req.user });
+	  //res.render('home', { title: 'controls, scripts: ['./app/controls.js']});
+	  //res.render('home', { title: 'data', scripts: ['./app/data.js']});
+      //res.render('home', { user : req.user });
   });
 
   app.get('/ping', function(req, res){
