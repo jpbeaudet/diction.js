@@ -7,6 +7,10 @@ var doc;
 
 (function($){
 	
+	 if ('webkitSpeechRecognition' in window) {
+   	  window.onload = function()
+         { 
+	
 	var recognizing;
     var recognition = new SpeechRecognition();
     recognition.lang = "en-EN";
@@ -39,11 +43,11 @@ var doc;
     };
 
 	
-    $('#button').click(function(){
+    $('#').click(function(){
     	toggleStartStop();
     });
 	
-	
+         };}
 });//end of jquery
 
 
