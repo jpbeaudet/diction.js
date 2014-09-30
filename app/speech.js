@@ -8,8 +8,7 @@ var doc;
 (function($){
 	
 	 if ('webkitSpeechRecognition' in window) {
-   	  window.onload = function()
-         { 
+   	 
 	
 	var recognizing;
     var recognition = new SpeechRecognition();
@@ -41,7 +40,24 @@ var doc;
       interim_span.innerHTML = interim;
       doc_span.innerHTML = doc;
     };
+    
+    function reset() {
+    	  recognizing = false;
+    	  button.innerHTML = "Click to Speak";
+    	}
 
+    	function toggleStartStop() {
+    	  if (recognizing) {
+    	    recognition.stop();
+    	    reset();
+    	  } else {
+    	    recognition.start();
+    	    recognizing = true;
+    	    button.innerHTML = "Click to Stop";
+    	    final_span.innerHTML = "";
+    	    interim_span.innerHTML = "";
+    	  }
+    	
 	
     $('#').click(function(){
     	toggleStartStop();
@@ -51,20 +67,3 @@ var doc;
 });//end of jquery
 
 
-function reset() {
-  recognizing = false;
-  button.innerHTML = "Click to Speak";
-}
-
-function toggleStartStop() {
-  if (recognizing) {
-    recognition.stop();
-    reset();
-  } else {
-    recognition.start();
-    recognizing = true;
-    button.innerHTML = "Click to Stop";
-    final_span.innerHTML = "";
-    interim_span.innerHTML = "";
-  }
-}
