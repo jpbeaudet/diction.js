@@ -56,7 +56,9 @@ var doc;
       }
     }
 	
-	
+    $('#button').click(function(){
+    	toggleStartStop();
+    });
 	
 	
 });//end of jquery
