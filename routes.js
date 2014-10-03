@@ -41,7 +41,7 @@ module.exports = function (app) {
   
   app.get('/home', function(req, res) {
 	  res.header('Content-type','text/html');
-	  res.sendFile( __dirname +'/home.html' );
+	  res.res.sendfile( __dirname +'/home.html' );
 	  //res.render('home', { title: 'speech', scripts: ['speech.js','controls.js','data.js'], user : req.user });
 	  //res.render('home', { title: 'controls, scripts: ['./app/controls.js']});
 	  //res.render('home', { title: 'data', scripts: ['./app/data.js']});
@@ -54,17 +54,17 @@ module.exports = function (app) {
   
   app.get('/speech.js', function(req, res){
 	  res.header('Content-type','text/javascript');
-	  res.sendFile( __dirname +'/app/speech.js' );
+	  res.sendfile( __dirname +'/app/speech.js' );
 	 });
 
   app.get('/controls.js', function(req, res){
 	  res.header('Content-type','text/javascript');
-	  res.sendFile( __dirname +'/app/controls.js' );
+	  res.sendfile( __dirname +'/app/controls.js' );
 	 });
 	 
   app.get('/data.js', function(req, res){
 		  res.header('Content-type','text/javascript');
-		  res.sendFile( __dirname +'/app/data.js' );
+		  res.res.sendfile( __dirname +'/app/data.js' );
 		 });
   
   app.get('*', function(req, res){
