@@ -40,8 +40,8 @@ module.exports = function (app) {
   });
   
   app.get('/home', function(req, res) {
-	  res.setHeader('Content-Type', 'Content-Type: text/html');
-	  res.render('home', { title: 'speech', scripts: ['./app/speech.js','./app/controls.js','./app/data.js'], user : req.user });
+
+	  res.render('home', { title: 'speech', scripts: ['speech.js','controls.js','data.js'], user : req.user });
 	  //res.render('home', { title: 'controls, scripts: ['./app/controls.js']});
 	  //res.render('home', { title: 'data', scripts: ['./app/data.js']});
       //res.render('home', { user : req.user });
