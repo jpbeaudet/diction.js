@@ -1,0 +1,16 @@
+html
+  head
+    title Diction4js
+  body
+    button#button(onclick='toggleStartStop()')
+    div(style='padding: 10px;')
+      span#final_span
+      span#interim_span(style='color: grey;')
+    div(style='padding: 10px;')
+      span#answer_span
+      
+    script(src='/socket.io/socket.io.js')
+    script(type='text/javascript', src='./app/speech.js')
+    script(type='text/javascript', src='./app/cookie.js')
+    script(type='text/javascript', src='./app/controls.js')   
+    script(src='//code.jquery.com/jquery-1.11.1.js')
