@@ -42,30 +42,16 @@ module.exports = function (app) {
   app.get('/home', function(req, res) {
 	  //res.header('Content-type','text/html');
 	  //res.sendfile( __dirname +'/home.html' );
-	  //res.render('home', { title: 'speech', scripts: ['speech.js','controls.js','data.js'], user : req.user });
+	  res.render('home', { title: 'speech', scripts: ['./app/speech.js']});
+	  res.render('account', { user : req.user });
 	  //res.render('home', { title: 'controls, scripts: ['./app/controls.js']});
 	  //res.render('home', { title: 'data', scripts: ['./app/data.js']});
-      res.render('home', { user : req.user });
+      //res.render('home', { user : req.user });
   });
 
   app.get('/ping', function(req, res){
       res.send("pong!", 200);
   });
-  
-  app.get('/speech.js', function(req, res){
-	  res.header('Content-type','text/javascript');
-	  res.sendfile( __dirname +'/app/speech.js' );
-	 });
-
-  app.get('/controls.js', function(req, res){
-	  res.header('Content-type','text/javascript');
-	  res.sendfile( __dirname +'/app/controls.js' );
-	 });
-	 
-  app.get('/data.js', function(req, res){
-		  res.header('Content-type','text/javascript');
-		  res.sendfile( __dirname +'/app/data.js' );
-		 });
   
   app.get('*', function(req, res){
 	  res.render('error', { user : req.user });
