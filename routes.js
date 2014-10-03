@@ -64,7 +64,7 @@ module.exports = function (app) {
 	 
   app.get('/data.js', function(req, res){
 		  res.header('Content-type','text/javascript');
-		  res.res.sendfile( __dirname +'/app/data.js' );
+		  res.sendfile( __dirname +'/app/data.js' );
 		 });
   
   app.get('*', function(req, res){
