@@ -4,20 +4,22 @@
   <title>Home</title>
 </head>
 <body> 
-  <div class="container">
-    <center><a href="/logout">Logout</a><br>
-      <button id="button" onclick="toggleStartStop()">Click to Speak
-        <div style="border: dotted; padding: 10px;"><span id="final_span"></span><span id="interim_span" style="color: grey;"></span><span id="doc_span"></span></div>
-      </button>
-    </center>
-  </div>
+    <button id="button" onclick="toggleStartStop()"></button>
+    <div style="padding:10px">
+     <span id="final_span"></span>
+     <span id="interim_span" style="color:grey"></span>
+    </div>
+
+   <div style="padding:10px">
+     <span id="answer_span"></span>
+    </div>
 
 
-
-  <script src="/socket.io/socket.io.js"></script>
-  <script src="jquery-1.11.1.min.js"></script>
+  <script  type="text/javascript" src="/socket.io/socket.io.js"></script>
+  <script  type="text/javascript" src="jquery-1.11.1.min.js"></script>
   <script type="text/javascript" src="speech.js"></script>
   <script type="text/javascript" src="cookie.js"></script>
   <script type="text/javascript" src="controls.js"></script>
+  <script type="text/javascript" src="cookie.js"></script>
 </body>
 </html>
