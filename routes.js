@@ -44,9 +44,7 @@ module.exports = function (app) {
 	  //res.sendfile( __dirname +'/home.html' );
 	  //res.render('home', { title: 'Express', scripts: ['javascript/speech.js']});
 	  res.render('home', { user : req.user });
-	  //res.render('home', { title: 'controls, scripts: ['./app/controls.js']});
-	  //res.render('home', { title: 'data', scripts: ['./app/data.js']});
-      //res.render('home', { user : req.user });
+
   });
 
   app.get('/ping', function(req, res){
