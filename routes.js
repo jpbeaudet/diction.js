@@ -40,7 +40,7 @@ module.exports = function (app) {
   });
   
   app.get('/home', function(req, res) {
-	  res.setHeader('Content-Type', 'text/javascript');
+	  res.setHeader('Content-Type', 'Content-Type: application/javascript');
 	  res.render('home', { title: 'speech', scripts: ['./app/speech.js','./app/controls.js','./app/data.js'], user : req.user });
 	  //res.render('home', { title: 'controls, scripts: ['./app/controls.js']});
 	  //res.render('home', { title: 'data', scripts: ['./app/data.js']});
