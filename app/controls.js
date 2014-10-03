@@ -22,7 +22,7 @@
 	  socket.emit("request", "");
 	  socket.on("response", function(response){
 		  var docA = response[0];
-		  var docB - response[1];
+		  var docB = response[1];
 		  var data = new MyData (docA,docB,transcript);
 		  Data = data;
 	  });
