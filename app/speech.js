@@ -40,7 +40,7 @@ var doc;
       interim_span.innerHTML = interim;
       doc_span.innerHTML = doc;
     };
-    
+     
     function reset() {
     	  recognizing = false;
     	  button.innerHTML = "Click to Speak";
