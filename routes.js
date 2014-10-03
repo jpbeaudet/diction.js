@@ -40,12 +40,12 @@ module.exports = function (app) {
   });
   
   app.get('/home', function(req, res) {
-	  res.header('Content-type','text/html');
-	  res.sendfile( __dirname +'/home.html' );
+	  //res.header('Content-type','text/html');
+	  //res.sendfile( __dirname +'/home.html' );
 	  //res.render('home', { title: 'speech', scripts: ['speech.js','controls.js','data.js'], user : req.user });
 	  //res.render('home', { title: 'controls, scripts: ['./app/controls.js']});
 	  //res.render('home', { title: 'data', scripts: ['./app/data.js']});
-      //res.render('home', { user : req.user });
+      res.render('home', { user : req.user });
   });
 
   app.get('/ping', function(req, res){
