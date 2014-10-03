@@ -66,8 +66,8 @@ module.exports = function (app) {
 		  res.sendFile( __dirname +'/app/data.js' );
 		 });
   
-  //app.get('/*', function(req, res){
-	  //res.render('error', { user : req.user });
-  //});
+  app.get('*', function(req, res){
+	  res.render('error', { user : req.user });
+  });
 
 };
