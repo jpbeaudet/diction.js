@@ -59,7 +59,7 @@ var doc;
     	  }
     	
 	
-    $('#').click(function(){
+    $('#button').click(function(){
     	toggleStartStop();
     });
 	
