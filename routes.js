@@ -40,15 +40,11 @@ module.exports = function (app) {
   });
   
   app.get('/home', function(req, res) {
-	  res.header('Content-type','text/html')
+	  res.header('Content-type','text/html');
 	  //res.render('home', { title: 'speech', scripts: ['speech.js','controls.js','data.js'], user : req.user });
 	  //res.render('home', { title: 'controls, scripts: ['./app/controls.js']});
 	  //res.render('home', { title: 'data', scripts: ['./app/data.js']});
       res.render('home', { user : req.user });
-	  res.header('Content-type','text/javascript');
-	  res.sendFile( __dirname +'/app/speech.js' );
-	  res.sendFile( __dirname +'/app/controls.js' );
-	  res.sendFile( __dirname +'/app/data.js' )
   });
 
   app.get('/ping', function(req, res){
