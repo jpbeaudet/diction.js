@@ -73,7 +73,7 @@ mongoose.connect('mongodb://localhost/passport_local_mongoose');
 // routes
 require('./routes')(app);
 
-var server = https.createServer(options, app)
+var server = https.createServer(options, app);
 app.set('port', process.env.PORT || 3000);
 
 //app.listen(app.get('port'), function(){
