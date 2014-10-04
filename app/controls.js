@@ -18,7 +18,7 @@
 	
 	  // start by building the data object which will contain all relevant info 
 	  var Data= [];
-	  var socket = io.connect('http://54.68.32.250:3000', {'force new connection': true});
+	  var socket = io.connect('https://54.68.32.250:3000', {'force new connection': true});
 	  socket.emit("request", "");
 	  socket.on("response", function(response){
 		  var docA = response[0];

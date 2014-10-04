@@ -78,18 +78,17 @@ var server = https.createServer(options, app);
 app.set('port', process.env.PORT || 3000);
 console.log(("Express server listening on port " + app.get('port')));
 
-//app.listen(app.get('port'), function(){
- // console.log(("Express server listening on port " + app.get('port')));
-//});
 
-//var io = require('socket.io').listen(server);
-//io.on('connection', function(socket){ 
+
+var io = require('socket.io').listen(server);
+io.on('connection', function(socket){ 
+	console.log("socket.io started on port"+ app.get('port'));
 	////here will go the initial load of the current saved user data (last diction)
-	//io.on("request",function(){
+	io.on("request",function(){
 		
-	//});
+	});
 	
-//});
+});
 
 
 server.listen(3000);
