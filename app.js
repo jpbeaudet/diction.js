@@ -15,12 +15,22 @@ var passport = require('passport');
 var fs = require('fs');
 var LocalStrategy = require('passport-local').Strategy;
 
+var options = {
+		  key: fs.readFileSync('var/keys/server.key'),
+		  cert: fs.readFileSync('var/keys/server.crt')
+	};
+
+
+	if(passphrase) {
+		options.passphrase = passphrase;
+	}
+
 
 // main config
 var app = express();
-var server = http.createServer(app);
+//var server = http.createServer(app);
 //var server = require('http').Server(app);
-app.set('port', process.env.PORT || 3000);
+//app.set('port', process.env.PORT || 3000);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
 app.set('view options', { layout: false });
@@ -63,9 +73,12 @@ mongoose.connect('mongodb://localhost/passport_local_mongoose');
 // routes
 require('./routes')(app);
 
-app.listen(app.get('port'), function(){
-  console.log(("Express server listening on port " + app.get('port')));
-});
+var server = https.createServer(options, app)
+app.set('port', process.env.PORT || 3000);
+
+//app.listen(app.get('port'), function(){
+ // console.log(("Express server listening on port " + app.get('port')));
+//});
 
 //var io = require('socket.io').listen(server);
 //io.on('connection', function(socket){ 
