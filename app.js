@@ -76,6 +76,7 @@ require('./routes')(app);
 
 var server = https.createServer(options, app);
 app.set('port', process.env.PORT || 3000);
+console.log(("Express server listening on port " + app.get('port')));
 
 //app.listen(app.get('port'), function(){
  // console.log(("Express server listening on port " + app.get('port')));
