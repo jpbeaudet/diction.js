@@ -14,6 +14,7 @@ var mongoose = require('mongoose');
 var passport = require('passport');
 var fs = require('fs');
 var LocalStrategy = require('passport-local').Strategy;
+var passphrase = ""
 
 var options = {
 		  key: fs.readFileSync('var/keys/server.key'),
