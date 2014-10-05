@@ -1,7 +1,7 @@
 doctype html
 html
  head
-    title Login
+    title Home
     meta(http-equiv='content-type', content='text/html; charset=utf-8')
     meta(name='description', content='')
     meta(name='keywords', content='')
@@ -15,13 +15,19 @@ html
     center
      a(href="/logout") Logout
      br
-     button#button(onclick='toggleStartStop()') Click to Speak
-       div(style='border: dotted; padding: 10px;')
-         span#final_span
-         span#interim_span(style='color: grey;')
-         span#doc_span
+     //button#button(onclick='toggleStartStop()') Click to Speak
+     button#button(href='#') Click to Speak
+     br
+     span#interim_span(style='color: grey;')
+       
+   .container 
+    center  
+     br 
+     span#final_span 
+     br    
+     span#doc_span
+     
   body 
-   //script(type='text/javascript')
    script(src='/socket.io/socket.io.js')
    script(type='text/javascript', src='./app/speech.js')
    script(type='text/javascript', src='./app/cookie.js')
