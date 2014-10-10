@@ -26,6 +26,7 @@ if ('webkitSpeechRecognition' in window) {
       var interim = "";
       for (var i = 0; i < event.results.length; ++i) {
         if (event.results[i].isFinal) {
+        	toggleStartStop() ;
             txt = event.results[i][0].transcript;
         	interim = ""; 
         	//doc = txt;
@@ -39,9 +40,11 @@ if ('webkitSpeechRecognition' in window) {
                 //txt = event.results[i][0].transcript;
             	//interim = ""; 
             	doc = txt;
-        	}
-        	toggleStartStop() ;
-        	setTimeout(function(){toggleStartStop() ;}, 600);
+            	toggleStartStop() ;
+        	}else{toggleStartStop() ;}
+        	
+        	//setTimeout(function(){toggleStartStop() ;}, 600);
+        	
         	
           //confirmation must come before final is tranfered to doc
           // I will have to place the command case here
