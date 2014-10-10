@@ -11,7 +11,7 @@ var doc;
 if ('webkitSpeechRecognition' in window) {
 	
 	var recognizing;
-    var recognition = new SpeechRecognition();
+    var recognition = new webkitSpeechRecognition();
     recognition.lang = "en-EN";
     recognition.continuous = true;
     recognition.interim = true;
