@@ -2,7 +2,7 @@
 // Diction4js - Web based hands-free text editor
 //
 
-(function($){
+//(function($){
 	
 	//This constructor will built all the parameters MyData object will need to use as ressources for controls. 
 	//For the moment i just added a few i could think i will need. 
@@ -24,4 +24,4 @@
 	}
 		
 	
-});//end of jquery
+//});//end of jquery
