@@ -35,15 +35,12 @@ if ('webkitSpeechRecognition' in window) {
         	isCmd = controls(txt) ;
         	console.log("isCmd ="+ isCmd);
         	if((isCmd == false)){
-        		console.log("isCmd called false");
-        		
-                //txt = event.results[i][0].transcript;
-            	//interim = ""; 
+        		console.log("isCmd called false"); 
             	doc = txt;
-            	setTimeout(function(){toggleStartStop() ;}, 600);
-        	}else{setTimeout(function(){toggleStartStop() ;}, 600);}
+            	
+        	}
         	
-        	//setTimeout(function(){toggleStartStop() ;}, 600);
+        	setTimeout(function(){toggleStartStop() ;}, 600);
         	
         	
           //confirmation must come before final is tranfered to doc
