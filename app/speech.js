@@ -7,7 +7,7 @@ var doc;
 
 //(function($){
 	
-	 if ('webkitSpeechRecognition' in window) {
+	 
    	 
 	
 	var recognizing;
@@ -47,7 +47,7 @@ var doc;
     	toggleStartStop();
     });
 	
-        }
+        
 //});//end of jquery
 
 
