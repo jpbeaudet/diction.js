@@ -18,11 +18,11 @@ if ('webkitSpeechRecognition' in window) {
     recognition.interim = true;
     reset();
     recognition.onend = reset;
-    var interim = "";
+    
     
     recognition.onresult = function (event) {
       var txt = "";// the final var will need to be stored in a third variable wich show entire text with format
-      
+      var interim = "";
       for (var i = 0; i < event.results.length; ++i) {
       //for (var i = event.resultIndex; i < event.results.length; ++i) {
         if (event.results[i].final) {
