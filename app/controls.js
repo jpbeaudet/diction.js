@@ -95,6 +95,7 @@
 				  break;
 				  
 				  default:
+					  return false;
 			 }
 			 
 			  break;
@@ -104,6 +105,7 @@
 			  break;
 			  
 			  default:
+				  return false;
 		 }
 		  
 		  break;
@@ -208,7 +210,7 @@
 		  
 	// final default to main switch	  
 	default:
-		return false
+		return false;
 	}//end of the main switch
 	 
 	  }else{return false;}// end of less than 4 words (possible commands)	  
