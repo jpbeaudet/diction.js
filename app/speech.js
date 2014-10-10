@@ -26,13 +26,13 @@ if ('webkitSpeechRecognition' in window) {
       var interim = "";
       for (var i = 0; i < event.results.length; ++i) {
         if (event.results[i].isFinal) {
-            //txt = event.results[i][0].transcript;
+            txt = event.results[i][0].transcript;
         	interim = ""; 
         	//doc = txt;
         	if((controls(txt) == false)){
         		console.log("isCmd = false");
-                txt = event.results[i][0].transcript;
-            	interim = ""; 
+                //txt = event.results[i][0].transcript;
+            	//interim = ""; 
             	doc = txt;
         	}
         	//var isCmd = controls(txt);
