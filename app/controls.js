@@ -14,6 +14,7 @@
 
 	
 	function controls (transcript) {
+		$("#final_span").css({"background-color": "#FFFFFF"});	
 	   console.log("controls() fired");
 	  // Will have to add a (err) handler on start 
 	  // if(err){return null}
@@ -74,16 +75,17 @@
 	  // ------------------------------------
 	 
 	 //Dots
-	 case '1':
+	 case 'what':
 		  
 		 switch(Sword)
 		 {
-		 case '1A':
+		 case 'is':
 			  
 			 switch(Tword)
 			 {
 			 
-			 case '1Aa':
+			 case 'this':
+				 $("#final_span").css({"background-color": "#FF0000"});
 				 return true;
 				  break;
 				  
