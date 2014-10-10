@@ -4,7 +4,7 @@
 
 var doc= " ";
 var txt = "";// the final var will need to be stored in a third variable wich show entire text with format
-
+var diction;
 //(function($){ 
 
 
@@ -28,6 +28,7 @@ if ('webkitSpeechRecognition' in window) {
         if (event.results[i].isFinal) {
           txt = event.results[i][0].transcript;
           interim = ""; 
+          doc = txt;
         // var isCmd = controls(txt);
 
  
@@ -41,11 +42,16 @@ if ('webkitSpeechRecognition' in window) {
         }
             
       } 
+    
       console.log("txt = "+txt);
       final_span.innerHTML = txt;
       interim_span.innerHTML = interim;
-      doc += txt;
-      doc_span.innerHTML = doc;
+      if(diction != doc){
+    	  doc_span.innerHTML += doc ;  
+    	  diction = doc;  
+      }
+     
+     
       console.log("doc = "+ doc);
 
     };
