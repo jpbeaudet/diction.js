@@ -44,7 +44,8 @@ if ('webkitSpeechRecognition' in window) {
             
       } 
       console.log("txt = "+txt);
-      final_span.innerHTML = txt; 
+      final_span.innerHTML = txt;
+      txt = "";
       interim_span.innerHTML = interim;
       console.log("doc = "+ doc);
 
