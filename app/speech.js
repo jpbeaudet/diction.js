@@ -39,18 +39,9 @@ if ('webkitSpeechRecognition' in window) {
             	//interim = ""; 
             	doc = txt;
         	}
-        	//var isCmd = controls(txt);
-        	//console.log("isCmd = "+ isCmd);
-        	//if(isCmd == false){
-        	//	console.log("isCmd = false");
-            //txt = event.results[i][0].transcript;
-        	//interim = ""; 
-        	//doc = txt;	
-        	//}
-       
-         
-
- 
+         	toggleStartStop();
+        	toggleStartStop();
+        	
           //confirmation must come before final is tranfered to doc
           // I will have to place the command case here
           // I will need to think a users case to confirm command and/or last sentence.
