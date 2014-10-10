@@ -29,7 +29,8 @@ if ('webkitSpeechRecognition' in window) {
             txt = event.results[i][0].transcript;
         	interim = ""; 
         	//doc = txt;
-        	if((controls(txt) == false)){
+        	var isCmd = controls(txt) 
+        	if((isCmd == false)){
         		
         		console.log("isCmd = false");
                 //txt = event.results[i][0].transcript;
