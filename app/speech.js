@@ -41,14 +41,16 @@ if ('webkitSpeechRecognition' in window) {
       doc_span.innerHTML = doc;
     };
     
-    var button = document.getElementById("button");
+   
     
     function reset() {
+    button = document.getElementById("button");
   	  recognizing = false;
   	  button.innerHTML = "Click to Speak";
   	}
 
   	function toggleStartStop() {
+  	button = document.getElementById("button");
   	  if (recognizing) {
   	    recognition.stop();
   	    reset();
