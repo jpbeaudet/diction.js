@@ -41,9 +41,11 @@ if ('webkitSpeechRecognition' in window) {
         }
             
       } 
+      console.log("txt = "+txt);
       final_span.innerHTML = txt; 
       interim_span.innerHTML = interim;
       doc += txt;
+      console.log("doc = "+ doc)
       doc_span.innerHTML = doc;
     };
 
