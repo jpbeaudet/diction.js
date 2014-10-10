@@ -29,7 +29,7 @@ if ('webkitSpeechRecognition' in window) {
           txt = event.results[i][0].transcript;
           interim = ""; 
         // var isCmd = controls(txt);
-        doc = doc+ " "+ txt;
+        doc += " "+ txt;
         final_span.innerHTML = txt; 
         doc_span.innerHTML = doc;
           //confirmation must come before final is tranfered to doc
