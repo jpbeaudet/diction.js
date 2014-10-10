@@ -8,7 +8,7 @@ var doc;
 //(function($){ 
 	
 	 
-   	 
+if ('webkitSpeechRecognition' in window) {
 	
 	var recognizing;
     var recognition = new SpeechRecognition();
@@ -60,7 +60,9 @@ var doc;
 	
     $('#button').click(function(){
     	toggleStartStop();
-    });
+    }); 
+    
+}
 	
         
 //});//end of jquery
