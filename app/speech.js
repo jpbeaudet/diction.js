@@ -23,9 +23,9 @@ if ('webkitSpeechRecognition' in window) {
     recognition.onresult = function (event) {
       var txt = "";// the final var will need to be stored in a third variable wich show entire text with format
       
-      //for (var i = 0; i < event.results.length; ++i) {
-      for (var i = event.resultIndex; i < event.results.length; ++i) {
-        if (event.results[i].isFinal) {
+      for (var i = 0; i < event.results.length; ++i) {
+      //for (var i = event.resultIndex; i < event.results.length; ++i) {
+        if (event.results[i].final) {
           txt = event.results[i][0].transcript;
           interim = ""; 
         // var isCmd = controls(txt);
@@ -38,11 +38,11 @@ if ('webkitSpeechRecognition' in window) {
           
         } else {
        	interim += event.results[i][0].transcript;
-       	interim_span.innerHTML = interim;
+       	
         }
             
       }     
-
+      interim_span.innerHTML = interim;
     };
     
     
