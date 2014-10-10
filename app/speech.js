@@ -25,7 +25,7 @@ if ('webkitSpeechRecognition' in window) {
       var interim = "";
       for (var i = 0; i < event.results.length; ++i) {
       //for (var i = event.resultIndex; i < event.results.length; ++i) {
-        if (event.results[i].final) {
+        if (event.results[i].isFinal) {
           txt = event.results[i][0].transcript;
           interim = ""; 
         // var isCmd = controls(txt);
