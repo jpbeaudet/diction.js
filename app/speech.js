@@ -21,7 +21,7 @@ if ('webkitSpeechRecognition' in window) {
     
     
     recognition.onresult = function (event) {
-
+    	txt = "";
       var interim = "";
       for (var i = 0; i < event.results.length; ++i) {
       //for (var i = event.resultIndex; i < event.results.length; ++i) {
