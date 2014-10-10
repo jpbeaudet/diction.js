@@ -43,6 +43,7 @@ if ('webkitSpeechRecognition' in window) {
       } 
       final_span.innerHTML = txt; 
       doc = doc+ " "+ txt;
+      doc_span.innerHTML = "";
       doc_span.innerHTML = doc;
       interim_span.innerHTML = interim;
     };
