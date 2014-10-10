@@ -84,7 +84,7 @@ var io = require('socket.io').listen(server);
 io.on('connection', function(socket){ 
 	console.log("socket.io started on port"+ app.get('port'));
 	////here will go the initial load of the current saved user data (last diction)
-	io.on("request",function(data){
+	socket.on("request",function(data){
 		console.log("socket answer = "+ data);
 		socket.emit("response", [ "docA","docB"]);
 		socket.emit("res", "res.test------------------------------>");
