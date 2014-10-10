@@ -33,11 +33,20 @@ if ('webkitSpeechRecognition' in window) {
           // I will need to think a users case to confirm command and/or last sentence.
           
         } else {
-          interim += event.results[i][0].transcript;
+        	
+      	  
+       	 for(i = event.resultIndex; i < event.results.length; ++i){
+    
+        		//show result to screen
+       		interim += event.results[i][0].transcript;
+       		interim_span.innerHTML = interim;
+       	 	}
+       	 
+          
         }
       }
       final_span.innerHTML = final;
-      interim_span.innerHTML = interim;
+     // interim_span.innerHTML = interim;
       doc_span.innerHTML = doc;
     };
     
