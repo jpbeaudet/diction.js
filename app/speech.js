@@ -6,14 +6,14 @@ var doc= " ";
 var txt = "";
 var diction;
 
-//$(document).ready(function(){
+//(function($){ 
 
 
 	 
 if ('webkitSpeechRecognition' in window) {
 	console.log('webSpeech recognition has started');
-	recognizing;
-    recognition = new webkitSpeechRecognition();
+	var recognizing;
+    var recognition = new webkitSpeechRecognition();
     recognition.lang = "en-EN";
     recognition.continuous = true;
     recognition.interimResults = true;
