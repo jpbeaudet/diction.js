@@ -33,39 +33,46 @@ if ('webkitSpeechRecognition' in window) {
           // I will need to think a users case to confirm command and/or last sentence.
           
         } else {
-          interim += event.results[i][0].transcript;
+          //interim += event.results[i][0].transcript;
+      	  
+       	 for(i = event.resultIndex; i < event.results.length; ++i){
+    
+        		//show result to screen
+        		$('#result').text($('#result').text() + event.results[i][0].transcript);
+       	 	}
         }
       }
-      final_span.innerHTML = final;
-      interim_span.innerHTML = interim;
-      doc_span.innerHTML = doc;
+      
+      //final_span.innerHTML = final;
+      //interim_span.innerHTML = interim;
+      //doc_span.innerHTML = doc;
     };
     
-    $('#btn').click(function(){
-    	toggleStartStop();
-    });
-    
-    function reset() {
-  	  recognizing = false;
-  	$('#btn').removeClass('btn-primary').html('Click to Stop');
-  	$('#btn').addClass('btn-primary').html('Click to Speak');
-  	  //button.innerHTML = "Click to Speak";
-  	}
-
-  	function toggleStartStop() {
-  	  if (recognizing) {
-  	    recognition.stop();
-  	    reset();
-  	  } else {
-  	    recognition.start();
-  	    recognizing = true;
-  	  $('#btn').removeClass('btn-primary').html('Click to Stop');
-  	   // button.innerHTML = "Click to Stop";
-  	    final_span.innerHTML = "";
-  	    interim_span.innerHTML = "";
-  	  } };
-	
-  
+ 
+	function toggleStartStop() {
+	     if (recognizing) {
+	          recognition.stop();
+	          reset();
+	     } else {
+	    	 $('#result').text("");
+	          recognition.start();
+	          recognizing = true;
+	          $('#btn').removeClass('btn-primary').html('Listening ...');
+	        }
+	      }	 
+	  function reset() {
+	        recognizing = false;
+	        $('#btn').addClass('btn-primary').html('Start'); 
+	      }
+	  
+	  function stop() {
+	        recognizing = true;
+	        toggleStartStop();
+	      }
+	  
+ $('#btn').click(function(){ 
+   	  toggleStartStop();
+     });
     
 }
 	
