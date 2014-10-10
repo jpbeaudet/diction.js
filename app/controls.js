@@ -29,11 +29,12 @@
 		  var data = new MyData (docA,docB,transcript);
 		  Data = data;
 	  });
-	
+	  var numWords ="";
+	  var request ="";
 	  //var numWords = Data.request.num;
 	  //var request = Data.request;
-	  var numWords = transcript.split(" ").length;
-	  var request = transcript.split(" ");
+	  numWords = transcript.split(" ").length;
+	  request = transcript.split(" ");
 	  //(function($){
 
 	  // For performances purpose there a bottleneck here to filter possible commands. 
