@@ -30,10 +30,12 @@ if ('webkitSpeechRecognition' in window) {
         	interim = ""; 
         	//doc = txt;
         	if((controls(txt) == false)){
+        		
         		console.log("isCmd = false");
                 //txt = event.results[i][0].transcript;
             	//interim = ""; 
             	doc = txt;
+            	txt = "";
         	}
         	//var isCmd = controls(txt);
         	//console.log("isCmd = "+ isCmd);
