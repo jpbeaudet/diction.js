@@ -19,7 +19,10 @@
 	  // start by building the data object which will contain all relevant info 
 	  var Data= [];
 	  var socket = io.connect('https://54.68.32.250:3000', {'force new connection': true});
-	  socket.emit("request", "");
+	  socket.emit("request", "test -------------------------------->");
+	  socket.on("res", function(data){
+		  
+	  });
 	  socket.on("response", function(response){
 		  var docA = response[0];
 		  var docB = response[1];
@@ -76,11 +79,11 @@
 			 {
 			 
 			 case '1Aa':
-				  
+				 return true;
 				  break;
 				  
 			 case '1Bb':	
-				  
+				 return true;
 				  break;
 				  
 				  default:
@@ -89,7 +92,7 @@
 			  break;
 			  
 		 case '1B':	
-			  
+			 return true;
 			  break;
 			  
 			  default:
@@ -135,7 +138,7 @@
 		  // 3 crtl-z like return
 	 case '2':  
 		  
-		  
+		  return true;
 		  break;
 		  
 	// back
@@ -169,7 +172,7 @@
 		  //5
 		  
 	case  '3':
-		  
+		return true;
 		  break;
 		  
 	// bold

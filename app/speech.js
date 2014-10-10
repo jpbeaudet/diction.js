@@ -5,6 +5,7 @@
 var doc= " ";
 var txt = "";
 var diction;
+var cmd;
 //(function($){ 
 
 
@@ -25,10 +26,17 @@ if ('webkitSpeechRecognition' in window) {
       var interim = "";
       for (var i = 0; i < event.results.length; ++i) {
         if (event.results[i].isFinal) {
-          txt = event.results[i][0].transcript;
-          interim = ""; 
-          doc = txt;
-        // var isCmd = controls(txt);
+        	var isCmd = controls(txt);
+        	if(isCmd == false){
+            txt = event.results[i][0].transcript;
+        	interim = ""; 
+        	doc = txt;	
+        	}else{
+        		cmd = event.results[i][0].transcript;
+        		
+        	}
+       
+         
 
  
           //confirmation must come before final is tranfered to doc
@@ -45,6 +53,7 @@ if ('webkitSpeechRecognition' in window) {
       console.log("txt = "+txt);
       final_span.innerHTML = txt;
       interim_span.innerHTML = interim;
+      cmd.innerHTML = txt;
       if(diction != doc){
     	  doc_span.innerHTML += " " + doc ;  
     	  diction = doc;  
