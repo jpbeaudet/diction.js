@@ -21,7 +21,8 @@ if ('webkitSpeechRecognition' in window) {
     recognition.onresult = function (event) {
       var txt = "";// the final var will need to be stored in a third variable wich show entire text with format
       var interim = "";
-      for (var i = 0; i < event.results.length; ++i) {
+      //for (var i = 0; i < event.results.length; ++i) {
+      for (var i = event.resultIndex; i < event.results.length; ++i) {
         if (event.results[i].isFinal) {
           txt = event.results[i][0].transcript;
           
@@ -34,12 +35,18 @@ if ('webkitSpeechRecognition' in window) {
           // I will need to think a users case to confirm command and/or last sentence.
           
         } else {
+        	
+        	for(i = event.resultIndex; i < event.results.length; ++i){
+        		 
+         		//show result to screen
+        		interim_span.innerHTML += event.results[i][0].transcript;
+        	 	}
  
-       	interim += event.results[i][0].transcript;
+       	//interim += event.results[i][0].transcript;
         }
       }
       final_span.innerHTML = txt;
-      interim_span.innerHTML = interim;
+      //interim_span.innerHTML = interim;
       doc_span.innerHTML = doc;
     };
     
