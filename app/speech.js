@@ -52,9 +52,9 @@ if ('webkitSpeechRecognition' in window) {
       //interim_span.innerHTML = interim;
       doc_span.innerHTML = doc;
     };
-}
+
     
-  });//end of jquery  
+ 
     
     function reset() {
     button = document.getElementById("button");
@@ -74,9 +74,9 @@ if ('webkitSpeechRecognition' in window) {
   	    final_span.innerHTML = "";
   	    interim_span.innerHTML = "";
   	  } };
-	
+}
     
-
+});//end of jquery  
 	
         
 
