@@ -82,7 +82,7 @@ if ('webkitSpeechRecognition' in window) {
   	    recognition.start();
   	    recognizing = true;
   	    button.innerHTML = "Click to Stop";
-  	    final_span.innerHTML = "";
+  	    //final_span.innerHTML = "";
   	    //interim_span.innerHTML = "";
   	  } };
 }
