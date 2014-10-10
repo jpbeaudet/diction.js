@@ -6,7 +6,10 @@ var doc= "";
 var recognizing;
 
 (function($){ 
-	
+
+	   $('#button').click(function(){
+	    	toggleStartStop();
+	    });
 	 
 if ('webkitSpeechRecognition' in window) {
 	console.log('webSpeech recognition has started');
@@ -54,9 +57,7 @@ if ('webkitSpeechRecognition' in window) {
     };
     
     
-    $('#button').click(function(){
-    	toggleStartStop();
-    });
+ 
     
  
     
