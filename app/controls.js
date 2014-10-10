@@ -207,7 +207,8 @@
 		  
 		  
 	// final default to main switch	  
-	default:	  
+	default:
+		return false
 	}//end of the main switch
 	 
 	  }else{return false;}// end of less than 4 words (possible commands)	  
