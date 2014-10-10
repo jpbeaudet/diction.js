@@ -41,23 +41,7 @@ var doc;
       doc_span.innerHTML = doc;
     };
      
-    function reset() {
-    	  recognizing = false;
-    	  button.innerHTML = "Click to Speak";
-    	}
 
-    	function toggleStartStop() {
-    	  if (recognizing) {
-    	    recognition.stop();
-    	    reset();
-    	  } else {
-    	    recognition.start();
-    	    recognizing = true;
-    	    button.innerHTML = "Click to Stop";
-    	    final_span.innerHTML = "";
-    	    interim_span.innerHTML = "";
-    	  }
-    	
 	
     $('#button').click(function(){
     	toggleStartStop();
@@ -67,3 +51,20 @@ var doc;
 });//end of jquery
 
 
+function reset() {
+	  recognizing = false;
+	  button.innerHTML = "Click to Speak";
+	}
+
+	function toggleStartStop() {
+	  if (recognizing) {
+	    recognition.stop();
+	    reset();
+	  } else {
+	    recognition.start();
+	    recognizing = true;
+	    button.innerHTML = "Click to Stop";
+	    final_span.innerHTML = "";
+	    interim_span.innerHTML = "";
+	  }
+	
