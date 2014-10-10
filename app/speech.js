@@ -40,8 +40,8 @@ if ('webkitSpeechRecognition' in window) {
                 //txt = event.results[i][0].transcript;
             	//interim = ""; 
             	doc = txt;
-            	toggleStartStop() ;
-        	}else{toggleStartStop() ;}
+            	setTimeout(function(){toggleStartStop() ;}, 600);
+        	}else{setTimeout(function(){toggleStartStop() ;}, 600);}
         	
         	//setTimeout(function(){toggleStartStop() ;}, 600);
         	
