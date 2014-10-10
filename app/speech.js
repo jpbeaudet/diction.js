@@ -29,19 +29,20 @@ if ('webkitSpeechRecognition' in window) {
           txt = event.results[i][0].transcript;
           interim = ""; 
         // var isCmd = controls(txt);
-        doc += " "+ txt;
-        final_span.innerHTML = txt; 
-        doc_span.innerHTML = doc;
+        doc = doc+ " "+ txt;
+ 
           //confirmation must come before final is tranfered to doc
           // I will have to place the command case here
           // I will need to think a users case to confirm command and/or last sentence.
           
         } else {
        	interim += event.results[i][0].transcript;
-       
+     
         }
             
-      }     
+      } 
+      final_span.innerHTML = txt; 
+      doc_span.innerHTML = doc;
       interim_span.innerHTML = interim;
     };
     
