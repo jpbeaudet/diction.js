@@ -39,7 +39,7 @@ if ('webkitSpeechRecognition' in window) {
        		//interim_span.innerHTML += event.results[i][0].transcript;
         		//show result to screen
        		interim += interim + event.results[i][0].transcript;
-       		interim_span.innerHTML = interim;
+       		interim_span.text = interim;
        	 	}
        	 
           
