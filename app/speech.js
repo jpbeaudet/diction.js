@@ -5,7 +5,7 @@
 var doc;
 
 
-//(function($){
+(function($){
 	
 	 
    	 
@@ -48,7 +48,7 @@ var doc;
     });
 	
         
-//});//end of jquery
+});//end of jquery
 
 
 function reset() {
