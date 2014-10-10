@@ -79,7 +79,7 @@ if ('webkitSpeechRecognition' in window) {
   	  } };
 }
     
-});//end of jquery  
+//});//end of jquery  
 	
         
 
