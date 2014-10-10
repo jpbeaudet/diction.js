@@ -32,8 +32,10 @@
 		  Data = data;
 	  });
 	
-	  var numWords = Data.request.num;
-	  var request = Data.request;
+	  //var numWords = Data.request.num;
+	  //var request = Data.request;
+	  var numWords = transcript.split(" ").length;
+	  var request = transcript.split(" ");
 	  
 	  // For performances purpose there a bottleneck here to filter possible commands. 
 	  // If there is 3 words or less it is a possible command, may have to adjust.
