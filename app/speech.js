@@ -52,7 +52,11 @@ if ('webkitSpeechRecognition' in window) {
       //interim_span.innerHTML = interim;
       doc_span.innerHTML = doc;
     };
-
+    
+    
+    $('#button').click(function(){
+    	toggleStartStop();
+    });
     
  
     
