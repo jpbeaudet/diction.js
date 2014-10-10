@@ -71,7 +71,7 @@ if ('webkitSpeechRecognition' in window) {
     };
 
     
-
+}
     
 });//end of jquery  
 	
@@ -94,7 +94,7 @@ function reset() {
   	    final_span.innerHTML = "";
   	    interim_span.innerHTML = "";
   	  } };
-}
+
 
 
 
