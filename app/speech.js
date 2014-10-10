@@ -2,7 +2,7 @@
 // Diction4js - Web based hands-free text editor
 //
 
-var doc;
+var doc= "";
 
 
 //(function($){ 
@@ -22,8 +22,9 @@ if ('webkitSpeechRecognition' in window) {
       var txt = "";// the final var will need to be stored in a third variable wich show entire text with format
       var interim = "";
       for (var i = 0; i < event.results.length; ++i) {
-        if (event.results[i].final) {
-          txt += event.results[i][0].transcript;
+        if (event.results[i].isFinal) {
+          txt = event.results[i][0].transcript;
+          
         // var isCmd = controls(final);
     
       var doc; // will be taken from server side sessions data. 
