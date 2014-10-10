@@ -19,15 +19,15 @@ if ('webkitSpeechRecognition' in window) {
     recognition.onend = reset;
 
     recognition.onresult = function (event) {
-      var final = "";// the final var will need to be stored in a third variable wich show entire text with format
+      var txt = "";// the final var will need to be stored in a third variable wich show entire text with format
       var interim = "";
       for (var i = 0; i < event.results.length; ++i) {
         if (event.results[i].final) {
-          final += event.results[i][0].transcript;
+          txt += event.results[i][0].transcript;
         // var isCmd = controls(final);
     
       var doc; // will be taken from server side sessions data. 
-        doc += " "+ final;
+        doc += " "+ txt;
           //confirmation must come before final is tranfered to doc
           // I will have to place the command case here
           // I will need to think a users case to confirm command and/or last sentence.
@@ -37,7 +37,7 @@ if ('webkitSpeechRecognition' in window) {
        	interim += event.results[i][0].transcript;
         }
       }
-      final_span.innerHTML = final;
+      final_span.innerHTML = txt;
       interim_span.innerHTML = interim;
       doc_span.innerHTML = doc;
     };
