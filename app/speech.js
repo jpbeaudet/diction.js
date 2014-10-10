@@ -32,9 +32,10 @@ if ('webkitSpeechRecognition' in window) {
         	//doc = txt;
         	//var isCmd="";
         	//isCmd = controls(txt) ;
-        	console.log("isCmd ="+ isCmd);
+        	//console.log("isCmd ="+ isCmd);
 
         		var usingItNow = function(isCmd) {
+        			console.log("isCmd ="+ isCmd);
                 	if((isCmd == false)){
                 		console.log("isCmd called false"); 
                     	doc = txt;
