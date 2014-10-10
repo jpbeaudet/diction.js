@@ -3,7 +3,7 @@
 //
 
 var doc= " ";
-
+var txt = "";// the final var will need to be stored in a third variable wich show entire text with format
 
 //(function($){ 
 
@@ -21,7 +21,7 @@ if ('webkitSpeechRecognition' in window) {
     
     
     recognition.onresult = function (event) {
-      var txt = "";// the final var will need to be stored in a third variable wich show entire text with format
+
       var interim = "";
       for (var i = 0; i < event.results.length; ++i) {
       //for (var i = event.resultIndex; i < event.results.length; ++i) {
@@ -29,9 +29,7 @@ if ('webkitSpeechRecognition' in window) {
           txt = event.results[i][0].transcript;
           interim = ""; 
         // var isCmd = controls(txt);
-          doc = doc+ " "+ txt;
-          doc_span.innerHTML = "";
-          doc_span.innerHTML = doc;
+
  
           //confirmation must come before final is tranfered to doc
           // I will have to place the command case here
@@ -46,7 +44,9 @@ if ('webkitSpeechRecognition' in window) {
       final_span.innerHTML = txt; 
       interim_span.innerHTML = interim;
     };
-    
+    doc = doc+ " "+ txt;
+    doc_span.innerHTML = "";
+    doc_span.innerHTML = doc;
     
     function reset() {
     button = document.getElementById("button");
