@@ -23,15 +23,19 @@ if ('webkitSpeechRecognition' in window) {
     
     recognition.onresult = function (event) {
     	txt = "";
+    	cmd = "";
       var interim = "";
       for (var i = 0; i < event.results.length; ++i) {
         if (event.results[i].isFinal) {
         	var isCmd = controls(txt);
+        	console.log("isCmd = "+ isCmd);
         	if(isCmd == false){
+        		console.log("isCmd = false");
             txt = event.results[i][0].transcript;
         	interim = ""; 
         	doc = txt;	
         	}else{
+        		console.log("isCmd = true");
         		cmd = event.results[i][0].transcript;
         		
         	}
@@ -53,7 +57,9 @@ if ('webkitSpeechRecognition' in window) {
       console.log("txt = "+txt);
       final_span.innerHTML = txt;
       interim_span.innerHTML = interim;
+      if(cmd != ""){
       cmd_span.innerHTML = cmd;
+      }
       if(diction != doc){
     	  doc_span.innerHTML += " " + doc ;  
     	  diction = doc;  
