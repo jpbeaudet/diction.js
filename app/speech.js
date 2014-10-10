@@ -3,14 +3,14 @@
 //
 
 var doc= "";
+var recognizing;
 
-
-//(function($){ 
+(function($){ 
 	
 	 
 if ('webkitSpeechRecognition' in window) {
 	console.log('webSpeech recognition has started');
-	var recognizing;
+
     var recognition = new webkitSpeechRecognition();
     recognition.lang = "en-EN";
     recognition.continuous = true;
@@ -40,18 +40,20 @@ if ('webkitSpeechRecognition' in window) {
         	
         	for(i = event.resultIndex; i < event.results.length; ++i){
          		//show result to screen
-        		interim += event.results[i][0].transcript;
+        		//interim += event.results[i][0].transcript;
+        		$('#interim_span').text($('#interim_span').text() + event.results[i][0].transcript);
         	 	}
  
        	//interim += event.results[i][0].transcript;
         }
       }
       final_span.innerHTML = txt;
-      interim_span.innerHTML = interim;
+      
+      //interim_span.innerHTML = interim;
       doc_span.innerHTML = doc;
     };
     
-   
+  });//end of jquery  
     
     function reset() {
     button = document.getElementById("button");
@@ -76,7 +78,7 @@ if ('webkitSpeechRecognition' in window) {
 }
 	
         
-//});//end of jquery
+
 
 
 
