@@ -43,10 +43,10 @@ if ('webkitSpeechRecognition' in window) {
       } 
       final_span.innerHTML = txt; 
       interim_span.innerHTML = interim;
+      doc += txt;
+      doc_span.innerHTML = doc;
     };
-    doc = doc+ " "+ txt;
-    doc_span.innerHTML = "";
-    doc_span.innerHTML = doc;
+
     
     function reset() {
     button = document.getElementById("button");
