@@ -47,7 +47,7 @@ var doc;
     	toggleStartStop();
     });
 	
-         };}
+        }
 });//end of jquery
 
 
@@ -66,5 +66,5 @@ function reset() {
 	    button.innerHTML = "Click to Stop";
 	    final_span.innerHTML = "";
 	    interim_span.innerHTML = "";
-	  }
+	  } };
 	
