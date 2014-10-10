@@ -12,8 +12,8 @@ $(document).ready(function(){
 	 
 if ('webkitSpeechRecognition' in window) {
 	console.log('webSpeech recognition has started');
-	var recognizing;
-    var recognition = new webkitSpeechRecognition();
+	recognizing;
+    recognition = new webkitSpeechRecognition();
     recognition.lang = "en-EN";
     recognition.continuous = true;
     recognition.interimResults = true;
@@ -71,7 +71,12 @@ if ('webkitSpeechRecognition' in window) {
     };
 
     
-    function reset() {
+
+    
+});//end of jquery  
+	
+        
+function reset() {
     button = document.getElementById("button");
   	  recognizing = false;
   	  button.innerHTML = "Click to Speak";
@@ -90,11 +95,6 @@ if ('webkitSpeechRecognition' in window) {
   	    interim_span.innerHTML = "";
   	  } };
 }
-    
-});//end of jquery  
-	
-        
-
 
 
 
