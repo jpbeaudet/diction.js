@@ -2,7 +2,7 @@
 // Diction4js - Web based hands-free text editor
 //
 
-var doc;
+var doc= " ";
 
 
 //(function($){ 
@@ -42,7 +42,7 @@ if ('webkitSpeechRecognition' in window) {
             
       } 
       final_span.innerHTML = txt; 
-      doc += txt;
+      doc = doc+ " "+ txt;
       doc_span.innerHTML = doc;
       interim_span.innerHTML = interim;
     };
