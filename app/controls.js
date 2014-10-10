@@ -11,7 +11,9 @@
 // when true the function will also execute the related command (callback)
 // the function handling the interim, the final ,doc and mode html will be placed after the controls function.
 
-(function($){function controls (transcript) {
+//(function($){
+	
+	function controls (transcript) {
 	   
 	  // Will have to add a (err) handler on start 
 	  // if(err){return null}
@@ -213,4 +215,4 @@
 //----------------------------------------------------------
 
 
-});//end of jquery
+//});//end of jquery
