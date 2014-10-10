@@ -6,7 +6,7 @@ var doc= " ";
 var txt = "";
 var diction;
 
-$(document).ready(function(){
+//$(document).ready(function(){
 
 
 	 
@@ -71,12 +71,7 @@ if ('webkitSpeechRecognition' in window) {
     };
 
     
-}
-    
-});//end of jquery  
-	
-        
-function reset() {
+    function reset() {
     button = document.getElementById("button");
   	  recognizing = false;
   	  button.innerHTML = "Click to Speak";
@@ -94,6 +89,11 @@ function reset() {
   	    final_span.innerHTML = "";
   	    interim_span.innerHTML = "";
   	  } };
+}
+    
+//});//end of jquery  
+	
+        
 
 
 
