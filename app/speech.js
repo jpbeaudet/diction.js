@@ -29,7 +29,9 @@ if ('webkitSpeechRecognition' in window) {
           txt = event.results[i][0].transcript;
           interim = ""; 
         // var isCmd = controls(txt);
-      
+          doc = doc+ " "+ txt;
+          doc_span.innerHTML = "";
+          doc_span.innerHTML = doc;
  
           //confirmation must come before final is tranfered to doc
           // I will have to place the command case here
@@ -42,9 +44,6 @@ if ('webkitSpeechRecognition' in window) {
             
       } 
       final_span.innerHTML = txt; 
-      doc = doc+ " "+ txt;
-      doc_span.innerHTML = "";
-      doc_span.innerHTML = doc;
       interim_span.innerHTML = interim;
     };
     
