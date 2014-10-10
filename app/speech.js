@@ -30,6 +30,7 @@ if ('webkitSpeechRecognition' in window) {
           interim = ""; 
           doc += txt;
           doc_span.innerHTML = doc;
+          txt = "";
         // var isCmd = controls(txt);
 
  
