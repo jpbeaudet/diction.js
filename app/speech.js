@@ -41,7 +41,7 @@ if ('webkitSpeechRecognition' in window) {
             	doc = txt;
         	}
         	toggleStartStop() ;
-        	setTimeout(function(){toggleStartStop() ;}, 1000);
+        	setTimeout(function(){toggleStartStop() ;}, 500);
         	
           //confirmation must come before final is tranfered to doc
           // I will have to place the command case here
