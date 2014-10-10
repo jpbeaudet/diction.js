@@ -29,7 +29,7 @@ if ('webkitSpeechRecognition' in window) {
           txt = event.results[i][0].transcript;
           interim = ""; 
         // var isCmd = controls(txt);
-        doc = doc+ " "+ txt;
+        doc += txt;
  
           //confirmation must come before final is tranfered to doc
           // I will have to place the command case here
