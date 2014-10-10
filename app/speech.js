@@ -28,9 +28,6 @@ if ('webkitSpeechRecognition' in window) {
         if (event.results[i].isFinal) {
           txt = event.results[i][0].transcript;
           interim = ""; 
-          doc += txt;
-          doc_span.innerHTML = doc;
-          txt = "";
         // var isCmd = controls(txt);
 
  
@@ -46,8 +43,9 @@ if ('webkitSpeechRecognition' in window) {
       } 
       console.log("txt = "+txt);
       final_span.innerHTML = txt;
-      txt = "";
       interim_span.innerHTML = interim;
+      doc += txt;
+      doc_span.innerHTML = doc;
       console.log("doc = "+ doc);
 
     };
