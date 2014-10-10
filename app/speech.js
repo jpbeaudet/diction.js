@@ -38,11 +38,11 @@ if ('webkitSpeechRecognition' in window) {
           
         } else {
        	interim += event.results[i][0].transcript;
-       	
+        interim_span.innerHTML = interim;
         }
             
       }     
-      interim_span.innerHTML = interim;
+     
     };
     
     
