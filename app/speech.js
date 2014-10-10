@@ -52,6 +52,7 @@ if ('webkitSpeechRecognition' in window) {
       //interim_span.innerHTML = interim;
       doc_span.innerHTML = doc;
     };
+}
     
   });//end of jquery  
     
@@ -75,7 +76,7 @@ if ('webkitSpeechRecognition' in window) {
   	  } };
 	
     
-}
+
 	
         
 
