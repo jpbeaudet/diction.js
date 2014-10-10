@@ -36,7 +36,7 @@
 	  //var request = Data.request;
 	  var numWords = transcript.split(" ").length;
 	  var request = transcript.split(" ");
-	  (function($){
+	  //(function($){
 		  console.log("-------->>sssssss");
 	  // For performances purpose there a bottleneck here to filter possible commands. 
 	  // If there is 3 words or less it is a possible command, may have to adjust.
@@ -216,6 +216,6 @@
 //----------------------------------------------------------
 
 
-});//end of jquery
+//});//end of jquery
 	  
 	}//end of controls	
