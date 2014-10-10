@@ -39,8 +39,7 @@ if ('webkitSpeechRecognition' in window) {
             	//interim = ""; 
             	doc = txt;
         	}
-         	toggleStartStop();
-        	toggleStartStop();
+
         	
           //confirmation must come before final is tranfered to doc
           // I will have to place the command case here
