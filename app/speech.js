@@ -5,7 +5,7 @@
 var doc= " ";
 var txt = "";
 var diction;
-var cmd="";
+
 //(function($){ 
 
 
@@ -23,7 +23,6 @@ if ('webkitSpeechRecognition' in window) {
     
     recognition.onresult = function (event) {
     	txt = "";
-    	cmd = "";
       var interim = "";
       for (var i = 0; i < event.results.length; ++i) {
         if (event.results[i].isFinal) {
@@ -47,8 +46,7 @@ if ('webkitSpeechRecognition' in window) {
           // I will need to think a users case to confirm command and/or last sentence.
           
         } else {
-       	interim += event.results[i][0].transcript;
-     
+       	interim += event.results[i][0].transcript;   
         }
             
       } 
