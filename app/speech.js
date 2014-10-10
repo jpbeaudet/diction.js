@@ -15,7 +15,7 @@ if ('webkitSpeechRecognition' in window) {
     var recognition = new webkitSpeechRecognition();
     recognition.lang = "en-EN";
     recognition.continuous = true;
-    recognition.interim = true;
+    recognition.interimResults = true;
     reset();
     recognition.onend = reset;
     
@@ -38,11 +38,11 @@ if ('webkitSpeechRecognition' in window) {
           
         } else {
        	interim += event.results[i][0].transcript;
-        interim_span.innerHTML = interim;
+       
         }
             
       }     
-     
+      interim_span.innerHTML = interim;
     };
     
     
