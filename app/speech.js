@@ -5,7 +5,7 @@
 var doc= " ";
 var txt = "";
 var diction;
-var cmd;
+var cmd="";
 //(function($){ 
 
 
