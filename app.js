@@ -87,7 +87,6 @@ io.on('connection', function(socket){
 	socket.on("request",function(data){
 		console.log("socket answer = "+ data);
 		socket.emit("response", [ "docA","docB"]);
-		socket.emit("res", "res.test------------------------------>");
 	});
 	
 });

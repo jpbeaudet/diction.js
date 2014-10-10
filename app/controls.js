@@ -23,9 +23,6 @@
 	  var Data= [];
 	  var socket = io.connect('https://54.68.32.250:3000', {'force new connection': true});
 	  socket.emit("request", "test -------------------------------->");
-	  socket.on("res", function(data){
-		  console.log("data in socket.controls = "+ data);
-	  });
 	  socket.on("response", function(response){
 		  var docA = response[0];
 		  var docB = response[1];
