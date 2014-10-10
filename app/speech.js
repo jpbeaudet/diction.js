@@ -6,7 +6,7 @@ var doc= " ";
 var txt = "";
 var diction;
 
-(function($){ 
+$(document).ready(function(){
 
 
 	 
