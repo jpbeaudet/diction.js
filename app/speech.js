@@ -30,21 +30,17 @@ if ('webkitSpeechRecognition' in window) {
             txt = event.results[i][0].transcript;
         	interim = ""; 
         	//doc = txt;
-        	//var isCmd="";
-        	//isCmd = controls(txt) ;
-        	//console.log("isCmd ="+ isCmd);
-
-        		var usingItNow = function(isCmd) {
-        			console.log("isCmd ="+ isCmd);
-                	if((isCmd == false)){
-                		console.log("isCmd called false"); 
-                    	doc = txt;
-                    	setTimeout(function(){toggleStartStop() ;}, 600);	
-                	}else{setTimeout(function(){toggleStartStop() ;}, 600);}
-                	
-                	
-        		};
-        		usingItNow(controls(txt));
+        	var isCmd="";
+        	isCmd = controls(txt) ;
+        	console.log("isCmd ="+ isCmd);
+        	
+        	if((isCmd == false)){
+        		console.log("isCmd called false"); 
+            	doc = txt;
+            	
+        	}
+        	
+        	setTimeout(function(){toggleStartStop() ;}, 600);
           //confirmation must come before final is tranfered to doc
           
         } else {
