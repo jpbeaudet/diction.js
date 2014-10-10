@@ -2,7 +2,7 @@
 // Diction4js - Web based hands-free text editor
 //
 
-var doc= "";
+var doc;
 
 
 //(function($){ 
@@ -27,37 +27,23 @@ if ('webkitSpeechRecognition' in window) {
       for (var i = event.resultIndex; i < event.results.length; ++i) {
         if (event.results[i].isFinal) {
           txt = event.results[i][0].transcript;
-          interim = "";
-          
-        // var isCmd = controls(final);
-    
-      var doc; // will be taken from server side sessions data. 
-        doc += " "+ txt;
+          interim = ""; 
+        // var isCmd = controls(txt);
+        doc = doc+ " "+ txt;
+        final_span.innerHTML = txt; 
+        doc_span.innerHTML = doc;
           //confirmation must come before final is tranfered to doc
           // I will have to place the command case here
           // I will need to think a users case to confirm command and/or last sentence.
           
         } else {
-        	
-        	for(i = event.resultIndex; i < event.results.length; ++i){
-         		//show result to screen
-        		interim += event.results[i][0].transcript;
-        		interim_span.innerHTML = (interim + event.results[i][0].transcript);
-        	 	}
- 
-       	//interim += event.results[i][0].transcript;
+       	interim += event.results[i][0].transcript;
         }
-      }
-      final_span.innerHTML = txt;
-      
-      //interim_span.innerHTML = interim;
-      doc_span.innerHTML = doc;
+        
+      }     
+      interim_span.innerHTML = interim;
     };
     
-    
- 
-    
- 
     
     function reset() {
     button = document.getElementById("button");
