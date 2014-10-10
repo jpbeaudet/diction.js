@@ -5,7 +5,7 @@
 var doc;
 
 
-(function($){
+(function($){ 
 	
 	 
    	 
