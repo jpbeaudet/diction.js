@@ -51,6 +51,21 @@ module.exports = function (app) {
       res.send("pong!", 200);
   });
   
+  app.get('/speech.js', function(req, res) {
+	  res.set('Content-Type', 'text/javascript');
+	  res.sendfile('./speech.js');
+	});
+  
+  app.get('/data.js', function(req, res) {
+	  res.set('Content-Type', 'text/javascript');
+	  res.sendfile('./data.js');
+	});
+  
+  app.get('/controls.js', function(req, res) {
+	  res.set('Content-Type', 'text/javascript');
+	  res.sendfile('./controls.js');
+	});
+  
   
   app.get('*', function(req, res){
 	  res.render('error', { user : req.user });
