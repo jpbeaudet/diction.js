@@ -11,7 +11,7 @@
 // when true the function will also execute the related command (callback)
 // the function handling the interim, the final ,doc and mode html will be placed after the controls function.
 
-//(function($){
+
 	
 	function controls (transcript) {
 	   console.log("controls() fired");
@@ -36,7 +36,7 @@
 	  //var request = Data.request;
 	  var numWords = transcript.split(" ").length;
 	  var request = transcript.split(" ");
-	  
+	  (function($){
 	  // For performances purpose there a bottleneck here to filter possible commands. 
 	  // If there is 3 words or less it is a possible command, may have to adjust.
 	  // Will have to devise a return strategy to cut the function usage to minimal possible. The command must still execute.
@@ -208,8 +208,6 @@
 	 
 	  }else{return false;}// end of less than 4 words (possible commands)	  
 	  
-	  
-}//end of controls	
 
 //
 //Here goes the function for interim, final, mode and doc //
@@ -217,4 +215,6 @@
 //----------------------------------------------------------
 
 
-//});//end of jquery
+});//end of jquery
+	  
+	}//end of controls	
