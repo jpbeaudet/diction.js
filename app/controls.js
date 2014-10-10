@@ -38,7 +38,7 @@
 	  var numWords = transcript.split(" ").length;
 	  var request = transcript.split(" ");
 	  //(function($){
-		  console.log("request = " + request);
+
 	  // For performances purpose there a bottleneck here to filter possible commands. 
 	  // If there is 3 words or less it is a possible command, may have to adjust.
 	  // Will have to devise a return strategy to cut the function usage to minimal possible. The command must still execute.
@@ -52,7 +52,10 @@
 		  if( request[0] == ''){
 			  request.splice(0,1);
 		  }
-		  
+		  console.log("request = " + request);
+		  console.log("request[0] = " + request[0]);
+		  console.log("request[1] = " + request[1]);
+		  console.log("request = " + request[2]);
 	 var Fword = request[0];
 	 var Sword = request[1];
 	 var Tword = request[2];
