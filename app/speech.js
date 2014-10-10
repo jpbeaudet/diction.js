@@ -30,22 +30,21 @@ if ('webkitSpeechRecognition' in window) {
             txt = event.results[i][0].transcript;
         	interim = ""; 
         	//doc = txt;
-        	var isCmd="";
-        	console.log("txt for ontrol is = "+ txt);
-        	isCmd = controls(txt) ;
+        	//var isCmd="";
+        	//isCmd = controls(txt) ;
         	console.log("isCmd ="+ isCmd);
-        	if((isCmd == false)){
-        		console.log("isCmd called false"); 
-            	doc = txt;
-            	
-        	}
-        	
-        	setTimeout(function(){toggleStartStop() ;}, 600);
-        	
-        	
+
+        		var usingItNow = function(isCmd) {
+                	if((isCmd == false)){
+                		console.log("isCmd called false"); 
+                    	doc = txt;
+                    	setTimeout(function(){toggleStartStop() ;}, 600);	
+                	}else{setTimeout(function(){toggleStartStop() ;}, 600);}
+                	
+                	
+        		};
+        		usingItNow(controls(txt));
           //confirmation must come before final is tranfered to doc
-          // I will have to place the command case here
-          // I will need to think a users case to confirm command and/or last sentence.
           
         } else {
        	interim += event.results[i][0].transcript;   
