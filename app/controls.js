@@ -38,7 +38,7 @@
 	  var numWords = transcript.split(" ").length;
 	  var request = transcript.split(" ");
 	  //(function($){
-		  console.log("-------->>sssssss");
+		  console.log("request = " + request);
 	  // For performances purpose there a bottleneck here to filter possible commands. 
 	  // If there is 3 words or less it is a possible command, may have to adjust.
 	  // Will have to devise a return strategy to cut the function usage to minimal possible. The command must still execute.
