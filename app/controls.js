@@ -28,7 +28,7 @@ var diction;
 		  var docB = response[1];
 		  var data = new MyData (docA,docB,transcript);
 		  Data = data;
-		  doc_span.innerHTML = docA;
+		  //doc_span.innerHTML = docA;
 	  });
 	   
 	  var numWords ="";

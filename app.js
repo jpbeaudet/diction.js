@@ -86,7 +86,7 @@ io.on('connection', function(socket){
 	////here will go the initial load of the current saved user data (last diction)
 	socket.on("request",function(data){
 		console.log("socket answer = "+ data);
-		socket.emit("response", [ req.session.doc ,"docB"]);
+		socket.emit("response", [ "docA" ,"docB"]);
 	});
 	socket.on("save",function(data){
 		console.log("socket save = "+ data);
