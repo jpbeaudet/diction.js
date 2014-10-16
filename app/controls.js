@@ -31,6 +31,8 @@ var diction;
 		  var docB = response[1];
 		  var data = new MyData (docA,docB,transcript);
 		  Data = data;
+		  console.log("memory A = "+ Data.docA );
+		  console.log("memory B = "+ Data.docB );
 		  //doc_span.innerHTML = docA;
 	  });
 	   
