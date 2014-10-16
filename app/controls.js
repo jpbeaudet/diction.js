@@ -250,8 +250,8 @@ function Isfalse(data){
     	if(pretext != undefined){
     		docA_span.innerHTML = pretext + " " + doc + " ";
     		docB_span.innerHTML = " ";
-    	}else{docA_span.innerHTML += " " + doc + " "; 
-        docB_span.innerHTML = " "; }
+    	}//else{docA_span.innerHTML += " " + doc + " "; 
+        //docB_span.innerHTML = " "; }
       
       
       
