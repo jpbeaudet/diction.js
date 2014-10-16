@@ -102,9 +102,9 @@ sessionSockets.on('connection', function(err,socket,session){
 		});
 		socket.on("save",function(data){
 			console.log("socket save = "+ data);
-			session.a += data;
+			//session.a += data;
 			//session.doc += data; 
-			session.save();
+			//session.save();
 			console.log("session = "+ session.a);
 			 
 		});
