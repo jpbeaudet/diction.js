@@ -35,14 +35,14 @@ var app = express();
 //var server = http.createServer(app);
 //var server = require('http').Server(app);
 //app.set('port', process.env.PORT || 3000);
+app.configure(function () {
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
 app.set('view options', { layout: false });
 app.use(express.logger());
 app.use(express.bodyParser());
 app.use(express.methodOverride());
-app.use(cookieParser);
-//app.use(express.cookieParser('J976dd78Hffr#$%68h'));
+app.use(express.cookieParser('J976dd78Hffr#$%68h'));
 app.use(express.session({store: sessionStore
     , secret: 'secret'
     , key: 'express.sid'}));
@@ -60,6 +60,7 @@ app.use(passport.session());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 app.use("/app", express.static(__dirname + "/app"));
+});
 
 app.configure('development', function(){
     app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
