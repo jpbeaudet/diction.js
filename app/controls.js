@@ -234,7 +234,7 @@ var diction;
 function Istrue(data){
 	
 	socket.emit("cmd", data);
-	//window.open("/scmd",'_self' );
+
 }
 function Isfalse(data){
 	var doc = data;
@@ -243,7 +243,6 @@ function Isfalse(data){
   	  diction = doc;  
     }    
 	socket.emit("save", data);
-	//window.open("/save",'_self' );
 }
 
 	  
