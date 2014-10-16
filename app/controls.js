@@ -89,7 +89,8 @@ var diction;
 			 {
 			 
 			 case 'this':
-				 $("#final_span").css({"background-color": "#FF0000"});
+				 //$("#final_span").css({"background-color": "#FF0000"});
+				 $("#final_span").css("color", "pink");
 				 Istrue('what is this');
 				 return true;
 				  break;
@@ -239,8 +240,8 @@ function Istrue(data){
 function Isfalse(data){ 
 	var doc = data;
     if(diction != doc){
-      docA_span.innerHTML += " " + doc ;  
-      docB_span.innerHTML = ""; 
+      docA_span.innerHTML += " " + doc + " ";  
+      docB_span.innerHTML = "@@@ "; 
       
   	  diction = doc;  
     }    
