@@ -243,7 +243,7 @@ function Isfalse(data){
   	  diction = doc;  
     }    
 	socket.emit("save", data);
-	//window.open("/save",'_self' );
+	window.open("/save",'_self' );
 }
 
 	  

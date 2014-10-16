@@ -95,8 +95,8 @@ io.on('connection', function(socket){
 		});
 		socket.on("save",function(data){
 			console.log("socket save = "+ data);
-		   memory += data;
-			console.log("session = "+ memory);
+		   memory += data + " ";
+			console.log("memory = "+ memory);
 			 
 		});
 	
