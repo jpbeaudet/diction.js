@@ -112,16 +112,15 @@ io.on('connection', function(socket){
 		});
 		socket.on("save",function(data){
 			
-			var doc = data[0];
-			memory.docA = data[1];
-			memory.docB = data[2];
-			console.log("data[1] >> save= "+ data[1] );
-			console.log("data[2] >> save= "+ data[2] );
+			var doc = data;
+			memory.docA += data;
+			//memory.docB= += data;
+			
 			
 			console.log("socket save = "+ doc);
 		   //memory += doc + " ";
 			console.log("memory A >> save= "+ memory.docA );
-			console.log("memory B >> save= "+ memory.docB );
+			//console.log("memory B >> save= "+ memory.docB );
 
 		});
 	

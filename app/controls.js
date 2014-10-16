@@ -245,14 +245,13 @@ function Isfalse(data){
 	var doc = data;
     if(diction != doc){
     	
-      docA_span.innerHTML = Data.docA + " " + doc + " "; 
-      Data.docA += " " + doc + " ";
+      docA_span.innerHTML += " " + doc + " "; 
       docB_span.innerHTML = " "; 
       
       
   	  diction = doc;  
    }    
-	socket.emit("save", [data, Data.docA, Data.docB]);
+	socket.emit("save", data);
 }
 
 	  
