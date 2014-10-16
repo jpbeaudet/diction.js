@@ -85,7 +85,7 @@ console.log(("Express server listening on port " + app.get('port')));
 
 
 
-var Session = require('connect').middleware.session.Session;
+var Session = require('connect')//.middleware.session.Session;
 var io = require('socket.io').listen(server);
 
 io.set('authorization', function (data, accept) {
