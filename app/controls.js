@@ -14,7 +14,7 @@
 var diction;
 	
 	function controls (transcript) {
-		$("#final_span").css({"background-color": "#FFFFFF"});	
+		$("#final_span").css("color", "black");
 	   console.log("controls() fired");
 	  // Will have to add a (err) handler on start 
 	  // if(err){return null}
