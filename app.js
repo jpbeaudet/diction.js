@@ -44,6 +44,10 @@ app.configure(function () {
         },
         key: EXPRESS_SID_KEY
     }));
+    app.use(passport.session());
+    app.use(app.router);
+    app.use(express.static(path.join(__dirname, 'public')));
+    app.use("/app", express.static(__dirname + "/app"));
 });
 
 // Configture routes
