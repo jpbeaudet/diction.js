@@ -70,7 +70,7 @@ mongoose.connect('mongodb://localhost/passport_local_mongoose');
 // Configture routes
 require('./routes')(app);
 
-// Create HTTP server, register socket.io as listener
+// Create https server, register socket.io as listener
 server = https.createServer(options, app);
 app.set('port', process.env.PORT || 3000);
 console.log(("Express server listening on port " + app.get('port')));
