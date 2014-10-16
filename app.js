@@ -102,6 +102,7 @@ sessionSockets.on('connection', function(err,socket,session){
 		});
 		socket.on("save",function(data){
 			console.log("socket save = "+ data);
+			session.a;
 			session.a += data;
 			//session.doc += data; 
 			session.save();
