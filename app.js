@@ -47,7 +47,7 @@ app.use(cookieParser);
 app.use(express.session({
     store: sessionStore,
     cookie: { 
-        httpOnly: true
+        httpOnly: false
     },
     key: EXPRESS_SID_KEY
 }));
