@@ -15,6 +15,8 @@ var mongoose = require('mongoose');
 var passport = require('passport');
 var fs = require('fs');
 var LocalStrategy = require('passport-local').Strategy;
+var MemoryStore = express.session.MemoryStore;
+var sessionStore = new MemoryStore();
 var passphrase = "";
 
 var options = {
