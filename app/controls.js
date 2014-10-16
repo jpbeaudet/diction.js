@@ -245,8 +245,14 @@ function Isfalse(data){
 	var doc = data;
     if(diction != doc){
     	
-      docA_span.innerHTML += " " + doc + " "; 
-      docB_span.innerHTML = " "; 
+    var	pretext = Data.docA;
+    console.log("pretext")
+    	if(pretext != undefined){
+    		docA_span.innerHTML = pretext + " " + doc + " ";
+    		docB_span.innerHTML = " ";
+    	}else{docA_span.innerHTML += " " + doc + " "; 
+        docB_span.innerHTML = " "; }
+      
       
       
   	  diction = doc;  
