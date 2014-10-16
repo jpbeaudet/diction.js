@@ -4,6 +4,8 @@
 
 
 // dependencies
+var SessionSockets = require('session.socket.io')
+  , sessionSockets = new SessionSockets(io, sessionStore, cookieParser);
 var path = require('path');  
 var express = require('express');
 var http = require('http');
@@ -14,8 +16,6 @@ var mongoose = require('mongoose');
 var passport = require('passport');
 var fs = require('fs');
 var LocalStrategy = require('passport-local').Strategy;
-var MemoryStore = express.session.MemoryStore;
-var sessionStore = new MemoryStore();
 var passphrase = "";
 
 var options = {
@@ -41,18 +41,18 @@ app.use(express.logger());
 app.use(express.bodyParser());
 app.use(express.methodOverride());
 app.use(express.cookieParser('J976dd78Hffr#$%68h'));
-app.use(express.session({store: sessionStore
-    , secret: 'secret'
-    , key: 'express.sid'}));
-//app.use(express.session({
-	 // secret: '%%?7hhh%43SS_--$',
-	 // store: new MongoStore({
-		//    host: '127.0.0.1',
-		//    port: 27017,
-		//    db: 'diction4js'
+//app.use(express.session({store: sessionStore
+   // , secret: 'secret'
+   // , key: 'express.sid'}));
+app.use(express.session({
+	  secret: '%%?7hhh%43SS_--$',
+	  store: new MongoStore({
+		    host: '127.0.0.1',
+		    port: 27017,
+		    db: 'diction4js'
 		    
-		//  })
-		//}));
+		  })
+		}));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(app.router);
@@ -87,35 +87,9 @@ console.log(("Express server listening on port " + app.get('port')));
 
 
 var io = require('socket.io').listen(server);
-
-var parseCookie = require('connect').utils.parseCookie;
-
-io.set('authorization', function (data, accept) {
-  if (data.headers.cookie) {
-    data.cookie = parseCookie(data.headers.cookie);
-    data.sessionID = data.cookie['express.sid'];
-
-    sessionStore.get(data.sessionID, function (err, session) {
-      if (err) 
-      {
-          accept(err.message, false); //Turn down the connection
-      } 
-      else
-      {
-          data.session = session; //Accept the session
-          accept(null, true);
-      }
-    });
-  } else {
-     return accept('No cookie transmitted.', false);
-  }
-});
-
-io.on('connection', function(socket){ 
+//io.on('connection', function(socket){ 
+sessionSockets.on('connection', function(err,socket,session){ 
 	console.log("socket.io started on port"+ app.get('port'));
-	var hs = socket.handshake;
-    console.log('A socket with sessionID ' + hs.sessionID 
-        + ' connected!');
     
 		socket.on("request",function(data){
 			console.log("socket answer = "+ data);
@@ -123,8 +97,9 @@ io.on('connection', function(socket){
 		});
 		socket.on("save",function(data){
 			console.log("socket save = "+ data);
-			hs.session.doc += data; 
-			   console.log("session = "+ session);
+			session.doc += data; 
+			session.save();
+			console.log("session = "+ session.doc);
 			 
 		});
 	
