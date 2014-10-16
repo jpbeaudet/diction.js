@@ -14,7 +14,9 @@ var mongoose = require('mongoose');
 var passport = require('passport');
 var fs = require('fs');
 var LocalStrategy = require('passport-local').Strategy;
-var passphrase = ""
+var MemoryStore = express.session.MemoryStore
+var sessionStore = new MemoryStore();
+var passphrase = "";
 
 var options = {
 		  key: fs.readFileSync('var/keys/server.key'),
@@ -39,15 +41,18 @@ app.use(express.logger());
 app.use(express.bodyParser());
 app.use(express.methodOverride());
 app.use(express.cookieParser('J976dd78Hffr#$%68h'));
-app.use(express.session({
-	  secret: '%%?7hhh%43SS_--$',
-	  store: new MongoStore({
-		    host: '127.0.0.1',
-		    port: 27017,
-		    db: 'diction4js'
+app.use(express.session({store: sessionStore
+    , secret: 'secret'
+    , key: 'express.sid'}));
+//app.use(express.session({
+	 // secret: '%%?7hhh%43SS_--$',
+	 // store: new MongoStore({
+		//    host: '127.0.0.1',
+		//    port: 27017,
+		//    db: 'diction4js'
 		    
-		  })
-		}));
+		//  })
+		//}));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(app.router);
@@ -80,28 +85,48 @@ console.log(("Express server listening on port " + app.get('port')));
 
 
 
-var connect = require('connect');
+
 var io = require('socket.io').listen(server);
+var Session = require('connect').middleware.session.Session;
+io.set('authorization', function (data, accept) {
+    if (data.headers.cookie) {
+        data.cookie = parseCookie(data.headers.cookie);
+        data.sessionID = data.cookie['express.sid'];
+        // save the session store to the data object 
+        // (as required by the Session constructor)
+        data.sessionStore = sessionStore;
+        sessionStore.get(data.sessionID, function (err, session) {
+            if (err || !session) {
+                accept('Error', false);
+            } else {
+                // create a session object, passing data as request and our
+                // just acquired session data
+                data.session = new Session(data, session);
+                accept(null, true);
+            }
+        });
+    } else {
+       return accept('No cookie transmitted.', false);
+    }
+});
+
 io.on('connection', function(socket){ 
-	var cookie_string = socket.request.headers.cookie;
-	  var parsed_cookies = connect.utils.parseCookie(cookie_string);
-	  var connect_sid = parsed_cookies['connect.sid'];
-	  if (connect_sid) {
-		  MongoStore.get(connect_sid, function (error, session) {
-	      //HOORAY NOW YOU'VE GOT THE SESSION OBJECT!!!!
-				socket.on("request",function(data){
-					console.log("socket answer = "+ data);
-					socket.emit("response", [ session ,"docB"]);
-				});
-				socket.on("save",function(data){
-					console.log("socket save = "+ data);
-					   session += data; 
-					   console.log("session = "+ session);
-					 
-				});
-	    });
-	  }
 	console.log("socket.io started on port"+ app.get('port'));
+	var hs = socket.handshake;
+    console.log('A socket with sessionID ' + hs.sessionID 
+        + ' connected!');
+    
+		socket.on("request",function(data){
+			console.log("socket answer = "+ data);
+			socket.emit("response", [ "docA" ,"docB"]);
+		});
+		socket.on("save",function(data){
+			console.log("socket save = "+ data);
+			hs.session.doc += data; 
+			   console.log("session = "+ session);
+			 
+		});
+	
 	////here will go the initial load of the current saved user data (last diction)
 
 		
