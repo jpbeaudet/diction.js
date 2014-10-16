@@ -16,6 +16,8 @@ var passport = require('passport');
 var fs = require('fs');
 var LocalStrategy = require('passport-local').Strategy;
 var passphrase = "";
+var EXPRESS_SID_KEY = 'express.sid';
+var COOKIE_SECRET ='J976dd78Hffr#$%68h';
 
 var options = {
 		  key: fs.readFileSync('var/keys/server.key'),
@@ -27,7 +29,7 @@ var options = {
 		options.passphrase = passphrase;
 	}
 
-var cookieParser = express.cookieParser('J976dd78Hffr#$%68h');
+var cookieParser = express.cookieParser(COOKIE_SECRET);
 // main config
 var app = express();
 //var server = http.createServer(app);
