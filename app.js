@@ -99,8 +99,8 @@ var io = require('socket.io').listen(server);
 io.on('connection', function(socket){ 
 	//var memory ="";
 	var memory = new Object();
-	memory.docA;
-	memory.docB;
+	memory.docA = "";
+	memory.docB= "";
 		
 	console.log("socket.io started on port"+ app.get('port'));
     
@@ -112,9 +112,11 @@ io.on('connection', function(socket){
 		});
 		socket.on("save",function(data){
 			
-			var doc =data[0];
+			var doc = data[0];
 			memory.docA = data[1];
 			memory.docB = data[2];
+			console.log("data[1] >> save= "+ data[1] );
+			console.log("data[2] >> save= "+ data[2] );
 			
 			console.log("socket save = "+ doc);
 		   //memory += doc + " ";
