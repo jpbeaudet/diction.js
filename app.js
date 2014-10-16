@@ -1,6 +1,12 @@
 var io      = require('socket.io'),
     https    = require('https'),
     express = require('express');
+
+var path = require('path');  
+var express = require('express');
+var http = require('http');
+var passport = require('passport');
+var LocalStrategy = require('passport-local').Strategy;
 var fs = require('fs');
 var passphrase = "";
 var options = {
