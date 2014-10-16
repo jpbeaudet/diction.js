@@ -236,7 +236,7 @@ function Istrue(data){
 	socket.emit("cmd", data);
 
 }
-function Isfalse(data){
+function Isfalse(data){ 
 	var doc = data;
     if(diction != doc){
       docA_span.innerHTML += " " + doc ;  
