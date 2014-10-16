@@ -4,8 +4,7 @@
 
 
 // dependencies
-var SessionSockets = require('session.socket.io')
-  , sessionSockets = new SessionSockets(io, sessionStore, cookieParser);
+
 var path = require('path');  
 var express = require('express');
 var http = require('http');
@@ -41,18 +40,18 @@ app.use(express.logger());
 app.use(express.bodyParser());
 app.use(express.methodOverride());
 app.use(express.cookieParser('J976dd78Hffr#$%68h'));
-//app.use(express.session({store: sessionStore
-   // , secret: 'secret'
-   // , key: 'express.sid'}));
-app.use(express.session({
-	  secret: '%%?7hhh%43SS_--$',
-	  store: new MongoStore({
-		    host: '127.0.0.1',
-		    port: 27017,
-		    db: 'diction4js'
+app.use(express.session({store: sessionStore
+    , secret: 'secret'
+    , key: 'express.sid'}));
+//app.use(express.session({
+	  ///secret: '%%?7hhh%43SS_--$',
+	  //store: new MongoStore({
+		   // host: '127.0.0.1',
+		    //port: 27017,
+		   // db: 'diction4js'
 		    
-		  })
-		}));
+		 // })
+		//}));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(app.router);
@@ -87,6 +86,8 @@ console.log(("Express server listening on port " + app.get('port')));
 
 
 var io = require('socket.io').listen(server);
+var SessionSockets = require('session.socket.io')
+, sessionSockets = new SessionSockets(io, sessionStore, cookieParser);
 //io.on('connection', function(socket){ 
 sessionSockets.on('connection', function(err,socket,session){ 
 	console.log("socket.io started on port"+ app.get('port'));
