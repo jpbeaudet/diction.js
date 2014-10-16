@@ -14,11 +14,10 @@
 var diction;
 	
 	function controls (transcript) {
-	var A;
-	var B;
 		$("#final_span").css("color", "grey");
 	   console.log("controls() fired");
-
+	   var docA;
+	   var docB;
 
 	  // Will have to add a (err) handler on start 
 	  // if(err){return null}
@@ -29,17 +28,14 @@ var diction;
 	  var socket = io.connect('https://54.68.32.250:3000');
 	  socket.emit("request", "test -------------------------------->");
 	  socket.on("response", function(response){
-		  var docA = response[0];
-		  var docB = response[1];
-		  var data = new MyData (docA,docB,transcript);
-		  Data = data;
-		  A =Data.docA;
-		  B =Data.docB ;
-		  console.log("memory A = "+ Data.docA );
-		  console.log("memory B = "+ Data.docB );
-		  //doc_span.innerHTML = docA;
+		  docA = response[0];
+		  docB = response[1];
 	  });
-	   
+	  var data = new MyData (docA,docB,transcript);
+	  Data = data;
+	  console.log("memory A = "+ Data.docA );
+	  console.log("memory B = "+ Data.docB );
+	  
 	  var numWords ="";
 	  var request ="";
 	  //var numWords = Data.request.num;
@@ -249,9 +245,9 @@ function Isfalse(data){
 	var doc = data;
     if(diction != doc){
     	
-    var	pretext = A;
+    var	pretext = Data.docA;
     console.log("pretext= "+ pretext);
-    console.log("A= "+ A);
+
     	if(pretext != undefined){
     		docA_span.innerHTML = pretext + " " + doc + " ";
     		docB_span.innerHTML = " ";
