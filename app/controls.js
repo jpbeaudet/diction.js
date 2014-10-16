@@ -251,6 +251,7 @@ function Isfalse(data){
     	
     var	pretext = A;
     console.log("pretext= "+ pretext);
+    console.log("A= "+ A);
     	if(pretext != undefined){
     		docA_span.innerHTML = pretext + " " + doc + " ";
     		docB_span.innerHTML = " ";
