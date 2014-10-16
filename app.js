@@ -67,7 +67,7 @@ passport.deserializeUser(Account.deserializeUser());
 require('./routes')(app);
 
 // Create HTTP server, register socket.io as listener
-var server = https.createServer(options, app);
+server = https.createServer(options, app);
 app.set('port', process.env.PORT || 3000);
 console.log(("Express server listening on port " + app.get('port')));
 io = io.listen(server);
@@ -108,6 +108,17 @@ io.set('authorization', function (data, callback) {
 // upon connection, start a periodic task that emits (every 1s) the current timestamp
 io.on('connection', function (socket) {
 	console.log("socket.io started on port"+ app.get('port'));
+    
+	socket.on("request",function(data){
+		console.log("socket answer = "+ data);
+		socket.emit("response", [ "docA" ,"docB"]);
+	});
+	socket.on("save",function(data){
+		console.log("socket save = "+ data);
+	   memory += data + " ";
+		console.log("memory = "+ memory);	
+
+	});
 
 });
 
