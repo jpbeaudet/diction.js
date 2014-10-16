@@ -236,6 +236,7 @@ var diction;
 function Istrue(data){
 	
 	socket.emit("cmd", data);
+	return true;
 
 }
 function Isfalse(data){ 
@@ -255,6 +256,7 @@ function Isfalse(data){
   	  diction = doc;  
    }    
 	socket.emit("save", data);
+	return false
 }
 
 	  });	  
