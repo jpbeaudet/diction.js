@@ -91,7 +91,7 @@ console.log(("Express server listening on port " + app.get('port')));
 
 var io = require('socket.io').listen(server);
 var SessionSockets = require('session.socket.io')
-, sessionSockets = new SessionSockets(io, sessionStore, cookieParser);
+, sessionSockets = new SessionSockets(io, sessionStore, express.cookieParser('J976dd78Hffr#$%68h'));
 //io.on('connection', function(socket){ 
 sessionSockets.on('connection', function(err,socket,session){ 
 	console.log("socket.io started on port"+ app.get('port'));
