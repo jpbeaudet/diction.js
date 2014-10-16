@@ -243,12 +243,14 @@ function Isfalse(data){
 	var doc = data;
     if(diction != doc){
     	
-      docA_span.innerHTML += " " + doc + " ";  
+      docA_span.innerHTML = Data.docA + " " + doc + " "; 
+      Data.docA += " " + doc + " ";
       docB_span.innerHTML = " "; 
+      
       
   	  diction = doc;  
    }    
-	socket.emit("save", data);
+	socket.emit("save", [data, Data.docA, Data.docB]);
 }
 
 	  

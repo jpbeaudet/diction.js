@@ -97,19 +97,27 @@ console.log(("Express server listening on port " + app.get('port')));
 var io = require('socket.io').listen(server);
 
 io.on('connection', function(socket){ 
-	var memory ="";
-	//var memory = new memory();
+	//var memory ="";
+	var memory = new memory();
+	memory.docA;
+	memory.docB;
 		
 	console.log("socket.io started on port"+ app.get('port'));
     
 		socket.on("request",function(data){
 			console.log("socket answer = "+ data);
-			socket.emit("response", [ "docA" ,"docB"]);
+			socket.emit("response", [ memory.docA ,memory.docB]);
 		});
 		socket.on("save",function(data){
-			console.log("socket save = "+ data);
-		   memory += data + " ";
-			console.log("memory = "+ memory);	
+			
+			var doc =data[0];
+			memory.docA = data[1];
+			memory.docB = data[2];
+			
+			console.log("socket save = "+ doc);
+		   //memory += doc + " ";
+			console.log("memory A = "+ memory.docA );
+			console.log("memory B = "+ memory.docB );
 
 		});
 	
