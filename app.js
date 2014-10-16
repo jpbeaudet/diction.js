@@ -106,6 +106,8 @@ io.on('connection', function(socket){
     
 		socket.on("request",function(data){
 			console.log("socket answer = "+ data);
+			console.log("memory A >>= "+ memory.docA );
+			console.log("memory B >>= "+ memory.docB );
 			socket.emit("response", [ memory.docA ,memory.docB]);
 		});
 		socket.on("save",function(data){
@@ -116,8 +118,8 @@ io.on('connection', function(socket){
 			
 			console.log("socket save = "+ doc);
 		   //memory += doc + " ";
-			console.log("memory A = "+ memory.docA );
-			console.log("memory B = "+ memory.docB );
+			console.log("memory A >> save= "+ memory.docA );
+			console.log("memory B >> save= "+ memory.docB );
 
 		});
 	
