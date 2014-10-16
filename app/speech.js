@@ -52,7 +52,7 @@ if ('webkitSpeechRecognition' in window) {
       } 
     
       console.log("txt = "+txt);
-      final_span.innerHTML = " @@@ " + txt ;
+      final_span.innerHTML = " @@@->  " + txt + "  <-@@@ ";
       interim_span.innerHTML = interim;
 
      
