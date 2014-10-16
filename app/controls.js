@@ -14,6 +14,8 @@
 var diction;
 	
 	function controls (transcript) {
+	var A;
+	var B;
 		$("#final_span").css("color", "grey");
 	   console.log("controls() fired");
 
@@ -31,6 +33,8 @@ var diction;
 		  var docB = response[1];
 		  var data = new MyData (docA,docB,transcript);
 		  Data = data;
+		  A =Data.docA;
+		  B =Data.docB ;
 		  console.log("memory A = "+ Data.docA );
 		  console.log("memory B = "+ Data.docB );
 		  //doc_span.innerHTML = docA;
@@ -245,7 +249,7 @@ function Isfalse(data){
 	var doc = data;
     if(diction != doc){
     	
-    var	pretext = Data.docA;
+    var	pretext = A;
     console.log("pretext= "+ pretext);
     	if(pretext != undefined){
     		docA_span.innerHTML = pretext + " " + doc + " ";
