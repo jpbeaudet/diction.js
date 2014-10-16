@@ -98,7 +98,7 @@ var io = require('socket.io').listen(server);
 
 io.on('connection', function(socket){ 
 	//var memory ="";
-	var memory = new memory();
+	var memory = new Object();
 	memory.docA;
 	memory.docB;
 		
