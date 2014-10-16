@@ -50,11 +50,18 @@ app.configure(function () {
         },
         key: EXPRESS_SID_KEY
     }));
+    app.use(passport.initialize());
     app.use(passport.session());
     app.use(app.router);
     app.use(express.static(path.join(__dirname, 'public')));
     app.use("/app", express.static(__dirname + "/app"));
 });
+
+//passport config
+var Account = require('./models/account');
+passport.use(new LocalStrategy(Account.authenticate()));
+passport.serializeUser(Account.serializeUser());
+passport.deserializeUser(Account.deserializeUser());
 
 // Configture routes
 require('./routes')(app);
