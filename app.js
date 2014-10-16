@@ -87,28 +87,28 @@ console.log(("Express server listening on port " + app.get('port')));
 
 
 var io = require('socket.io').listen(server);
-var Session = require('connect')//.middleware.session.Session;
+
+var parseCookie = require('connect').utils.parseCookie;
+
 io.set('authorization', function (data, accept) {
-    if (data.headers.cookie) {
-        data.cookie = parseCookie(data.headers.cookie);
-    	
-        data.sessionID = data.cookie['express.sid'];
-        // save the session store to the data object 
-        // (as required by the Session constructor)
-        data.sessionStore = sessionStore;
-        sessionStore.get(data.sessionID, function (err, session) {
-            if (err || !session) {
-                accept('Error', false);
-            } else {
-                // create a session object, passing data as request and our
-                // just acquired session data
-                data.session = new Session(data, session);
-                accept(null, true);
-            }
-        });
-    } else {
-       return accept('No cookie transmitted.', false);
-    }
+  if (data.headers.cookie) {
+    data.cookie = parseCookie(data.headers.cookie);
+    data.sessionID = data.cookie['express.sid'];
+
+    sessionStore.get(data.sessionID, function (err, session) {
+      if (err) 
+      {
+          accept(err.message, false); //Turn down the connection
+      } 
+      else
+      {
+          data.session = session; //Accept the session
+          accept(null, true);
+      }
+    });
+  } else {
+     return accept('No cookie transmitted.', false);
+  }
 });
 
 io.on('connection', function(socket){ 
