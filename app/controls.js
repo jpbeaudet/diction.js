@@ -16,13 +16,8 @@ var diction;
 	function controls (transcript) {
 		$("#final_span").css("color", "grey");
 	   console.log("controls() fired");
-	   var fSpan = document.getElementById("final_span");
-	   if(diction != doc){
-		      docA_span.innerHTML += " " + fSpan  + " ";  
-		      docB_span.innerHTML = "@@@ "; 
-		      
-		  	  diction = doc;  
-		    } 
+
+
 	  // Will have to add a (err) handler on start 
 	  // if(err){return null}
 	
@@ -246,12 +241,13 @@ function Istrue(data){
 }
 function Isfalse(data){ 
 	var doc = data;
-   // if(diction != doc){
-     // docA_span.innerHTML += " " + doc + " ";  
-     // docB_span.innerHTML = "@@@ "; 
+    if(diction != doc){
+    	
+      docA_span.innerHTML += " " + final_span + " ";  
+      docB_span.innerHTML = "@@@ "; 
       
-  	 // diction = doc;  
-   // }    
+  	  diction = doc;  
+   }    
 	socket.emit("save", data);
 }
 
