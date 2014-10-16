@@ -239,8 +239,9 @@ function Istrue(data){
 function Isfalse(data){
 	var doc = data;
     if(diction != doc){
-      docA_span.innerHTML = ""; 
-      docB_span.innerHTML += " " + doc ;  
+      docA_span.innerHTML += " " + doc ;  
+      docB_span.innerHTML = ""; 
+      
   	  diction = doc;  
     }    
 	socket.emit("save", data);
