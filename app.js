@@ -105,7 +105,7 @@ sessionSockets.on('connection', function(err,socket,session){
 			session.a += data;
 			//session.doc += data; 
 			session.save();
-			console.log("session = "+ session);
+			console.log("session = "+ session.a);
 			 
 		});
 	
