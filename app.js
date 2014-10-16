@@ -1,25 +1,8 @@
-// Author: Jean-Philippe Beaudet @ S3R3NITY Technology
-// Diction4js - Web based hands-free text editor
-//
-
-
-// dependencies
-
-var path = require('path');  
-var express = require('express');
-var http = require('http');
-var https = require('https');
-var session    = require('express-session');
-//var MongoStore = require('connect-mongo')(express);
-var mongoose = require('mongoose');
-var passport = require('passport');
+var io      = require('socket.io'),
+    https    = require('https'),
+    express = require('express');
 var fs = require('fs');
-var LocalStrategy = require('passport-local').Strategy;
 var passphrase = "";
-var sessionStore = new express.session.MemoryStore();
-var EXPRESS_SID_KEY = 'express.sid';
-var COOKIE_SECRET ='J976dd78Hffr#$%68h';
-
 var options = {
 		  key: fs.readFileSync('var/keys/server.key'),
 		  cert: fs.readFileSync('var/keys/server.crt')
@@ -30,71 +13,43 @@ var options = {
 		options.passphrase = passphrase;
 	}
 
+
+// We define the key of the cookie containing the Express SID
+var EXPRESS_SID_KEY = 'express.sid';
+
+// We define a secret string used to crypt the cookies sent by Express
+var COOKIE_SECRET = 'J976dd78Hffr#$%68h';
 var cookieParser = express.cookieParser(COOKIE_SECRET);
-// main config
+
+// Create a new store in memory for the Express sessions
+var sessionStore = new express.session.MemoryStore();
+
 var app = express();
-//var server = http.createServer(app);
-//var server = require('http').Server(app);
-//app.set('port', process.env.PORT || 3000);
+
+// Configure Express app with :
+// * Cookie Parser created above
+// * Configure Session Store
 app.configure(function () {
-app.set('views', __dirname + '/views');
-app.set('view engine', 'jade');
-app.set('view options', { layout: false });
-app.use(express.logger());
-app.use(express.bodyParser());
-app.use(express.methodOverride());
-app.use(cookieParser);
-app.use(express.session({
-    store: sessionStore,
-    cookie: { 
-        httpOnly: true
-    },
-    key: EXPRESS_SID_KEY
-}));
-//app.use(express.session({
-	 // secret: '%%?7hhh%43SS_--$',
-	 // store: new MongoStore({
-		   // host: '127.0.0.1',
-		   // port: 27017,
-		   // db: 'diction4js'
-		    
-		 // })
-		//}));
-app.use(passport.initialize());
-app.use(passport.session());
-app.use(app.router);
-app.use(express.static(path.join(__dirname, 'public')));
-app.use("/app", express.static(__dirname + "/app"));
+    app.use(cookieParser);
+    app.use(express.session({
+        store: sessionStore,
+        cookie: { 
+            httpOnly: true
+        },
+        key: EXPRESS_SID_KEY
+    }));
 });
 
-app.configure('development', function(){
-    app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
-});
-
-app.configure('production', function(){
-    app.use(express.errorHandler());
-});
-
-// passport config
-var Account = require('./models/account');
-passport.use(new LocalStrategy(Account.authenticate()));
-passport.serializeUser(Account.serializeUser());
-passport.deserializeUser(Account.deserializeUser());
-
-// mongoose
-mongoose.connect('mongodb://localhost/passport_local_mongoose');
-
-// routes
+// Configture routes
 require('./routes')(app);
 
+// Create HTTP server, register socket.io as listener
 var server = https.createServer(options, app);
 app.set('port', process.env.PORT || 3000);
 console.log(("Express server listening on port " + app.get('port')));
+io = io.listen(server);
 
-
-
-
-io = require('socket.io').listen(server);
+// We configure the socket.io authorization handler (handshake)
 io.set('authorization', function (data, callback) {
     if(!data.headers.cookie) {
         return callback('No cookie transmitted.', false);
@@ -127,25 +82,10 @@ io.set('authorization', function (data, callback) {
     });
 });
 
-io.on('connection', function(socket){ 
-	var memory ="";
+// upon connection, start a periodic task that emits (every 1s) the current timestamp
+io.on('connection', function (socket) {
 	console.log("socket.io started on port"+ app.get('port'));
-    
-		socket.on("request",function(data){
-			console.log("socket answer = "+ data);
-			socket.emit("response", [ "docA" ,"docB"]);
-		});
-		socket.on("save",function(data){
-			console.log("socket save = "+ data);
-		   memory += data + " ";
-			console.log("memory = "+ memory);	
 
-		});
-	
-	////here will go the initial load of the current saved user data (last diction)
-
-	
-	
 });
 
 
