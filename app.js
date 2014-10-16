@@ -14,7 +14,7 @@ var mongoose = require('mongoose');
 var passport = require('passport');
 var fs = require('fs');
 var LocalStrategy = require('passport-local').Strategy;
-var MemoryStore = express.session.MemoryStore
+var MemoryStore = express.session.MemoryStore;
 var sessionStore = new MemoryStore();
 var passphrase = "";
 
@@ -85,9 +85,9 @@ console.log(("Express server listening on port " + app.get('port')));
 
 
 
-
-var io = require('socket.io').listen(server);
 var Session = require('connect').middleware.session.Session;
+var io = require('socket.io').listen(server);
+
 io.set('authorization', function (data, accept) {
     if (data.headers.cookie) {
         data.cookie = parseCookie(data.headers.cookie);
