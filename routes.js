@@ -42,6 +42,7 @@ module.exports = function (app) {
   app.get('/home', function(req, res) {
 	  res.render('home', { user : req.user });
   });
+  
 
   app.get('/ping', function(req, res){
       res.send("pong!", 200);

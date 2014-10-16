@@ -28,7 +28,9 @@ var diction;
 		  var docB = response[1];
 		  var data = new MyData (docA,docB,transcript);
 		  Data = data;
+		  doc_span.innerHTML = docA;
 	  });
+	   
 	  var numWords ="";
 	  var request ="";
 	  //var numWords = Data.request.num;
@@ -231,14 +233,16 @@ var diction;
 function Istrue(data){
 	
 	socket.emit("save", data);
+	window.open("/save",_self );
 }
 function Isfalse(data){
 	var doc = data;
     if(diction != doc){
   	  doc_span.innerHTML += " " + doc ;  
   	  diction = doc;  
-    }
+    }    
 	socket.emit("save", data);
+	window.open("/save",_self );
 }
 
 	  
