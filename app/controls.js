@@ -233,7 +233,7 @@ var diction;
 function Istrue(data){
 	
 	socket.emit("save", data);
-	window.open("/save",'_self' );
+	//window.open("/save",'_self' );
 }
 function Isfalse(data){
 	var doc = data;
@@ -242,7 +242,7 @@ function Isfalse(data){
   	  diction = doc;  
     }    
 	socket.emit("save", data);
-	window.open("/save",'_self' );
+	//window.open("/save",'_self' );
 }
 
 	  

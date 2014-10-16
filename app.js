@@ -80,24 +80,36 @@ console.log(("Express server listening on port " + app.get('port')));
 
 
 
+var connect = require('connect');
 var io = require('socket.io').listen(server);
 io.on('connection', function(socket){ 
+	var cookie_string = socket_client.request.headers.cookie;
+	  var parsed_cookies = connect.utils.parseCookie(cookie_string);
+	  var connect_sid = parsed_cookies['connect.sid'];
+	  if (connect_sid) {
+		  MongoStore.get(connect_sid, function (error, session) {
+	      //HOORAY NOW YOU'VE GOT THE SESSION OBJECT!!!!
+				socket.on("request",function(data){
+					console.log("socket answer = "+ data);
+					socket.emit("response", [ session ,"docB"]);
+				});
+				socket.on("save",function(data){
+					console.log("socket save = "+ data);
+					   session += data; 
+					   console.log("session = "+ session);
+					 
+				});
+	    });
+	  }
 	console.log("socket.io started on port"+ app.get('port'));
 	////here will go the initial load of the current saved user data (last diction)
-	socket.on("request",function(data){
-		console.log("socket answer = "+ data);
-		socket.emit("response", [ "docA" ,"docB"]);
-	});
-	socket.on("save",function(data){
-		console.log("socket save = "+ data);
-		  app.get('/save', function(req, res) {
-			  req.session.doc += data ;
-			  res.end();
-		  });  
-		 
-	});
+
 		
-	
+	//app.get('/save', function(req, res) {
+		 // req.session.doc += S ;
+		 // console.log("session = "+ S);
+		 // res.end();
+	 // });
 	
 });
 
