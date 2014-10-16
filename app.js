@@ -91,7 +91,7 @@ io.on('connection', function(socket){
 	socket.on("save",function(data){
 		console.log("socket save = "+ data);
 		
-		
+		 req.session.doc += data ;
 	});
 		
 	
