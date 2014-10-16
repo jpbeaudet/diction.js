@@ -15,26 +15,26 @@ var diction;
 	
 	function controls (transcript) {
 		$("#final_span").css("color", "grey");
-	   console.log("controls() fired");
-	   var docA;
-	   var docB;
+	   console.log("controls() fired");;
 
 	  // Will have to add a (err) handler on start 
 	  // if(err){return null}
 	
 	  // start by building the data object which will contain all relevant info 
-	  var Data= [];
+	  var Data= null;
 	  //var socket = io.connect('https://54.68.32.250:3000', {'force new connection': true});
 	  var socket = io.connect('https://54.68.32.250:3000');
 	  socket.emit("request", "test -------------------------------->");
 	  socket.on("response", function(response){
-		  docA = response[0];
-		  docB = response[1];
+		  var docA = response[0];
+		  var docB = response[1];
+		  var data = new MyData (docA,docB,transcript);
+		  Data = data;
+		  console.log("memory A in = "+ Data.docA );
+		  console.log("memory B in = "+ Data.docB );
 	  });
-	  var data = new MyData (docA,docB,transcript);
-	  Data = data;
-	  console.log("memory A = "+ Data.docA );
-	  console.log("memory B = "+ Data.docB );
+	  console.log("memory A out = "+ Data.docA );
+	  console.log("memory B out = "+ Data.docB );
 	  
 	  var numWords ="";
 	  var request ="";
