@@ -4,7 +4,7 @@
 
 
 // dependencies
-var connect = require('connect')
+
 var path = require('path');  
 var express = require('express');
 var http = require('http');
@@ -15,8 +15,8 @@ var mongoose = require('mongoose');
 var passport = require('passport');
 var fs = require('fs');
 var LocalStrategy = require('passport-local').Strategy;
-//var MemoryStore = express.session.MemoryStore;
-var sessionStore = new connect.middleware.session.MemoryStore();
+var MemoryStore = express.session.MemoryStore;
+var sessionStore = new MemoryStore();
 var passphrase = "";
 
 var options = {
@@ -102,11 +102,11 @@ sessionSockets.on('connection', function(err,socket,session){
 		});
 		socket.on("save",function(data){
 			console.log("socket save = "+ data);
-		
+			
 			session.docA += data;
 			//session.doc += data; 
 			session.save();
-			console.log("session = "+ session);
+			console.log("session = "+ session.docA);
 			 
 		});
 	
