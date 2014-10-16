@@ -106,7 +106,7 @@ io.on('connection', function(socket){
 	app.get('/save', function(req, res) {
 		  req.session.doc += memory ;
 		  console.log("session = "+ req.session.doc);
-		  res.end();
+		  //res.end();
 	  });
 	
 });
