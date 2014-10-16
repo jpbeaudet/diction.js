@@ -243,7 +243,7 @@ function Isfalse(data){
 	var doc = data;
     if(diction != doc){
     	
-      docA_span.innerHTML += " " + final_span + " ";  
+      docA_span.innerHTML += " " + doc + " ";  
       docB_span.innerHTML = "@@@ "; 
       
   	  diction = doc;  
