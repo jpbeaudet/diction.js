@@ -44,8 +44,8 @@ app.use(express.bodyParser());
 app.use(express.methodOverride());
 app.use(express.cookieParser('J976dd78Hffr#$%68h'));
 app.use(express.session({store: sessionStore
-    , secret: 'secret'
-    , key: 'express.sid'}));
+    
+    }));
 //app.use(express.session({
 	  ///secret: '%%?7hhh%43SS_--$',
 	  //store: new MongoStore({
