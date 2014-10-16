@@ -50,12 +50,9 @@ if ('webkitSpeechRecognition' in window) {
       } 
     
       console.log("txt = "+txt);
-      final_span.innerHTML = txt;
+      final_span.innerHTML = txt+ " @@@ ";
       interim_span.innerHTML = interim;
-     // if(diction != doc){
-    	 // doc_span.innerHTML += " " + doc ;  
-    	//  diction = doc;  
-     // }
+
      
      
       console.log("doc = "+ doc);
@@ -78,8 +75,7 @@ if ('webkitSpeechRecognition' in window) {
   	    recognition.start();
   	    recognizing = true;
   	    button.innerHTML = "Click to Stop";
-  	    //final_span.innerHTML = "";
-  	    //interim_span.innerHTML = "";
+
   	  } };
 }
     
