@@ -6,7 +6,7 @@ var doc= " ";
 var txt = "";
 var diction;
 
-//(function($){ 
+
 
 
 	 
@@ -83,7 +83,7 @@ if ('webkitSpeechRecognition' in window) {
   	  } };
 }
     
-//});//end of jquery  
+
 	
         
 
