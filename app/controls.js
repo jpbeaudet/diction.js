@@ -32,9 +32,8 @@ var diction;
 		  Data = data;
 		  console.log("memory A in = "+ Data.docA );
 		  console.log("memory B in = "+ Data.docB );
-	  });
-	  console.log("memory A out = "+ Data.docA );
-	  console.log("memory B out = "+ Data.docB );
+	 
+
 	  
 	  var numWords ="";
 	  var request ="";
@@ -261,7 +260,7 @@ function Isfalse(data){
 	socket.emit("save", data);
 }
 
-	  
+	  });	  
 	}//end of controls	
 	
 	
