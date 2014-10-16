@@ -86,7 +86,7 @@ console.log(("Express server listening on port " + app.get('port')));
 
 var io = require('socket.io').listen(server);
 io.on('connection', function(socket){ 
-	var memory "";
+	var memory ="";
 	console.log("socket.io started on port"+ app.get('port'));
     
 		socket.on("request",function(data){
