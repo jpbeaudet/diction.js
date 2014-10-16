@@ -22,7 +22,6 @@ var diction;
 	
 	  // start by building the data object which will contain all relevant info 
 	  var Data= new Object();
-	  //var socket = io.connect('https://54.68.32.250:3000', {'force new connection': true});
 	  var socket = io.connect('https://54.68.32.250:3000');
 	  socket.emit("request", "test -------------------------------->");
 	  socket.on("response", function(response){
@@ -92,7 +91,6 @@ var diction;
 			 {
 			 
 			 case 'this':
-				 //$("#final_span").css({"background-color": "#FF0000"});
 				 $("#final_span").css("color", "pink");
 				 Istrue('what is this');
 				 return true;
@@ -250,8 +248,7 @@ function Isfalse(data){
     	if(pretext != undefined){
     		docA_span.innerHTML = pretext + " " + doc + " ";
     		docB_span.innerHTML = " ";
-    	}//else{docA_span.innerHTML += " " + doc + " "; 
-        //docB_span.innerHTML = " "; }
+    	}
       
       
       
