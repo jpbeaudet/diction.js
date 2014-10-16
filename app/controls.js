@@ -76,7 +76,7 @@
 	  // ------------------------------------
 	 
 	 //Dots
-	 case 'what':
+	 case 'what': 
 		  
 		 switch(Sword)
 		 {
