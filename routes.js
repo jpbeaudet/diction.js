@@ -40,6 +40,8 @@ module.exports = function (app) {
   });
   
   app.get('/home', function(req, res) {
+	  req.session.docA;
+	  req.session.docB;
 	  res.render('home', { user : req.user });
   });
   
