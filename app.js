@@ -10,12 +10,13 @@ var express = require('express');
 var http = require('http');
 var https = require('https');
 var session    = require('express-session');
-var MongoStore = require('connect-mongo')(express);
+//var MongoStore = require('connect-mongo')(express);
 var mongoose = require('mongoose');
 var passport = require('passport');
 var fs = require('fs');
 var LocalStrategy = require('passport-local').Strategy;
 var passphrase = "";
+var sessionStore = new express.session.MemoryStore();
 var EXPRESS_SID_KEY = 'express.sid';
 var COOKIE_SECRET ='J976dd78Hffr#$%68h';
 
@@ -44,14 +45,21 @@ app.use(express.bodyParser());
 app.use(express.methodOverride());
 app.use(cookieParser);
 app.use(express.session({
-	  secret: '%%?7hhh%43SS_--$',
-	  store: new MongoStore({
-		    host: '127.0.0.1',
-		    port: 27017,
-		    db: 'diction4js'
+    store: sessionStore,
+    cookie: { 
+        httpOnly: true
+    },
+    key: EXPRESS_SID_KEY
+}));
+//app.use(express.session({
+	 // secret: '%%?7hhh%43SS_--$',
+	 // store: new MongoStore({
+		   // host: '127.0.0.1',
+		   // port: 27017,
+		   // db: 'diction4js'
 		    
-		  })
-		}));
+		 // })
+		//}));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(app.router);
@@ -104,7 +112,7 @@ io.set('authorization', function (data, callback) {
                         (data.cookies && data.cookies[EXPRESS_SID_KEY]);
 
         // Then we just need to load the session from the Express Session Store
-        MongoStore.load(sidCookie, function(err, session) {
+        sessionStore.load(sidCookie, function(err, session) {
             // And last, we check if the used has a valid session and if he is logged in
             if (err || !session || session.isLogged !== true) {
                 callback('Not logged in.', false);
