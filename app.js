@@ -104,7 +104,7 @@ io.set('authorization', function (data, callback) {
                         (data.cookies && data.cookies[EXPRESS_SID_KEY]);
 
         // Then we just need to load the session from the Express Session Store
-        sessionStore.load(sidCookie, function(err, session) {
+        MongoStore.load(sidCookie, function(err, session) {
             // And last, we check if the used has a valid session and if he is logged in
             if (err || !session || session.isLogged !== true) {
                 callback('Not logged in.', false);
