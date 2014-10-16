@@ -88,6 +88,13 @@ io.on('connection', function(socket){
 		console.log("socket answer = "+ data);
 		socket.emit("response", [ "docA","docB"]);
 	});
+	socket.on("save",function(data){
+		console.log("socket save = "+ data);
+		
+		
+	});
+		
+	
 	
 });
 

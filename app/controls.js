@@ -11,7 +11,7 @@
 // when true the function will also execute the related command (callback)
 // the function handling the interim, the final ,doc and mode html will be placed after the controls function.
 
-
+var diction;
 	
 	function controls (transcript) {
 		$("#final_span").css({"background-color": "#FFFFFF"});	
@@ -35,7 +35,7 @@
 	  //var request = Data.request;
 	  numWords = transcript.split(" ").length;
 	  request = transcript.split(" ");
-	  //(function($){
+
 
 	  // For performances purpose there a bottleneck here to filter possible commands. 
 	  // If there is 3 words or less it is a possible command, may have to adjust.
@@ -87,24 +87,29 @@
 			 
 			 case 'this':
 				 $("#final_span").css({"background-color": "#FF0000"});
+				 Istrue('what is this');
 				 return true;
 				  break;
 				  
-			 case '1Bb':	
+			 case '1Bb':
+				 Istrue('2');
 				 return true;
 				  break;
 				  
 				  default:
+					  Isfalse(transcript); 
 					  return false;
 			 }
 			 
 			  break;
 			  
 		 case '1B':	
+			 
 			 return true;
 			  break;
 			  
 			  default:
+				  Isfalse(transcript); 
 				  return false;
 		 }
 		  
@@ -147,7 +152,7 @@
 	// cancel
 		  // 3 crtl-z like return
 	 case '2':  
-		  
+		 Istrue('2');
 		  return true;
 		  break;
 		  
@@ -182,6 +187,7 @@
 		  //5
 		  
 	case  '3':
+		Istrue('3');
 		return true;
 		  break;
 		  
@@ -210,18 +216,32 @@
 		  
 	// final default to main switch	  
 	default:
+		Isfalse(transcript); 
 		return false;
 	}//end of the main switch
 	 
-	  }else{return false;}// end of less than 4 words (possible commands)	  
+	  }else{Isfalse(transcript); 
+		     return false;}// end of less than 4 words (possible commands)	  
 	  
 
 //
 //Here goes the function for interim, final, mode and doc //
 //
 //----------------------------------------------------------
+function Istrue(data){
+	
+	socket.emit("save", data);
+}
+function Isfalse(data){
+	var doc = data;
+    if(diction != doc){
+  	  doc_span.innerHTML += " " + doc ;  
+  	  diction = doc;  
+    }
+	socket.emit("save", data);
+}
 
-
-//});//end of jquery
 	  
 	}//end of controls	
+	
+	

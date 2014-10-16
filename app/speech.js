@@ -36,7 +36,7 @@ if ('webkitSpeechRecognition' in window) {
         	
         	if((isCmd == false)){
         		console.log("isCmd called false"); 
-            	doc = txt;
+            	//doc = txt;
             	
         	}
         	
