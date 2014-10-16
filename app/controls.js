@@ -246,7 +246,7 @@ function Isfalse(data){
     if(diction != doc){
     	
     var	pretext = Data.docA;
-    console.log("pretext")
+    console.log("pretext= "+ pretext);
     	if(pretext != undefined){
     		docA_span.innerHTML = pretext + " " + doc + " ";
     		docB_span.innerHTML = " ";
