@@ -96,18 +96,16 @@ io.on('connection', function(socket){
 		socket.on("save",function(data){
 			console.log("socket save = "+ data);
 		   memory += data + " ";
-			console.log("memory = "+ memory);
-			 
+			console.log("memory = "+ memory);			
+			exports.save = function (req, res) {
+			 req.session.doc += memory;
+			 console.log("req.session.doc = "+ req.session.doc);
+				};
 		});
 	
 	////here will go the initial load of the current saved user data (last diction)
 
-		
-	app.get('/save', function(req, res) {
-		  req.session.doc += memory ;
-		  console.log("session = "+ req.session.doc);
-		  //res.end();
-	  });
+	
 	
 });
 
