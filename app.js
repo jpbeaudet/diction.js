@@ -41,7 +41,8 @@ app.set('view options', { layout: false });
 app.use(express.logger());
 app.use(express.bodyParser());
 app.use(express.methodOverride());
-app.use(express.cookieParser('J976dd78Hffr#$%68h'));
+app.use(cookieParser);
+//app.use(express.cookieParser('J976dd78Hffr#$%68h'));
 app.use(express.session({store: sessionStore
     , secret: 'secret'
     , key: 'express.sid'}));
