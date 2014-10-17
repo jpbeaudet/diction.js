@@ -14,8 +14,7 @@
 var diction;
 	
 	function controls (transcript) {
-		var pretext;
-		var afttext;
+		
 		$("#final_span").css("color", "grey");
 	   console.log("controls() fired");;
 
@@ -33,10 +32,9 @@ var diction;
 		  Data = data;
 		  console.log("memory A in = "+ Data.docA );
 		  console.log("memory B in = "+ Data.docB );
-		   pretext = Data.docA;
-		   afttext = Data.docB;
+		  
 	 
-	  });	
+	 
 	  
 	  var numWords ="";
 	  var request ="";
@@ -239,7 +237,8 @@ var diction;
 //Here goes the function for interim, final, mode and doc //
 //
 //----------------------------------------------------------
-	  
+	  var pretext = Data.docA;
+	  var afttext = Data.docB;	  
 
 function Istrue(data){
 	
@@ -270,7 +269,7 @@ function Isfalse(data){
 	
 }
 
-	   
+	  });		   
 	}//end of controls	
 	
 	
