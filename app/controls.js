@@ -40,7 +40,8 @@ var diction;
 	   index = new MyData (docA,docB,transcript); 
 		  console.log("memory A in = "+ index.docA );
 		  console.log("memory B in = "+ index.docB );
-	  }
+		  
+	
 	  
 	  var numWords ="";
 	  var request ="";
@@ -276,7 +277,7 @@ function Isfalse(data){
 	socket.emit("save", [data, pretext , afttext]);
 	
 }
-		   
+	  }	   
 	}//end of controls	
 	
 	
