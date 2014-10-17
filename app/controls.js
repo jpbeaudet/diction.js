@@ -10,7 +10,7 @@
 //
 // when true the function will also execute the related command (callback)
 // the function handling the interim, the final ,doc and mode html will be placed after the controls function.
-
+var Data= new Object();
 var diction;
 	
 	function controls (transcript) {
@@ -22,7 +22,7 @@ var diction;
 	  // if(err){return null}
 	
 	  // start by building the data object which will contain all relevant info 
-	  var Data= new Object();
+	
 	  var socket = io.connect('https://54.68.32.250:3000');
 	  socket.emit("request", "test -------------------------------->");
 	  socket.on("response", function(response){
@@ -32,7 +32,8 @@ var diction;
 		  Data = data;
 		  console.log("memory A in = "+ Data.docA );
 		  console.log("memory B in = "+ Data.docB );
-		  
+
+	  });
 	 
 	 
 	  
@@ -237,8 +238,7 @@ var diction;
 //Here goes the function for interim, final, mode and doc //
 //
 //----------------------------------------------------------
-	  var pretext = Data.docA;
-	  var afttext = Data.docB;	  
+	  
 
 function Istrue(data){
 	var pretext = Data.docA;
@@ -270,8 +270,7 @@ function Isfalse(data){
 	socket.emit("save", [data, pretext , afttext]);
 	
 }
-
-	  });		   
+		   
 	}//end of controls	
 	
 	

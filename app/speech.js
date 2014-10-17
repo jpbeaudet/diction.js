@@ -22,13 +22,13 @@ if ('webkitSpeechRecognition' in window) {
     
     
     recognition.onresult = function (event) {
-    	$("#final_span").css("color", "grey");
+    	
     	txt = "";
       var interim = "";
 
       for (var i = 0; i < event.results.length; ++i) {
         if (event.results[i].isFinal) {
- 
+        	$("#final_span").css("color", "grey");
         	toggleStartStop() ;
             txt = event.results[i][0].transcript;
         	interim = ""; 
