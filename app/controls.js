@@ -15,7 +15,7 @@ var diction;
 //var index;
 	
 	function controls (transcript) {
-		//var index;
+		var index;
 		$("#final_span").css("color", "grey");
 	   console.log("controls() fired");;
 
@@ -29,17 +29,18 @@ var diction;
 	  socket.on("response", function(response){
 		  var docA = response[0];
 		  var docB = response[1];
-		  makeIndex(docA,docB);
+		 // makeIndex(docA,docB);
+		  index = new MyData (docA,docB,transcript);
 		  
 		  //Data = data;
 
 
 	  });
 	 
-	    function makeIndex ( docA, docB){
-	    var index = new MyData (docA,docB,transcript); 
-		
-	   
+	    //function makeIndex ( docA, docB){
+	    //var index = new MyData (docA,docB,transcript); 
+	    //};
+	   if(index != undefined){
 	   
 	  console.log("memory A in = "+ index.docA );
 	  console.log("memory B in = "+ index.docB );
@@ -277,8 +278,8 @@ function Isfalse(data){
 	socket.emit("save", [data, pretext , afttext]);
 	
 }
-	    };
-	    return true;
+	   }   
+	    
 	}//end of controls	
 	
 	
