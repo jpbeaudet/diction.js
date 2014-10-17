@@ -252,6 +252,7 @@ function Isfalse(data){
     		docA_span.innerHTML = pretext + " " + doc + " ";
     		docB_span.innerHTML = afttext + " ";
     		pretext = pretext + " " + doc + " ";
+    		afttext = afttext + "";
     	}
       
       
