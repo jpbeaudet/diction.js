@@ -36,7 +36,7 @@ var diction;
 
 	  });
 	 
-	    var foo = function makeIndex ( docA, docB){
+	    function makeIndex ( docA, docB){
 	    var index = new MyData (docA,docB,transcript); 
 		
 	   
@@ -278,9 +278,7 @@ function Isfalse(data){
 	
 }
 	    };
-	    if(foo){
-	    	return true;
-	    }else{return false};
+	    return true;
 	}//end of controls	
 	
 	
