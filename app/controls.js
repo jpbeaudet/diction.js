@@ -15,7 +15,7 @@ var diction;
 //var index;
 	
 	function controls (transcript) {
-		var index;
+		//var index;
 		$("#final_span").css("color", "grey");
 	   console.log("controls() fired");;
 
@@ -36,13 +36,13 @@ var diction;
 
 	  });
 	 
-	  function makeIndex ( docA, docB){
-	   index = new MyData (docA,docB,transcript); 
-		  console.log("memory A in = "+ index.docA );
-		  console.log("memory B in = "+ index.docB );
-		  
-	
-	  
+	    var foo = function makeIndex ( docA, docB){
+	    var index = new MyData (docA,docB,transcript); 
+		
+	   
+	   
+	  console.log("memory A in = "+ index.docA );
+	  console.log("memory B in = "+ index.docB );
 	  var numWords ="";
 	  var request ="";
 	  //var numWords = Data.request.num;
@@ -277,7 +277,10 @@ function Isfalse(data){
 	socket.emit("save", [data, pretext , afttext]);
 	
 }
-	  }	   
+	    };
+	    if(foo){
+	    	return true;
+	    }else{return false};
 	}//end of controls	
 	
 	
