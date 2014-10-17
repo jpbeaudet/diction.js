@@ -47,6 +47,7 @@ var diction;
 	  // Will have to devise a return strategy to cut the function usage to minimal possible. The command must still execute.
 	  // First idea is : return true when its a command after executing the command. On the other side, will filter if isCmd is true or not
 	  if( numWords < 4){
+		  console.log("words is less than 4 ")
 		  
 		  // Sometime googleSpeechApi return the first element of the array as undefined or empty. 
 		  if( request[0] == undefined){
