@@ -22,6 +22,7 @@ if ('webkitSpeechRecognition' in window) {
     
     
     recognition.onresult = function (event) {
+    	$("#final_span").css("color", "grey");
     	txt = "";
       var interim = "";
 
@@ -50,7 +51,7 @@ if ('webkitSpeechRecognition' in window) {
      
   
 
-    };
+    }; 
 
     
     function reset() {
