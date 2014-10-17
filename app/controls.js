@@ -10,11 +10,12 @@
 //
 // when true the function will also execute the related command (callback)
 // the function handling the interim, the final ,doc and mode html will be placed after the controls function.
-var Data= new Object();
+//var Data= new Object();
 var diction;
+//var index;
 	
 	function controls (transcript) {
-		
+		var index;
 		$("#final_span").css("color", "grey");
 	   console.log("controls() fired");;
 
@@ -28,14 +29,18 @@ var diction;
 	  socket.on("response", function(response){
 		  var docA = response[0];
 		  var docB = response[1];
-		  var data = new MyData (docA,docB,transcript);
-		  Data = data;
-		  console.log("memory A in = "+ Data.docA );
-		  console.log("memory B in = "+ Data.docB );
+		  makeIndex(docA,docB);
+		  
+		  //Data = data;
+
 
 	  });
 	 
-	 
+	  function makeIndex ( docA, docB){
+	   index = new MyData (docA,docB,transcript); 
+		  console.log("memory A in = "+ index.docA );
+		  console.log("memory B in = "+ index.docB );
+	  }
 	  
 	  var numWords ="";
 	  var request ="";
@@ -241,8 +246,8 @@ var diction;
 	  
 
 function Istrue(data){
-	var pretext = Data.docA;
-	  var afttext = Data.docB;
+	var pretext = index.docA;
+	  var afttext = index.docB;
 	//socket.emit("cmd", data);
 	socket.emit("cmd", [ pretext , afttext]);
 
@@ -250,15 +255,15 @@ function Istrue(data){
 function Isfalse(data){ 
 	var doc = data;
     if(diction != doc){
-    	var pretext = Data.docA;
-  	  var afttext = Data.docB;	
+    	var pretext = index.docA;
+  	  var afttext = index.docB;	
    
     console.log("pretext= "+ pretext);
     console.log("afttext= "+ afttext);
 
     	//if(pretext != undefined){
-    		//docA_span.innerHTML = pretext + " " + doc + " ";
-    		docA_span.innerHTML += " " + doc + " ";
+    		docA_span.innerHTML = pretext + " " + doc + " ";
+    		//docA_span.innerHTML += " " + doc + " ";
     		docB_span.innerHTML = afttext + " ";
     		pretext = pretext + " " + doc + " ";
     		afttext = afttext + "";
