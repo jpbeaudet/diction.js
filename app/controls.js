@@ -257,7 +257,8 @@ function Isfalse(data){
     console.log("afttext= "+ afttext);
 
     	if(pretext != undefined){
-    		docA_span.innerHTML = pretext + " " + doc + " ";
+    		//docA_span.innerHTML = pretext + " " + doc + " ";
+    		docA_span.innerHTML += " " + doc + " ";
     		docB_span.innerHTML = afttext + " ";
     		pretext = pretext + " " + doc + " ";
     		afttext = afttext + "";
