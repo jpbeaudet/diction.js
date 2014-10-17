@@ -235,18 +235,19 @@ var diction;
 //Here goes the function for interim, final, mode and doc //
 //
 //----------------------------------------------------------
+var	pretext = Data.docA;
+var afttext = Data.docB;
 function Istrue(data){
 	
-	socket.emit("cmd", data);
-	
+	//socket.emit("cmd", data);
+	socket.emit("cmd", [ pretext , afttext]);
 
 }
 function Isfalse(data){ 
 	var doc = data;
     if(diction != doc){
     	
-    var	pretext = Data.docA;
-    var afttext = Data.docB;
+   
     console.log("pretext= "+ pretext);
     console.log("afttext= "+ afttext);
 

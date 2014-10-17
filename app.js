@@ -119,6 +119,15 @@ io.on('connection', function(socket){
 			console.log("memory B >> save= "+ memory.docB );
 
 		});
+		
+		socket.on("cmd",function(data){			
+						
+			memory.docA = data[0];
+			memory.docB = data[1];			
+			console.log("memory A >> save= "+ memory.docA );
+			console.log("memory B >> save= "+ memory.docB );
+
+		});
 	
 	////here will go the initial load of the current saved user data (last diction)
 
