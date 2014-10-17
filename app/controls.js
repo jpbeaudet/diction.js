@@ -95,7 +95,7 @@ var diction;
 			 case 'this':
 				 $("#final_span").css("color", "pink");
 				 Istrue('what is this');
-				 return true;
+				 //return true;
 				  break;
 				  
 			 case '1Bb':
