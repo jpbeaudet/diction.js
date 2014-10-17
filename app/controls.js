@@ -40,6 +40,7 @@ var diction;
 	  //var request = Data.request;
 	  numWords = transcript.split(" ").length;
 	  request = transcript.split(" ");
+	  console.log("numwords = "+ numWords);
 
 
 	  // For performances purpose there a bottleneck here to filter possible commands. 
