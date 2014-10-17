@@ -244,18 +244,21 @@ function Isfalse(data){
     if(diction != doc){
     	
     var	pretext = Data.docA;
+    var afttext = Data.docB;
     console.log("pretext= "+ pretext);
+    console.log("afttext= "+ afttext);
 
     	if(pretext != undefined){
     		docA_span.innerHTML = pretext + " " + doc + " ";
-    		docB_span.innerHTML = " ";
+    		docB_span.innerHTML = afttext + " ";
+    		pretext = pretext + " " + doc + " ";
     	}
       
       
       
   	  diction = doc;  
    }    
-	socket.emit("save", data);
+	socket.emit("save", [data, pretext , afttext]);
 	
 }
 
