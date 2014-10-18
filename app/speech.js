@@ -35,7 +35,7 @@ if ('webkitSpeechRecognition' in window) {
         	var isCmd="";
         	isCmd = controls(txt) ;
         	
-        	//setTimeout(function(){toggleStartStop() ;}, 600);
+        	
           //confirmation must come before final is tranfered to doc
           
         } else {

@@ -279,10 +279,7 @@ function Isfalse(data){
   	  diction = doc;  
    }    
 	socket.emit("save", [data, pretext , afttext]);
-	    button = document.getElementById("button");
-	    recognition.start();
-  	    recognizing = true;
-  	    button.innerHTML = "Click to Stop";
+	setTimeout(function(){toggleStartStop() ;}, 100);
 	return false;
 }
 	   }   
