@@ -279,7 +279,7 @@ function Isfalse(data){
   	  diction = doc;  
    }    
 	socket.emit("save", [data, pretext , afttext]);
-	setTimeout(function(){toggleStartStop() ;}, 100);
+	setTimeout(function(){toggleStartStop() ;}, 200);
 	return false;
 }
 	   }   
