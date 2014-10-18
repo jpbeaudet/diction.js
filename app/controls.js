@@ -254,6 +254,7 @@ function Istrue(data){
 	  var afttext = index.docB;
 	//socket.emit("cmd", data);
 	socket.emit("cmd", [ pretext , afttext]);
+	setTimeout(function(){toggleStartStop() ;}, 100);
 	return true;
 
 }
@@ -275,11 +276,11 @@ function Isfalse(data){
     	//}
       
       
-      
+      setTimeout(function(){toggleStartStop() ;}, 100);
   	  diction = doc;  
    }    
 	socket.emit("save", [data, pretext , afttext]);
-	setTimeout(function(){toggleStartStop() ;}, 200);
+	
 	return false;
 }
 	   }   
