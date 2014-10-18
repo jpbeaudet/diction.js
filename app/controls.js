@@ -16,7 +16,7 @@ var diction;
 	
 	function controls (transcript) {
 		var index;
-		$("#final_span").css("color", "grey");
+		
 	   console.log("controls() fired");;
 
 	  // Will have to add a (err) handler on start 
@@ -27,6 +27,7 @@ var diction;
 	  var socket = io.connect('https://54.68.32.250:3000');
 	  socket.emit("request", "test -------------------------------->");
 	  socket.on("response", function(response){
+		  $("#final_span").css("color", "grey");
 		  var docA = response[0];
 		  var docB = response[1];
 		 // makeIndex(docA,docB);
@@ -35,7 +36,7 @@ var diction;
 		  //Data = data;
 
 
-	  });
+	
 	 
 	    //function makeIndex ( docA, docB){
 	    //var index = new MyData (docA,docB,transcript); 
@@ -105,29 +106,29 @@ var diction;
 			 case 'this':
 				 $("#final_span").css("color", "pink");
 				 Istrue('what is this');
-				 return true;
+				 //return true;
 				  break;
 				  
 			 case '1Bb':
 				 Istrue('2');
-				 return true;
+				 //return true;
 				  break;
 				  
 				  default:
 					  Isfalse(transcript); 
-					  return false;
+					  //return false;
 			 }
 			 
 			  break;
 			  
 		 case '1B':	
 			 
-			 return true;
+			 //return true;
 			  break;
 			  
 			  default:
 				  Isfalse(transcript); 
-				  return false;
+				  //return false;
 		 }
 		  
 		  break;
@@ -170,7 +171,7 @@ var diction;
 		  // 3 crtl-z like return
 	 case '2':  
 		 Istrue('2');
-		  return true;
+		  //return true;
 		  break;
 		  
 	// back
@@ -205,7 +206,7 @@ var diction;
 		  
 	case  '3':
 		Istrue('3');
-		return true;
+		//return true;
 		  break;
 		  
 	// bold
@@ -234,11 +235,12 @@ var diction;
 	// final default to main switch	  
 	default:
 		Isfalse(transcript); 
-		return false;
+		//return false;
 	}//end of the main switch
 	 
 	  }else{Isfalse(transcript); 
-		     return false;}// end of less than 4 words (possible commands)	  
+		    // return false;
+		     }// end of less than 4 words (possible commands)	  
 	  
 
 //
@@ -252,6 +254,7 @@ function Istrue(data){
 	  var afttext = index.docB;
 	//socket.emit("cmd", data);
 	socket.emit("cmd", [ pretext , afttext]);
+	return true;
 
 }
 function Isfalse(data){ 
@@ -276,10 +279,10 @@ function Isfalse(data){
   	  diction = doc;  
    }    
 	socket.emit("save", [data, pretext , afttext]);
-	
+	return false;
 }
 	   }   
-	    
+	  });    
 	}//end of controls	
 	
 	
