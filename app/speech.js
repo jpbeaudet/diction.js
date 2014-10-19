@@ -61,6 +61,7 @@ if ('webkitSpeechRecognition' in window) {
   	}
 
   	function toggleStartStop() {
+  		console.log("toggleStartStop has been exited");
   	button = document.getElementById("button");
   	  if (recognizing) {
   	    recognition.stop();
