@@ -135,7 +135,7 @@ io.on('connection', function(socket){
 	});
 
 		socket.on("request",function(data){
-			MEMORY.findOne({nick: username}, function(err,docs) { console.log(obj); });
+			MEMORY.findOne({nick: username}, function(err,obj) { console.log(obj); });
 			MEMORY.find(function (err, docs) {
 				  if (err) return console.error(err);
 				  console.log("element stored in db: docA,docB,username "+docs);
