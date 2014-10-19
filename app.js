@@ -94,14 +94,24 @@ db.once('open', function callback () {
 
 
 // routes
+
+require('./routes')(app);
 var username= "";
 app.get('/home', function(req, res) {
-	username = req.body.username;
-	console.log(username);
+
 	  res.render('home', { user : req.user });
 });
-require('./routes')(app);
 
+app.get('/login', function(req, res) {
+	
+    res.render('login', { user : req.user });
+});
+
+app.post('/login', passport.authenticate('local'), function(req, res) {
+	username = req.body.username;
+	console.log(username);
+    res.redirect('/home');
+});
 
 var server = https.createServer(options, app);
 app.set('port', process.env.PORT || 3000);
