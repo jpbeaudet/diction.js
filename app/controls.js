@@ -259,9 +259,10 @@ function Isfalse(data, index){
     afttext = afttext + "";  
     
   	diction = doc;  
-   }    
+       
 	socket.emit("save", [data, pretext , afttext]);	
 	return setTimeout(function(){toggleStartStop() ;}, 200);;
+    }
 }
 	      
 	
