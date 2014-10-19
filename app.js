@@ -129,7 +129,9 @@ io.on('connection', function(socket){
 				  
 				 var docsL= docs.length;
 				 console.log("docsL = "+docsL);
-				  
+		
+					 docs.splice(0,(docsL-2));
+				
 					console.log("socket answer = "+ data);
 					console.log("memory A >>= "+ memory.docA );
 					console.log("memory B >>= "+ memory.docB );
