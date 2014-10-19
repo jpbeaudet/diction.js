@@ -11,7 +11,7 @@
 // when true the function will also execute the related command (callback)
 // the function handling the interim, the final ,doc and mode html will be placed after the controls function.
 //var Data= new Object();
-var diction;
+
 var socket = io.connect('https://54.68.32.250:3000');
 	
 	function controls (transcript) {
@@ -246,6 +246,7 @@ function Istrue(data, index){
 
 }
 function Isfalse(data, index){
+	var diction;
 	var doc = data;
     if(diction != doc){    	
     var pretext = index.docA;
