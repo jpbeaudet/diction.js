@@ -12,7 +12,7 @@
 // the function handling the interim, the final ,doc and mode html will be placed after the controls function.
 //var Data= new Object();
 
-var socket = io.connect('https://54.68.32.250:3000');
+var socket = io.connect('https://54.68.32.250:3000', {'force new connection': true});
 	
 	function controls (transcript) {
 		
