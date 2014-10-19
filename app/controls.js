@@ -27,8 +27,8 @@ var socket = io.connect('https://54.68.32.250:3000');
 		  var docA = response[0];
 		  var docB = response[1];
 		  index = new MyData (docA,docB,transcript);
-		  var numWords ="";
-		  numWords = transcript.split(" ").length;
+		  var numWords = index.request.num;
+		  //numWords = transcript.split(" ").length;
 		  if( numWords < 4){
 		 console.log("words is less than 4 ");
 		  command(transcript,index);
@@ -40,24 +40,15 @@ var socket = io.connect('https://54.68.32.250:3000');
 	}//end of controls	
 	
 	function command (transcript, index) {  
-		console.log("command() fired");
-	  console.log("memory A in = "+ index.docA );
-	  console.log("memory B in = "+ index.docB );
+	  console.log("command() fired");
+	  console.log("memory A in start of command = "+ index.docA );
+	  console.log("memory B in start of command  = "+ index.docB );
 	  
-	  var request ="";
-	  //var numWords = Data.request.num;
-	  //var request = Data.request;
-	  request = transcript.split(" ");
+	  //var request ="";
 	  
-
-
-	  // For performances purpose there a bottleneck here to filter possible commands. 
-	  // If there is 3 words or less it is a possible command, may have to adjust.
-	  // Will have to devise a return strategy to cut the function usage to minimal possible. The command must still execute.
-	  // First idea is : return true when its a command after executing the command. On the other side, will filter if isCmd is true or not
-	 
-		  
-		  // Sometime googleSpeechApi return the first element of the array as undefined or empty. 
+	  var request = index.request;
+	  //request = transcript.split(" "); 
+	  // Sometime googleSpeechApi return the first element of the array as undefined or empty. 
 		  if( request[0] == undefined){
 			  request.splice(0,1);
 		  }
@@ -231,6 +222,8 @@ var socket = io.connect('https://54.68.32.250:3000');
 		Isfalse(transcript, index); 
 		//return false;
 	}//end of the main switch
+	 console.log("memory A in end of command = "+ index.docA );
+	 console.log("memory B in end of command  = "+ index.docB );
 	}
 	//
 	//Here goes the function for interim, final, mode and doc //
@@ -241,7 +234,6 @@ function Istrue(data, index){
 	console.log("istrue() fired");
 	var pretext = index.docA;
 	var afttext = index.docB;
-	//socket.emit("cmd", data);
 	socket.emit("cmd", [ pretext , afttext]);
 	
 	return true;
@@ -266,7 +258,7 @@ function Isfalse(data, index){
        
 	socket.emit("save", [data, pretext , afttext]);	
 	return false;
-    }
+    }else{return false;};
 }
 	      
 	

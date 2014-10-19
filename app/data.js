@@ -17,8 +17,8 @@
 		//this.textBySentences = (docA.split("." +" "+  "/[A-Z]/" )+ docB.split("." +" "+  "/[A-Z]/" ) +transcript.split("." +" "+  "/[A-Z]/" ));
 		//this.textByParagraph = docA.split(/\r\n|\r|\n/g) + docB.split(/\r\n|\r|\n/g)+ transcript.split(/\r\n|\r|\n/g);
 		//this.positionByCaracter - (this.wordsTotal - this.docA.words);
-		//this.request = transcript.split(" ");
-		//this.request.num = transcript.split(" ").length;
+		this.request = transcript.split(" ");
+		this.request.num = transcript.split(" ").length;
 	}
 		
 	
