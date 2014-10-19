@@ -93,17 +93,19 @@ db.once('open', function callback () {
 
 // routes
 require('./routes')(app);
+var username= "";
+app.get('/login', function(req, res) {
+	username = req.body.username;
+    res.render('login', { user : req.user });
+});
+
+app.post('/login', passport.authenticate('local'), function(req, res) {
+    res.redirect('/home');
+});
 
 var server = https.createServer(options, app);
 app.set('port', process.env.PORT || 3000);
 console.log(("Express server listening on port " + app.get('port')));
-
-
-//var MEMORY = mongoose.model('memory', memoryDb);
-//var Memory = new MEMORY({ docA: "", docB: "" });
-//Memory.save(function (err, Memory) {
-	 // if (err) return console.error(err);
-	//});
 
 
 var io = require('socket.io').listen(server);
@@ -113,12 +115,13 @@ io.on('connection', function(socket){
 	var memory = new Object();	
 	memory.docA = "";
 	memory.docB= "";
+
 	MEMORY.collection.remove( function (err) {
 		  if (err) throw err;
 		  // collection is now empty but not deleted
 		});
 
-	var Memory = new MEMORY({ docA: "", docB: "" });
+	var Memory = new MEMORY({ docA: "", docB: "" , username: username });
 	Memory.save(function (err, Memory) {
 		  if (err) return console.error(err);
 		});
@@ -133,18 +136,13 @@ io.on('connection', function(socket){
 		socket.on("request",function(data){
 			MEMORY.find(function (err, docs) {
 				  if (err) return console.error(err);
-				  console.log("element stored in db: docA,docB "+docs);
+				  console.log("element stored in db: docA,docB,username "+docs);
 				  
-				 var docsL= docs.length;
-				 console.log("docsL = "+docsL);				
-					console.log("socket answer = "+ data);
-					console.log("memory A >>= "+ memory.docA );
-					console.log("memory B >>= "+ memory.docB );
-					console.log("docsA docs[(docsL - 1)]>>= "+ docs[(docsL - 1)] );
-					console.log("docsA docs[docsL - 1].docA;>>= "+ docs[docsL - 1].docA);
-					console.log("docsB docs[docsL - 1].docB;>>= "+ docs[docsL - 1].docB );
-					//socket.emit("response", [ memory.docA ,memory.docB]);
-					socket.emit("response", [docs[docsL - 1].docA ,docs[docsL - 1].docB]);
+				  var docsL= docs.length;	
+				  console.log("docsA docs[(docsL - 1)]>>= "+ docs[(docsL - 1)] );
+				  console.log("docsA docs[docsL - 1].docA;>>= "+ docs[docsL - 1].docA);
+				  console.log("docsB docs[docsL - 1].docB;>>= "+ docs[docsL - 1].docB );
+				  socket.emit("response", [docs[docsL - 1].docA ,docs[docsL - 1].docB]);
 			});
 		
 		});
@@ -178,9 +176,6 @@ io.on('connection', function(socket){
 			console.log("memory B >> save= "+ memory.docB );
 
 		});
-	
-	////here will go the initial load of the current saved user data (last diction)
-
 	
 	
 });
