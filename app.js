@@ -98,12 +98,14 @@ var server = https.createServer(options, app);
 app.set('port', process.env.PORT || 3000);
 console.log(("Express server listening on port " + app.get('port')));
 
+
+var MEMORY = mongoose.model('memory', memoryDb);
 var Memory = new MEMORY({ docA: "", docB: "" });
 Memory.save(function (err, Memory) {
 	  if (err) return console.error(err);
 	});
 
-var MEMORY = mongoose.model('memory', memoryDb);
+
 var io = require('socket.io').listen(server);
 
 io.on('connection', function(socket){ 
