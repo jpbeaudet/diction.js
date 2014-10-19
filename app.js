@@ -103,24 +103,25 @@ console.log(("Express server listening on port " + app.get('port')));
 var io = require('socket.io').listen(server);
 
 io.on('connection', function(socket){ 
-	//var memoryDb = mongoose.Schema({
-	 //   docA: String,
-	 //   docB: String
-	//});
-	//var MEMORY = mongoose.model('memory', memoryDb);
+	var memoryDb = mongoose.Schema({
+	    docA: String,
+	    docB: String
+	});
+	var MEMORY = mongoose.model('memory', memoryDb);
 	//var memory ="";
-	var memory = new Object();
 	
+	
+	var memory = new Object();	
 	memory.docA = "";
 	memory.docB= "";
 		
 	console.log("socket.io started on port"+ app.get('port'));
     
 		socket.on("request",function(data){
-			//MEMORY.find(function (err, docs) {
-				//  if (err) return console.error(err);
-				//  console.log(docs);
-			//});	  
+			MEMORY.find(function (err, docs) {
+				  if (err) return console.error(err);
+				  console.log("element stored in db: docA,docB "+docs);
+			});	  
 			
 			console.log("socket answer = "+ data);
 			console.log("memory A >>= "+ memory.docA );
@@ -134,10 +135,10 @@ io.on('connection', function(socket){
 			memory.docA = data[1];
 			memory.docB = data[2];	
 			
-			//var Memory = new MEMORY({ docA: memory.docA, docB: memory.docB });
-			//Memory.save(function (err, Memory) {
-				//  if (err) return console.error(err);
-				//});
+			var Memory = new MEMORY({ docA: memory.docA, docB: memory.docB });
+			Memory.save(function (err, Memory) {
+				  if (err) return console.error(err);
+				});
 			console.log("socket save = "+ doc);
 			console.log("memory A >> save= "+ memory.docA );
 			console.log("memory B >> save= "+ memory.docB );
