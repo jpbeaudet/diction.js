@@ -151,7 +151,7 @@ io.on('connection', function(socket){
 
 			function callback (err, numAffected) {
 			  console.log("affected array element = " + numAffected)
-			})
+			}
 			//var Memory = new MEMORY({ docA: memory.docA, docB: memory.docB });
 			//Memory.save(function (err, Memory) {
 				//  if (err) return console.error(err);
