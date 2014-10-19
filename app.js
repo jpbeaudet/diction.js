@@ -91,14 +91,17 @@ db.once('open', function callback () {
   console.log("db started ------------");
 });
 
+
+
 // routes
-require('./routes')(app);
 var username= "";
 app.get('/home', function(req, res) {
 	username = req.body.username;
 	console.log(username);
 	  res.render('home', { user : req.user });
 });
+require('./routes')(app);
+
 
 var server = https.createServer(options, app);
 app.set('port', process.env.PORT || 3000);
