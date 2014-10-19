@@ -140,7 +140,7 @@ io.on('connection', function(socket){
 			memory.docB = data[2];
 			
 
-			Memory.update({ docA: '*' , docB: '*'}, { docA: memory.docA , docB: memory.docB}, callback);
+			Memory.update({ docA: '' , docB: ''}, { docA: memory.docA , docB: memory.docB}, callback);
 
 			function callback (err, numAffected) {
 			  console.log("affected array element = " + numAffected)
