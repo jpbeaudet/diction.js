@@ -258,7 +258,7 @@ function Isfalse(data, index){
        
 	socket.emit("save", [data, pretext , afttext]);	
 	return false;
-    }else{return false;};
+    }
 }
 	      
 	
