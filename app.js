@@ -121,8 +121,6 @@ io.on('connection', function(socket){
 		  console.log("starting elements stored in db: docA,docB "+docs);
 
 	});
-	
-	module.exports = mongoose.model('Favorite', favorite);
 
 	exports.deleteMEMORY = function (req, res, next) {
 	    if (req.params.callback !== null) {
