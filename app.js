@@ -97,15 +97,6 @@ db.once('open', function callback () {
 
 require('./routes')(app);
 var username= "";
-app.get('/home', function(req, res) {
-
-	  res.render('home', { user : req.user });
-});
-
-app.get('/login', function(req, res) {
-	
-    res.render('login', { user : req.user });
-});
 
 app.post('/login', passport.authenticate('local'), function(req, res) {
 	username = req.body.username;
@@ -137,14 +128,16 @@ io.on('connection', function(socket){
 		});
 		
 	console.log("socket.io started on port"+ app.get('port'));
-	MEMORY.find(function (err, docs) {
+	MEMORY.findOne({nick: username}, function(err,docs) { 
+	//MEMORY.find(function (err, docs) {
 		  if (err) return console.error(err);
-		  console.log("starting elements stored in db: docA,docB "+docs);
+		  console.log("starting elements stored in "+ username+" db: docA,docB ,username"+ docs);
 
 	});
 
 		socket.on("request",function(data){
-			MEMORY.find(function (err, docs) {
+			MEMORY.findOne({nick: username}, function(err,docs) { 
+			//MEMORY.find(function (err, docs) {
 				  if (err) return console.error(err);
 				  console.log("element stored in db: docA,docB,username "+docs);
 				  

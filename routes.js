@@ -25,6 +25,15 @@ module.exports = function (app) {
     });
   });
 
+  app.get('/home', function(req, res) {
+
+	  res.render('home', { user : req.user });
+});
+
+app.get('/login', function(req, res) {
+	
+    res.render('login', { user : req.user });
+});
 
   
 
