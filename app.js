@@ -98,7 +98,7 @@ var server = https.createServer(options, app);
 app.set('port', process.env.PORT || 3000);
 console.log(("Express server listening on port " + app.get('port')));
 
-var Memory = new MEMORY({ docA: memory.docA, docB: memory.docB });
+var Memory = new MEMORY({ docA: "", docB: "" });
 Memory.save(function (err, Memory) {
 	  if (err) return console.error(err);
 	});
