@@ -142,12 +142,14 @@ io.on('connection', function(socket){
 			//MEMORY.find(function (err, docs) {
 				  if (err) return console.error(err);
 				  console.log("element stored in "+username+" db: docA,docB,username "+doc);
-				  
+				  if(doc != undefined){
 				  var docsL= doc.length;	
 				  console.log("docsA docs[(docsL - 1)]>>= "+ doc[(docsL - 1)] );
 				  console.log("docsA docs[docsL - 1].docA;>>= "+ doc[docsL - 1].docA);
 				  console.log("docsB docs[docsL - 1].docB;>>= "+ doc[docsL - 1].docB );
 				  socket.emit("response", [doc[docsL - 1].docA ,doc[docsL - 1].docB]);
+			}else{socket.emit("response", ["" , ""]);
+			};
 			});
 		
 		});
