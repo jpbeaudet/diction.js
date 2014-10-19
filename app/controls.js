@@ -39,7 +39,8 @@ var socket = io.connect('https://54.68.32.250:3000');
 	  });    
 	}//end of controls	
 	
-	function command (transcript, index) {   
+	function command (transcript, index) {  
+		console.log("command() fired");
 	  console.log("memory A in = "+ index.docA );
 	  console.log("memory B in = "+ index.docB );
 	  
@@ -237,6 +238,7 @@ var socket = io.connect('https://54.68.32.250:3000');
 	//----------------------------------------------------------
 	
 function Istrue(data, index){
+	console.log("istrue() fired");
 	var pretext = index.docA;
 	var afttext = index.docB;
 	//socket.emit("cmd", data);
@@ -246,6 +248,7 @@ function Istrue(data, index){
 
 }
 function Isfalse(data, index){
+	console.log("isFalse() fired");
 	var diction;
 	var doc = data;
     if(diction != doc){    	
