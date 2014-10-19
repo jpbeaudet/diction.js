@@ -93,7 +93,7 @@ db.once('open', function callback () {
 
 // routes
 require('./routes')(app);
-//var username= "";
+var username= "";
 app.get('/home', function(req, res) {
 	username = req.body.username;
 	console.log(username);
