@@ -84,6 +84,7 @@ passport.deserializeUser(Account.deserializeUser());
 // mongoose
 mongoose.connect('mongodb://localhost/passport_local_mongoose');
 
+var memoryDb = require('./models/save');
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function callback () {
@@ -103,10 +104,7 @@ console.log(("Express server listening on port " + app.get('port')));
 var io = require('socket.io').listen(server);
 
 io.on('connection', function(socket){ 
-	var memoryDb = mongoose.Schema({
-	    docA: String,
-	    docB: String
-	});
+
 	var MEMORY = mongoose.model('memory', memoryDb);
 	//var memory ="";
 	
