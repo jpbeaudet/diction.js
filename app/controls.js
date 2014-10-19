@@ -18,7 +18,7 @@ var socket = io.connect('https://54.68.32.250:3000');
 		
 		var index;		
 	   console.log("controls() fired");;	
-	  // start by building the data object which will contain all relevant info 
+	  // start by building the index object which will contain all relevant info 
 	
 	
 	  socket.emit("request", "test -------------------------------->");
@@ -28,7 +28,6 @@ var socket = io.connect('https://54.68.32.250:3000');
 		  var docB = response[1];
 		  index = new MyData (docA,docB,transcript);
 		  var numWords = index.request.num;
-		  //numWords = transcript.split(" ").length;
 		  if( numWords < 4){
 		 console.log("words is less than 4 ");
 		  command(transcript,index);
@@ -42,11 +41,8 @@ var socket = io.connect('https://54.68.32.250:3000');
 	  console.log("command() fired");
 	  console.log("memory A in start of command = "+ index.docA );
 	  console.log("memory B in start of command  = "+ index.docB );
-	  
-	  //var request ="";
-	  
+
 	  var request = index.request;
-	  //request = transcript.split(" "); 
 	  // Sometime googleSpeechApi return the first element of the array as undefined or empty. 
 		  if( request[0] == undefined){
 			  request.splice(0,1);
@@ -61,15 +57,17 @@ var socket = io.connect('https://54.68.32.250:3000');
 	 var Fword = request[0];
 	 var Sword = request[1];
 	 var Tword = request[2];
-		  
-	 switch(Fword)
-	 { 
+		
+	// Here will go the actual command. There will be three section handling : movement, characters and edition mode	// 
+	// If its a command , it will execute the command and sent the transcript, index and command event number to IsTrue. 
+	//Else it send index and transcript directly to	IsFalse
+	//Command will modify the index object for further if needed (ex pretext aftext)
+	// 65 commands function to built
+		 
+	//------------------------------------------------------------------------------------------------------------------------------- 
 	 
-// Here will go the actual controls and command. There will be three section handling : movement, characters and edition mode	// 
-// Each command will have to execute and as a call back return true ( if err return null so the other side will erase the last transcript)	
-// 63 commands function to built
-//------------------------------------------------------------------------------------------------------------------------------- 
-	  
+	 switch(Fword)
+	 { 	 	  
 	  // character section 		//
 	  // ------------------------------------
 	 
@@ -225,8 +223,8 @@ var socket = io.connect('https://54.68.32.250:3000');
 	 console.log("memory B in end of command  = "+ index.docB );
 	}
 	//
-	//Here goes the function for interim, final, mode and doc //
-	//
+	//Here goes the istrue and isfalse that will emit to server last index modification for saving purposes//
+	//It will also need to emit the data for the json thickback constructor
 	//----------------------------------------------------------
 	
 function Istrue(data, index){
