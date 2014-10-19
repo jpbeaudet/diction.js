@@ -26,8 +26,10 @@ var diction;
 		  var docA = response[0];
 		  var docB = response[1];
 		  index = new MyData (docA,docB,transcript);
+		  var numWords ="";
+		  numWords = transcript.split(" ").length;
 		  if( numWords < 4){
-		 console.log("words is less than 4 ")
+		 console.log("words is less than 4 ");
 		  command(transcript,index);
 		  }else{Isfalse(transcript, index); 
 		    // return false;
@@ -39,11 +41,11 @@ var diction;
 	function command (transcript, index) {   
 	  console.log("memory A in = "+ index.docA );
 	  console.log("memory B in = "+ index.docB );
-	  var numWords ="";
+	  
 	  var request ="";
 	  //var numWords = Data.request.num;
 	  //var request = Data.request;
-	  numWords = transcript.split(" ").length;
+	  
 	  request = transcript.split(" ");
 	  console.log("numwords = "+ numWords);
 
