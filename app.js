@@ -113,6 +113,13 @@ io.on('connection', function(socket){
 	var memory = new Object();	
 	memory.docA = "";
 	memory.docB= "";
+	MEMORY.collection.remove( function (err) {
+		  if (err) throw err;
+		  // collection is now empty but not deleted
+		});
+	Memory.save(function (err, Memory) {
+		  if (err) return console.error(err);
+		});
 	var Memory = new MEMORY({ docA: "", docB: "" });
 	Memory.save(function (err, Memory) {
 		  if (err) return console.error(err);
@@ -164,10 +171,7 @@ io.on('connection', function(socket){
 						
 			memory.docA = data[0];
 			memory.docB = data[1];
-			MEMORY.collection.remove( function (err) {
-				  if (err) throw err;
-				  // collection is now empty but not deleted
-				});
+
 			var Memory = new MEMORY({ docA: memory.docA, docB: memory.docB });
 			Memory.save(function (err, Memory) {
 				  if (err) return console.error(err);
