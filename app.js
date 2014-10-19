@@ -128,25 +128,26 @@ io.on('connection', function(socket){
 		});
 		
 	console.log("socket.io started on port"+ app.get('port'));
-	MEMORY.find(function (err, docs) {
+	MEMORY.findOne({ username: username}, function (err, doc){
+	//MEMORY.find(function (err, docs) {
 		  if (err) return console.error(err);
-		  console.log("starting elements stored in db: docA,docB "+docs);
+		  console.log("starting elements stored in "+ username+" db: docA,docB "+doc);
 
 	});
 
 		socket.on("request",function(data){
 			MEMORY.findOne({ username: username}, function (err, doc){
 				  console.log(" findOne did send :"+ doc);
-				});
-			MEMORY.find(function (err, docs) {
+				
+			//MEMORY.find(function (err, docs) {
 				  if (err) return console.error(err);
-				  console.log("element stored in db: docA,docB,username "+docs);
+				  console.log("element stored in "+username+" db: docA,docB,username "+doc);
 				  
-				  var docsL= docs.length;	
-				  console.log("docsA docs[(docsL - 1)]>>= "+ docs[(docsL - 1)] );
-				  console.log("docsA docs[docsL - 1].docA;>>= "+ docs[docsL - 1].docA);
-				  console.log("docsB docs[docsL - 1].docB;>>= "+ docs[docsL - 1].docB );
-				  socket.emit("response", [docs[docsL - 1].docA ,docs[docsL - 1].docB]);
+				  var docsL= doc.length;	
+				  console.log("docsA docs[(docsL - 1)]>>= "+ doc[(docsL - 1)] );
+				  console.log("docsA docs[docsL - 1].docA;>>= "+ doc[docsL - 1].docA);
+				  console.log("docsB docs[docsL - 1].docB;>>= "+ doc[docsL - 1].docB );
+				  socket.emit("response", [doc[docsL - 1].docA ,doc[docsL - 1].docB]);
 			});
 		
 		});
