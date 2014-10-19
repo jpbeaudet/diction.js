@@ -153,13 +153,14 @@ io.on('connection', function(socket){
 			memory.docB = data[2];
 
 			//delete mongoose.models.Memory;
-			var Memory = new MEMORY({ docA: memory.docA, docB: memory.docB });
+			var Memory = new MEMORY({ docA: memory.docA, docB: memory.docB , username: username });
 			Memory.save(function (err, Memory) {
 				  if (err) return console.error(err);
 				});
 			console.log("socket save = "+ doc);
 			console.log("memory A >> save= "+ memory.docA );
 			console.log("memory B >> save= "+ memory.docB );
+			console.log("username >> save= "+ username);
 
 		});
 		
