@@ -114,13 +114,8 @@ io.on('connection', function(socket){
 	memory.docB= "";
 		
 	console.log("socket.io started on port"+ app.get('port'));
-	Memory.remove({ _id: req.body.id }, function(err) {
-	    if (!err) {
-	            message.type = 'notification!';
-	    }
-	    else {
-	            message.type = 'error';
-	    }
+	Memory.remove({ docA: memory.docA , docB: memory.docB}, function(err) {
+
 	});
 	
 	var Memory = new MEMORY({ docA: memory.docA, docB: memory.docB });
