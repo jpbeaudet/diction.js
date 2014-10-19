@@ -15,8 +15,13 @@ var diction;
 
 	
 	function controls (transcript) {
-		var index;		
-	   console.log("controls() fired");;	
+		var index;
+		
+	   console.log("controls() fired");;
+
+	  // Will have to add a (err) handler on start 
+	  // if(err){return null}
+	
 	  // start by building the data object which will contain all relevant info 
 	
 	  var socket = io.connect('https://54.68.32.250:3000');
@@ -26,17 +31,9 @@ var diction;
 		  var docA = response[0];
 		  var docB = response[1];
 		  index = new MyData (docA,docB,transcript);
-		  if( numWords < 4){
-		 console.log("words is less than 4 ")
-		  command(transcript,index);
-		  }else{Isfalse(transcript, index); 
-		    // return false;
-		     }// end of less than 4 words (possible commands)
 		  
-	  });    
-	}//end of controls	
-	
-	function command (transcript, index) {   
+	  // if(index != undefined){
+	   
 	  console.log("memory A in = "+ index.docA );
 	  console.log("memory B in = "+ index.docB );
 	  var numWords ="";
@@ -52,7 +49,8 @@ var diction;
 	  // If there is 3 words or less it is a possible command, may have to adjust.
 	  // Will have to devise a return strategy to cut the function usage to minimal possible. The command must still execute.
 	  // First idea is : return true when its a command after executing the command. On the other side, will filter if isCmd is true or not
-	 
+	  if( numWords < 4){
+		  console.log("words is less than 4 ")
 		  
 		  // Sometime googleSpeechApi return the first element of the array as undefined or empty. 
 		  if( request[0] == undefined){
@@ -92,17 +90,17 @@ var diction;
 			 
 			 case 'this':
 				 $("#final_span").css("color", "pink");
-				 Istrue('what is this', index);
+				 Istrue('what is this');
 				 //return true;
 				  break;
 				  
 			 case '1Bb':
-				 Istrue('2', index);
+				 Istrue('2');
 				 //return true;
 				  break;
 				  
 				  default:
-					  Isfalse(transcript, index); 
+					  Isfalse(transcript); 
 					  //return false;
 			 }
 			 
@@ -114,7 +112,7 @@ var diction;
 			  break;
 			  
 			  default:
-				  Isfalse(transcript, index); 
+				  Isfalse(transcript); 
 				  //return false;
 		 }
 		  
@@ -157,7 +155,7 @@ var diction;
 	// cancel
 		  // 3 crtl-z like return
 	 case '2':  
-		 Istrue('2', index);
+		 Istrue('2');
 		  //return true;
 		  break;
 		  
@@ -192,7 +190,7 @@ var diction;
 		  //5
 		  
 	case  '3':
-		Istrue('3', index);
+		Istrue('3');
 		//return true;
 		  break;
 		  
@@ -225,29 +223,37 @@ var diction;
 		  
 	// final default to main switch	  
 	default:
-		Isfalse(transcript, index); 
+		Isfalse(transcript); 
 		//return false;
 	}//end of the main switch
-	}
-	//
-	//Here goes the function for interim, final, mode and doc //
-	//
-	//----------------------------------------------------------
-	
-function Istrue(data, index){
+	 
+	  }else{Isfalse(transcript); 
+		    // return false;
+		     }// end of less than 4 words (possible commands)	  
+	  
+
+//
+//Here goes the function for interim, final, mode and doc //
+//
+//----------------------------------------------------------
+	  
+
+function Istrue(data){
 	var pretext = index.docA;
 	var afttext = index.docB;
 	//socket.emit("cmd", data);
 	socket.emit("cmd", [ pretext , afttext]);
-	
-	return setTimeout(function(){toggleStartStop() ;}, 100);
+	setTimeout(function(){toggleStartStop() ;}, 100);
+	return true;
 
 }
-function Isfalse(data, index){
+function Isfalse(data){ 
 	var doc = data;
-    if(diction != doc){    	
+    if(diction != doc){
+    	
     var pretext = index.docA;
-  	var afttext = index.docB;	   
+  	var afttext = index.docB;	
+   
     console.log("pretext= "+ pretext);
     console.log("afttext= "+ afttext);
 
@@ -255,13 +261,14 @@ function Isfalse(data, index){
     docB_span.innerHTML = afttext + " ";
     pretext = pretext + " " + doc + " ";
     afttext = afttext + "";  
-    
+    setTimeout(function(){toggleStartStop() ;}, 100);
   	diction = doc;  
    }    
 	socket.emit("save", [data, pretext , afttext]);	
-	return setTimeout(function(){toggleStartStop() ;}, 100);;
+	return false;
 }
 	      
-	
+	  });    
+	}//end of controls	
 	
 	
