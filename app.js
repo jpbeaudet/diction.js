@@ -146,9 +146,9 @@ io.on('connection', function(socket){
 			  console.log("affected array element = " + numAffected)
 			}
 			//var Memory = new MEMORY({ docA: memory.docA, docB: memory.docB });
-			//Memory.save(function (err, Memory) {
-				//  if (err) return console.error(err);
-				//});
+			Memory.save(function (err, Memory) {
+			 if (err) return console.error(err);
+				});
 			console.log("socket save = "+ doc);
 			console.log("memory A >> save= "+ memory.docA );
 			console.log("memory B >> save= "+ memory.docB );
