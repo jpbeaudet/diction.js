@@ -99,16 +99,17 @@ app.set('port', process.env.PORT || 3000);
 console.log(("Express server listening on port " + app.get('port')));
 
 
-var MEMORY = mongoose.model('memory', memoryDb);
-var Memory = new MEMORY({ docA: "", docB: "" });
-Memory.save(function (err, Memory) {
-	  if (err) return console.error(err);
-	});
+//var MEMORY = mongoose.model('memory', memoryDb);
+//var Memory = new MEMORY({ docA: "", docB: "" });
+//Memory.save(function (err, Memory) {
+	 // if (err) return console.error(err);
+	//});
 
 
 var io = require('socket.io').listen(server);
 
 io.on('connection', function(socket){ 
+	var MEMORY = mongoose.model('memory', memoryDb);
 	//var memory ="";
 	var memory = new Object();	
 	memory.docA = "";
@@ -125,13 +126,14 @@ io.on('connection', function(socket){
 			MEMORY.find(function (err, docs) {
 				  if (err) return console.error(err);
 				  console.log("element stored in db: docA,docB "+docs);
+
+			});
 			  
 			
 			console.log("socket answer = "+ data);
 			console.log("memory A >>= "+ memory.docA );
 			console.log("memory B >>= "+ memory.docB );
 			socket.emit("response", [ memory.docA ,memory.docB]);
-			});	
 		});
 		socket.on("save",function(data){
 			
@@ -140,16 +142,19 @@ io.on('connection', function(socket){
 			memory.docB = data[2];
 			
 
-			Memory.update({ docA: '' , docB: ''}, { docA: memory.docA , docB: memory.docB}, callback);
+			//Memory.update({ docA: '' , docB: ''}, { docA: memory.docA , docB: memory.docB}, callback);
 
-			function callback (err, numAffected) {
-			  console.log("affected array element = " + numAffected)
-				Memory.save(function (err, Memory) {
-					 if (err) return console.error(err);
-						});
-			}
-			//var Memory = new MEMORY({ docA: memory.docA, docB: memory.docB });
-	
+			//function callback (err, numAffected) {
+			 // console.log("affected array element = " + numAffected)
+				//Memory.save(function (err, Memory) {
+					// if (err) return console.error(err);
+						//});
+			//}
+			delete mongoose.models.Memory;
+			var Memory = new MEMORY({ docA: memory.docA, docB: memory.docB });
+			Memory.save(function (err, Memory) {
+				  if (err) return console.error(err);
+				});
 			console.log("socket save = "+ doc);
 			console.log("memory A >> save= "+ memory.docA );
 			console.log("memory B >> save= "+ memory.docB );
@@ -160,11 +165,11 @@ io.on('connection', function(socket){
 						
 			memory.docA = data[0];
 			memory.docB = data[1];
-			
-			//var Memory = new MEMORY({ docA: memory.docA, docB: memory.docB });
-			//Memory.save(function (err, Memory) {
-				 // if (err) return console.error(err);
-				//});
+			delete mongoose.models.Memory;
+			var Memory = new MEMORY({ docA: memory.docA, docB: memory.docB });
+			Memory.save(function (err, Memory) {
+				  if (err) return console.error(err);
+				});
 			console.log("memory A >> save= "+ memory.docA );
 			console.log("memory B >> save= "+ memory.docB );
 
