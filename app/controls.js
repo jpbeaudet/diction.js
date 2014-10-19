@@ -12,14 +12,14 @@
 // the function handling the interim, the final ,doc and mode html will be placed after the controls function.
 //var Data= new Object();
 var diction;
-
+var socket = io.connect('https://54.68.32.250:3000');
 	
 	function controls (transcript) {
 		var index;		
 	   console.log("controls() fired");;	
 	  // start by building the data object which will contain all relevant info 
 	
-	  var socket = io.connect('https://54.68.32.250:3000');
+	
 	  socket.emit("request", "test -------------------------------->");
 	  socket.on("response", function(response){
 		  $("#final_span").css("color", "grey");
