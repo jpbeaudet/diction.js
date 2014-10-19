@@ -136,7 +136,8 @@ io.on('connection', function(socket){
 					console.log("docsA docs[(docsL - 1)]>>= "+ docs[(docsL - 1)] );
 					console.log("docsA docs[docsL - 1].docA;>>= "+ docs[docsL - 1].docA);
 					console.log("docsB docs[docsL - 1].docB;>>= "+ docs[docsL - 1].docB );
-					socket.emit("response", [ memory.docA ,memory.docB]);
+					//socket.emit("response", [ memory.docA ,memory.docB]);
+					socket.emit("response", [docs[docsL - 1].docA ,docs[docsL - 1].docB]);
 			});
 		
 		});
@@ -145,17 +146,8 @@ io.on('connection', function(socket){
 			var doc = data[0];			
 			memory.docA = data[1];
 			memory.docB = data[2];
-			
 
-			//Memory.update({ docA: '' , docB: ''}, { docA: memory.docA , docB: memory.docB}, callback);
-
-			//function callback (err, numAffected) {
-			 // console.log("affected array element = " + numAffected)
-				//Memory.save(function (err, Memory) {
-					// if (err) return console.error(err);
-						//});
-			//}
-			delete mongoose.models.Memory;
+			//delete mongoose.models.Memory;
 			var Memory = new MEMORY({ docA: memory.docA, docB: memory.docB });
 			Memory.save(function (err, Memory) {
 				  if (err) return console.error(err);
