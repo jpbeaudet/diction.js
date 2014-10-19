@@ -126,8 +126,9 @@ io.on('connection', function(socket){
 			MEMORY.find(function (err, docs) {
 				  if (err) return console.error(err);
 				  console.log("element stored in db: docA,docB "+docs);
-				  console.log("last docs[docsL - 1] "+docs[docsL - 1]);
+				  
 				 var docsL= docs.length;
+				 console.log("docsL = "+docsL);
 				  
 					console.log("socket answer = "+ data);
 					console.log("memory A >>= "+ memory.docA );
