@@ -25,7 +25,6 @@ if ('webkitSpeechRecognition' in window) {
     	
     	txt = "";
       var interim = "";
-      interim = "-->>"
 
       for (var i = 0; i < event.results.length; ++i) {
         if (event.results[i].isFinal) {
@@ -48,6 +47,10 @@ if ('webkitSpeechRecognition' in window) {
     
       final_span.innerHTML = " @@@->  " + txt + "  <-@@@ ";
       interim_span.innerHTML = interim;
+      Intm = document.getElementById("interim_span");
+      if(Intm == ""){
+    	  interim_span.innerHTML = "-->>";  
+      }
 
      
   
