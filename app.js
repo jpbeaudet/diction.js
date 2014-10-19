@@ -94,14 +94,10 @@ db.once('open', function callback () {
 // routes
 require('./routes')(app);
 var username= "";
-app.get('/login', function(req, res) {
+app.get('/home', function(req, res) {
 	username = req.body.username;
 	console.log(username);
-    res.render('login', { user : req.user });
-});
-
-app.post('/login', passport.authenticate('local'), function(req, res) {
-    res.redirect('/home');
+	  res.render('home', { user : req.user });
 });
 
 var server = https.createServer(options, app);
