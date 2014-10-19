@@ -32,8 +32,9 @@ var socket = io.connect('https://54.68.32.250:3000');
 		  if( numWords < 4){
 		 console.log("words is less than 4 ");
 		  command(transcript,index);
+		  return true;
 		  }else{Isfalse(transcript, index); 
-		    // return false;
+		    return false;
 		     }// end of less than 4 words (possible commands)
 		  
 	  });    
