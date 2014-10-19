@@ -116,10 +116,14 @@ io.on('connection', function(socket){
 	memory.docB= "";
 		
 	console.log("socket.io started on port"+ app.get('port'));
-	//Memory.remove({ docA: memory.docA , docB: memory.docB}, function(err) {
+	MEMORY.find(function (err, docs) {
+		  if (err) return console.error(err);
+		  console.log("starting elements stored in db: docA,docB "+docs);
+		  for (i in docs){
+			docs[i] = "" ; 
+		  }
 
-	//});
-	//delete mongoose.models.Memory;
+	});
 
     
 		socket.on("request",function(data){
@@ -128,8 +132,6 @@ io.on('connection', function(socket){
 				  console.log("element stored in db: docA,docB "+docs);
 
 			});
-			  
-			
 			console.log("socket answer = "+ data);
 			console.log("memory A >>= "+ memory.docA );
 			console.log("memory B >>= "+ memory.docB );
