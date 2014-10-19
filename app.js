@@ -96,6 +96,7 @@ require('./routes')(app);
 var username= "";
 app.get('/login', function(req, res) {
 	username = req.body.username;
+	console.log(username);
     res.render('login', { user : req.user });
 });
 
