@@ -134,8 +134,8 @@ io.on('connection', function(socket){
 					console.log("memory A >>= "+ memory.docA );
 					console.log("memory B >>= "+ memory.docB );
 					console.log("docsA docs[(docsL - 1)]>>= "+ docs[(docsL - 1)] );
-					console.log("docsA docs[docsL - 1][0];>>= "+ docs[(docsL - 1)][0] );
-					console.log("docsB docs[docsL - 1][0];>>= "+ docs[(docsL - 1)][1] );
+					console.log("docsA docs[docsL - 1].docA;>>= "+ docs[docsL - 1].docA);
+					console.log("docsB docs[docsL - 1].docB;>>= "+ docs[docsL - 1].docB );
 					socket.emit("response", [ memory.docA ,memory.docB]);
 			});
 		
