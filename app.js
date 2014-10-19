@@ -110,7 +110,10 @@ var io = require('socket.io').listen(server);
 
 io.on('connection', function(socket){ 
 	var MEMORY = mongoose.model('memory', memoryDb);
-	//var memory ="";
+	MEMORY.collection.remove( function (err) {
+		  if (err) throw err;
+		  // collection is now empty but not deleted
+		});
 	var memory = new Object();	
 	memory.docA = "";
 	memory.docB= "";
@@ -128,10 +131,7 @@ io.on('connection', function(socket){
 				  console.log("element stored in db: docA,docB "+docs);
 				  
 				 var docsL= docs.length;
-				 console.log("docsL = "+docsL);
-		
-					 //docs.splice(0,(docsL-2));
-				
+				 console.log("docsL = "+docsL);				
 					console.log("socket answer = "+ data);
 					console.log("memory A >>= "+ memory.docA );
 					console.log("memory B >>= "+ memory.docB );
