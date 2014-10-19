@@ -122,36 +122,11 @@ io.on('connection', function(socket){
 
 	});
 
-	exports.deleteMEMORY = function (req, res, next) {
-	    if (req.params.callback !== null) {
-	        res.contentType = 'application/javascript';
-	    }
-	    // Changed to findOne instead of find to get a single document with the favorites.
-	    MEMORY.find({docA: req.params.name, docB:req.params.name}, function (error, doc) {
-	        if (error) {
-	            res.send(null, 500);
-	        } else if (doc) {
-	      
-	                // remove it from the array.
-	                doc.MEMORY.splice(0, doc.MEMORY.length);
-	                // save the doc
-	                doc.save(function(error) {
-	           
-	                });
-	                // stop here, otherwise 404
-	                return;
-	            
-	        }
-	        // send 404 not found
-	        res.send(null, 404);
-	    });
-	};
-
-    
 		socket.on("request",function(data){
 			MEMORY.find(function (err, docs) {
 				  if (err) return console.error(err);
 				  console.log("element stored in db: docA,docB "+docs);
+				  console.log("docs[0] "+docs[0]);
 
 			});
 			console.log("socket answer = "+ data);
