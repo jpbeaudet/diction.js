@@ -110,13 +110,13 @@ var io = require('socket.io').listen(server);
 
 io.on('connection', function(socket){ 
 	var MEMORY = mongoose.model('memory', memoryDb);
-	MEMORY.collection.remove( function (err) {
-		  if (err) throw err;
-		  // collection is now empty but not deleted
-		});
 	var memory = new Object();	
 	memory.docA = "";
 	memory.docB= "";
+	var Memory = new MEMORY({ docA: "", docB: "" });
+	Memory.save(function (err, Memory) {
+		  if (err) return console.error(err);
+		});
 		
 	console.log("socket.io started on port"+ app.get('port'));
 	MEMORY.find(function (err, docs) {
@@ -164,7 +164,10 @@ io.on('connection', function(socket){
 						
 			memory.docA = data[0];
 			memory.docB = data[1];
-			delete mongoose.models.Memory;
+			MEMORY.collection.remove( function (err) {
+				  if (err) throw err;
+				  // collection is now empty but not deleted
+				});
 			var Memory = new MEMORY({ docA: memory.docA, docB: memory.docB });
 			Memory.save(function (err, Memory) {
 				  if (err) return console.error(err);
