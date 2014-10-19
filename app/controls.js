@@ -45,9 +45,8 @@ var socket = io.connect('https://54.68.32.250:3000');
 	  var request ="";
 	  //var numWords = Data.request.num;
 	  //var request = Data.request;
-	  
 	  request = transcript.split(" ");
-	  console.log("numwords = "+ numWords);
+	  
 
 
 	  // For performances purpose there a bottleneck here to filter possible commands. 
