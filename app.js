@@ -107,16 +107,14 @@ io.on('connection', function(socket){
 
 	var MEMORY = mongoose.model('memory', memoryDb);
 	//var memory ="";
-	
-	
 	var memory = new Object();	
 	memory.docA = "";
 	memory.docB= "";
 		
 	console.log("socket.io started on port"+ app.get('port'));
-	Memory.remove({ docA: memory.docA , docB: memory.docB}, function(err) {
+	//Memory.remove({ docA: memory.docA , docB: memory.docB}, function(err) {
 
-	});
+	//});
 	
 	var Memory = new MEMORY({ docA: memory.docA, docB: memory.docB });
 	Memory.save(function (err, Memory) {
