@@ -114,6 +114,19 @@ io.on('connection', function(socket){
 	memory.docB= "";
 		
 	console.log("socket.io started on port"+ app.get('port'));
+	Memory.remove({ _id: req.body.id }, function(err) {
+	    if (!err) {
+	            message.type = 'notification!';
+	    }
+	    else {
+	            message.type = 'error';
+	    }
+	});
+	
+	var Memory = new MEMORY({ docA: memory.docA, docB: memory.docB });
+	Memory.save(function (err, Memory) {
+		  if (err) return console.error(err);
+		});
     
 		socket.on("request",function(data){
 			MEMORY.find(function (err, docs) {
@@ -131,12 +144,18 @@ io.on('connection', function(socket){
 			
 			var doc = data[0];			
 			memory.docA = data[1];
-			memory.docB = data[2];	
+			memory.docB = data[2];
 			
-			var Memory = new MEMORY({ docA: memory.docA, docB: memory.docB });
-			Memory.save(function (err, Memory) {
-				  if (err) return console.error(err);
-				});
+
+			Memory.update({ docA: '*' , docB: '*'}, { docA: memory.docA , docB: memory.docB}, callback);
+
+			function callback (err, numAffected) {
+			  console.log("affected array element = " + numAffected)
+			})
+			//var Memory = new MEMORY({ docA: memory.docA, docB: memory.docB });
+			//Memory.save(function (err, Memory) {
+				//  if (err) return console.error(err);
+				//});
 			console.log("socket save = "+ doc);
 			console.log("memory A >> save= "+ memory.docA );
 			console.log("memory B >> save= "+ memory.docB );
