@@ -32,8 +32,9 @@ if ('webkitSpeechRecognition' in window) {
         	toggleStartStop() ;
             txt = event.results[i][0].transcript;
         	interim = ""; 
-        	var isCmd="";
-        	isCmd = controls(txt) ;
+        	//var isCmd="";
+        	//isCmd = controls(txt) ;
+        	controls(txt) ;
         	restart();
         	
           //confirmation must come before final is tranfered to doc
