@@ -74,7 +74,7 @@ if ('webkitSpeechRecognition' in window) {
   	  } };
   	  
   	  function restart(){
-  		setTimeout(function(){toggleStartStop() ;}, 200);
+  		setTimeout(function(){toggleStartStop() ;}, 300);
   	  }
 }
     
