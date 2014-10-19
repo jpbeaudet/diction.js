@@ -126,13 +126,17 @@ io.on('connection', function(socket){
 			MEMORY.find(function (err, docs) {
 				  if (err) return console.error(err);
 				  console.log("element stored in db: docA,docB "+docs);
-				  console.log("docs[0] "+docs[0]);
-
+				  console.log("last docs[docsL - 1] "+docs[docsL - 1]);
+				 var docsL= docs.length;
+				  
+					console.log("socket answer = "+ data);
+					console.log("memory A >>= "+ memory.docA );
+					console.log("memory B >>= "+ memory.docB );
+					console.log("docsA docs[docsL - 1][0];>>= "+ docs[docsL - 1][0] );
+					console.log("docsB docs[docsL - 1][0];>>= "+ docs[docsL - 1][1] );
+					socket.emit("response", [ memory.docA ,memory.docB]);
 			});
-			console.log("socket answer = "+ data);
-			console.log("memory A >>= "+ memory.docA );
-			console.log("memory B >>= "+ memory.docB );
-			socket.emit("response", [ memory.docA ,memory.docB]);
+		
 		});
 		socket.on("save",function(data){
 			
