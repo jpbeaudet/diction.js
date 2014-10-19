@@ -84,6 +84,12 @@ passport.deserializeUser(Account.deserializeUser());
 // mongoose
 mongoose.connect('mongodb://localhost/passport_local_mongoose');
 
+//var db = mongoose.connection;
+//db.on('error', console.error.bind(console, 'connection error:'));
+//db.once('open', function callback () {
+//  console.log("db started ------------");
+//});
+
 // routes
 require('./routes')(app);
 
@@ -97,23 +103,41 @@ console.log(("Express server listening on port " + app.get('port')));
 var io = require('socket.io').listen(server);
 
 io.on('connection', function(socket){ 
+	//var memoryDb = mongoose.Schema({
+	 //   docA: String,
+	 //   docB: String
+	//});
+	//var MEMORY = mongoose.model('memory', memoryDb);
 	//var memory ="";
 	var memory = new Object();
+	
 	memory.docA = "";
 	memory.docB= "";
 		
 	console.log("socket.io started on port"+ app.get('port'));
     
 		socket.on("request",function(data){
+			//MEMORY.find(function (err, docs) {
+				//  if (err) return console.error(err);
+				//  console.log(docs);
+			//});	  
+			
 			console.log("socket answer = "+ data);
 			console.log("memory A >>= "+ memory.docA );
 			console.log("memory B >>= "+ memory.docB );
 			socket.emit("response", [ memory.docA ,memory.docB]);
+			
 		});
-		socket.on("save",function(data){			
+		socket.on("save",function(data){
+			
 			var doc = data[0];			
 			memory.docA = data[1];
-			memory.docB = data[2];			
+			memory.docB = data[2];	
+			
+			//var Memory = new MEMORY({ docA: memory.docA, docB: memory.docB });
+			//Memory.save(function (err, Memory) {
+				//  if (err) return console.error(err);
+				//});
 			console.log("socket save = "+ doc);
 			console.log("memory A >> save= "+ memory.docA );
 			console.log("memory B >> save= "+ memory.docB );
@@ -123,7 +147,12 @@ io.on('connection', function(socket){
 		socket.on("cmd",function(data){			
 						
 			memory.docA = data[0];
-			memory.docB = data[1];			
+			memory.docB = data[1];
+			
+			//var Memory = new MEMORY({ docA: memory.docA, docB: memory.docB });
+			//Memory.save(function (err, Memory) {
+				 // if (err) return console.error(err);
+				//});
 			console.log("memory A >> save= "+ memory.docA );
 			console.log("memory B >> save= "+ memory.docB );
 

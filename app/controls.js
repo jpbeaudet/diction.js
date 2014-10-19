@@ -12,7 +12,7 @@
 // the function handling the interim, the final ,doc and mode html will be placed after the controls function.
 //var Data= new Object();
 var diction;
-//var index;
+
 	
 	function controls (transcript) {
 		var index;
@@ -30,18 +30,9 @@ var diction;
 		  $("#final_span").css("color", "grey");
 		  var docA = response[0];
 		  var docB = response[1];
-		 // makeIndex(docA,docB);
 		  index = new MyData (docA,docB,transcript);
 		  
-		  //Data = data;
-
-
-	
-	 
-	    //function makeIndex ( docA, docB){
-	    //var index = new MyData (docA,docB,transcript); 
-	    //};
-	   if(index != undefined){
+	  // if(index != undefined){
 	   
 	  console.log("memory A in = "+ index.docA );
 	  console.log("memory B in = "+ index.docB );
@@ -71,7 +62,7 @@ var diction;
 		  console.log("request = " + request);
 		  console.log("request[0] = " + request[0]);
 		  console.log("request[1] = " + request[1]);
-		  console.log("request = " + request[2]);
+		  console.log("request [2] = " + request[2]);
 	 var Fword = request[0];
 	 var Sword = request[1];
 	 var Tword = request[2];
@@ -81,13 +72,7 @@ var diction;
 	 
 // Here will go the actual controls and command. There will be three section handling : movement, characters and edition mode	// 
 // Each command will have to execute and as a call back return true ( if err return null so the other side will erase the last transcript)	
-	 // var dots = functions(err, data){if(err){return false;}else{
-	 // >>(execute the command);
-	 // return true;
-	 // }}
-	 //if(dots){return true;}else{return null;};
-	 //
-	 // 63 commands function to built
+// 63 commands function to built
 //------------------------------------------------------------------------------------------------------------------------------- 
 	  
 	  // character section 		//
@@ -209,7 +194,11 @@ var diction;
 		//return true;
 		  break;
 		  
-	// bold
+	//select
+		  //copy
+		  //paste
+		  //cut
+    // bold
 	// italic
 	// underline
 	// capital mode (caps Lock)	  
@@ -251,7 +240,7 @@ var diction;
 
 function Istrue(data){
 	var pretext = index.docA;
-	  var afttext = index.docB;
+	var afttext = index.docB;
 	//socket.emit("cmd", data);
 	socket.emit("cmd", [ pretext , afttext]);
 	setTimeout(function(){toggleStartStop() ;}, 100);
@@ -261,29 +250,24 @@ function Istrue(data){
 function Isfalse(data){ 
 	var doc = data;
     if(diction != doc){
-    	var pretext = index.docA;
-  	  var afttext = index.docB;	
+    	
+    var pretext = index.docA;
+  	var afttext = index.docB;	
    
     console.log("pretext= "+ pretext);
     console.log("afttext= "+ afttext);
 
-    	//if(pretext != undefined){
-    		docA_span.innerHTML = pretext + " " + doc + " ";
-    		//docA_span.innerHTML += " " + doc + " ";
-    		docB_span.innerHTML = afttext + " ";
-    		pretext = pretext + " " + doc + " ";
-    		afttext = afttext + "";
-    	//}
-      
-      
-      setTimeout(function(){toggleStartStop() ;}, 100);
-  	  diction = doc;  
+    docA_span.innerHTML = pretext + " " + doc + " ";
+    docB_span.innerHTML = afttext + " ";
+    pretext = pretext + " " + doc + " ";
+    afttext = afttext + "";  
+    setTimeout(function(){toggleStartStop() ;}, 100);
+  	diction = doc;  
    }    
-	socket.emit("save", [data, pretext , afttext]);
-	
+	socket.emit("save", [data, pretext , afttext]);	
 	return false;
 }
-	   }   
+	      
 	  });    
 	}//end of controls	
 	
