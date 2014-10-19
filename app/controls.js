@@ -15,7 +15,7 @@ var diction;
 var socket = io.connect('https://54.68.32.250:3000');
 	
 	function controls (transcript) {
-		toggleStartStop() ;
+		
 		var index;		
 	   console.log("controls() fired");;	
 	  // start by building the data object which will contain all relevant info 
