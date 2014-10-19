@@ -241,7 +241,7 @@ function Istrue(data, index){
 	//socket.emit("cmd", data);
 	socket.emit("cmd", [ pretext , afttext]);
 	
-	return setTimeout(function(){toggleStartStop() ;}, 100);
+	return setTimeout(function(){toggleStartStop() ;}, 200);
 
 }
 function Isfalse(data, index){
@@ -260,7 +260,7 @@ function Isfalse(data, index){
   	diction = doc;  
    }    
 	socket.emit("save", [data, pretext , afttext]);	
-	return setTimeout(function(){toggleStartStop() ;}, 100);;
+	return setTimeout(function(){toggleStartStop() ;}, 200);;
 }
 	      
 	
