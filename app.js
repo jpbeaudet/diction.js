@@ -117,9 +117,7 @@ io.on('connection', function(socket){
 		  if (err) throw err;
 		  // collection is now empty but not deleted
 		});
-	Memory.save(function (err, Memory) {
-		  if (err) return console.error(err);
-		});
+
 	var Memory = new MEMORY({ docA: "", docB: "" });
 	Memory.save(function (err, Memory) {
 		  if (err) return console.error(err);
