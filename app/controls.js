@@ -30,8 +30,8 @@ var socket = io.connect('https://54.68.32.250:3000', {'force new connection': tr
 		  var numWords = index.request.num;
 		  if( numWords < 4){
 		 console.log("words is less than 4 ");
-		  command(transcript,index);
-		  }else{Isfalse(transcript, index); 
+		   return command(transcript,index);
+		  }else{return Isfalse(transcript, index); 
 		     }// end of less than 4 words (possible commands)
 		  
 	  });    
@@ -82,31 +82,30 @@ var socket = io.connect('https://54.68.32.250:3000', {'force new connection': tr
 			 {
 			 
 			 case 'this':
-				 $("#final_span").css("color", "pink");
-				 Istrue('what is this', index);
-				 //return true;
+				 $("#final_span").css("color", "pink");				 
+				 return Istrue('what is this', index);
 				  break;
 				  
 			 case '1Bb':
-				 Istrue('2', index);
-				 //return true;
+				 
+				 return Istrue('2', index);
 				  break;
 				  
 				  default:
 					  Isfalse(transcript, index); 
-					  //return false;
+					  return Isfalse(transcript, index); 
 			 }
 			 
 			  break;
 			  
 		 case '1B':	
 			 
-			 //return true;
+			 return Istrue('1B', index);
 			  break;
 			  
 			  default:
-				  Isfalse(transcript, index); 
-				  //return false;
+				   
+				  return Isfalse(transcript, index);
 		 }
 		  
 		  break;
@@ -148,8 +147,8 @@ var socket = io.connect('https://54.68.32.250:3000', {'force new connection': tr
 	// cancel
 		  // 3 crtl-z like return
 	 case '2':  
-		 Istrue('2', index);
-		  //return true;
+		 
+		  return Istrue('2', index);
 		  break;
 		  
 	// back
@@ -183,8 +182,8 @@ var socket = io.connect('https://54.68.32.250:3000', {'force new connection': tr
 		  //5
 		  
 	case  '3':
-		Istrue('3', index);
-		//return true;
+		
+		return Istrue('3', index);
 		  break;
 		  
 	//select
@@ -216,8 +215,8 @@ var socket = io.connect('https://54.68.32.250:3000', {'force new connection': tr
 		  
 	// final default to main switch	  
 	default:
-		Isfalse(transcript, index); 
-		//return false;
+		
+		return Isfalse(transcript, index); 
 	}//end of the main switch
 	 console.log("memory A in end of command = "+ index.docA );
 	 console.log("memory B in end of command  = "+ index.docB );
