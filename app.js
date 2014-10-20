@@ -138,8 +138,8 @@ io.on('connection', function(socket){
 		socket.on("request",function(data){
 			MEMORY.findOne({ username: username}, function (err, doc){
 				  console.log(" findOne did send :"+ doc);
-				  console.log(" last doc for doc [0]" + username+"  :"+ doc[0]);
-				  console.log(" last doc for doc [1]" + username+"  :"+ doc[1]);
+				  console.log(" last doc for :: doc.docA for" + username+"  :"+ doc.docA);
+				 
 			});
 			     MEMORY.find(function (err, docs) {
 				  if (err) return console.error(err);
