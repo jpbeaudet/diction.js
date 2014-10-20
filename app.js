@@ -183,9 +183,13 @@ io.on('connection', function(socket){
 			memory.docA = data[0];
 			memory.docB = data[1];
 
-			var Memory = new MEMORY({ docA: memory.docA, docB: memory.docB });
-			Memory.save(function (err, Memory) {
-				  if (err) return console.error(err);
+			MEMORY.collection.remove( function (err) {
+				  if (err) throw err;
+				  // collection is now empty but not deleted
+					var Memory = new MEMORY({ docA: memory.docA, docB: memory.docB , username: username });
+					Memory.save(function (err, Memory) {
+						  if (err) return console.error(err);
+						});
 				});
 			console.log("memory A >> save= "+ memory.docA );
 			console.log("memory B >> save= "+ memory.docB );
