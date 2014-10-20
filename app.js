@@ -116,17 +116,20 @@ io.on('connection', function(socket){
 	var memory = new Object();	
 	memory.docA = "";
 	memory.docB= "";
+	
+	//socket on.load >>>
 
 	//MEMORY.collection.remove( function (err) {
 		 // if (err) throw err;
 		  // collection is now empty but not deleted
-		//});
+		
 
 	//var Memory = new MEMORY({ docA: "", docB: "" , username: username });
 	//Memory.save(function (err, Memory) {
 		//  if (err) return console.error(err);
 		//});
-		
+		//});
+	
 	console.log("socket.io started on port"+ app.get('port'));
 	MEMORY.findOne({ username: username}, function (err, doc){
 	//MEMORY.find(function (err, docs) {

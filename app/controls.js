@@ -92,7 +92,6 @@ var socket = io.connect('https://54.68.32.250:3000', {'force new connection': tr
 				  break;
 				  
 				  default:
-					  Isfalse(transcript, index); 
 					  return Isfalse(transcript, index); 
 			 }
 			 
