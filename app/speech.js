@@ -74,8 +74,10 @@ if ('webkitSpeechRecognition' in window) {
   	  } };
   	  
   	  function restart(){
-  		recognizing = false;
+  		if (recognizing) {
   		setTimeout(function(){toggleStartStop() ;}, 300);
+  		}else{ recognizing = true ;
+  			setTimeout(function(){toggleStartStop() ;}, 300);}
   	  }
 }
     
