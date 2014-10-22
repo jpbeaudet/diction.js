@@ -185,8 +185,8 @@ window.onload = function()
 		 switch(Sword)
 		 {
 		 case 'text':
-			 return Istrue('newtext', index);
 			 socket.emit('newtext',"new text----------------->>");
+			 return Istrue('newtext', index);
 			 break;
 			 
 			 
