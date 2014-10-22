@@ -75,9 +75,9 @@ if ('webkitSpeechRecognition' in window) {
   	  
   	  function restart(){
   		if (recognizing) {
-  		setTimeout(function(){toggleStartStop() ;}, 300);
+  		setTimeout(function(){toggleStartStop() ;}, 400);
   		}else{ recognizing = true ;
-  			setTimeout(function(){toggleStartStop() ;}, 300);}
+  			setTimeout(function(){toggleStartStop() ;}, 400);}
   	  }
 }
     
