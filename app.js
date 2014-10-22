@@ -10,7 +10,6 @@ var express = require('express');
 var http = require('http');
 var https = require('https');
 var session    = require('express-session');
-//var MongoStore = require('connect-mongo')(express);
 var mongoose = require('mongoose');
 var passport = require('passport');
 var fs = require('fs');
@@ -33,9 +32,6 @@ var options = {
 var cookieParser = express.cookieParser(COOKIE_SECRET);
 // main config
 var app = express();
-//var server = http.createServer(app);
-//var server = require('http').Server(app);
-//app.set('port', process.env.PORT || 3000);
 app.configure(function () {
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
@@ -51,15 +47,7 @@ app.use(express.session({
     },
     key: EXPRESS_SID_KEY
 }));
-//app.use(express.session({
-	 // secret: '%%?7hhh%43SS_--$',
-	 // store: new MongoStore({
-		   // host: '127.0.0.1',
-		   // port: 27017,
-		   // db: 'diction4js'
-		    
-		 // })
-		//}));
+
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(app.router);
@@ -91,8 +79,6 @@ db.once('open', function callback () {
   console.log("db started ------------");
 });
 
-
-
 // routes
 
 require('./routes')(app);
@@ -116,11 +102,6 @@ io.on('connection', function(socket){
 	var memory = new Object();	
 	memory.docA = "";
 	memory.docB= "";
-	
-	//socket on.load >>>
-
-
-	
 	console.log("socket.io started on port"+ app.get('port'));
 	
 	MEMORY.findOne({ username: username}, function (err, doc){
@@ -166,17 +147,7 @@ io.on('connection', function(socket){
 				  console.log(" last doc for :: doc.docA for" + username+"  :"+ doc.docA);
 				  socket.emit("response", [doc.docA, doc.docB]);
 			});
-			    // MEMORY.find(function (err, docs) {
-				 // if (err) return console.error(err);
-				  //console.log("element stored in db: docA,docB,username "+docs);
-				
-				 // var docsL= docs.length;	
-				  //console.log("docsA docs[(docsL - 1)]>>= "+ docs[(docsL - 1)] );
-				  //console.log("docsA docs[docsL - 1].docA;>>= "+ docs[docsL - 1].docA);
-				 // console.log("docsB docs[docsL - 1].docB;>>= "+ docs[docsL - 1].docB );
-				 // socket.emit("response", [docs[docsL - 1].docA ,docs[docsL - 1].docB]);
-			
-			    // });
+
 		
 		});
 		socket.on("save",function(data){
@@ -194,26 +165,14 @@ io.on('connection', function(socket){
 				  MEMORY.update(query, { docA: memory.docA , docB: memory.docB, username: username}, options, callback);
 				  function callback (err, numAffected) {
 					   //numAffected is the number of updated documents
-		
+						console.log("socket save = "+ doc);
+						console.log("memory A >> save= "+ memory.docA );
+						console.log("memory B >> save= "+ memory.docB );
+						console.log("username >> save= "+ username);
 					};
 			});
 
-			//delete mongoose.models.Memory;
-			//MEMORY.collection.remove( function (err) {
-				  //if (err) throw err;
-				  // collection is now empty but not deleted
-					//var Memory = new MEMORY({ docA: memory.docA, docB: memory.docB , username: username });
-					//Memory.save(function (err, Memory) {
-						//  if (err) return console.error(err);
-						//});
-				//});
-			
-			
-			
-			console.log("socket save = "+ doc);
-			console.log("memory A >> save= "+ memory.docA );
-			console.log("memory B >> save= "+ memory.docB );
-			console.log("username >> save= "+ username);
+
 
 		});
 		
@@ -230,15 +189,12 @@ io.on('connection', function(socket){
 				  MEMORY.update(query, { docA: memory.docA , docB: memory.docB, username: username}, options, callback);
 				  function callback (err, numAffected) {
 					   //numAffected is the number of updated documents
-		
+						console.log("memory A >> save= "+ memory.docA );
+						console.log("memory B >> save= "+ memory.docB );
 					};
 			});
-			console.log("memory A >> save= "+ memory.docA );
-			console.log("memory B >> save= "+ memory.docB );
-
-		});
-	
-	
+			});	
+		
 });
 
 
