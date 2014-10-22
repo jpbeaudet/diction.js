@@ -188,6 +188,8 @@ window.onload = function()
 			 $("#final_span").css("color", "pink");	
 			 index.docA = "";
 			 index.docB ="";
+			 docA_span.innerHTML = "";
+			 docB_span.innerHTML = "";
 			 socket.emit('newtext',"new text----------------->>");
 			 
 			 return Istrue('newtext', index);
