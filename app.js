@@ -140,7 +140,7 @@ io.on('connection', function(socket){
 	
 	    socket.on("load",function(data){
 	    	MEMORY.findOne({ username: username}, function (err, doc){
-	    		  if(doc.docA != null){
+	    		  if(doc != null){
 	    			  socket.emit("res.load", [doc.docA, doc.docB]);  
 	    		  }else{
 	    			  var Memory = new MEMORY({ docA: "", docB: "" , username: username });
