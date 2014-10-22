@@ -185,7 +185,11 @@ window.onload = function()
 		 switch(Sword)
 		 {
 		 case 'text':
+			 $("#final_span").css("color", "pink");	
+			 index.docA = "";
+			 index.docB ="";
 			 socket.emit('newtext',"new text----------------->>");
+			 
 			 return Istrue('newtext', index);
 			 break;
 			 
