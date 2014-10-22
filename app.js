@@ -179,18 +179,34 @@ io.on('connection', function(socket){
 			var doc = data[0];			
 			memory.docA = data[1];
 			memory.docB = data[2];
+			
+			
+			MEMORY.findOne({ username: username}, function (err, doc){
+				var query = {docA:doc.docA, docB:doc.docB, username: username},
+				    options = { multi: true };
+				  console.log(" query =  :"+ query);
+				
+				  Model.update(query, { docA: memory.docA , docB: memory.docB, username: username}, options, callback);
+				  function callback (err, numAffected) {
+					   //numAffected is the number of updated documents
+					   Memory.save(function (err, Memory) {
+					    if (err) return console.error(err);
+						});
+					};
+			});
 
 			//delete mongoose.models.Memory;
-			MEMORY.collection.remove( function (err) {
-				  if (err) throw err;
+			//MEMORY.collection.remove( function (err) {
+				  //if (err) throw err;
 				  // collection is now empty but not deleted
-					var Memory = new MEMORY({ docA: memory.docA, docB: memory.docB , username: username });
-					Memory.save(function (err, Memory) {
-						  if (err) return console.error(err);
-						});
-				});
+					//var Memory = new MEMORY({ docA: memory.docA, docB: memory.docB , username: username });
+					//Memory.save(function (err, Memory) {
+						//  if (err) return console.error(err);
+						//});
+				//});
 			
-
+			
+			
 			console.log("socket save = "+ doc);
 			console.log("memory A >> save= "+ memory.docA );
 			console.log("memory B >> save= "+ memory.docB );
