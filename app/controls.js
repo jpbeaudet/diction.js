@@ -14,6 +14,17 @@
 
 var socket = io.connect('https://54.68.32.250:3000', {'force new connection': true});
 	
+window.onload = function()
+{
+	socket.emit("load", "load -------------------------------->");	
+	socket.on("res.load", function(response){
+		var docA =response[0];
+		var docB =response[1];
+		docA_span.innerHTML = docA;
+	    docB_span.innerHTML = docB;	
+		
+});
+
 	function controls (transcript) {
 		
 		var index;		

@@ -11,6 +11,7 @@ var diction;
 
 	 
 if ('webkitSpeechRecognition' in window) {
+
 	console.log('webSpeech recognition has started');
 	var recognizing;
     var recognition = new webkitSpeechRecognition();

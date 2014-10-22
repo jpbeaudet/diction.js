@@ -137,6 +137,23 @@ io.on('connection', function(socket){
 		  console.log("starting elements stored in "+ username+" db: docA,docB "+doc);
 
 	});
+	
+	    socket.on("load",function(data){
+	    	MEMORY.findOne({ username: username}, function (err, doc){
+	    		  if(doc.docA  != undefined && doc.docB != undefined){
+	    			  socket.emit("res.load", [doc.docA, doc.docB]);  
+	    		  }else{
+	    			  var Memory = new MEMORY({ docA: "", docB: "" , username: username });
+						Memory.save(function (err, Memory) {
+							  if (err) return console.error(err);
+							});
+	    			  socket.emit("res.load", [doc.docA, doc.docB]);    
+	    		  }
+
+				  
+			});
+	    	
+	    });
 
 		socket.on("request",function(data){
 			MEMORY.findOne({ username: username}, function (err, doc){
