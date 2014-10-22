@@ -147,7 +147,7 @@ io.on('connection', function(socket){
 						Memory.save(function (err, Memory) {
 							  if (err) return console.error(err);
 							});
-	    			  socket.emit("res.load", [doc.docA, doc.docB]);    
+	    			  socket.emit("res.load", ["", ""]);    
 	    		  }
 
 				  
