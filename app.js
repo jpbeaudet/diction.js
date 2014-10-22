@@ -142,19 +142,19 @@ io.on('connection', function(socket){
 			MEMORY.findOne({ username: username}, function (err, doc){
 				  console.log(" findOne did send :"+ doc);
 				  console.log(" last doc for :: doc.docA for" + username+"  :"+ doc.docA);
-				 
+				  socket.emit("response", doc.docA, doc.docB);
 			});
-			     MEMORY.find(function (err, docs) {
-				  if (err) return console.error(err);
-				  console.log("element stored in db: docA,docB,username "+docs);
+			    // MEMORY.find(function (err, docs) {
+				 // if (err) return console.error(err);
+				  //console.log("element stored in db: docA,docB,username "+docs);
 				
-				  var docsL= docs.length;	
-				  console.log("docsA docs[(docsL - 1)]>>= "+ docs[(docsL - 1)] );
-				  console.log("docsA docs[docsL - 1].docA;>>= "+ docs[docsL - 1].docA);
-				  console.log("docsB docs[docsL - 1].docB;>>= "+ docs[docsL - 1].docB );
-				  socket.emit("response", [docs[docsL - 1].docA ,docs[docsL - 1].docB]);
+				 // var docsL= docs.length;	
+				 // console.log("docsA docs[(docsL - 1)]>>= "+ docs[(docsL - 1)] );
+				 // console.log("docsA docs[docsL - 1].docA;>>= "+ docs[docsL - 1].docA);
+				 // console.log("docsB docs[docsL - 1].docB;>>= "+ docs[docsL - 1].docB );
+				 // socket.emit("response", [docs[docsL - 1].docA ,docs[docsL - 1].docB]);
 			
-			});
+			    // });
 		
 		});
 		socket.on("save",function(data){
