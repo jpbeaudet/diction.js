@@ -180,7 +180,20 @@ window.onload = function()
 		  // sentence
 		  
 	// accept
-		  
+    //new text		  
+	 case 'new':
+		 switch(Sword)
+		 {
+		 case 'text':
+			 return Istrue('newtext', index);
+			 socket.emit('newtext',"new text----------------->>");
+			 break;
+			 
+			 
+	     default:
+	     return Isfalse(transcript, index); 
+		 }
+	    
 			  
 	// Mode section						//
 	// ------------------------------------		

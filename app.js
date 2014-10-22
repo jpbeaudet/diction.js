@@ -119,18 +119,10 @@ io.on('connection', function(socket){
 	
 	//socket on.load >>>
 
-	//MEMORY.collection.remove( function (err) {
-		 // if (err) throw err;
-		  // collection is now empty but not deleted
-		
 
-	//var Memory = new MEMORY({ docA: "", docB: "" , username: username });
-	//Memory.save(function (err, Memory) {
-		//  if (err) return console.error(err);
-		//});
-		//});
 	
 	console.log("socket.io started on port"+ app.get('port'));
+	
 	MEMORY.findOne({ username: username}, function (err, doc){
 	//MEMORY.find(function (err, docs) {
 		  if (err) return console.error(err);
@@ -140,20 +132,33 @@ io.on('connection', function(socket){
 	
 	    socket.on("load",function(data){
 	    	MEMORY.findOne({ username: username}, function (err, doc){
-	    		  if(doc != null){
-	    			  socket.emit("res.load", [doc.docA, doc.docB]);  
-	    		  }else{
-	    			  var Memory = new MEMORY({ docA: "", docB: "" , username: username });
-						Memory.save(function (err, Memory) {
-							  if (err) return console.error(err);
-							});
-	    			  socket.emit("res.load", ["", ""]);    
-	    		  }
-
-				  
+	    		
+	    	if(doc != null){
+	    	socket.emit("res.load", [doc.docA, doc.docB]);  
+	    	}else{
+	    	var Memory = new MEMORY({ docA: "", docB: "" , username: username });
+			Memory.save(function (err, Memory) {
+			if (err) return console.error(err);
 			});
-	    	
+	    	socket.emit("res.load", ["", ""]);    
+	        }				  
+			});	    	
 	    });
+	    
+	    socket.on("newtext",function(data){
+			MEMORY.findOne({ username: username}, function (err, doc){
+				var query = {docA:doc.docA, docB:doc.docB, username: username},
+				    options = { multi: true };
+				  console.log(" query =  :"+ query);
+				
+				  MEMORY.update(query, { docA: "", docB: "", username: username}, options, callback);
+				  function callback (err, numAffected) {
+					   //numAffected is the number of updated documents
+		
+					};
+			});	
+	    });
+
 
 		socket.on("request",function(data){
 			MEMORY.findOne({ username: username}, function (err, doc){
