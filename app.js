@@ -189,9 +189,7 @@ io.on('connection', function(socket){
 				  MEMORY.update(query, { docA: memory.docA , docB: memory.docB, username: username}, options, callback);
 				  function callback (err, numAffected) {
 					   //numAffected is the number of updated documents
-					   Memory.save(function (err, Memory) {
-					    if (err) return console.error(err);
-						});
+		
 					};
 			});
 
