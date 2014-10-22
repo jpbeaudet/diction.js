@@ -4,7 +4,7 @@
 
 var doc= " ";
 var txt = "";
-var diction;
+var diction='';
 
 
 
@@ -35,7 +35,9 @@ if ('webkitSpeechRecognition' in window) {
         	interim = ""; 
         	//var isCmd="";
         	//isCmd = controls(txt) ;
+        	if(diction != txt){ 
         	controls(txt) ;
+        	}
         	//restart();
         	
           //confirmation must come before final is tranfered to doc
