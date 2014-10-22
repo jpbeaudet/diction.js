@@ -221,15 +221,18 @@ io.on('connection', function(socket){
 						
 			memory.docA = data[0];
 			memory.docB = data[1];
-
-			MEMORY.collection.remove( function (err) {
-				  if (err) throw err;
-				  // collection is now empty but not deleted
-					var Memory = new MEMORY({ docA: memory.docA, docB: memory.docB , username: username });
-					Memory.save(function (err, Memory) {
-						  if (err) return console.error(err);
-						});
-				});
+			
+			MEMORY.findOne({ username: username}, function (err, doc){
+				var query = {docA:doc.docA, docB:doc.docB, username: username},
+				    options = { multi: true };
+				  console.log(" query =  :"+ query);
+				
+				  MEMORY.update(query, { docA: memory.docA , docB: memory.docB, username: username}, options, callback);
+				  function callback (err, numAffected) {
+					   //numAffected is the number of updated documents
+		
+					};
+			});
 			console.log("memory A >> save= "+ memory.docA );
 			console.log("memory B >> save= "+ memory.docB );
 
