@@ -30,13 +30,13 @@ if ('webkitSpeechRecognition' in window) {
       for (var i = 0; i < event.results.length; ++i) {
         if (event.results[i].isFinal) {
         	$("#final_span").css("color", "grey");
-        	toggleStartStop() ;
+        	//toggleStartStop() ;
             txt = event.results[i][0].transcript;
         	interim = ""; 
         	//var isCmd="";
         	//isCmd = controls(txt) ;
         	controls(txt) ;
-        	restart();
+        	//restart();
         	
           //confirmation must come before final is tranfered to doc
           
