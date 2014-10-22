@@ -24,6 +24,7 @@ window.onload = function()
 	    docB_span.innerHTML = docB;	
 		
 });
+};
 
 	function controls (transcript) {
 		
