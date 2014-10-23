@@ -4,12 +4,7 @@
 
 var doc= " ";
 var txt = "";
-var diction='';
-
-
-
-
-	 
+var diction='';	 
 if ('webkitSpeechRecognition' in window) {
 
 	console.log('webSpeech recognition has started');
@@ -22,9 +17,8 @@ if ('webkitSpeechRecognition' in window) {
     recognition.onend = reset;
     
     
-    recognition.onresult = function (event) {
-    	
-    	txt = "";
+    recognition.onresult = function (event) {   	
+      txt = "";
       var interim = "";
 
       for (var i = 0; i < event.results.length; ++i) {
@@ -36,26 +30,17 @@ if ('webkitSpeechRecognition' in window) {
         	interim = ""; 
         	var isCmd="";
         	var isCmd = controls(txt) ;
-
-        	//if(diction != txt){ 
-        	//controls(txt) ;
-        	//}
+        	restart();       	
         	
-        	restart();
-        	
-          //confirmation must come before final is tranfered to doc
-          
         } else {
        	interim += event.results[i][0].transcript;   
         }
             
       } 
-    
-    
+       
       final_span.innerHTML = " @@@->  " + txt + "  <-@@@ ";
       interim_span.innerHTML = interim;
       icon_span.innerHTML = "-->> ";
-
     }; 
 
     
