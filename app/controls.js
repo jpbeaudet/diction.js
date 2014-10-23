@@ -34,6 +34,7 @@ window.onload = function()
 	
 	  socket.emit("request", "test -------------------------------->");
 	  socket.on("response", function(response){
+		  if(response){
 		  console.log("response fired");
 		  $("#final_span").css("color", "grey");
 		  var docA = response[0];
@@ -45,7 +46,7 @@ window.onload = function()
 		   return command(transcript,index);
 		  }else{return Isfalse(transcript, index); 
 		     }// end of less than 4 words (possible commands)
-		  
+		  }
 	  });
 	
 	}//end of controls	
