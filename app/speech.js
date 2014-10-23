@@ -35,6 +35,7 @@ if ('webkitSpeechRecognition' in window) {
         	interim = ""; 
         	var isCmd="";
         	var isCmd = controls(txt) ;
+        	txt = "";
         	//if(diction != txt){ 
         	//controls(txt) ;
         	//}
