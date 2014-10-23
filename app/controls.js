@@ -25,9 +25,10 @@ window.onload = function()
 		
 });
 };
-var lock= "";
+
 	function controls (transcript) {
-		if(transcript != lock){
+		var lock= "";
+		
 		
 		var index;		
 	   console.log("controls() fired");;	
@@ -36,6 +37,8 @@ var lock= "";
 	
 	  socket.emit("request", "test -------------------------------->");
 	  socket.on("response", function(response){
+		  if(response != lock){
+			  lock=response;
 		  $("#final_span").css("color", "grey");
 		  var docA = response[0];
 		  var docB = response[1];
@@ -46,9 +49,9 @@ var lock= "";
 		   return command(transcript,index);
 		  }else{return Isfalse(transcript, index); 
 		     }// end of less than 4 words (possible commands)
-		  
+		  }
 	  });
-	}
+	
 	}//end of controls	
 	
 	function command (transcript, index) {  
