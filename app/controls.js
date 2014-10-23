@@ -25,9 +25,9 @@ window.onload = function()
 		
 });
 };
-var lock =0; 
+
 	function controls (transcript) {
-		lock=0;
+		
 		var index;	
 		
 	   console.log("controls() fired");;	
@@ -36,8 +36,7 @@ var lock =0;
 
 	  socket.emit("request", "test -------------------------------->");
 	  socket.on("response", function(response){
-			if(lock<1){
-			  lock++;
+			
 		  console.log("response fired");
 		  $("#final_span").css("color", "grey");
 		  var docA = response[0];
@@ -49,7 +48,7 @@ var lock =0;
 		   return command(transcript,index);
 		  }else{return Isfalse(transcript, index); 
 		     }// end of less than 4 words (possible commands)
-		  }
+		  
 	  });
 	
 	}//end of controls	
