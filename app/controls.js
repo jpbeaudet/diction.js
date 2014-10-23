@@ -25,8 +25,9 @@ window.onload = function()
 		
 });
 };
-
+var lock= "";
 	function controls (transcript) {
+		if(transcript != lock){
 		
 		var index;		
 	   console.log("controls() fired");;	
@@ -46,7 +47,8 @@ window.onload = function()
 		  }else{return Isfalse(transcript, index); 
 		     }// end of less than 4 words (possible commands)
 		  
-	  });    
+	  });
+	}
 	}//end of controls	
 	
 	function command (transcript, index) {  
