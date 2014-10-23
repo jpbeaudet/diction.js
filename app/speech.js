@@ -33,7 +33,7 @@ if ('webkitSpeechRecognition' in window) {
         	toggleStartStop() ;
             txt = event.results[i][0].transcript;
         	interim = ""; 
-        	//var isCmd="";
+        	var isCmd="";
         	var isCmd = controls(txt) ;
         	//if(diction != txt){ 
         	//controls(txt) ;
