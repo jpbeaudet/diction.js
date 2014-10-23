@@ -66,7 +66,7 @@ window.onload = function()
 	  if( numWords < 4){
 	  var request = index.request;
 	  }else{
-		  var request = ""; 
+		  var request = ["",""];
 	  }
 	  // Sometime googleSpeechApi return the first element of the array as undefined or empty. 
 		  if( request[0] == undefined){
