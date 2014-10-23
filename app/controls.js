@@ -39,7 +39,6 @@ window.onload = function()
 	  socket.on("response", function(response){
 			
 		  console.log("response fired");
-          confirm = true;
 		  $("#final_span").css("color", "grey");
 		  var docA = response[0];
 		  var docB = response[1];
@@ -49,12 +48,11 @@ window.onload = function()
 		 console.log("words is less than 4 ");
 		   return command(transcript,index);
 		  }else{return Isfalse(transcript, index); 
-		     }// end of less than 4 words (possible commands)
-		  
+		     }// end of less than 4 words (possible commands)		  
 	  });
-	if (confirm){
+	
 		return true;
-	}
+	
 	}//end of controls	
 	
 	function command (transcript, index) {  
