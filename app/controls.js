@@ -44,11 +44,12 @@ window.onload = function()
 		  var docB = response[1];
 		  index = new MyData (docA,docB,transcript);
 		  var numWords = index.request.num;
-		  if( numWords < 4){
-		 console.log("words is less than 4 ");
-		   return command(transcript,index);
-		  }else{return Isfalse(transcript, index); 
-		     }// end of less than 4 words (possible commands)		  
+		  return command(transcript,index);
+		 // if( numWords < 4){
+		 //console.log("words is less than 4 ");
+		  // return command(transcript,index);
+		  //}else{return Isfalse(transcript, index); 
+		    // }// end of less than 4 words (possible commands)		  
 	  });
 	
 		return true;
@@ -57,6 +58,8 @@ window.onload = function()
 	
 	function command (transcript, index) {  
 	  console.log("command() fired");
+	  if( numWords < 4){
+	  console.log("words is less than 4 ");
 	  console.log("memory A in start of command = "+ index.docA );
 	  console.log("memory B in start of command  = "+ index.docB );
 
@@ -254,9 +257,12 @@ window.onload = function()
 		
 		return Isfalse(transcript, index); 
 	}//end of the main switch
+	  }else{
+		  return Isfalse(transcript, index); 
+	  }
 	 console.log("memory A in end of command = "+ index.docA );
 	 console.log("memory B in end of command  = "+ index.docB );
-	}
+	}//end of commands()
 	//
 	//Here goes the istrue and isfalse that will emit to server last index modification for saving purposes//
 	//It will also need to emit the data for the json thickback constructor
@@ -290,7 +296,8 @@ function Isfalse(data, index){
        
 	socket.emit("save", [data, pretext , afttext]);	
 	return false;
-    }
+    } 
+   
 }
 	      
 	
