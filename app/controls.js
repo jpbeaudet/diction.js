@@ -29,6 +29,7 @@ window.onload = function()
 	function controls (transcript) {
 		
 		var index;	
+		var confirm = false;
 		
 	   console.log("controls() fired");;	
 	  // start by building the index object which will contain all relevant info 
@@ -38,6 +39,7 @@ window.onload = function()
 	  socket.on("response", function(response){
 			
 		  console.log("response fired");
+          confirm = true;
 		  $("#final_span").css("color", "grey");
 		  var docA = response[0];
 		  var docB = response[1];
@@ -50,7 +52,9 @@ window.onload = function()
 		     }// end of less than 4 words (possible commands)
 		  
 	  });
-	
+	if (confirm){
+		return true;
+	}
 	}//end of controls	
 	
 	function command (transcript, index) {  

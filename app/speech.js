@@ -40,8 +40,10 @@ if ('webkitSpeechRecognition' in window) {
         	//if(diction != txt){ 
         	//controls(txt) ;
         	//}
+        	if(isCmd){
+        	isCmd="";
         	restart();
-        	
+        	}
           //confirmation must come before final is tranfered to doc
           
         } else {
