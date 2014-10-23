@@ -27,14 +27,16 @@ window.onload = function()
 };
 
 	function controls (transcript) {	
-		var index;		
+		var index;	
+		var lock =0;
 	   console.log("controls() fired");;	
 	  // start by building the index object which will contain all relevant info 
 	
-	
+	if(lock<1){
 	  socket.emit("request", "test -------------------------------->");
 	  socket.on("response", function(response){
 		  if(response){
+			  lock++;
 		  console.log("response fired");
 		  $("#final_span").css("color", "grey");
 		  var docA = response[0];
@@ -48,7 +50,7 @@ window.onload = function()
 		     }// end of less than 4 words (possible commands)
 		  }
 	  });
-	
+	}
 	}//end of controls	
 	
 	function command (transcript, index) {  
