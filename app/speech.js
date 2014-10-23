@@ -28,6 +28,7 @@ if ('webkitSpeechRecognition' in window) {
       var interim = "";
 
       for (var i = 0; i < event.results.length; ++i) {
+    	  txt = "";
         if (event.results[i].isFinal) {
         	$("#final_span").css("color", "grey");
         	//toggleStartStop() ;
