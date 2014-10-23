@@ -259,7 +259,7 @@ window.onload = function()
 		return Isfalse(transcript, index); 
 	}//end of the main switch
 	  }else{
-		  return Isfalse(transcript, index); 
+		 Isfalse(transcript, index); 
 	  }
 	 console.log("memory A in end of command = "+ index.docA );
 	 console.log("memory B in end of command  = "+ index.docB );
