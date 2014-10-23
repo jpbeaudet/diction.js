@@ -34,9 +34,7 @@ if ('webkitSpeechRecognition' in window) {
         	toggleStartStop() ;
             txt = event.results[i][0].transcript;
         	interim = ""; 
-        	var isCmd="";
-        	var isCmd = controls(txt) ;
-        	txt = "";
+
         	//if(diction != txt){ 
         	//controls(txt) ;
         	//}
@@ -50,7 +48,9 @@ if ('webkitSpeechRecognition' in window) {
         }
             
       } 
-    
+  	var isCmd="";
+	var isCmd = controls(txt) ;
+	txt = "";
     
       final_span.innerHTML = " @@@->  " + txt + "  <-@@@ ";
       interim_span.innerHTML = interim;
