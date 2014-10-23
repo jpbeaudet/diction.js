@@ -12,8 +12,8 @@
 // the function handling the interim, the final ,doc and mode html will be placed after the controls function.
 //var Data= new Object();
 
-//var socket = io.connect('https://54.68.32.250:3000', {'force new connection': true});
-var socket = io.connect('https://54.68.32.250:3000');	
+var socket = io.connect('https://54.68.32.250:3000', {'force new connection': true});
+//var socket = io.connect('https://54.68.32.250:3000');	
 window.onload = function()
 {
 	socket.emit("load", "load -------------------------------->");	
@@ -34,7 +34,7 @@ window.onload = function()
 	
 	  socket.emit("request", "test -------------------------------->");
 	  socket.on("response", function(response){
-		
+		  console.log("response fired");
 		  $("#final_span").css("color", "grey");
 		  var docA = response[0];
 		  var docB = response[1];
