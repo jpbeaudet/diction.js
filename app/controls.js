@@ -43,7 +43,7 @@ window.onload = function()
 		  var docA = response[0];
 		  var docB = response[1];
 		  index = new MyData (docA,docB,transcript);
-		  var numWords = index.request.num;
+		  //var numWords = index.request.num;
 		  return command(transcript,index);
 		 // if( numWords < 4){
 		 //console.log("words is less than 4 ");
@@ -58,6 +58,7 @@ window.onload = function()
 	
 	function command (transcript, index) {  
 	  console.log("command() fired");
+	  var numWords = index.request.num;
 	  if( numWords < 4){
 	  console.log("words is less than 4 ");
 	  console.log("memory A in start of command = "+ index.docA );
