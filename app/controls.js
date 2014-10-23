@@ -12,8 +12,7 @@
 // the function handling the interim, the final ,doc and mode html will be placed after the controls function.
 //var Data= new Object();
 
-var socket = io.connect('https://54.68.32.250:3000', {'force new connection': true});
-//var socket = io.connect('https://54.68.32.250:3000');	
+var socket = io.connect('https://54.68.32.250:3000', {'force new connection': true});	
 window.onload = function()
 {
 	socket.emit("load", "load -------------------------------->");	
@@ -26,11 +25,8 @@ window.onload = function()
 });
 };
 
-	function controls (transcript) {
-		
-		var index;	
-		var confirm = false;
-		
+	function controls (transcript) {		
+		var index;		
 	   console.log("controls() fired");;	
 	  // start by building the index object which will contain all relevant info 
 	
@@ -43,13 +39,8 @@ window.onload = function()
 		  var docA = response[0];
 		  var docB = response[1];
 		  index = new MyData (docA,docB,transcript);
-		  //var numWords = index.request.num;
 		  return command(transcript,index);
-		 // if( numWords < 4){
-		 //console.log("words is less than 4 ");
-		  // return command(transcript,index);
-		  //}else{return Isfalse(transcript, index); 
-		    // }// end of less than 4 words (possible commands)		  
+		  
 	  });
 	
 		return true;
@@ -60,10 +51,11 @@ window.onload = function()
 	  console.log("command() fired");
 	  var numWords = index.request.num;
 	  
-	  console.log("words is less than 4 ");
+	
 	  console.log("memory A in start of command = "+ index.docA );
 	  console.log("memory B in start of command  = "+ index.docB );
 	  if( numWords < 4){
+	  console.log("words is less than 4 ");
 	  var request = index.request;
 	  }else{
 		  var request = ["",""];
@@ -257,8 +249,7 @@ window.onload = function()
 		  
 		  
 	// final default to main switch	  
-	default:
-		
+	default:		
 		return Isfalse(transcript, index); 
 	}//end of the main switch
 	 
