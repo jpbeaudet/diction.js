@@ -25,10 +25,11 @@ window.onload = function()
 		
 });
 };
-
-	function controls (transcript) {	
+var lock =0; 
+	function controls (transcript) {
+		lock=0;
 		var index;	
-		var lock =0;
+		
 	   console.log("controls() fired");;	
 	  // start by building the index object which will contain all relevant info 
 	
