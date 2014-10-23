@@ -31,7 +31,7 @@ if ('webkitSpeechRecognition' in window) {
     	  txt = "";
         if (event.results[i].isFinal) {
         	$("#final_span").css("color", "grey");
-        	//toggleStartStop() ;
+        	toggleStartStop() ;
             txt = event.results[i][0].transcript;
         	interim = ""; 
         	var isCmd="";
@@ -40,7 +40,7 @@ if ('webkitSpeechRecognition' in window) {
         	//if(diction != txt){ 
         	//controls(txt) ;
         	//}
-        	//restart();
+        	restart();
         	
           //confirmation must come before final is tranfered to doc
           
