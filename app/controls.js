@@ -12,8 +12,8 @@
 // the function handling the interim, the final ,doc and mode html will be placed after the controls function.
 //var Data= new Object();
 
-var socket = io.connect('https://54.68.32.250:3000', {'force new connection': true});
-	
+//var socket = io.connect('https://54.68.32.250:3000', {'force new connection': true});
+var socket = io.connect('https://54.68.32.250:3000');	
 window.onload = function()
 {
 	socket.emit("load", "load -------------------------------->");	
@@ -26,10 +26,7 @@ window.onload = function()
 });
 };
 
-	function controls (transcript) {
-		var lock= "";
-		
-		
+	function controls (transcript) {	
 		var index;		
 	   console.log("controls() fired");;	
 	  // start by building the index object which will contain all relevant info 
@@ -37,8 +34,7 @@ window.onload = function()
 	
 	  socket.emit("request", "test -------------------------------->");
 	  socket.on("response", function(response){
-		  if(response != lock){
-			  lock=response;
+		
 		  $("#final_span").css("color", "grey");
 		  var docA = response[0];
 		  var docB = response[1];
@@ -49,7 +45,7 @@ window.onload = function()
 		   return command(transcript,index);
 		  }else{return Isfalse(transcript, index); 
 		     }// end of less than 4 words (possible commands)
-		  }
+		  
 	  });
 	
 	}//end of controls	
