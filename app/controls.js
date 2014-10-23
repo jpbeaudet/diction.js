@@ -33,10 +33,10 @@ var lock =0;
 	   console.log("controls() fired");;	
 	  // start by building the index object which will contain all relevant info 
 	
-	if(lock<1){
+
 	  socket.emit("request", "test -------------------------------->");
 	  socket.on("response", function(response){
-		  if(response){
+			if(lock<1){
 			  lock++;
 		  console.log("response fired");
 		  $("#final_span").css("color", "grey");
@@ -51,7 +51,7 @@ var lock =0;
 		     }// end of less than 4 words (possible commands)
 		  }
 	  });
-	}
+	
 	}//end of controls	
 	
 	function command (transcript, index) {  
