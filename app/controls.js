@@ -59,12 +59,15 @@ window.onload = function()
 	function command (transcript, index) {  
 	  console.log("command() fired");
 	  var numWords = index.request.num;
-	  //if( numWords < 4){
+	  
 	  console.log("words is less than 4 ");
 	  console.log("memory A in start of command = "+ index.docA );
 	  console.log("memory B in start of command  = "+ index.docB );
-
+	  if( numWords < 4){
 	  var request = index.request;
+	  }else{
+		  var request = ""; 
+	  }
 	  // Sometime googleSpeechApi return the first element of the array as undefined or empty. 
 		  if( request[0] == undefined){
 			  request.splice(0,1);
@@ -258,9 +261,7 @@ window.onload = function()
 		
 		return Isfalse(transcript, index); 
 	}//end of the main switch
-	 // }else{
-		 // return Isfalse(transcript, index); 
-	//  }
+	 
 	 console.log("memory A in end of command = "+ index.docA );
 	 console.log("memory B in end of command  = "+ index.docB );
 	}//end of commands()
