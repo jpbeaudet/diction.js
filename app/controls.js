@@ -59,7 +59,7 @@ window.onload = function()
 	function command (transcript, index) {  
 	  console.log("command() fired");
 	  var numWords = index.request.num;
-	  if( numWords < 4){
+	  //if( numWords < 4){
 	  console.log("words is less than 4 ");
 	  console.log("memory A in start of command = "+ index.docA );
 	  console.log("memory B in start of command  = "+ index.docB );
@@ -258,9 +258,9 @@ window.onload = function()
 		
 		return Isfalse(transcript, index); 
 	}//end of the main switch
-	  }else{
-		 Isfalse(transcript, index); 
-	  }
+	 // }else{
+		 // return Isfalse(transcript, index); 
+	//  }
 	 console.log("memory A in end of command = "+ index.docA );
 	 console.log("memory B in end of command  = "+ index.docB );
 	}//end of commands()
