@@ -16,7 +16,7 @@ if ('webkitSpeechRecognition' in window) {
     reset();
     recognition.onend = reset;
     
-    
+    manual_span.innerHTML = '<textarea name ="manual" rows="1" cols="1"></textarea>';
     recognition.onresult = function (event) {   	
       txt = "";
       var interim = "";
@@ -40,7 +40,8 @@ if ('webkitSpeechRecognition' in window) {
        
       final_span.innerHTML = " @@@->  " + txt + "  <-@@@ ";
       interim_span.innerHTML = interim;
-      icon_span.innerHTML = '<textarea rows="1" cols="1"></textarea>';
+      icon_span.innerHTML = "-->";
+      
     }; 
 
     
