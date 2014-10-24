@@ -54,26 +54,7 @@ app.get('/login', function(req, res) {
 	  res.sendfile('./speech.js');
 	});
   
-  app.get('/node_modules/tinymce/tinymce.min.js', function(req, res) {
-	  res.set('Content-Type', 'text/javascript');
-	  res.sendfile('./node_modules/tinymce/tinymce.min.js');
-	});
-  
-  app.get('/node_modules/tinymce/themes/modern/theme.min.js', function(req, res) {
-	  res.set('Content-Type', 'text/javascript');
-	  res.sendfile('./node_modules/tinymce/themes/modern/theme.min.js');
-	});
-  
-  app.get('/node_modules/tinymce/skins/lightgray/skin.min.css', function(req, res) {
-	  //res.set('Content-Type', 'text/javascript');
-	  res.sendfile('./node_modules/tinymce/skins/lightgray/skin.min.css');
-	});
-  
-  app.get('/node_modules/tinymce/skins/lightgray/content.min.css', function(req, res) {
-	  //res.set('Content-Type', 'text/javascript');
-	  res.sendfile('./node_modules/tinymce/skins/lightgray/content.min.css');
-	});
-  
+
   app.get('/data.js', function(req, res) {
 	  res.set('Content-Type', 'text/javascript');
 	  res.sendfile('./data.js');
