@@ -41,7 +41,7 @@ if ('webkitSpeechRecognition' in window) {
       final_span.innerHTML = " @@@->  " + txt + "  <-@@@ ";
       interim_span.innerHTML = interim;
       icon_span.innerHTML = "-->";
-      manual_span.innerHTML = '<textarea name ="manual" rows="1" cols="1"></textarea>';
+      //manual_span.innerHTML = '<textarea name ="manual" rows="1" cols="1"></textarea>';
       
     }; 
 
