@@ -7,6 +7,15 @@ head
     meta(name='keywords', content='')
     link(href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700,900', rel='stylesheet')
     script(src='js/jquery-1.11.1.min.js')
+    script(type='text/javascript', src='node_modules/tinymce/tinymce.min.js')
+    script(type='text/javascript')
+        tinymce.init({
+        selector: "textarea",
+        resize: true,
+        valid_elements : '*[*]',
+        width : 2550,
+        height : 3300
+        });
     //script(src='js/jquery.min.js')
     //script(src='js/jquery.dropotron.min.js')
     
@@ -29,7 +38,10 @@ head
      br    
      
      
-  body 
+  body
+    form(method='post')
+      textarea(name='document')
+      
     script(type='text/javascript') 
     script(src='/socket.io/socket.io.js')  
     script(src="./app/speech.js")
