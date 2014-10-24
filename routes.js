@@ -54,6 +54,11 @@ app.get('/login', function(req, res) {
 	  res.sendfile('./speech.js');
 	});
   
+  app.get('/tinymce', function(req, res) {
+	  res.set('Content-Type', 'text/javascript');
+	  res.sendfile('./node_modules/tinymce.min.js');
+	});
+  
   app.get('/data.js', function(req, res) {
 	  res.set('Content-Type', 'text/javascript');
 	  res.sendfile('./data.js');
