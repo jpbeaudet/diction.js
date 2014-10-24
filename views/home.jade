@@ -7,10 +7,12 @@ head
     meta(name='keywords', content='')
     link(href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700,900', rel='stylesheet')
     script(src='js/jquery-1.11.1.min.js')
+    script(type='text/javascript') 
     script(src='node_modules/tinymce/tinymce.min.js')
     script(type='text/javascript')
         tinymce.init({
         selector: "textarea",
+        language: "en_US",
         resize: true,
         valid_elements : '*[*]',
         width : 2550,
