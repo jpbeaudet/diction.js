@@ -56,7 +56,7 @@ app.get('/login', function(req, res) {
   
   app.get('/tinymce.min.js', function(req, res) {
 	  res.set('Content-Type', 'text/javascript');
-	  res.sendfile('./node_modules/tinymce.min.js');
+	  res.sendfile('./node_modules/tinymce/tinymce.min.js');
 	});
   
   app.get('/data.js', function(req, res) {
