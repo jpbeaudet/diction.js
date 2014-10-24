@@ -21,7 +21,7 @@ head
     //script(src='js/jquery.min.js')
     //script(src='js/jquery.dropotron.min.js')
     
-
+  body
    .container
     center
      a(href="/logout") Logout
@@ -38,11 +38,12 @@ head
      span#interim_span(style='color: red;')    
      span#docB_span
      br    
-     
-     
-  body
-    form(method='post')
-      textarea(name='document')
+   .container 
+    center     
+     form(method='post')
+       textarea(name='document')     
+  
+
       
     script(type='text/javascript') 
     script(src='/socket.io/socket.io.js')  
