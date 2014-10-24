@@ -1,0 +1,1397 @@
+[33mcommit b605fe070fa844c2be30d7bb4bb235af52ad8667[m
+Author: Jean-Philippe Beaudet <jpbeaudet@ip-172-31-47-39.us-west-2.compute.internal>
+Date:   Thu Oct 16 15:31:05 2014 +0000
+
+    iadd
+
+[33mcommit 594120bc1d551b3e1fa915aea44a53ed39e7872e[m
+Author: Jean-Philippe Beaudet <jpbeaudet@ip-172-31-47-39.us-west-2.compute.internal>
+Date:   Thu Oct 16 15:26:58 2014 +0000
+
+    itrying to sync
+
+[33mcommit e0ea57d30e550e7eca9c64610d9bbdd706c1fc34[m
+Author: Jean-Philippe Beaudet <jpbeaudet@ip-172-31-47-39.us-west-2.compute.internal>
+Date:   Thu Oct 16 15:17:52 2014 +0000
+
+    icomiting node_modulesw
+
+[33mcommit 61cb08154bd9fce86a5643ae1aa77af2dfb558dd[m
+Author: Jean-Philippe Beaudet <jpbeaudet@ip-172-31-47-39.us-west-2.compute.internal>
+Date:   Thu Oct 16 15:09:53 2014 +0000
+
+    icomiting revert wq
+
+[33mcommit 851f8bd61eb8f6b4925bd5e216161d0201d70749[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 18:04:25 2014 -0400
+
+    same so revert for smimpler
+
+[33mcommit a7be1f342b00f65ca124682ef941cd70996ca382[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 18:02:49 2014 -0400
+
+    corr
+
+[33mcommit 76531ef8960b6aa2159cbe37817e76e7ae43e34a[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 18:01:07 2014 -0400
+
+    testing a callback nesting
+
+[33mcommit 8ab7346c07272d53478e6477d4f7a1e584ad9d8d[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 17:53:05 2014 -0400
+
+    semi final commit still timing recognition bug have to fix tthis
+
+[33mcommit 89e005f9412bcc0861d852ab2e123ecaa2c8e6d9[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 17:49:40 2014 -0400
+
+    more
+
+[33mcommit 196571fea05ab6fc3fa4b61552295fbe0cb46a5a[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 17:48:23 2014 -0400
+
+    more
+
+[33mcommit adaffb151d3c8d2ffa7b42d28e3b8838479f34b1[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 17:36:03 2014 -0400
+
+    more g
+
+[33mcommit d9dfe3bdda00010936376be9f2bc472856edafe6[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 17:33:24 2014 -0400
+
+    mor n
+
+[33mcommit db32f245219e03989c0d36379f719d3f0f44d806[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 17:31:17 2014 -0400
+
+    more
+
+[33mcommit 4fe1e4020aaf96ea53317581c2cb6e2563e4d9c5[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 17:30:04 2014 -0400
+
+    more
+
+[33mcommit e82f813c97368b232d3dc428420f6dcb4802c0b3[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 17:28:09 2014 -0400
+
+    more
+
+[33mcommit 3fb2bf0b81bc1620a152b334c643d93d875ca237[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 17:23:45 2014 -0400
+
+    more trouble
+
+[33mcommit 329910fdf79013d47548f02112b2a6631dd93449[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 17:20:10 2014 -0400
+
+    revert
+
+[33mcommit ae8144ca33a558e1bd11c2cf46b1251ab807664a[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 17:14:31 2014 -0400
+
+    more nnn
+
+[33mcommit ab5792f2ca1af5dfbe9254f9681e0a29f5b2dd2b[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 17:09:53 2014 -0400
+
+    more
+
+[33mcommit 412db3714b9220874228804c8fa2a44935b82d45[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 17:06:06 2014 -0400
+
+    jquery control mopre
+
+[33mcommit db50886192fd8bd24d365b323a98df839dcb51f6[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 17:03:05 2014 -0400
+
+    more jj88
+
+[33mcommit a0c7438f19dc205bfae9092eb5372cd6960c7bb5[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 17:00:10 2014 -0400
+
+    more jjj7
+
+[33mcommit 9bb116819109b5d2d035ce6fd7b4b2f25bdceffe[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 16:57:48 2014 -0400
+
+    jquery more 77
+
+[33mcommit a168294147a1d4b7774a1f61c81ad4d314d86e50[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 16:55:50 2014 -0400
+
+    jquery troubleshoot
+
+[33mcommit 2e8dbf53bddb31096bcd813fc981e8a4370b1a3d[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 16:54:10 2014 -0400
+
+    jquery more
+
+[33mcommit c3dbf2821cdda0e9796b22651ba37b305b4a502d[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 16:52:10 2014 -0400
+
+    jquery moe revert
+
+[33mcommit c8882c98e35df9f0502c4eabb16e323c4ca7ebb0[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 16:50:19 2014 -0400
+
+    jquery more
+
+[33mcommit 52aed7947958b6fd100a797ee016d1e5c2e630d1[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 16:48:20 2014 -0400
+
+    jquery semi fin
+
+[33mcommit 4432efecccf12304951030433e920fe3c37fced6[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 16:41:30 2014 -0400
+
+    jquery
+
+[33mcommit 71855d9caf17a2a0d92ea63e2444b9e54e8aa10f[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 16:39:28 2014 -0400
+
+    more
+
+[33mcommit ea337be19d06a0c04aa729215fff9bb7cb712442[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 16:36:31 2014 -0400
+
+    jquery test
+
+[33mcommit 7c216bd336decf18c053eb0ecc65a4f77f9c24a8[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 16:32:14 2014 -0400
+
+    jquery revert again
+
+[33mcommit 06fc1dfa6ad7be28a8757229553c6bc5d4c8b980[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 16:31:20 2014 -0400
+
+    more
+
+[33mcommit 5cfb7fe34fcf97f598b09138d0bbf213219a4569[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 16:28:49 2014 -0400
+
+    jquery10
+
+[33mcommit f526657f4679795c7caeed7b65262bc2c5715414[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 16:26:41 2014 -0400
+
+    more revrt jquery
+
+[33mcommit 552940d8ea66e3f075a46db23399c2443dbabe57[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 16:25:49 2014 -0400
+
+    jquery revrt
+
+[33mcommit 7b7b03337028ebc37812f1b6067befb66969e448[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 16:24:09 2014 -0400
+
+    jquey7
+
+[33mcommit ced910427dabb8222e8a5f9da0382265c74411f8[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 16:22:46 2014 -0400
+
+    jquery 5
+
+[33mcommit dc57f954eb3edf250874243fd4657d7b7d1e9076[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 16:20:51 2014 -0400
+
+    jquery
+
+[33mcommit 3cfaa862d9b947025b917f2806ae08943bd425c1[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 16:17:20 2014 -0400
+
+    jquery
+
+[33mcommit 3c64a4e42421aa05ef7dceaef06854a567e26125[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 16:16:17 2014 -0400
+
+    jquery5
+
+[33mcommit 2c8803253969f7a56143c447819a1474090b69a1[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 16:14:07 2014 -0400
+
+    jquery 3
+
+[33mcommit 4d6910bb9211b4b8eabc02af3213ab69b5c718ee[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 16:13:17 2014 -0400
+
+    jquery2
+
+[33mcommit 0c7bd8ea9e1949a233d4d5f158c1bb9ae5222b00[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 16:11:00 2014 -0400
+
+    jquery1
+
+[33mcommit 3d2214f4c7579de7843123e2dd1958248df5068b[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 16:09:59 2014 -0400
+
+    socket4
+
+[33mcommit aa40847a6fe13eb1541362150883a3ce730b387e[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 16:08:03 2014 -0400
+
+    socket 2
+
+[33mcommit c94570d88eb72c4ea99a13cea1762947785088cd[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 16:05:53 2014 -0400
+
+    socket 1
+
+[33mcommit 4f8805db7da2473585e10245f3f6618632f18094[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 16:03:48 2014 -0400
+
+    finishing3
+
+[33mcommit 15fb4fd0cdec6d63ff9e3cdb9499ea0f8475c5d0[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 16:01:34 2014 -0400
+
+    finishing 2
+
+[33mcommit 5e3c9db4f04915f530556fe002b44d269092d83b[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 16:00:00 2014 -0400
+
+    finishing touch
+
+[33mcommit b4688be163d7383ccd05bfb08ae1113904d20bf3[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 15:57:26 2014 -0400
+
+    revrt
+
+[33mcommit 4f621cec793a06e919fe42374616bb2063ce5799[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 15:55:10 2014 -0400
+
+    setup2
+
+[33mcommit 71b07fcd789941eceae79feacbdf7307dbfe7d89[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 15:51:42 2014 -0400
+
+    restrting control setup for socket setup
+
+[33mcommit e13c77b35d30ee83e4c6d42f2197b8acd375bc39[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 15:46:38 2014 -0400
+
+    trying to revert again
+
+[33mcommit c9abe40ed2b3c029ad48c43ccec164ffa647d7c8[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 15:43:56 2014 -0400
+
+    revert
+
+[33mcommit f185d517c80906374854a6569299d5fbd69578fd[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 15:42:40 2014 -0400
+
+    more
+
+[33mcommit 6076eb1962293e0c32220a29d57b81c232f769e2[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 15:40:33 2014 -0400
+
+    more
+
+[33mcommit 38c2a6f01fd35839e00373015de75928c054a27b[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 15:34:41 2014 -0400
+
+    more
+
+[33mcommit 8b71b583c745588d3dc3e90b3a9cfd8e7216794d[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 15:31:04 2014 -0400
+
+    more
+
+[33mcommit 33b7b3a31113e1c272e4eb516fc5c0146ab90584[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 15:23:56 2014 -0400
+
+    more
+
+[33mcommit d7e55678d03cc72ab0f174c1aa76b54da37e9c89[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 15:18:00 2014 -0400
+
+    starting socket.io setup with controls
+
+[33mcommit 6feaec3a5750c697c7d405323a7ffcff0f19bee6[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 14:28:46 2014 -0400
+
+    final commit
+
+[33mcommit e7045cbe22dd2ef9ff95007be178a37fb17b56fa[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 14:27:43 2014 -0400
+
+    semi-final commit for webspeech api setup
+
+[33mcommit 248cb6580e38cc98278ded6aea8e729eec6b8b7b[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 14:25:27 2014 -0400
+
+    more
+
+[33mcommit 322b6489980a48574bb9e44002473d8383d0b2c2[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 14:16:14 2014 -0400
+
+    more
+
+[33mcommit 45d94047dd3795446e7ccd611d74017ffe4c5dea[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 14:11:44 2014 -0400
+
+    more
+
+[33mcommit 567cfba9d626fa8d14c5c32cf997e4b3af8d1097[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 14:10:20 2014 -0400
+
+    molre
+
+[33mcommit 919341c46e7d9a8d241c2a5a5ce68d5f82fd002a[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 14:08:59 2014 -0400
+
+    more
+
+[33mcommit 880fe24d8ab16b1ed837b8b4764c84b2f15c86a3[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 14:06:37 2014 -0400
+
+    more
+
+[33mcommit 1db56bb93b01c12bfae9889d62b94b5f4bea73d5[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 14:05:08 2014 -0400
+
+    more
+
+[33mcommit 30c0cba9382b20c81403a0601e6f34dfa23c441f[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 14:03:41 2014 -0400
+
+    more
+
+[33mcommit c30b7437756df44c769488686b768e5005a3cb83[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 14:02:42 2014 -0400
+
+    more
+
+[33mcommit 9150c5f7db0f711c64b325fdd37d16e450b9aa97[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 14:00:41 2014 -0400
+
+    more
+
+[33mcommit 28c741cfe36abd596e4d6ad5edd3c78938bc6737[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 13:57:07 2014 -0400
+
+    more
+
+[33mcommit 39497dc7f9abbf0a2daf049ac47d1e0777a7d364[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 13:55:02 2014 -0400
+
+    more
+
+[33mcommit 1943ca9c0eaf7c7a7f68e02b0a1ee525922cb0c2[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 13:53:28 2014 -0400
+
+    more
+
+[33mcommit 99e9cd30cdc20dc5eb1bc641367a72916c75d354[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 13:51:12 2014 -0400
+
+    more
+
+[33mcommit 3ae4a95ec3a66536dbf1471428a6349526a047fe[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 13:49:59 2014 -0400
+
+    more
+
+[33mcommit 68958bfc7c766a044bb8a45131794d344e2665e1[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 13:48:51 2014 -0400
+
+    imore
+
+[33mcommit 4c8237fcade70ed3804cff77285d09f5f0b1085e[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 13:47:07 2014 -0400
+
+    more
+
+[33mcommit fc897e1ee505d393f085bf11b36db88d2db4bb84[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 13:29:45 2014 -0400
+
+    more
+
+[33mcommit 2b099be4a13fee654564e8eb2fd32a4e84f4d69b[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 13:25:47 2014 -0400
+
+    more
+
+[33mcommit eb74455253510c67ffdeccd9db979527fb1140fd[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 13:24:33 2014 -0400
+
+    more
+
+[33mcommit 36e51c20ca884f82e1eb274bc74381f8d47d79df[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 13:23:17 2014 -0400
+
+    more
+
+[33mcommit 4b5598f6f9b07da79ef14187fc89b1c9043a50e4[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 13:20:46 2014 -0400
+
+    more
+
+[33mcommit effb2d38842f3fe9bff10131d6a72474a45be424[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 13:15:53 2014 -0400
+
+    more
+
+[33mcommit b34c5768db49b23ea285d262942e36735445ddbd[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 13:14:24 2014 -0400
+
+    more
+
+[33mcommit 33a5203a21ae5522ab7fb3c4bd959fb5facea471[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 13:12:12 2014 -0400
+
+    more
+
+[33mcommit c4a73132b2b599e9337bfdcf17a07c794af30805[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 13:07:13 2014 -0400
+
+    more
+
+[33mcommit 8f44c10015a71c10f7a51196a721130210aff377[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 13:06:12 2014 -0400
+
+    more
+
+[33mcommit b8f58d47d1ccec24c6a8177ecfb7dd6599eaa6d7[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 13:02:54 2014 -0400
+
+    more
+
+[33mcommit 1dc2dfd3c902b07db64806d718c2eb22d4d68750[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 12:59:59 2014 -0400
+
+    more
+
+[33mcommit 97d357399b4982123602398d56752e24a5f200fd[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 12:57:48 2014 -0400
+
+    more
+
+[33mcommit da5b7b0a60850531672ba24a667eae9dc3b7c553[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 12:57:02 2014 -0400
+
+    more
+
+[33mcommit d906e9a55d0f513b8d767b24c98876a89f046ac2[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 12:55:19 2014 -0400
+
+    more
+
+[33mcommit 6063f30872f8514f8b27335bf35b42e1f8d8d56e[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 12:54:10 2014 -0400
+
+    more
+
+[33mcommit b83bcbf89a63e12f08ead3b09ea7ab9a4a2aa219[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 12:49:54 2014 -0400
+
+    mor
+
+[33mcommit 762070ccf1811c6912a1e21fb16f03392d4e9a53[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 12:46:35 2014 -0400
+
+    more
+
+[33mcommit 574e7a322d0c31453bee0fcd019c12d91bf5ddf5[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 12:39:58 2014 -0400
+
+    more
+
+[33mcommit 3576917b50521f8397f69026ba2b1672a2760d4b[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 12:35:20 2014 -0400
+
+    more
+
+[33mcommit bf9e28ef4054aee63d2e80189aab092dbaf3dd70[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 12:33:37 2014 -0400
+
+    more
+
+[33mcommit d9163d8f284ec27cfb56f040aa5f5b7d2a2dde3d[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 12:31:34 2014 -0400
+
+    more
+
+[33mcommit d56a1ca33c1f04a2f71b8f6e9e8fab908f3ead7e[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 12:24:43 2014 -0400
+
+    more
+
+[33mcommit d0be67f2b7a3b0aedddffeddca5eef430eaba09e[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 12:22:23 2014 -0400
+
+    more
+
+[33mcommit acb224818d40b686bf72d37abee7a36696b42fab[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 12:20:39 2014 -0400
+
+    more
+
+[33mcommit f66b971317718643545b4f80077b9ae9d050ef95[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 12:18:05 2014 -0400
+
+    more
+
+[33mcommit 0afc4890110d45c5118263dcaa5ecb1f51f6cde4[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 12:14:52 2014 -0400
+
+    more
+
+[33mcommit b8b79b8c28931d8192d8c5687c397c8919a80768[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 12:12:11 2014 -0400
+
+    more test
+
+[33mcommit 6aff4382fbefbe90f3bb9e73400bbfec6559d670[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 12:08:01 2014 -0400
+
+    more
+
+[33mcommit fd5dcc27fcfe096ad0c2d41afb7810567e9198a9[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 12:03:56 2014 -0400
+
+    more
+
+[33mcommit 4be4a051921e84777bed9653857ed261b86b4710[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 11:59:23 2014 -0400
+
+    more
+
+[33mcommit 0cc065538b8d6f7f14d7cbabe85dae42c0b900e9[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 11:58:09 2014 -0400
+
+    more
+
+[33mcommit d002d65b9cd53c207e45f821e75d4824df4668bb[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 11:39:02 2014 -0400
+
+    more
+
+[33mcommit fb50ad6193674e9b4e3565f0e33f590d0fa933d6[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 11:24:12 2014 -0400
+
+    comiting tuto 2
+
+[33mcommit dac62c03f515f0d7f2e53ff7628bde797c8cc589[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 11:21:41 2014 -0400
+
+    comiting tuto 1
+
+[33mcommit 835d8a918e0c8ac222a9f462996a0dcd6f6a56f6[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 11:14:19 2014 -0400
+
+    final prep to start on webspeech api
+
+[33mcommit 156fa72e50ce1c929f9294f0c15b98a90f5645de[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 11:11:56 2014 -0400
+
+    more prep
+
+[33mcommit 546a508324af5793008a61c3e24b4dffad1f0aec[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 11:10:45 2014 -0400
+
+    comting prep
+
+[33mcommit 4d411408835891f05d063291b7797f8b50868271[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 11:09:23 2014 -0400
+
+    comiting
+
+[33mcommit 2f14fd357c84a48d820ef73aaeba2637a255dcde[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 11:08:03 2014 -0400
+
+    making last modif to return to new workspace
+
+[33mcommit 2d23d1c0eec85f02abde995a7c880414ac44c985[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 10 11:06:13 2014 -0400
+
+    comtiing last yesterday changes
+
+[33mcommit 99838029ed1c8e6767d2f31f27d36b8f651ab456[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Thu Oct 9 22:07:58 2014 -0400
+
+    more
+
+[33mcommit 0f3e0980edcbae6a80384cee899eba91668863a4[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Thu Oct 9 22:03:52 2014 -0400
+
+    more
+
+[33mcommit bf5a67e606ef0d738771208236673219019ae807[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Thu Oct 9 21:45:03 2014 -0400
+
+    more
+
+[33mcommit 1c246508a136f058d961e70cd0c35e2768c33597[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Thu Oct 9 21:43:13 2014 -0400
+
+    imore
+
+[33mcommit 30ec5abdad8c23b87f378518976d7d32f64ebbc7[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Thu Oct 9 21:41:57 2014 -0400
+
+    more
+
+[33mcommit 84b0794c40277ae125baaa67e7a1ee90c20a173b[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Thu Oct 9 21:40:39 2014 -0400
+
+    more
+
+[33mcommit 84a39426c6bcd97463c1374a90302057bc5baf33[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Thu Oct 9 21:37:20 2014 -0400
+
+    more
+
+[33mcommit 9f3b73b49681fc7155b30e83a1b78923191b369e[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Thu Oct 9 21:36:29 2014 -0400
+
+    more
+
+[33mcommit b73d786e7646225d61f0fcb723c7aba1c82d277a[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Thu Oct 9 21:35:15 2014 -0400
+
+    more
+
+[33mcommit 5d2a8f2e59a0ce5a66b13f912219a3a575d6da38[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Thu Oct 9 21:27:54 2014 -0400
+
+    more
+
+[33mcommit 9967e1b6c69e6f7f132ab8c5b5a2ea409cc5ff8e[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Thu Oct 9 21:25:32 2014 -0400
+
+    more
+
+[33mcommit dc23696c80eeb0dca2f5e3d889fa71adb516ea22[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Thu Oct 9 21:24:17 2014 -0400
+
+    more
+
+[33mcommit ea49674498f900637efa82315a27380d5db982da[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Thu Oct 9 21:22:49 2014 -0400
+
+    mor
+
+[33mcommit 458ab00940d2442fe9ac6a1c121b2a6c9a3b316d[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Thu Oct 9 21:21:21 2014 -0400
+
+    more
+
+[33mcommit cd3a502edf5dcafd6469f718662bf019de1f92ad[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Thu Oct 9 21:18:47 2014 -0400
+
+    more
+
+[33mcommit 35b2d6e7b46b056bd3aec657ab4e73633375882b[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Thu Oct 9 21:17:34 2014 -0400
+
+    more
+
+[33mcommit c6ecf6e2794c5399613729f6afb594d27e8d1108[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Thu Oct 9 21:16:18 2014 -0400
+
+    more
+
+[33mcommit cba954cfd027cbc2b29919e827894324d5850ae0[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Thu Oct 9 21:13:45 2014 -0400
+
+    more try
+
+[33mcommit 01f08cc378ec8fe87181ae8038c49a7d216ac472[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Thu Oct 9 21:07:29 2014 -0400
+
+    comiting some try
+
+[33mcommit 163043e8d253bda22a75a1838a26ce8ef65b4b4e[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Sun Oct 5 13:48:10 2014 -0400
+
+    more preparation for ntish's work
+
+[33mcommit 0b8caf522416de79712c7fd828493b4424508424[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Sun Oct 5 13:24:02 2014 -0400
+
+    commiting preparation for nitsh's work
+
+[33mcommit 62e9d5471a196e823d407db9436f1e7cf54b46f5[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Sat Oct 4 14:32:20 2014 -0400
+
+    https final
+
+[33mcommit 1b215c3bcc48a7e8379363c9abbc541ace65fc14[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Sat Oct 4 14:22:04 2014 -0400
+
+    https5
+
+[33mcommit 370c17c393289f7d096c6ed83932aaec09362a0f[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Sat Oct 4 14:19:20 2014 -0400
+
+    https4
+
+[33mcommit 5f199a0652e73f19eaba31418bc749c8fe414cb5[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Sat Oct 4 14:17:34 2014 -0400
+
+    https3
+
+[33mcommit 217203622162c772a82eaa01853843d3b1528977[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Sat Oct 4 14:15:34 2014 -0400
+
+    https 2
+
+[33mcommit 5f70701b29799c9a8814528e33006b7cea55aa94[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Sat Oct 4 14:13:10 2014 -0400
+
+    https test
+
+[33mcommit 3860d1336587801f28c2588730ae8100e33af2c7[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 3 18:42:38 2014 -0400
+
+    preparing further ressources
+
+[33mcommit ba2de38def3e6b32863f13a1a0b9d2786d90ed8f[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 3 18:41:19 2014 -0400
+
+    preparing stock for hired
+
+[33mcommit 1650b9144aabc7879dfbf1a98afb3e84d01f9757[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 3 18:37:19 2014 -0400
+
+    ll have to hire to finish setup
+
+[33mcommit 729aa7c14d3f006631207ed58c9cab8f3e0fc6a2[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 3 18:34:30 2014 -0400
+
+    more
+
+[33mcommit 82457baa905b448bfafcce329b4deac95c82769c[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 3 18:33:20 2014 -0400
+
+    more
+
+[33mcommit 34491b49ec439471e3ce1c7143a52b671b6f3405[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 3 18:29:28 2014 -0400
+
+    more
+
+[33mcommit a833990a345050bcee03efb42e6dfcd29ccdf6e7[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 3 18:23:25 2014 -0400
+
+    more
+
+[33mcommit f5659c5e5f5898e9bc41e18a1b30ff97878dd0a4[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 3 18:22:11 2014 -0400
+
+    more
+
+[33mcommit 392e6f377e3e7c2820f308797c56a26151f5686b[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 3 18:20:35 2014 -0400
+
+    more
+
+[33mcommit d1239157e12cf60cd3f690c88c02db5a0617d345[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 3 18:19:40 2014 -0400
+
+    more
+
+[33mcommit 01b578abbf2fddb8daee48288c07ac377a6bd758[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 3 18:17:08 2014 -0400
+
+    more
+
+[33mcommit 7e121f663bc239751b0d11aa703e46293d78ae0c[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 3 18:15:43 2014 -0400
+
+    more
+
+[33mcommit c75630e3e6b37e208328f98f73634f64f81a36f6[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 3 18:12:47 2014 -0400
+
+    more
+
+[33mcommit 1398ad640c847a86b23a28ef56a4a2afe6066c93[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 3 18:07:51 2014 -0400
+
+    more
+
+[33mcommit bfff6fbbe8c389d4ae4ee658b8b22573a682dd6c[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 3 18:06:24 2014 -0400
+
+    more
+
+[33mcommit ecda0a68d764aad39bb4bf85b4dbfba85ae164a5[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 3 18:03:05 2014 -0400
+
+    more
+
+[33mcommit 3c44866043254751c67fb260adfbd6479634c6c0[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 3 17:56:31 2014 -0400
+
+    did not find a solution yet
+
+[33mcommit 0166279a43fba6a59092b5baa84528fc9d38ca9d[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 3 17:49:06 2014 -0400
+
+    mmore
+
+[33mcommit c45b32698394f21aeb492a1965576496d9dbf04f[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 3 17:45:19 2014 -0400
+
+    more
+
+[33mcommit 0a4a546527339db15b594d352d7f7003a32fa072[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 3 17:40:32 2014 -0400
+
+    more
+
+[33mcommit d7af39be7361839457e6d6507f043866722a1f1f[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 3 17:36:54 2014 -0400
+
+    more
+
+[33mcommit 665541bd90940b0dd03fccf315870c4424c08719[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 3 17:32:57 2014 -0400
+
+    more
+
+[33mcommit 9e564461187d4ca789f00e7cda38e19adfc44fa3[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 3 17:31:08 2014 -0400
+
+    more
+
+[33mcommit bcbb56f0c07f583f7f5876948a6c777a5bbd4126[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 3 17:29:37 2014 -0400
+
+    more
+
+[33mcommit 12f92b2d1b69f186b9d6bb5c13b98f14224ecb45[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 3 17:24:49 2014 -0400
+
+    trying with pure html
+
+[33mcommit be89732653d15eb9d1164184bafe796df7b9656b[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 3 17:14:56 2014 -0400
+
+    more
+
+[33mcommit f73beb1e5b212b3d937e5a70aa89cba3bb9181cc[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 3 17:13:13 2014 -0400
+
+    more
+
+[33mcommit ebee90c7d322c24509ce50591ef6f5d87b45520b[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 3 17:11:35 2014 -0400
+
+    more
+
+[33mcommit bd5665f0aa73e0682a3dbaedd74f1770bb2c8be6[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 3 17:07:39 2014 -0400
+
+    more
+
+[33mcommit af5ac9196d4f5f79e1494c028db7d0c012913826[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 3 17:03:33 2014 -0400
+
+    more
+
+[33mcommit 83e7d4316cd3a77c973d5d8219693fdf07724e2d[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 3 17:02:55 2014 -0400
+
+    more
+
+[33mcommit aa0bfb707936f4ec0337699cfcbfdda2f31cf14c[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 3 17:01:31 2014 -0400
+
+    more
+
+[33mcommit 1d8a8818a63f2ee13c10182a86bd1421443b1763[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 3 16:59:28 2014 -0400
+
+    changing routes
+
+[33mcommit 4d08bca74f039aa47e332812bfc0d1de9e93b8ab[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 3 16:52:47 2014 -0400
+
+    imore
+
+[33mcommit 919b5ee044b2582a471a5fe997540aeb8f48ceb3[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 3 16:50:34 2014 -0400
+
+    more
+
+[33mcommit 57b24faa81257739d3b9b7ab4991b40ad89f0e00[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 3 16:49:38 2014 -0400
+
+    more
+
+[33mcommit bdd3623d257799f55a29d8b06c6b79cd3ad6afec[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 3 16:46:43 2014 -0400
+
+    more
+
+[33mcommit 1caf7c9689f9bda788f0adc56e67019a1f4f36b7[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 3 16:44:18 2014 -0400
+
+    mor
+
+[33mcommit 8d59c8266c3335914fd1fd8320299e2ceaed18b1[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 3 16:42:12 2014 -0400
+
+    more
+
+[33mcommit 3b159f1471245f3b6001f80f8e6c301470959ea3[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 3 16:37:53 2014 -0400
+
+    more
+
+[33mcommit 251bac4b210fdfb6e8ba8c5c9ba21cde7ff88ae5[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 3 16:31:33 2014 -0400
+
+    no more bson prob
+
+[33mcommit c1870e0d84f27d3cf09c2f1387832cd201b00e78[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 3 16:28:32 2014 -0400
+
+    add
+
+[33mcommit 32c31d5d452bd6a9cd84c738400bf3ef664cf970[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 3 16:26:43 2014 -0400
+
+    m
+
+[33mcommit 817ea511d90d24fbb6a3d3510ac49a09ea1f684d[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 3 16:14:58 2014 -0400
+
+    restarting home.jade
+
+[33mcommit aebb96ed3605ba3f99446a66320f954749cb9e08[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 3 16:09:57 2014 -0400
+
+    more
+
+[33mcommit 9e7300d2d8ce1fbeddd083ff216626b3b9ff9066[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 3 16:07:29 2014 -0400
+
+     more
+
+[33mcommit f88b3c0f081a92ffcc90ae0382b4d6b24143c86e[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 3 16:04:53 2014 -0400
+
+    more
+
+[33mcommit c5487e6bf84721d58bb93acb9e3fb8cc6e8fb485[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 3 16:02:15 2014 -0400
+
+    canging the script call tag
+
+[33mcommit 7c3d823096842dab69d28923b0c22da1e8f2060c[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Oct 3 15:57:09 2014 -0400
+
+    comiting chages inthe called script client side
+
+[33mcommit 2b85264fe4053b0eb20cf111970d52755e2ea76c[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Mon Sep 29 20:42:40 2014 -0400
+
+    more
+
+[33mcommit a1882ccef91a6e7c020847c341ed4f6bad6eda14[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Mon Sep 29 20:37:47 2014 -0400
+
+    more
+
+[33mcommit 8cd608b7de6ee4467256ec56cee9b095b8de3d30[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Mon Sep 29 20:35:30 2014 -0400
+
+    more
+
+[33mcommit af5fdd699c0fdb7cdf203c98d901c824d50f50ae[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Mon Sep 29 20:31:05 2014 -0400
+
+    more
+
+[33mcommit 7d281b330b01514ffbbd8e738f9f67b2d3397617[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Mon Sep 29 20:28:13 2014 -0400
+
+    more
+
+[33mcommit 462920785f114125b53ae213b047258367c93568[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Mon Sep 29 20:26:20 2014 -0400
+
+    more
+
+[33mcommit 10dbead083867c65ff1932b5392cf12c8e10271f[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Mon Sep 29 20:24:15 2014 -0400
+
+    more
+
+[33mcommit da7e78966425c6264eca96af8ae02b8e055dbd75[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Mon Sep 29 20:19:40 2014 -0400
+
+    more
+
+[33mcommit 93fe3411278fb0ca62f71cd8dd5d5131c5b83792[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Mon Sep 29 20:13:26 2014 -0400
+
+    more
+
+[33mcommit 1590efcc9473d8375878b0980cb6f72ead072b99[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Mon Sep 29 20:11:03 2014 -0400
+
+    adding a render for client script on routes.js
+
+[33mcommit 5d0e4663c9e2e36e862247afcfd47ac147920aad[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Mon Sep 29 20:05:34 2014 -0400
+
+    use jquery to toggle start and stop
+
+[33mcommit a92110127c5fdc01f71b66cc538242d0333e72cd[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Mon Sep 29 20:01:28 2014 -0400
+
+    more corrections
+
+[33mcommit f5e4ec00a1f5a43b60e8ff65ee8dafe5ffa5511c[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Mon Sep 29 19:58:02 2014 -0400
+
+    some more late thinmking corrections
+
+[33mcommit dec49738b4463dccaee33e0bf3e927d320c024c9[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Mon Sep 29 19:56:44 2014 -0400
+
+    correcting home.jade
+
+[33mcommit 716f84ce26b5cefd1910f5832c77ed365393441f[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Mon Sep 29 19:52:09 2014 -0400
+
+    reconnecting mongoose
+
+[33mcommit a26be001681569bbd2f87ef41246f10081d529bd[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Mon Sep 29 19:48:19 2014 -0400
+
+    really adding it!
+
+[33mcommit 624429dfeff28487ffed257689f25d8af48e93f7[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Mon Sep 29 19:47:56 2014 -0400
+
+    adding bootstrap
+
+[33mcommit 986f5b536b0b1af6ea2f77ba61b2ed3029778a18[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Mon Sep 29 19:38:47 2014 -0400
+
+    jade corrections
+
+[33mcommit 36e06bff47801ef48e6aa08551181270592efadf[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Mon Sep 29 19:32:57 2014 -0400
+
+    new changes and test
+
+[33mcommit b591beec9469b3d3ef7fa69a8dd68cd5ce5c16d2[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Sun Sep 28 17:08:04 2014 -0400
+
+    comiting a new jquery
+
+[33mcommit ce93ffc4be630a10d3143c655f444f17389bc49e[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Sun Sep 28 14:59:10 2014 -0400
+
+    more try to install mongostore for sessions
+
+[33mcommit 5d1398ac3f76a988edcfd6209f4d33c8c3178121[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Sat Sep 27 18:40:29 2014 -0400
+
+    more trial and error !!!!
+
+[33mcommit ade4e49d33d207c755cd1a2609f4fa201b0ee558[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Sat Sep 27 18:38:55 2014 -0400
+
+    more correction
+
+[33mcommit e83bd6ddf62a227ad0075ab2854c8b33c9538664[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Sat Sep 27 18:36:29 2014 -0400
+
+    more
+
+[33mcommit 448b3e5e6082c05b0a8e28a44005e44fd0bd3923[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Sat Sep 27 18:34:21 2014 -0400
+
+    mroe correction
+
+[33mcommit 7bfbde5e256bf6e4c68a3f0600b4532d3671c07a[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Sat Sep 27 18:31:27 2014 -0400
+
+    some corrections
+
+[33mcommit 285f8b193fa929fec921cee7d7f231c7050aab91[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Sat Sep 27 18:28:36 2014 -0400
+
+    comting a necessary folders
+
+[33mcommit 4651bf3dc922437bc217eab8f44df5adcb071cc3[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Sat Sep 27 18:27:04 2014 -0400
+
+    comiting for express 3.3.4
+
+[33mcommit fd68e2ef2b4a1389771d47fd617494c40572d035[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Sat Sep 27 18:03:22 2014 -0400
+
+    chaging connect-mongo configuration
+
+[33mcommit 8129cb1582ac3a806c7ff1430249882678954c5a[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Sat Sep 27 18:00:39 2014 -0400
+
+    commiting a better package.json
+
+[33mcommit ab2fb140eae67acce3bf34e853d1ff7078d9226b[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Sat Sep 27 17:56:50 2014 -0400
+
+    commting a package.json
+
+[33mcommit 7d37cfe1b02fd665d09444d95606a28d9d9d10b7[m
+Author: Jean-Philippe Beaudet <jpbeaudet@ip-172-31-47-39.us-west-2.compute.internal>
+Date:   Sat Sep 27 00:01:40 2014 +0000
+
+    first commit of node_modules
+
+[33mcommit 3933c71f10886343ec772bc351b115da3fe49d5a[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Sep 26 17:21:49 2014 -0400
+
+    updating some file before npm install modules
+
+[33mcommit 344bc4094b739186f71218bdb1d1249485488f3f[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Sep 26 17:13:57 2014 -0400
+
+    eclipse sync test
+
+[33mcommit f4641a2782a34b6749bee015f9ac76d925360305[m
+Author: U-user-PC\user <user@user-PC.(none)>
+Date:   Fri Sep 26 17:00:36 2014 -0400
+
+    First commit on the project diction4js
+
+[33mcommit 56727a81733bd73bd0aa7f7c11e095a8e95324d5[m
+Author: Phil <pchevry@gmail.com>
+Date:   Fri Sep 26 11:56:07 2014 -0400
+
+    initial commit
