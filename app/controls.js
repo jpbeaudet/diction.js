@@ -172,8 +172,8 @@ window.onload = function()
 	// top
 	 case 'top':  
 		  $("#final_span").css("color", "pink");
-		  index.docA = index.docA + index.docB;
-		  index.docB ="";
+		  index.docB = index.docA + index.docB;
+		  index.docA ="";
 		  
 		  return Istrue('top', index);
 		  break;
@@ -181,8 +181,8 @@ window.onload = function()
 		  
 	 case 'bottom':  
 		  $("#final_span").css("color", "pink");
-		  index.docB = index.docA + index.docB;
-		  index.docA ="";		  
+		  index.docA = index.docA + index.docB;
+		  index.docB ="";		  
 		  return Istrue('bottom', index);
 		  break;
 	// back
