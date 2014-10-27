@@ -162,11 +162,29 @@ window.onload = function()
     
 	// cancel
 		  // 3 crtl-z like return
-	 case '2':  
-		 
-		  return Istrue('2', index);
+	 case 'cancel': 
+		  $("#final_span").css("color", "pink");
+		  var toBeCancelled = document.getElementById("final_span").text();
+		  console.log("toBeCancelled is = " + toBeCancelled);
+		  return Istrue('cancel', index);
 		  break;
+	
+	// top
+	 case 'top':  
+		  $("#final_span").css("color", "pink");
+		  index.docA = index.docA + index.docB;
+		  index.docB ="";
 		  
+		  return Istrue('top', index);
+		  break;
+	//bottom
+		  
+	 case 'bottom':  
+		  $("#final_span").css("color", "pink");
+		  index.docB = index.docA + index.docB;
+		  index.docA ="";		  
+		  return Istrue('bottom', index);
+		  break;
 	// back
 		  // words
 		  //sentence
