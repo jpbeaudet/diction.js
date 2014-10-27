@@ -174,7 +174,9 @@ window.onload = function()
 		  $("#final_span").css("color", "pink");
 		  index.docB = index.docA + index.docB;
 		  index.docA ="";
-		  
+		  icon_span.innerHTML = "-->";
+		  docA_span.innerHTML = index.docA;
+		  docB_span.innerHTML = index.docB;		  
 		  return Istrue('top', index);
 		  break;
 	//bottom
@@ -182,7 +184,10 @@ window.onload = function()
 	 case 'bottom':  
 		  $("#final_span").css("color", "pink");
 		  index.docA = index.docA + index.docB;
-		  index.docB ="";		  
+		  index.docB ="";	
+		  icon_span.innerHTML = "-->";
+		  docA_span.innerHTML = index.docA;
+		  docB_span.innerHTML = index.docB;
 		  return Istrue('bottom', index);
 		  break;
 	// back
