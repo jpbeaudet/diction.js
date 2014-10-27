@@ -178,7 +178,12 @@ window.onload = function()
     // return 
 		  //top
 		  //end
-	// erase
+	// stop
+	 case 'stop': 
+		  $("#final_span").css("color", "pink");	
+		  toggleStartStop();
+		  return Istrue('stop', index);
+		  break;
 	// go to :
 		  // line
 		  // word
