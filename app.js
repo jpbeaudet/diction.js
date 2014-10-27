@@ -105,7 +105,6 @@ io.on('connection', function(socket){
 	console.log("socket.io started on port"+ app.get('port'));
 	
 	MEMORY.findOne({ username: username}, function (err, doc){
-	//MEMORY.find(function (err, docs) {
 		  if (err) return console.error(err);
 		  console.log("starting elements stored in "+ username+" db: docA,docB "+doc);
 
