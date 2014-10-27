@@ -164,7 +164,7 @@ window.onload = function()
 		  // 3 crtl-z like return
 	 case 'cancel': 
 		  $("#final_span").css("color", "pink");
-		  var toBeCancelled = document.getElementById("final_span").text();
+		  var toBeCancelled = $("final_span").text();
 		  console.log("toBeCancelled is = " + toBeCancelled);
 		  return Istrue('cancel', index);
 		  break;
