@@ -19,6 +19,7 @@ window.onload = function()
 	socket.on("res.load", function(response){
 		var docA =response[0];
 		var docB =response[1];
+		icon_span.innerHTML = "-->";
 		docA_span.innerHTML = docA;
 	    docB_span.innerHTML = docB;	
 		
