@@ -168,8 +168,8 @@ window.onload = function()
 		  $("#final_span").css("color", "pink");
 		  var toBeCancelled = $("final_span").text();
 		  console.log("toBeCancelled is = " + toBeCancelled);
-		  return endcase(Sword, 'cancel', index);
-		  //return Istrue('cancel', index);
+		  //return endcase(Sword, 'cancel', index);
+		  return Istrue('cancel', index);
 		  break;
 	
 	// top
@@ -180,8 +180,8 @@ window.onload = function()
 		  icon_span.innerHTML = "-->";
 		  docA_span.innerHTML = index.docA;
 		  docB_span.innerHTML = index.docB;
-		  return endcase(Sword, 'top', index);
-		  //return Istrue('top', index);
+		  //return endcase(Sword, 'top', index);
+		  return Istrue('top', index);
 		  break;
 	//bottom
 		  
@@ -192,8 +192,8 @@ window.onload = function()
 		  icon_span.innerHTML = "-->";
 		  docA_span.innerHTML = index.docA;
 		  docB_span.innerHTML = index.docB;
-		  return endcase(Sword, 'bottom', index);
-		  //return Istrue('bottom', index);
+		  //return endcase(Sword, 'bottom', index);
+		  return Istrue('bottom', index);
 		  break;
 	// back
 		  // words
@@ -210,8 +210,8 @@ window.onload = function()
 	 case 'stop': 
 		  $("#final_span").css("color", "pink");	
 		  toggleStartStop();
-		  return endcase(Sword, 'stop', index);
-		 // return Istrue('stop', index);
+		  //return endcase(Sword, 'stop', index);
+		  return Istrue('stop', index);
 		  break;
 	// go to :
 		  // line
@@ -231,8 +231,8 @@ window.onload = function()
 			 docB_span.innerHTML = "";
 			 socket.emit('newtext',"new text----------------->>");
 			 
-			 //return Istrue('newtext', index);
-			 return endcase(Tword, 'newtext', index);
+			 return Istrue('newtext', index);
+			 //return endcase(Tword, 'newtext', index);
 			 break;
 			 
 			 
