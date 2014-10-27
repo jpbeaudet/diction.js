@@ -83,7 +83,7 @@ window.onload = function()
 	// 65 commands function to built
 		 
 	//------------------------------------------------------------------------------------------------------------------------------- 
-	 
+
 	 switch(Fword)
 	 { 	 	  
 	  // character section 		//
@@ -100,7 +100,8 @@ window.onload = function()
 			 {
 			 
 			 case 'this':
-				 $("#final_span").css("color", "pink");				 
+				 $("#final_span").css("color", "pink");		
+				 
 				 return Istrue('what is this', index);
 				  break;
 				  
@@ -167,7 +168,8 @@ window.onload = function()
 		  $("#final_span").css("color", "pink");
 		  var toBeCancelled = $("final_span").text();
 		  console.log("toBeCancelled is = " + toBeCancelled);
-		  return Istrue('cancel', index);
+		  return endcase(Sword, 'cancel', index);
+		  //return Istrue('cancel', index);
 		  break;
 	
 	// top
@@ -177,8 +179,9 @@ window.onload = function()
 		  index.docA ="";
 		  icon_span.innerHTML = "-->";
 		  docA_span.innerHTML = index.docA;
-		  docB_span.innerHTML = index.docB;		  
-		  return Istrue('top', index);
+		  docB_span.innerHTML = index.docB;
+		  return endcase(Sword, 'top', index);
+		  //return Istrue('top', index);
 		  break;
 	//bottom
 		  
@@ -189,7 +192,8 @@ window.onload = function()
 		  icon_span.innerHTML = "-->";
 		  docA_span.innerHTML = index.docA;
 		  docB_span.innerHTML = index.docB;
-		  return Istrue('bottom', index);
+		  return endcase(Sword, 'bottom', index);
+		  //return Istrue('bottom', index);
 		  break;
 	// back
 		  // words
@@ -206,7 +210,8 @@ window.onload = function()
 	 case 'stop': 
 		  $("#final_span").css("color", "pink");	
 		  toggleStartStop();
-		  return Istrue('stop', index);
+		  return endcase(Sword, 'stop', index);
+		 // return Istrue('stop', index);
 		  break;
 	// go to :
 		  // line
@@ -226,7 +231,8 @@ window.onload = function()
 			 docB_span.innerHTML = "";
 			 socket.emit('newtext',"new text----------------->>");
 			 
-			 return Istrue('newtext', index);
+			 //return Istrue('newtext', index);
+			 return endcase(Tword, 'newtext', index);
 			 break;
 			 
 			 
@@ -289,7 +295,16 @@ window.onload = function()
 	//Here goes the istrue and isfalse that will emit to server last index modification for saving purposes//
 	//It will also need to emit the data for the json thickback constructor
 	//----------------------------------------------------------
-	
+
+function endcase (nextWord,command,index){
+	 switch(nextWord)
+	 { 
+	 case '""':
+	 return Istrue(command, index); 
+	default:
+	 return Isfalse(transcript, index); 
+		 }
+	 }
 function Istrue(data, index){
 	console.log("istrue() fired");
 	var pretext = index.docA;
