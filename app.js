@@ -159,6 +159,7 @@ io.on('connection', function(socket){
 			json.num ++;
 			Json += ',' +json ;
 			var jsonSave = '{'+ Json+'}';
+			JSON.parse(jsonSave);
 			for (i in jsonSave){
 			console.log("Json save no: "+i+" in app.js = "+JSON.stringify(jsonSave[i])+"-------------------------------------->>");
 			}
