@@ -150,14 +150,13 @@ io.on('connection', function(socket){
 		
 		});
 		//var Json={event:"0",data:""};
-		var lock=new Array();
+		var lock;
 		var X = new Object();
 		X.docs = new Array();
 		X.docs[0]={event:"0",data:""};
 //var Json = {num:'0',json:[{event:'0',data:""}]};
 		socket.on("save",function(data){
-			if(data != lock){
-				lock =data;
+		console.log("save has fire()--------------------------------->>")
 			
 			var doc = data[0];			
 			memory.docA = data[1];
@@ -199,7 +198,7 @@ io.on('connection', function(socket){
 			});
 
 
-			}	
+				
 		});
 		
 		socket.on("cmd",function(data){			
