@@ -167,7 +167,7 @@ window.onload = function()
 	 case 'cancel': 
 		 switch(Sword)
 		 {
-		 case ' ':
+		 case undefined:
 		  $("#final_span").css("color", "pink");
 		  var toBeCancelled = $("final_span").text();
 		  console.log("toBeCancelled is = " + toBeCancelled);
@@ -182,7 +182,7 @@ window.onload = function()
 	 case 'top': 
 		 switch(Sword)
 		 {
-		 case ' ':
+		 case undefined:
 			 $("#final_span").css("color", "pink");
 			  index.docB = index.docA + index.docB;
 			  index.docA ="";
@@ -231,7 +231,7 @@ window.onload = function()
 	 case 'stop': 
 		 switch(Sword)
 		 {
-		 case ' ':
+		 case undefined:
 		  $("#final_span").css("color", "pink");	
 		  toggleStartStop();
 		  //return endcase(Sword, 'stop', index);
@@ -254,7 +254,7 @@ window.onload = function()
 		 case 'text':
 			 switch(Tword)
 			 {
-			 case ' ':
+			 case undefined:
 			 $("#final_span").css("color", "pink");	
 			 index.docA = "";
 			 index.docB ="";
@@ -329,13 +329,6 @@ window.onload = function()
 	//It will also need to emit the data for the json thickback constructor
 	//----------------------------------------------------------
 
-function endcase (nextWord,transcript,event,index){
-if(nextWord == ""){
-	 return Istrue(event, index); 
-}else{
-	 return Isfalse(transcript, index); 
-} 
-	 }
 function Istrue(data, index){
 	console.log("istrue() fired");
 	var pretext = index.docA;
