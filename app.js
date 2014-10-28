@@ -162,14 +162,7 @@ io.on('connection', function(socket){
 			memory.docA = data[1];
 			memory.docB = data[2];
 			var json = data[3];
-			console.log("json in app = "+JSON.stringify(json));
-			var num = (X.docs.length);
-			console.log("X.docs[(num-1)].data = "+X.docs[(num-1)].data);
-			//if(X.docs[(num-1)].data!= json.data){				
-			X.docs[num] = json;
-			//}
-			console.log("num = "+num);
-			console.log("X.docs[(num-1)].data = "+X.docs[(num-1)].data );
+
 			//for (i in X.docs){
 			//	console.log("X.docs["+i+"] = "+X.docs[i]);
 			//	console.log("X.docs.["+i+"].data = "+X.docs[i].data);
@@ -191,6 +184,14 @@ io.on('connection', function(socket){
 				  MEMORY.update(query, { docA: memory.docA , docB: memory.docB, username: username}, options, callback);
 				  function callback (err, numAffected) {
 					   //numAffected is the number of updated documents
+						console.log("json in app = "+JSON.stringify(json));
+						var num = (X.docs.length);
+						console.log("X.docs[(num-1)].data = "+X.docs[(num-1)].data);
+						//if(X.docs[(num-1)].data!= json.data){				
+						X.docs[num] = json;
+						//}
+						console.log("num = "+num);
+						console.log("X.docs[(num-1)].data = "+X.docs[(num-1)].data );
 						console.log("socket save = "+ doc);
 						console.log("memory A >> save= "+ memory.docA );
 						console.log("memory B >> save= "+ memory.docB );
