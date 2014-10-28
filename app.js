@@ -187,7 +187,8 @@ io.on('connection', function(socket){
 						console.log("json in app = "+JSON.stringify(json));
 						var num = (X.docs.length);
 						console.log("X.docs[(num-1)].data = "+X.docs[(num-1)].data);
-						//if(X.docs[(num-1)].data!= json.data){				
+						//if(X.docs[(num-1)].data!= json.data){
+						X.docs=null;
 						X.docs[num] = json;
 						//}
 						console.log("num = "+num);
