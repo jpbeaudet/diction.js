@@ -149,14 +149,14 @@ io.on('connection', function(socket){
 
 		
 		});
-		var Json;
+		var Json= {num:"",event:"0",data:""};
 		socket.on("save",function(data){
 			
 			var doc = data[0];			
 			memory.docA = data[1];
 			memory.docB = data[2];
 			var json = data[3];
-			Json = Json +',' +json ;
+			Json += ',' +json ;
 			var jsonSave = '{'+ Json+'}';
 			console.log("Json in app.js = "+JSON.stringify(jsonSave)+"-------------------------------------->>");
 			
