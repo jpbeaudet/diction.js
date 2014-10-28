@@ -150,6 +150,7 @@ io.on('connection', function(socket){
 		
 		});
 		//var Json={event:"0",data:""};
+		var lock;
 		var X = new Object();
 		X.docs = new Array();
 		X.docs[0]={event:"0",data:""};
@@ -162,12 +163,14 @@ io.on('connection', function(socket){
 			var json = data[3];
 			console.log("json in app = "+JSON.stringify(json));
 			var num = (X.docs.length);
+			if(json!=lock){
 			X.docs[num] = json;
 			console.log("num = "+num);
 			for (i in X.docs){
 				console.log("X.docs["+i+"] = "+X.docs[i]);
 				console.log("X.docs.["+i+"].data = "+X.docs[i].data);
 			}
+			
 			//J = JSON.stringify(Json)+','+ JSON.stringify(json);
 			//console.log("J in app = "+J);
 			//Json =J;
@@ -192,7 +195,7 @@ io.on('connection', function(socket){
 			});
 
 
-
+			}
 		});
 		
 		socket.on("cmd",function(data){			
