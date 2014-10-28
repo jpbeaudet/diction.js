@@ -160,7 +160,7 @@ io.on('connection', function(socket){
 			JSON.stringify(json);
 			Json += ',' +json ;
 			var jsonSave = '{'+ Json+'}';			
-			console.log("Json save no: "+i+" in app.js = "+JSON.stringify(jsonSave)+"-------------------------------------->>");
+			console.log("Json savein app.js = "+JSON.stringify(jsonSave)+"-------------------------------------->>");
 			
 			
 			MEMORY.findOne({ username: username}, function (err, doc){
