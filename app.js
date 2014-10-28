@@ -157,11 +157,10 @@ io.on('connection', function(socket){
 			memory.docB = data[2];
 			var json = data[3];
 			json.num ++;
+			JSON.stringify(json);
 			Json += ',' +json ;
 			var jsonSave = '{'+ Json+'}';
-			jsonSave.replace("/[/g" , "{");
-			jsonSave.replace("/]/g" , "}");
-			JSON.parse(jsonSave);
+
 			for(i in jsonSave){
 			console.log("Json save no: "+i+" in app.js = "+JSON.stringify(jsonSave[i])+"-------------------------------------->>");
 			}
