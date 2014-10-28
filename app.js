@@ -169,7 +169,7 @@ io.on('connection', function(socket){
 			X.docs[num] = json;
 			//}
 			console.log("num = "+num);
-			console.log("X.docs[(num-1)] = "+X.docs[(num-1)] );
+			console.log("X.docs[(num-1)].data = "+X.docs[(num-1)].data );
 			//for (i in X.docs){
 			//	console.log("X.docs["+i+"] = "+X.docs[i]);
 			//	console.log("X.docs.["+i+"].data = "+X.docs[i].data);
