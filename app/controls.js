@@ -180,8 +180,8 @@ window.onload = function()
 		  icon_span.innerHTML = "-->";
 		  docA_span.innerHTML = index.docA;
 		  docB_span.innerHTML = index.docB;
-		  //return endcase(Sword, 'top', index);
-		  return Istrue('top', index);
+		  return endcase(Sword, 'top', index);
+		  //return Istrue('top', index);
 		  break;
 	//bottom
 		  
@@ -208,10 +208,12 @@ window.onload = function()
 		  //end
 	// stop
 	 case 'stop': 
+		 
 		  $("#final_span").css("color", "pink");	
 		  toggleStartStop();
 		  //return endcase(Sword, 'stop', index);
 		  return Istrue('stop', index);
+		 
 		  break;
 	// go to :
 		  // line
@@ -297,13 +299,11 @@ window.onload = function()
 	//----------------------------------------------------------
 
 function endcase (nextWord,command,index){
-	 switch(nextWord)
-	 { 
-	 case '""':
+if(nextWord == ""){
 	 return Istrue(command, index); 
-	default:
+}else{
 	 return Isfalse(transcript, index); 
-		 }
+} 
 	 }
 function Istrue(data, index){
 	console.log("istrue() fired");
