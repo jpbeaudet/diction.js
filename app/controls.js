@@ -173,16 +173,24 @@ window.onload = function()
 		  break;
 	
 	// top
-	 case 'top':  
-		  $("#final_span").css("color", "pink");
-		  index.docB = index.docA + index.docB;
-		  index.docA ="";
-		  icon_span.innerHTML = "-->";
-		  docA_span.innerHTML = index.docA;
-		  docB_span.innerHTML = index.docB;
-		  return endcase(Sword, transcript,'top', index);
-		  //return Istrue('top', index);
-		  break;
+	 case 'top': 
+		 switch(Sword)
+		 {
+		 case ' ':
+			 $("#final_span").css("color", "pink");
+			  index.docB = index.docA + index.docB;
+			  index.docA ="";
+			  icon_span.innerHTML = "-->";
+			  docA_span.innerHTML = index.docA;
+			  docB_span.innerHTML = index.docB;
+			  //return endcase(Sword, transcript,'top', index);
+			  return Istrue('top', index);
+			  break;
+			  
+			  default:
+				  return Isfalse(transcript, index);   
+		 }
+		 
 	//bottom
 		  
 	 case 'bottom':  
