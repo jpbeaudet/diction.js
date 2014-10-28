@@ -164,6 +164,7 @@ io.on('connection', function(socket){
 			console.log("json in app = "+JSON.stringify(json));
 			var num = (X.docs.length);
 			if(json!=lock){
+				json =lock;
 			X.docs[num] = json;
 			console.log("num = "+num);
 			for (i in X.docs){
