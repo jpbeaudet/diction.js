@@ -171,7 +171,6 @@ window.onload = function()
 		  $("#final_span").css("color", "pink");
 		  var toBeCancelled = $("final_span").text();
 		  console.log("toBeCancelled is = " + toBeCancelled);
-		  //return endcase(Sword, 'cancel', index);
 		  return Istrue('cancel', index);
 		  break;
 		  default:
@@ -189,7 +188,6 @@ window.onload = function()
 			  icon_span.innerHTML = "-->";
 			  docA_span.innerHTML = index.docA;
 			  docB_span.innerHTML = index.docB;
-			  //return endcase(Sword, transcript,'top', index);
 			  return Istrue('top', index);
 			  break;
 			  
@@ -209,7 +207,6 @@ window.onload = function()
 		  icon_span.innerHTML = "-->";
 		  docA_span.innerHTML = index.docA;
 		  docB_span.innerHTML = index.docB;
-		  //return endcase(Sword, 'bottom', index);
 		  return Istrue('bottom', index);
 		  break;
 		  
@@ -234,7 +231,6 @@ window.onload = function()
 		 case undefined:
 		  $("#final_span").css("color", "pink");	
 		  toggleStartStop();
-		  //return endcase(Sword, 'stop', index);
 		  return Istrue('stop', index);
 		 
 		  break;
@@ -263,7 +259,6 @@ window.onload = function()
 			 socket.emit('newtext',"new text----------------->>");
 			 
 			 return Istrue('newtext', index);
-			 //return endcase(Tword, 'newtext', index);
 			 break;
 			  default:
 				  return Isfalse(transcript, index);   
