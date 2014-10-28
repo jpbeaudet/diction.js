@@ -202,7 +202,7 @@ window.onload = function()
 	 case 'bottom': 
 		 switch(Sword)
 		 {
-		 case '""':
+		 case 'undefined':
 		  $("#final_span").css("color", "pink");
 		  index.docA = index.docA + index.docB;
 		  index.docB ="";	
