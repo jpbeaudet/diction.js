@@ -337,7 +337,9 @@ function Isfalse(data, index){
 	console.log("isFalse() fired");
 	var diction;
 	var doc = data;
-    if(diction != doc){    	
+    if(diction != doc){ 
+    var json = {num:"",event:'0',data:data};
+    console.log("json in IsFalse = "+json);
     var pretext = index.docA;
   	var afttext = index.docB;	   
     console.log("pretext= "+ pretext);
