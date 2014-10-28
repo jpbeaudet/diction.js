@@ -156,7 +156,7 @@ io.on('connection', function(socket){
 			memory.docA = data[1];
 			memory.docB = data[2];
 			var json = data[3];
-			Json = Json +',' json ;
+			Json = Json +',' +json ;
 			var jsonSave = '{'+ Json+'}';
 			console.log("Json in app.js = "+JSON.stringify(jsonSave)+"-------------------------------------->>");
 			
