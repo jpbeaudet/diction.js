@@ -149,7 +149,7 @@ io.on('connection', function(socket){
 
 		
 		});
-		var Json {} ;
+		var Json;
 		socket.on("save",function(data){
 			
 			var doc = data[0];			
