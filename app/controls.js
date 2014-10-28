@@ -180,7 +180,7 @@ window.onload = function()
 		  icon_span.innerHTML = "-->";
 		  docA_span.innerHTML = index.docA;
 		  docB_span.innerHTML = index.docB;
-		  return endcase(Sword, 'top', index);
+		  return endcase(Sword, transcript,'top', index);
 		  //return Istrue('top', index);
 		  break;
 	//bottom
@@ -298,9 +298,9 @@ window.onload = function()
 	//It will also need to emit the data for the json thickback constructor
 	//----------------------------------------------------------
 
-function endcase (nextWord,command,index){
+function endcase (nextWord,transcript,event,index){
 if(nextWord == ""){
-	 return Istrue(command, index); 
+	 return Istrue(event, index); 
 }else{
 	 return Isfalse(transcript, index); 
 } 
