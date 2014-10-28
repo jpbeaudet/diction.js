@@ -163,9 +163,9 @@ io.on('connection', function(socket){
 			var json = data[3];
 			console.log("json in app = "+JSON.stringify(json));
 			var num = (X.docs.length);
-			if(json!=lock){
-				json =lock;
+			if(X.docs[(num-1)]!= json){				
 			X.docs[num] = json;
+			}
 			console.log("num = "+num);
 			for (i in X.docs){
 				console.log("X.docs["+i+"] = "+X.docs[i]);
@@ -196,7 +196,7 @@ io.on('connection', function(socket){
 			});
 
 
-			}
+			
 		});
 		
 		socket.on("cmd",function(data){			
