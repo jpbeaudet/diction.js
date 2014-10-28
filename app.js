@@ -149,7 +149,10 @@ io.on('connection', function(socket){
 
 		
 		});
-		var Json={event:"0",data:""};
+		//var Json={event:"0",data:""};
+		var X = new Object();
+		X.docs = new Array();
+		X.docs[0]={event:"0",data:""};
 //var Json = {num:'0',json:[{event:'0',data:""}]};
 		socket.on("save",function(data){
 			
@@ -158,12 +161,20 @@ io.on('connection', function(socket){
 			memory.docB = data[2];
 			var json = data[3];
 			console.log("json in app = "+JSON.stringify(json));
-			J = JSON.stringify(Json)+','+ JSON.stringify(json);
-			console.log("J in app = "+J);
-			Json =J;
-			J ='{docs:['+ J +']}';
+			var num = (X.docs.length);
+			X.docs[num] = JSON.stringify(json);
+			console.log("num = "+num);
+			for (i in X.docs){
+				console.log("X.docs["+num+"] = "+X.docs[num]);
+				console.log("X.docs.["+num+"].data = "+X.docs[num].data);
+			}
+			//J = JSON.stringify(Json)+','+ JSON.stringify(json);
+			//console.log("J in app = "+J);
+			//Json =J;
+			//J ='{docs:['+ J +']}';
+		
 			console.log("final J in app = "+J);
-			console.log("J.docs in app = "+J.docs);
+			console.log("X.docs in app = "+X.docs);
 			console.log("Json in app = "+Json);
 			MEMORY.findOne({ username: username}, function (err, doc){
 				var query = {docA:doc.docA, docB:doc.docB, username: username},
