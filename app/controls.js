@@ -165,12 +165,18 @@ window.onload = function()
 	// cancel
 		  // 3 crtl-z like return
 	 case 'cancel': 
+		 switch(Sword)
+		 {
+		 case ' ':
 		  $("#final_span").css("color", "pink");
 		  var toBeCancelled = $("final_span").text();
 		  console.log("toBeCancelled is = " + toBeCancelled);
 		  //return endcase(Sword, 'cancel', index);
 		  return Istrue('cancel', index);
 		  break;
+		  default:
+			  return Isfalse(transcript, index);   
+	 } 
 	
 	// top
 	 case 'top': 
@@ -193,7 +199,10 @@ window.onload = function()
 		 
 	//bottom
 		  
-	 case 'bottom':  
+	 case 'bottom': 
+		 switch(Sword)
+		 {
+		 case ' ':
 		  $("#final_span").css("color", "pink");
 		  index.docA = index.docA + index.docB;
 		  index.docB ="";	
@@ -203,6 +212,10 @@ window.onload = function()
 		  //return endcase(Sword, 'bottom', index);
 		  return Istrue('bottom', index);
 		  break;
+		  
+		  default:
+			  return Isfalse(transcript, index);   
+	 }
 	// back
 		  // words
 		  //sentence
@@ -216,13 +229,18 @@ window.onload = function()
 		  //end
 	// stop
 	 case 'stop': 
-		 
+		 switch(Sword)
+		 {
+		 case ' ':
 		  $("#final_span").css("color", "pink");	
 		  toggleStartStop();
 		  //return endcase(Sword, 'stop', index);
 		  return Istrue('stop', index);
 		 
 		  break;
+		  default:
+			  return Isfalse(transcript, index);   
+	 }
 	// go to :
 		  // line
 		  // word
@@ -234,6 +252,9 @@ window.onload = function()
 		 switch(Sword)
 		 {
 		 case 'text':
+			 switch(Tword)
+			 {
+			 case ' ':
 			 $("#final_span").css("color", "pink");	
 			 index.docA = "";
 			 index.docB ="";
@@ -244,7 +265,9 @@ window.onload = function()
 			 return Istrue('newtext', index);
 			 //return endcase(Tword, 'newtext', index);
 			 break;
-			 
+			  default:
+				  return Isfalse(transcript, index);   
+		 }
 			 
 	     default:
 	     return Isfalse(transcript, index); 
