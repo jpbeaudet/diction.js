@@ -353,7 +353,7 @@ function Isfalse(data, index){
     
   	diction = doc;  
        
-	socket.emit("save", [data, pretext , afttext]);	
+	socket.emit("save", [data, pretext , afttext,json]);	
 	return false;
     } 
    
