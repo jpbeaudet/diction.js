@@ -149,7 +149,7 @@ io.on('connection', function(socket){
 
 		
 		});
-		var Json;
+		var Json={event:"0",data:""};
 //var Json = {num:'0',json:[{event:'0',data:""}]};
 		socket.on("save",function(data){
 			
@@ -158,7 +158,10 @@ io.on('connection', function(socket){
 			memory.docB = data[2];
 			var json = data[3];
 			console.log("json in app = "+JSON.stringify(json));
-			Json += ','+ JSON.stringify(json);
+			J = JSON.stringify(Json)+','+ JSON.stringify(json);
+			console.log("J in app = "+J);
+			Json =J;
+			J ='{'+ J +'}';
 			console.log("Json in app = "+JSON.stringify(Json));
 			MEMORY.findOne({ username: username}, function (err, doc){
 				var query = {docA:doc.docA, docB:doc.docB, username: username},
