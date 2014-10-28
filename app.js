@@ -156,10 +156,12 @@ io.on('connection', function(socket){
 			memory.docA = data[1];
 			memory.docB = data[2];
 			var json = data[3];
+			json.num ++;
 			Json += ',' +json ;
 			var jsonSave = '{'+ Json+'}';
-			console.log("Json in app.js = "+JSON.stringify(jsonSave)+"-------------------------------------->>");
-			
+			for (i in jsonSave){
+			console.log("Json save no: "+i" in app.js = "+JSON.stringify(jsonSave[i])+"-------------------------------------->>");
+			}
 			
 			MEMORY.findOne({ username: username}, function (err, doc){
 				var query = {docA:doc.docA, docB:doc.docB, username: username},
