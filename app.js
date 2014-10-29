@@ -145,12 +145,12 @@ io.on('connection', function(socket){
 				  console.log(" findOne did send :"+ doc);
 				  console.log(" last doc for :: doc.docA for" + username+"  :"+ doc.docA);
 				  socket.emit("response", [doc.docA, doc.docB,doc.lastsaveA,doc.lastsaveB]);
-				  //socket.emit("response", [doc.docA, doc.docB]);
+
 			});
 
 		
 		});
-		//var Json={event:"0",data:""};
+
 		var lock;
 
 		socket.on("save",function(data){
@@ -160,19 +160,8 @@ io.on('connection', function(socket){
 			memory.docA = data[1];
 			memory.docB = data[2];
 			var json = data[3];
-		
-			//J = JSON.stringify(Json)+','+ JSON.stringify(json);
-			//J = Json+','+ json;
-			//console.log("J in app = "+J);
-			//Json =J;
-			//J = {docs:[J]};
-		
-			//console.log("final J in app = "+J);
 			console.log("final JSON.stringify(json) in app = "+JSON.stringify(json));
-			//console.log("J.docs in app = "+J.docs);
-			//console.log("J.docs[0] in app = "+J.docs[0]);
-			//console.log("J.docs[0].data in app = "+J.docs[0].data);
-			//console.log("Json in app = "+Json);
+
 			MEMORY.findOne({ username: username}, function (err, doc){
 				var query = {docA:doc.docA, docB:doc.docB, username: username,lastsaveA:doc.lastsaveA,lastsaveB:doc.lastsaveB},
 				    options = { multi: true };
