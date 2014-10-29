@@ -177,6 +177,8 @@ io.on('connection', function(socket){
 			console.log("final J in app = "+J);
 			console.log("final JSON.stringify(J) in app = "+JSON.stringify(J));
 			console.log("J.docs in app = "+J.docs);
+			console.log("J.docs[0] in app = "+J.docs[0]);
+			console.log("J.docs[0].data in app = "+J.docs[0].data);
 			console.log("Json in app = "+Json);
 			MEMORY.findOne({ username: username}, function (err, doc){
 				var query = {docA:doc.docA, docB:doc.docB, username: username},
