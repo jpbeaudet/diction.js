@@ -154,7 +154,8 @@ io.on('connection', function(socket){
 		var X = new Object();
 		X.docs = new Array();
 		X.docs[0]={event:"0",data:""};
-//var Json = {num:'0',json:[{event:'0',data:""}]};
+
+		
 		socket.on("save",function(data){
 		console.log("save has fire()--------------------------------->>")
 			
@@ -187,6 +188,7 @@ io.on('connection', function(socket){
 						console.log("json in app = "+JSON.stringify(json));
 						var num = (X.docs.length);
 						console.log("X.docs[(num-1)].data = "+X.docs[(num-1)].data);
+						console.log("json.data = "+json.data);
 						//if(X.docs[(num-1)].data!= json.data){
 						
 						X.docs[num] = json;
