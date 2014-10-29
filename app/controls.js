@@ -39,7 +39,9 @@ window.onload = function()
 		  $("#final_span").css("color", "grey");
 		  var docA = response[0];
 		  var docB = response[1];
-		  index = new MyData (docA,docB,transcript);
+		  var LastdocA = response[2];
+		  var LastdocB = response[3];
+		  index = new MyData (docA,docB,transcript,LastdocA,LastdocB);
 		  return command(transcript,index);
 		  
 	  });
@@ -169,8 +171,10 @@ window.onload = function()
 		 {
 		 case undefined:
 		  $("#final_span").css("color", "pink");
-		  var toBeCancelled = $("final_span").text();
-		  console.log("toBeCancelled is = " + toBeCancelled);
+		  index.docA = index.LastdocA;
+		  index.docB = index.LastdocB;
+		  docA_span.innerHTML = index.LastdocA;
+		  docB_span.innerHTML = index.LastdocB;
 		  return Istrue('cancel', index);
 		  break;
 		  default:
