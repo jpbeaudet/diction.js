@@ -41,8 +41,8 @@ window.onload = function()
 		  var docB = response[1];
 		  var LastdocA = response[2];
 		  var LastdocB = response[3];
-		  //index = new MyData (docA,docB,transcript,LastdocA,LastdocB);
-		  index = new MyData (docA,docB,transcript);
+		  index = new MyData (docA,docB,transcript,LastdocA,LastdocB);
+		  //index = new MyData (docA,docB,transcript);
 		  return command(transcript,index);
 		  
 	  });
@@ -172,10 +172,10 @@ window.onload = function()
 		 {
 		 case undefined:
 		  $("#final_span").css("color", "pink");
-		  //index.docA = index.LastdocA;
-		  //index.docB = index.LastdocB;
-		  //docA_span.innerHTML = index.LastdocA;
-		  //docB_span.innerHTML = index.LastdocB;
+		  index.docA = index.LastdocA;
+		  index.docB = index.LastdocB;
+		  docA_span.innerHTML = index.LastdocA;
+		  docB_span.innerHTML = index.LastdocB;
 		  return Istrue('cancel', index);
 		  break;
 		  default:

@@ -6,11 +6,11 @@
 	//For the moment i just added a few i could think i will need. 
 	//-------------------------------------------------------------------
 	
-	//function MyData (docA,docB,LastdocA,LastdocB,transcript){
-		function MyData (docA,docB,transcript){
+	function MyData (docA,docB,transcript,LastdocA,LastdocB){
+		//function MyData (docA,docB,transcript){
 		this.docA = docA;
-		//this.LastdocA = LastdocA;
-		//this.LastdocB=LastdocB;
+		this.LastdocA = LastdocA;
+		this.LastdocB=LastdocB;
 		//this.docA.words = docA.split(" ").length ;
 		this.docB = docB;
 		//this.docB.words = docB.split(" ").length;
