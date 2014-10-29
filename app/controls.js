@@ -181,7 +181,21 @@ window.onload = function()
 		  default:
 			  return Isfalse(transcript, index);   
 	 } 
-	
+	 case 'cancelled': 
+		 switch(Sword)
+		 {
+		 case undefined:
+		  $("#final_span").css("color", "pink");
+		  final_span.innerHTML = "cancel";
+		  index.docA = index.LastdocA;
+		  index.docB = index.LastdocB;
+		  docA_span.innerHTML = index.LastdocA;
+		  docB_span.innerHTML = index.LastdocB;
+		  return Istrue('cancel', index);
+		  break;
+		  default:
+			  return Isfalse(transcript, index);   
+	 } 
 	// top
 	 case 'top': 
 		 switch(Sword)
