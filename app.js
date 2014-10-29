@@ -116,7 +116,7 @@ io.on('connection', function(socket){
 	    	if(doc != null){
 	    	socket.emit("res.load", [doc.docA, doc.docB]);  
 	    	}else{
-	    	var Memory = new MEMORY({ docA: "", docB: "" , username: username});
+	    	var Memory = new MEMORY({ docA: "", docB: "" , username: username,lastsaveA:"",lastsaveB:""});
 			Memory.save(function (err, Memory) {
 			if (err) return console.error(err);
 			});
@@ -127,11 +127,11 @@ io.on('connection', function(socket){
 	    
 	    socket.on("newtext",function(data){
 			MEMORY.findOne({ username: username}, function (err, doc){
-				var query = {docA:doc.docA, docB:doc.docB, username: username},
+				var query = {docA:doc.docA, docB:doc.docB, username: usernamem,lastsave:doc.lastsave},
 				    options = { multi: true };
 				  console.log(" query =  :"+ query);
 				
-				  MEMORY.update(query, { docA: "", docB: "", username: username}, options, callback);
+				  MEMORY.update(query, { docA: "", docB: "", username: username,lastsaveA:doc.lastsaveA,lastsaveB:doc.lastsaveB}, options, callback);
 				  function callback (err, numAffected) {
 					   //numAffected is the number of updated documents
 		
@@ -173,16 +173,18 @@ io.on('connection', function(socket){
 			//console.log("J.docs[0].data in app = "+J.docs[0].data);
 			//console.log("Json in app = "+Json);
 			MEMORY.findOne({ username: username}, function (err, doc){
-				var query = {docA:doc.docA, docB:doc.docB, username: username},
+				var query = {docA:doc.docA, docB:doc.docB, username: username,lastsaveA:doc.lastsaveA,lastsaveB:doc.lastsaveB},
 				    options = { multi: true };
 				  console.log(" query =  :"+ query);
 				  console.log('doc.json in save ='+ doc.json)
 				
-				  MEMORY.update(query, { docA: memory.docA , docB: memory.docB, username: username}, options, callback);
+				  MEMORY.update(query, { docA: memory.docA , docB: memory.docB, username: username,lastsaveA:doc.docA,lastsaveB:doc.docB}, options, callback);
 				  function callback (err, numAffected) {
 					   //numAffected is the number of updated documents
 	
 						console.log("socket save = "+ doc);
+						console.log("lastsave A >> save= "+ doc.lastsaveA );
+						console.log("lastsave B >> save= "+ doc.lastsaveB );
 						console.log("memory A >> save= "+ memory.docA );
 						console.log("memory B >> save= "+ memory.docB );
 						console.log("username >> save= "+ username);
@@ -199,11 +201,11 @@ io.on('connection', function(socket){
 			memory.docB = data[1];
 			
 			MEMORY.findOne({ username: username}, function (err, doc){
-				var query = {docA:doc.docA, docB:doc.docB, username: username},
+				var query = {docA:doc.docA, docB:doc.docB, username: username,lastsaveA:doc.lastsaveA,lastsaveB:doc.lastsaveB},
 				    options = { multi: true };
 				  console.log(" query =  :"+ query);
 				
-				  MEMORY.update(query, { docA: memory.docA , docB: memory.docB, username: username}, options, callback);
+				  MEMORY.update(query, { docA: memory.docA , docB: memory.docB, username: username,lastsaveA:doc.lastsaveA,lastsaveB:doc.lastsaveB}, options, callback);
 				  function callback (err, numAffected) {
 					   //numAffected is the number of updated documents
 						console.log("memory A >> save= "+ memory.docA );

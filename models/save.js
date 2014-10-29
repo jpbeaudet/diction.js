@@ -4,7 +4,9 @@ var mongoose = require('mongoose'),
 	var memoryDb = mongoose.Schema({
 	    docA: String,
 	    docB: String,
-	    username: String
+	    username: String,
+	    lastsaveA: String,
+	    lastsaveB: String
 	});
 
 module.exports = mongoose.model('memory', memoryDb);;
