@@ -189,10 +189,10 @@ io.on('connection', function(socket){
 						var num = (X.docs.length);
 						console.log("X.docs[(num-1)].data = "+X.docs[(num-1)].data);
 						console.log("json.data = "+json.data);
-						//if(X.docs[(num-1)].data!= json.data){
+						if(X.docs[(num-1)].data!= json.data){
 						
 						X.docs[num] = json;
-						//}
+						}
 						console.log("num = "+num);
 						console.log("X.docs[(num-1)].data = "+X.docs[(num-1)].data );
 						console.log("socket save = "+ doc);
