@@ -116,7 +116,7 @@ io.on('connection', function(socket){
 	    	if(doc != null){
 	    	socket.emit("res.load", [doc.docA, doc.docB]);  
 	    	}else{
-	    	var Memory = new MEMORY({ docA: "", docB: "" , username: username,json:' {event:"0",data:""}'});
+	    	var Memory = new MEMORY({ docA: "", docB: "" , username: username,json:'{event:"0",data:""}'});
 			Memory.save(function (err, Memory) {
 			if (err) return console.error(err);
 			});
@@ -131,7 +131,7 @@ io.on('connection', function(socket){
 				    options = { multi: true };
 				  console.log(" query =  :"+ query);
 				
-				  MEMORY.update(query, { docA: "", docB: "", username: username,json:' {event:"0",data:""}'}, options, callback);
+				  MEMORY.update(query, { docA: "", docB: "", username: username,json:""}, options, callback);
 				  function callback (err, numAffected) {
 					   //numAffected is the number of updated documents
 		
