@@ -172,7 +172,7 @@ io.on('connection', function(socket){
 			J = JSON.stringify(Json)+','+ JSON.stringify(json);
 			console.log("J in app = "+J);
 			Json =J;
-			J = {docs:['+ J +']};
+			J = {docs:[ J ]};
 		
 			console.log("final J in app = "+J);
 			console.log("final JSON.stringify(J) in app = "+JSON.stringify(J));
