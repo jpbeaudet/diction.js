@@ -149,11 +149,11 @@ io.on('connection', function(socket){
 
 		
 		});
-		//var Json={event:"0",data:""};
+		var Json={event:"0",data:""};
 		var lock;
-		var X = new Object();
-		X.docs = new Array();
-		X.docs[0]={event:"0",data:""};
+		//var X = new Object();
+		//X.docs = new Array();
+		//X.docs[0]={event:"0",data:""};
 
 		
 		socket.on("save",function(data){
@@ -169,14 +169,15 @@ io.on('connection', function(socket){
 			//	console.log("X.docs.["+i+"].data = "+X.docs[i].data);
 			//}
 			
-			//J = JSON.stringify(Json)+','+ JSON.stringify(json);
-			//console.log("J in app = "+J);
-			//Json =J;
-			//J ='{docs:['+ J +']}';
+			J = JSON.stringify(Json)+','+ JSON.stringify(json);
+			console.log("J in app = "+J);
+			Json =J;
+			J = {docs:['+ J +']};
 		
-			//console.log("final J in app = "+J);
-			//console.log("X.docs in app = "+X.docs);
-			//console.log("Json in app = "+Json);
+			console.log("final J in app = "+J);
+			console.log("final JSON.stringify(J) in app = "+JSON.stringify(J));
+			console.log("J.docs in app = "+J.docs);
+			console.log("Json in app = "+Json);
 			MEMORY.findOne({ username: username}, function (err, doc){
 				var query = {docA:doc.docA, docB:doc.docB, username: username},
 				    options = { multi: true };
@@ -185,16 +186,16 @@ io.on('connection', function(socket){
 				  MEMORY.update(query, { docA: memory.docA , docB: memory.docB, username: username}, options, callback);
 				  function callback (err, numAffected) {
 					   //numAffected is the number of updated documents
-						console.log("json in app = "+JSON.stringify(json));
-						var num = (X.docs.length);
-						console.log("X.docs[(num-1)].data = "+X.docs[(num-1)].data);
-						console.log("json.data = "+json.data);
-						if(X.docs[(num-1)].data!= json.data){
+						//console.log("json in app = "+JSON.stringify(json));
+						//var num = (X.docs.length);
+						//console.log("X.docs[(num-1)].data = "+X.docs[(num-1)].data);
+						//console.log("json.data = "+json.data);
+						//if(X.docs[(num-1)].data!= json.data){
 						
-						X.docs[num] = json;
-						}
-						console.log("num = "+num);
-						console.log("X.docs[(num-1)].data = "+X.docs[(num-1)].data );
+						//X.docs[num] = json;
+						//}
+						//console.log("num = "+num);
+						//console.log("X.docs[(num-1)].data = "+X.docs[(num-1)].data );
 						console.log("socket save = "+ doc);
 						console.log("memory A >> save= "+ memory.docA );
 						console.log("memory B >> save= "+ memory.docB );
