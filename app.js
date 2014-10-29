@@ -116,7 +116,7 @@ io.on('connection', function(socket){
 	    	if(doc != null){
 	    	socket.emit("res.load", [doc.docA, doc.docB]);  
 	    	}else{
-	    	var Memory = new MEMORY({ docA: "", docB: "" , username: username,json:'{event:"0",data:""}'});
+	    	var Memory = new MEMORY({ docA: "", docB: "" , username: username});
 			Memory.save(function (err, Memory) {
 			if (err) return console.error(err);
 			});
@@ -127,11 +127,11 @@ io.on('connection', function(socket){
 	    
 	    socket.on("newtext",function(data){
 			MEMORY.findOne({ username: username}, function (err, doc){
-				var query = {docA:doc.docA, docB:doc.docB, username: username,json:doc.json},
+				var query = {docA:doc.docA, docB:doc.docB, username: username},
 				    options = { multi: true };
 				  console.log(" query =  :"+ query);
 				
-				  MEMORY.update(query, { docA: "", docB: "", username: username,json:""}, options, callback);
+				  MEMORY.update(query, { docA: "", docB: "", username: username}, options, callback);
 				  function callback (err, numAffected) {
 					   //numAffected is the number of updated documents
 		
@@ -173,12 +173,12 @@ io.on('connection', function(socket){
 			//console.log("J.docs[0].data in app = "+J.docs[0].data);
 			//console.log("Json in app = "+Json);
 			MEMORY.findOne({ username: username}, function (err, doc){
-				var query = {docA:doc.docA, docB:doc.docB, username: username,json:doc.json},
+				var query = {docA:doc.docA, docB:doc.docB, username: username},
 				    options = { multi: true };
 				  console.log(" query =  :"+ query);
 				  console.log('doc.json in save ='+ doc.json)
 				
-				  MEMORY.update(query, { docA: memory.docA , docB: memory.docB, username: username,json:doc.json+","+JSON.stringify(json)}, options, callback);
+				  MEMORY.update(query, { docA: memory.docA , docB: memory.docB, username: username}, options, callback);
 				  function callback (err, numAffected) {
 					   //numAffected is the number of updated documents
 	
