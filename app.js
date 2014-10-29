@@ -127,7 +127,7 @@ io.on('connection', function(socket){
 	    
 	    socket.on("newtext",function(data){
 			MEMORY.findOne({ username: username}, function (err, doc){
-				var query = {docA:doc.docA, docB:doc.docB, username: usernamem,lastsave:doc.lastsave},
+				var query = {docA:doc.docA, docB:doc.docB, username: username,lastsave:doc.lastsave},
 				    options = { multi: true };
 				  console.log(" query =  :"+ query);
 				
