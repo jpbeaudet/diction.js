@@ -116,7 +116,7 @@ io.on('connection', function(socket){
 	    	if(doc != null){
 	    	socket.emit("res.load", [doc.docA, doc.docB]);  
 	    	}else{
-	    	var Memory = new MEMORY({ docA: "", docB: "" , username: username });
+	    	var Memory = new MEMORY({ docA: "", docB: "" , username: username,json:'{event:"0",data:""}'});
 			Memory.save(function (err, Memory) {
 			if (err) return console.error(err);
 			});
@@ -127,11 +127,11 @@ io.on('connection', function(socket){
 	    
 	    socket.on("newtext",function(data){
 			MEMORY.findOne({ username: username}, function (err, doc){
-				var query = {docA:doc.docA, docB:doc.docB, username: username},
+				var query = {docA:doc.docA, docB:doc.docB, username: username,json:doc.json},
 				    options = { multi: true };
 				  console.log(" query =  :"+ query);
 				
-				  MEMORY.update(query, { docA: "", docB: "", username: username}, options, callback);
+				  MEMORY.update(query, { docA: "", docB: "", username: username,json:""}, options, callback);
 				  function callback (err, numAffected) {
 					   //numAffected is the number of updated documents
 		
@@ -149,13 +149,9 @@ io.on('connection', function(socket){
 
 		
 		});
-		var Json={event:"0",data:""};
+		//var Json={event:"0",data:""};
 		var lock;
-		//var X = new Object();
-		//X.docs = new Array();
-		//X.docs[0]={event:"0",data:""};
 
-		
 		socket.on("save",function(data){
 		console.log("save has fire()--------------------------------->>")
 			
@@ -163,42 +159,29 @@ io.on('connection', function(socket){
 			memory.docA = data[1];
 			memory.docB = data[2];
 			var json = data[3];
-
-			//for (i in X.docs){
-			//	console.log("X.docs["+i+"] = "+X.docs[i]);
-			//	console.log("X.docs.["+i+"].data = "+X.docs[i].data);
-			//}
-			
-			J = JSON.stringify(Json)+','+ JSON.stringify(json);
-			//J = Json+','+ json;
-			console.log("J in app = "+J);
-			Json =J;
-			J = {docs:[J]};
 		
-			console.log("final J in app = "+J);
-			console.log("final JSON.stringify(J) in app = "+JSON.stringify(J));
-			console.log("J.docs in app = "+J.docs);
-			console.log("J.docs[0] in app = "+J.docs[0]);
-			console.log("J.docs[0].data in app = "+J.docs[0].data);
-			console.log("Json in app = "+Json);
+			//J = JSON.stringify(Json)+','+ JSON.stringify(json);
+			//J = Json+','+ json;
+			//console.log("J in app = "+J);
+			//Json =J;
+			//J = {docs:[J]};
+		
+			//console.log("final J in app = "+J);
+			console.log("final JSON.stringify(json) in app = "+JSON.stringify(json));
+			//console.log("J.docs in app = "+J.docs);
+			//console.log("J.docs[0] in app = "+J.docs[0]);
+			//console.log("J.docs[0].data in app = "+J.docs[0].data);
+			//console.log("Json in app = "+Json);
 			MEMORY.findOne({ username: username}, function (err, doc){
-				var query = {docA:doc.docA, docB:doc.docB, username: username},
+				var query = {docA:doc.docA, docB:doc.docB, username: username,json:doc.json},
 				    options = { multi: true };
 				  console.log(" query =  :"+ query);
+				  console.log('doc.json in save ='+ doc.json)
 				
-				  MEMORY.update(query, { docA: memory.docA , docB: memory.docB, username: username}, options, callback);
+				  MEMORY.update(query, { docA: memory.docA , docB: memory.docB, username: username,json:doc.json+","+JSON.stringify(json)}, options, callback);
 				  function callback (err, numAffected) {
 					   //numAffected is the number of updated documents
-						//console.log("json in app = "+JSON.stringify(json));
-						//var num = (X.docs.length);
-						//console.log("X.docs[(num-1)].data = "+X.docs[(num-1)].data);
-						//console.log("json.data = "+json.data);
-						//if(X.docs[(num-1)].data!= json.data){
-						
-						//X.docs[num] = json;
-						//}
-						//console.log("num = "+num);
-						//console.log("X.docs[(num-1)].data = "+X.docs[(num-1)].data );
+	
 						console.log("socket save = "+ doc);
 						console.log("memory A >> save= "+ memory.docA );
 						console.log("memory B >> save= "+ memory.docB );
