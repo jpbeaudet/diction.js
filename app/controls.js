@@ -226,13 +226,27 @@ window.onload = function()
 		  docA_span.innerHTML = index.docA;
 		  docB_span.innerHTML = index.docB;
 		  return Istrue('Bottom', index);
-		  break;
-		  
-		  
-		  
+		  break;  
 		  default:
 			  return Isfalse(transcript, index);   
 	 }
+		 
+	 case 'Bodum': 
+		 switch(Sword)
+		 {
+		 case undefined:
+		  $("#final_span").css("color", "pink");
+		  index.docA = index.docA + index.docB;
+		  index.docB ="";	
+		  icon_span.innerHTML = "-->";
+		  docA_span.innerHTML = index.docA;
+		  docB_span.innerHTML = index.docB;
+		  return Istrue('Bottom', index);
+		  break;  
+		  default:
+			  return Isfalse(transcript, index);   
+	 }		 
+		 
 	// back
 		  // words
 		  //sentence
