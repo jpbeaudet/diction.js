@@ -229,18 +229,6 @@ window.onload = function()
 		  break;
 		  
 		  
-		 case 'end': 
-			 switch(Sword)
-			 {
-			 case undefined:
-			  $("#final_span").css("color", "pink");
-			  index.docA = index.docA + index.docB;
-			  index.docB ="";	
-			  icon_span.innerHTML = "-->";
-			  docA_span.innerHTML = index.docA;
-			  docB_span.innerHTML = index.docB;
-			  return Istrue('End', index);
-			  break;	  
 		  
 		  default:
 			  return Isfalse(transcript, index);   
