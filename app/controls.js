@@ -186,7 +186,8 @@ window.onload = function()
 		 {
 		 case undefined:
 		  $("#final_span").css("color", "pink");
-		  final_span.innerHTML = "cancel";
+		  $("#final_span").text("cancel");
+		  //final_span.innerHTML = "cancel";
 		  index.docA = index.LastdocA;
 		  index.docB = index.LastdocB;
 		  docA_span.innerHTML = index.LastdocA;
