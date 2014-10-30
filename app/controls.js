@@ -176,7 +176,7 @@ window.onload = function()
 		  index.docB = index.LastdocB;
 		  docA_span.innerHTML = index.LastdocA;
 		  docB_span.innerHTML = index.LastdocB;
-		  return Istrue('cancel', index);
+		  return Istrue('Cancel', index);
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
@@ -186,13 +186,11 @@ window.onload = function()
 		 {
 		 case undefined:
 		  $("#final_span").css("color", "pink");
-		  transcript = "cancel";
-		  //final_span.innerHTML = "cancel";
 		  index.docA = index.LastdocA;
 		  index.docB = index.LastdocB;
 		  docA_span.innerHTML = index.LastdocA;
 		  docB_span.innerHTML = index.LastdocB;
-		  return Istrue('cancel', index);
+		  return Istrue('Cancel', index);
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
@@ -208,7 +206,7 @@ window.onload = function()
 			  icon_span.innerHTML = "-->";
 			  docA_span.innerHTML = index.docA;
 			  docB_span.innerHTML = index.docB;
-			  return Istrue('top', index);
+			  return Istrue('Top', index);
 			  break;
 			  
 			  default:
@@ -227,8 +225,22 @@ window.onload = function()
 		  icon_span.innerHTML = "-->";
 		  docA_span.innerHTML = index.docA;
 		  docB_span.innerHTML = index.docB;
-		  return Istrue('bottom', index);
+		  return Istrue('Bottom', index);
 		  break;
+		  
+		  
+		 case 'end': 
+			 switch(Sword)
+			 {
+			 case undefined:
+			  $("#final_span").css("color", "pink");
+			  index.docA = index.docA + index.docB;
+			  index.docB ="";	
+			  icon_span.innerHTML = "-->";
+			  docA_span.innerHTML = index.docA;
+			  docB_span.innerHTML = index.docB;
+			  return Istrue('End', index);
+			  break;	  
 		  
 		  default:
 			  return Isfalse(transcript, index);   
@@ -348,6 +360,7 @@ function Istrue(data, index){
 	console.log("istrue() fired");
 	var pretext = index.docA;
 	var afttext = index.docB;
+	final_span.innerHTML = " @@@->  " + data + "  <-@@@ ";
 	socket.emit("cmd", [ pretext , afttext]);
 	
 	return true;
@@ -370,7 +383,7 @@ function Isfalse(data, index){
     docB_span.innerHTML = afttext + " ";
     pretext = pretext + " " + doc + " ";
     afttext = afttext + "";  
-    
+    final_span.innerHTML = " @@@->  " + doc + "  <-@@@ ";
   	diction = doc;  
        
 	socket.emit("save", [data, pretext , afttext,json]);	

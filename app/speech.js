@@ -40,7 +40,7 @@ if ('webkitSpeechRecognition' in window) {
             
       } 
        
-      final_span.innerHTML = " @@@->  " + txt + "  <-@@@ ";
+   //   final_span.innerHTML = " @@@->  " + txt + "  <-@@@ ";
       interim_span.innerHTML = interim;
       icon_span.innerHTML = "-->";
       
