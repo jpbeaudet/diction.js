@@ -316,7 +316,7 @@ window.onload = function()
 			                }
 			            }
 			        });	 
-				 }
+				 });
 			 
 			
 			 break;
