@@ -290,7 +290,12 @@ window.onload = function()
 			 {
 			 case undefined:
 
-				 confirmNewText(index);
+				var confirm = confirmNewText(index);
+				if(confirm){
+					return Istrue('newtext', index);
+				}else{
+					return Istrue('newtext', index);
+				}
 			 break;
 			  default:
 				  return Isfalse(transcript, index);   
@@ -408,12 +413,12 @@ $.confirm({
  docB_span.innerHTML = "";
  socket.emit('newtext',"new text----------------->>");
 
- return Istrue('newtext', index);
+ return true;
             }
         },
         'No'	: {
             'class'	: 'gray',
-            'action': function(){return Istrue('newtext', index);}	// Nothing to do in this case. You can as well omit the action property.
+            'action': function(){return false;}	// Nothing to do in this case. You can as well omit the action property.
        
         }
     }
