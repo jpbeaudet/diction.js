@@ -11,7 +11,7 @@
 // when true the function will also execute the related command (callback)
 // the function handling the interim, the final ,doc and mode html will be placed after the controls function.
 //var Data= new Object();
-var ok;
+
 var socket = io.connect('https://54.68.32.250:3000', {'force new connection': true});	
 window.onload = function()
 {
@@ -22,7 +22,6 @@ window.onload = function()
 		icon_span.innerHTML = "-->";
 		docA_span.innerHTML = docA;
 	    docB_span.innerHTML = docB;	
-	    ok =false;
 
 });
 };
@@ -35,7 +34,6 @@ window.onload = function()
 
 	  socket.emit("request", "test -------------------------------->");
 	  socket.on("response", function(response){
-			ok = false;
 		  console.log("response fired");
 		  $("#final_span").css("color", "grey");
 		  var docA = response[0];
@@ -67,16 +65,17 @@ window.onload = function()
 		  var request = ["",""];
 	  }
 	  // Sometime googleSpeechApi return the first element of the array as undefined or empty. 
-		  if( request[0] == undefined){
-			  request.splice(0,1);
+	  if( request[0] == undefined){
+		  request.splice(0,1);
 		  }
 		  if( request[0] == ''){
 			  request.splice(0,1);
 		  }
-		  console.log("request = " + request);
-		  console.log("request[0] = " + request[0]);
-		  console.log("request[1] = " + request[1]);
-		  console.log("request [2] = " + request[2]);
+	 console.log("request = " + request);
+	 console.log("request[0] = " + request[0]);
+	 console.log("request[1] = " + request[1]);
+	 console.log("request [2] = " + request[2]);
+		  
 	 var Fword = request[0];
 	 var Sword = request[1];
 	 var Tword = request[2];
