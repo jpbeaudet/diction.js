@@ -289,36 +289,8 @@ window.onload = function()
 			 switch(Tword)
 			 {
 			 case undefined:
-				 $("#delete").click();
-				  $("#delete").click(function(){
 
-			        $.confirm({
-			            'title'		: 'Delete Confirmation',
-			            'message'	: 'You are about to delete your current text. <br />It cannot be restored at a later time! Continue?',
-			            'buttons'	: {
-			                'Yes'	: {
-			                    'class'	: 'blue',
-			                    'action': function(){
-			   		 $("#final_span").css("color", "pink");	
-					 index.docA = "";
-					 index.docB ="";
-					 docA_span.innerHTML = "";
-					 docB_span.innerHTML = "";
-					 socket.emit('newtext',"new text----------------->>");
-					
-					 return Istrue('newtext', index);
-			                    }
-			                },
-			                'No'	: {
-			                    'class'	: 'gray',
-			                    'action': function(){return Istrue('newtext', index);}	// Nothing to do in this case. You can as well omit the action property.
-			               
-			                }
-			            }
-			        });	 
-				 });
-			 
-			
+				 confirmNewText(index);
 			 break;
 			  default:
 				  return Isfalse(transcript, index);   
@@ -420,7 +392,31 @@ function Isfalse(data, index){
     } 
    
 }
-	      
+ function confirmNewText(index)	{      
 	
+$.confirm({
+    'title'		: 'Delete Confirmation',
+    'message'	: 'You are about to delete your current text. <br />It cannot be restored at a later time! Continue?',
+    'buttons'	: {
+        'Yes'	: {
+            'class'	: 'blue',
+            'action': function(){
+	 $("#final_span").css("color", "pink");	
+ index.docA = "";
+ index.docB ="";
+ docA_span.innerHTML = "";
+ docB_span.innerHTML = "";
+ socket.emit('newtext',"new text----------------->>");
+
+ return Istrue('newtext', index);
+            }
+        },
+        'No'	: {
+            'class'	: 'gray',
+            'action': function(){return Istrue('newtext', index);}	// Nothing to do in this case. You can as well omit the action property.
+       
+        }
+    }
+});	 	
 	
-	
+}
