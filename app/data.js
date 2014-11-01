@@ -7,7 +7,9 @@
 	//-------------------------------------------------------------------
 	
 	function MyData (docA,docB,transcript,LastdocA,LastdocB){
-       // this.lines=  (spanA.match(/\n/g)||[]).length+(spanB.match(/\n/g)||[]).length;
+		var n = 77;
+		var docAll = docA + docB + transcript;
+        this.lines=  docAll.match(new RegExp('.{1,'+n+'}', 'g')).length;
         //this.lines.position= (spanB.match(/\n/g)||[]).length;
         //this.column;
 		this.docA = docA;
