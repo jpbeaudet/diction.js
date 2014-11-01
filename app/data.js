@@ -11,6 +11,9 @@
 		var docAll = docA + docB + transcript;
         this.lines=  docAll.match(new RegExp('.{1,'+n+'}', 'g')).length;
         //this.lines.position= (spanB.match(/\n/g)||[]).length;
+        this.confirmation = function(){
+        	
+        };
 		this.docA = docA;
 		this.LastdocA = LastdocA;
 		this.LastdocB=LastdocB;

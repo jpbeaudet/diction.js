@@ -22,7 +22,7 @@ window.onload = function()
 		icon_span.innerHTML = "-->";
 		docA_span.innerHTML = docA;
 	    docB_span.innerHTML = docB;	
-		
+
 });
 };
 
@@ -79,6 +79,8 @@ window.onload = function()
 	 var Fword = request[0];
 	 var Sword = request[1];
 	 var Tword = request[2];
+	 
+
 		
 	// Here will go the actual command. There will be three section handling : movement, characters and edition mode	// 
 	// If its a command , it will execute the command and sent the transcript, index and command event number to IsTrue. 
@@ -286,14 +288,34 @@ window.onload = function()
 			 switch(Tword)
 			 {
 			 case undefined:
-			 $("#final_span").css("color", "pink");	
-			 index.docA = "";
-			 index.docB ="";
-			 docA_span.innerHTML = "";
-			 docB_span.innerHTML = "";
-			 socket.emit('newtext',"new text----------------->>");
+				 
+
+			        $.confirm({
+			            'title'		: 'Delete Confirmation',
+			            'message'	: 'You are about to delete your current text. <br />It cannot be restored at a later time! Continue?',
+			            'buttons'	: {
+			                'Yes'	: {
+			                    'class'	: 'blue',
+			                    'action': function(){
+			   		 $("#final_span").css("color", "pink");	
+					 index.docA = "";
+					 index.docB ="";
+					 docA_span.innerHTML = "";
+					 docB_span.innerHTML = "";
+					 socket.emit('newtext',"new text----------------->>");
+					 return Istrue('newtext', index);
+			                    }
+			                },
+			                'No'	: {
+			                    'class'	: 'gray',
+			                    'action': function(){return Istrue('newtext', index);}	// Nothing to do in this case. You can as well omit the action property.
+			               
+			                }
+			            }
+			        });	 
+	
 			 
-			 return Istrue('newtext', index);
+			
 			 break;
 			  default:
 				  return Isfalse(transcript, index);   
@@ -353,6 +375,7 @@ window.onload = function()
 	 
 	 console.log("memory A in end of command = "+ index.docA );
 	 console.log("memory B in end of command  = "+ index.docB );
+	 }
 	}//end of commands()
 	//
 	//Here goes the istrue and isfalse that will emit to server last index modification for saving purposes//
