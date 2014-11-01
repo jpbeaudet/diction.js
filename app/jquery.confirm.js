@@ -1,4 +1,4 @@
-(function($){
+///(function($){
 
     $.confirm = function(params){
 
@@ -53,4 +53,4 @@
         });
     }
 
-})(jQuery);
+//})(jQuery);
