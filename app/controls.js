@@ -286,7 +286,7 @@ window.onload = function()
 		 {
 		 case undefined:
 		  $("#final_span").css("color", "pink");
-		  $('#confirmButtons').find('.button grey').click();
+		  $('#confirmOverlay').find('#confirmBox').find('#confirmButtons').find('.button grey').click();
 		  //$("#confirmButtons.button grey").click();
 		  return Istrue('Yes', index);
 		 
@@ -300,7 +300,7 @@ window.onload = function()
 		 {
 		 case undefined:
 		  $("#final_span").css("color", "pink");
-		  $('#confirmButtons').find('.button blue').click();
+		  $('#confirmOverlay').find('#confirmBox').find('#confirmButtons').find('.button blue').click();
 		  //$("#confirmButtons.button blue").click();
 		  return Istrue('No', index);
 		 
