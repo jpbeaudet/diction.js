@@ -43,7 +43,6 @@ window.onload = function()
 		  var LastdocB = response[3];
 		  index = new MyData (docA,docB,transcript,LastdocA,LastdocB);
 		  lines_span.innerHTML = "Lines: "+ index.lines;
-		  //column_span.innerHTML = " Column: "+ column;
 		  words_span.innerHTML = " Words: "+ index.wordsTotal;
 		  return command(transcript,index);
 		  
