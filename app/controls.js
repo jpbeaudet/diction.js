@@ -286,7 +286,7 @@ window.onload = function()
 		 {
 		 case undefined:
 		  $("#final_span").css("color", "pink");	
-		  $(".button grey").click();
+		  $("#confirmButtons.button grey").click();
 		  return Istrue('Yes', index);
 		 
 		  break;
@@ -299,7 +299,7 @@ window.onload = function()
 		 {
 		 case undefined:
 		  $("#final_span").css("color", "pink");	
-		  $(".button blue").click();
+		  $("#confirmButtons.button blue").click();
 		  return Istrue('No', index);
 		 
 		  break;
