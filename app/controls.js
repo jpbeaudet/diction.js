@@ -11,7 +11,7 @@
 // when true the function will also execute the related command (callback)
 // the function handling the interim, the final ,doc and mode html will be placed after the controls function.
 //var Data= new Object();
-
+var ok;
 var socket = io.connect('https://54.68.32.250:3000', {'force new connection': true});	
 window.onload = function()
 {
@@ -22,6 +22,7 @@ window.onload = function()
 		icon_span.innerHTML = "-->";
 		docA_span.innerHTML = docA;
 	    docB_span.innerHTML = docB;	
+	    ok =false;
 
 });
 };
@@ -34,7 +35,7 @@ window.onload = function()
 
 	  socket.emit("request", "test -------------------------------->");
 	  socket.on("response", function(response){
-			
+			ok = false;
 		  console.log("response fired");
 		  $("#final_span").css("color", "grey");
 		  var docA = response[0];
@@ -288,7 +289,7 @@ window.onload = function()
 			 switch(Tword)
 			 {
 			 case undefined:
-				 var ok = true;
+				  ok = true;
 				 if(ok){
 
 			        $.confirm({
