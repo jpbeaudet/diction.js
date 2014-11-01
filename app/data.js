@@ -7,14 +7,18 @@
 	//-------------------------------------------------------------------
 	
 	function MyData (docA,docB,transcript,LastdocA,LastdocB){
-		//function MyData (docA,docB,transcript){
+		var spanA=  document.getElementById("docA_span");
+		var spanB=  document.getElementById("docB_span");
+        this.lines=  (spanA.match(/\n/g)||[]).length+(spanB.match(/\n/g)||[]).length;
+        this.lines.position= (spanB.match(/\n/g)||[]).length;
+        this.column;
 		this.docA = docA;
 		this.LastdocA = LastdocA;
 		this.LastdocB=LastdocB;
-		//this.docA.words = docA.split(" ").length ;
+		this.docA.words = docA.split(" ").length ;
 		this.docB = docB;
-		//this.docB.words = docB.split(" ").length;
-		///this.wordsTotal = ( docA.split(" ").length + docB.split(" ").length + transcript.split(" ").length);
+		this.docB.words = docB.split(" ").length;
+		this.wordsTotal = ( docA.split(" ").length + docB.split(" ").length + transcript.split(" ").length);
 		//this.textByWords = (docA.split(" ") + docB.split(" ") + transcript.split(" "));
 		//this.textBySentences = (docA.split("." +" "+  "/[A-Z]/" )+ docB.split("." +" "+  "/[A-Z]/" ) +transcript.split("." +" "+  "/[A-Z]/" ));
 		//this.textByParagraph = docA.split(/\r\n|\r|\n/g) + docB.split(/\r\n|\r|\n/g)+ transcript.split(/\r\n|\r|\n/g);
