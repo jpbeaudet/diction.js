@@ -280,6 +280,36 @@ window.onload = function()
 		  // sentence
 		  
 	// accept
+		 
+	 case 'yes': 
+		 switch(Sword)
+		 {
+		 case undefined:
+		  $("#final_span").css("color", "pink");	
+		  $("#confirmButtons").delegate(".button gray", "click", function(e) {
+			    // ...
+			});
+		  return Istrue('stop', index);
+		 
+		  break;
+		  default:
+			  return Isfalse(transcript, index);   
+	 }	 
+		 
+	 case 'no': 
+		 switch(Sword)
+		 {
+		 case undefined:
+		  $("#final_span").css("color", "pink");	
+		  $("#confirmButtons").delegate(".button blue", "click", function(e) {
+			    // ...
+			});
+		  return Istrue('stop', index);
+		 
+		  break;
+		  default:
+			  return Isfalse(transcript, index);   
+	 }	
     //new text		  
 	 case 'new':
 		 switch(Sword)
