@@ -413,12 +413,12 @@ $.confirm({
  docB_span.innerHTML = "";
  socket.emit('newtext',"new text----------------->>");
 
- return function(){ location.reload();};
+ return function(){ location.reload(true);};
             }
         },
         'No'	: {
             'class'	: 'gray',
-            'action': function(){return function(){ location.reload();};}	// Nothing to do in this case. You can as well omit the action property.
+            'action': function(){return function(){ location.reload(true);};}	// Nothing to do in this case. You can as well omit the action property.
        
         }
     }
