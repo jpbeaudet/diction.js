@@ -289,8 +289,8 @@ window.onload = function()
 			 switch(Tword)
 			 {
 			 case undefined:
-				  ok = true;
-				 if(ok){
+				 $("#delete").click();
+				  $("#delete").click(function(){
 
 			        $.confirm({
 			            'title'		: 'Delete Confirmation',
@@ -305,13 +305,13 @@ window.onload = function()
 					 docA_span.innerHTML = "";
 					 docB_span.innerHTML = "";
 					 socket.emit('newtext',"new text----------------->>");
-					 ok = false;
+					
 					 return Istrue('newtext', index);
 			                    }
 			                },
 			                'No'	: {
 			                    'class'	: 'gray',
-			                    'action': function(){ok = false; return Istrue('newtext', index);}	// Nothing to do in this case. You can as well omit the action property.
+			                    'action': function(){return Istrue('newtext', index);}	// Nothing to do in this case. You can as well omit the action property.
 			               
 			                }
 			            }
