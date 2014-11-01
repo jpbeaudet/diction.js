@@ -288,7 +288,8 @@ window.onload = function()
 			 switch(Tword)
 			 {
 			 case undefined:
-				 
+				 var ok = true;
+				 if(ok){
 
 			        $.confirm({
 			            'title'		: 'Delete Confirmation',
@@ -313,7 +314,7 @@ window.onload = function()
 			                }
 			            }
 			        });	 
-	
+				 }
 			 
 			
 			 break;
