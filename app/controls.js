@@ -286,10 +286,8 @@ window.onload = function()
 		 {
 		 case undefined:
 		  $("#final_span").css("color", "pink");	
-		  $("#confirmButtons").delegate(".button gray", "click", function(e) {
-			    // ...
-			});
-		  return Istrue('stop', index);
+		  $(".button grey").click();
+		  return Istrue('Yes', index);
 		 
 		  break;
 		  default:
@@ -301,10 +299,8 @@ window.onload = function()
 		 {
 		 case undefined:
 		  $("#final_span").css("color", "pink");	
-		  $("#confirmButtons").delegate(".button blue", "click", function(e) {
-			    // ...
-			});
-		  return Istrue('stop', index);
+		  $(".button blue").click();
+		  return Istrue('No', index);
 		 
 		  break;
 		  default:
