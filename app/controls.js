@@ -285,8 +285,9 @@ window.onload = function()
 		 switch(Sword)
 		 {
 		 case undefined:
-		  $("#final_span").css("color", "pink");	
-		  $("#confirmButtons.button grey").click();
+		  $("#final_span").css("color", "pink");
+		  $('#confirmButtons').find('.button grey').click();
+		  //$("#confirmButtons.button grey").click();
 		  return Istrue('Yes', index);
 		 
 		  break;
@@ -298,8 +299,9 @@ window.onload = function()
 		 switch(Sword)
 		 {
 		 case undefined:
-		  $("#final_span").css("color", "pink");	
-		  $("#confirmButtons.button blue").click();
+		  $("#final_span").css("color", "pink");
+		  $('#confirmButtons').find('.button blue').click();
+		  //$("#confirmButtons.button blue").click();
 		  return Istrue('No', index);
 		 
 		  break;
