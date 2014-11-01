@@ -7,11 +7,9 @@
 	//-------------------------------------------------------------------
 	
 	function MyData (docA,docB,transcript,LastdocA,LastdocB){
-		var spanA=  document.getElementById("docA_span").text();
-		var spanB=  document.getElementById("docB_span").text();
-        this.lines=  (spanA.match(/\n/g)||[]).length+(spanB.match(/\n/g)||[]).length;
-        this.lines.position= (spanB.match(/\n/g)||[]).length;
-        this.column;
+       // this.lines=  (spanA.match(/\n/g)||[]).length+(spanB.match(/\n/g)||[]).length;
+        //this.lines.position= (spanB.match(/\n/g)||[]).length;
+        //this.column;
 		this.docA = docA;
 		this.LastdocA = LastdocA;
 		this.LastdocB=LastdocB;
