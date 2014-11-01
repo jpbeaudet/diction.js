@@ -375,7 +375,7 @@ window.onload = function()
 	 
 	 console.log("memory A in end of command = "+ index.docA );
 	 console.log("memory B in end of command  = "+ index.docB );
-	 }
+	 
 	}//end of commands()
 	//
 	//Here goes the istrue and isfalse that will emit to server last index modification for saving purposes//
