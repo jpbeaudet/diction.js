@@ -248,8 +248,8 @@ window.onload = function()
 		 {
 		 case undefined:
 		  $("#final_span").css("color", "pink");
-		  docA_span.innerHTML = index.docA+ '</br>';
-		  index.docA += '</br>';
+		  docA_span.innerHTML = index.docA+ ' <br>';
+		  index.docA += ' <br>';
 		  return Istrue("Tab", index);
 		  break;
 		  default:
