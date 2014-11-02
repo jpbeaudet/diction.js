@@ -135,6 +135,21 @@ window.onload = function()
 		  break;
 		  
 	// Dash /
+		  
+	//backlash \	  
+		  
+	 case 'backlash': 
+		 switch(Sword)
+		 {
+		 case undefined:
+		  $("#final_span").css("color", "pink");
+		  docA_span.innerHTML = index.docA+ " /\/";
+		  docB_span.innerHTML = index.docB;
+		  return Istrue("/\/", index);
+		  break;
+		  default:
+			  return Isfalse(transcript, index);   
+	 } 		  
     // comma ,
     // space 
     // enter & newline 
