@@ -207,8 +207,8 @@ window.onload = function()
 		 {
 		 case undefined:
 		  $("#final_span").css("color", "pink");
-		  docA_span.innerHTML = index.docA+ '  ';
-		  index.docA += '  ';
+		  docA_span.innerHTML = index.docA+ '&nbsp;';
+		  index.docA += '&nbsp;';
 		  return Istrue("Space", index);
 		  break;
 		  default:
@@ -222,8 +222,8 @@ window.onload = function()
 		 {
 		 case undefined:
 		  $("#final_span").css("color", "pink");
-		  docA_span.innerHTML = index.docA+ ' \t';
-		  index.docA += ' \t';
+		  docA_span.innerHTML = index.docA+ '&nbsp;&nbsp;&nbsp;&nbsp;';
+		  index.docA += '&nbsp;&nbsp;&nbsp;&nbsp;';
 		  return Istrue("Tab", index);
 		  break;
 		  default:
@@ -234,8 +234,8 @@ window.onload = function()
 		 {
 		 case undefined:
 		  $("#final_span").css("color", "pink");
-		  docA_span.innerHTML = index.docA+ ' \t';
-		  index.docA += ' \t';
+		  docA_span.innerHTML = index.docA+ '&nbsp;&nbsp;&nbsp;&nbsp;';
+		  index.docA += '&nbsp;&nbsp;&nbsp;&nbsp;';
 		  return Istrue("Tab", index);
 		  break;
 		  default:
@@ -260,28 +260,14 @@ window.onload = function()
 		 {
 		 case undefined:
 		  $("#final_span").css("color", "pink");
-		  docA_span.innerHTML = index.docA+ ' \r';
-		  index.docA += ' \r';
+		  docA_span.innerHTML = index.docA+ ' <br>';
+		  index.docA += ' <br>';
 		  return Istrue("Tab", index);
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
 	 }
-	 case 'new': 
-		 switch(Sword)
-		 {
-		 
-		 
-		 case undefined:
-		  $("#final_span").css("color", "pink");
-		  docA_span.innerHTML = index.docA+ ' \r';
-		  index.docA += ' \r';
-		  return Istrue("Tab", index);
-		  break;
-		  default:
-			  return Isfalse(transcript, index);   
-	 }	
-		 
+	 
 	 case 'new': 
 		  
 		 switch(Sword)
@@ -293,7 +279,7 @@ window.onload = function()
 			 
 			 case undefined:
 				  $("#final_span").css("color", "pink");
-				  docA_span.innerHTML = index.docA+ ' \n';
+				  docA_span.innerHTML = index.docA+ ' <br>';
 				  index.docA += ' \n';
 				  return Istrue("New Line", index);
 				  break;
