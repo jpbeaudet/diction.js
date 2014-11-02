@@ -268,28 +268,26 @@ window.onload = function()
 	//		  return Isfalse(transcript, index);   
 	// }
 	 
-	 //case 'new': 
-		  
-		 //switch(Sword)
-		// {
-		// case 'line':
+	 case 'new':
+		 switch(Sword)
+		 {
+		 case 'line':
+			 switch(Tword)
+			 {
+			 case undefined:
+				  $("#final_span").css("color", "pink");
+				  docA_span.innerHTML = index.docA+ ' <br /> ';
+				  index.docA += ' <br /> ';
+				  return Istrue("Enter", index);
+				  break;
+				  default:
+					  return Isfalse(transcript, index);   
+		 }
 			 
-			// switch(Tword)
-			// {
-			 
-			// case undefined:
-				//  $("#final_span").css("color", "pink");
-				//  docA_span.innerHTML = index.docA+ ' <br>';
-				//  index.docA += ' \n';
-				//  return Istrue("New Line", index);
-				//  break;
-				//  default:
-				//	  return Isfalse(transcript, index);  	
-			// }
-			 
-		// default:
-		 //return Isfalse(transcript, index); 
-		// }
+	     default:
+	     return Isfalse(transcript, index); 
+		 }
+	    
 		 
 	// caps (only next)
 	// :
