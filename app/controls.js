@@ -138,6 +138,18 @@ window.onload = function()
 		  
 	//backlash \	  
 		  
+	 case 'backslash': 
+		 switch(Sword)
+		 {
+		 case undefined:
+		  $("#final_span").css("color", "pink");
+		  docA_span.innerHTML = index.docA+ '\\';
+		  return Istrue("\\", index);
+		  break;
+		  default:
+			  return Isfalse(transcript, index);   
+	 } 	
+		 
 	 case 'backlash': 
 		 switch(Sword)
 		 {
@@ -148,7 +160,7 @@ window.onload = function()
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
-	 } 		  
+	 } 			 
     // comma ,
     // space 
     // enter & newline 
