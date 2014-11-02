@@ -248,9 +248,9 @@ window.onload = function()
 		 {
 		 case undefined:
 		  $("#final_span").css("color", "pink");
-		  docA_span.innerHTML = index.docA+ ' <br>';
-		  index.docA += ' <br>';
-		  return Istrue("Tab", index);
+		  docA_span.innerHTML = index.docA+ ' <br /> ';
+		  index.docA += ' <br /> ';
+		  return Istrue("Enter", index);
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
