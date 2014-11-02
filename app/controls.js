@@ -443,18 +443,18 @@ window.onload = function()
 			  default:
 				  return Isfalse(transcript, index);   
 		 }
-		 case 'line':
-			 switch(Tword)
-			 {
-			 case undefined:
-				  $("#final_span").css("color", "pink");
-				  docA_span.innerHTML = index.docA+ ' <div><br /></div> ';
-				  index.docA += ' <div><br /></div> ';
-				  return Istrue("Enter", index);	
-				  break;
-			      default:
-				  return Isfalse(transcript, index);   
-		 }	 
+		// case 'line':
+			// switch(Tword)
+			// {
+			// case undefined:
+				//  $("#final_span").css("color", "pink");
+				//  docA_span.innerHTML = index.docA+ ' <div><br /></div> ';
+				//  index.docA += ' <div><br /></div> ';
+				 // return Istrue("Enter", index);	
+				 // break;
+			    //  default:
+				//  return Isfalse(transcript, index);   
+		// }	 
 	     default:
 	     return Isfalse(transcript, index); 
 		 }
