@@ -222,8 +222,8 @@ window.onload = function()
 		 {
 		 case undefined:
 		  $("#final_span").css("color", "pink");
-		  docA_span.innerHTML = index.docA+ '\t';
-		  index.docA += '\t';
+		  docA_span.innerHTML = index.docA+ ' \t';
+		  index.docA += ' \t';
 		  return Istrue("Tab", index);
 		  break;
 		  default:
@@ -234,8 +234,8 @@ window.onload = function()
 		 {
 		 case undefined:
 		  $("#final_span").css("color", "pink");
-		  docA_span.innerHTML = index.docA+ '\t';
-		  index.docA += '\t';
+		  docA_span.innerHTML = index.docA+ ' \t';
+		  index.docA += ' \t';
 		  return Istrue("Tab", index);
 		  break;
 		  default:
@@ -260,8 +260,8 @@ window.onload = function()
 		 {
 		 case undefined:
 		  $("#final_span").css("color", "pink");
-		  docA_span.innerHTML = index.docA+ '\r';
-		  index.docA += '\r';
+		  docA_span.innerHTML = index.docA+ ' \r';
+		  index.docA += ' \r';
 		  return Istrue("Tab", index);
 		  break;
 		  default:
@@ -274,8 +274,8 @@ window.onload = function()
 		 
 		 case undefined:
 		  $("#final_span").css("color", "pink");
-		  docA_span.innerHTML = index.docA+ '\r';
-		  index.docA += '\r';
+		  docA_span.innerHTML = index.docA+ ' \r';
+		  index.docA += ' \r';
 		  return Istrue("Tab", index);
 		  break;
 		  default:
@@ -293,8 +293,8 @@ window.onload = function()
 			 
 			 case undefined:
 				  $("#final_span").css("color", "pink");
-				  docA_span.innerHTML = index.docA+ '\n';
-				  index.docA += '\n';
+				  docA_span.innerHTML = index.docA+ ' \n';
+				  index.docA += ' \n';
 				  return Istrue("New Line", index);
 				  break;
 				  default:
