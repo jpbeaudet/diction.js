@@ -40,6 +40,9 @@ window.onload = function()
 		  var docB = response[1];
 		  var LastdocA = response[2];
 		  var LastdocB = response[3];
+		  if(transcript == "\n"){
+			  transcript = "<div><br \></div>";
+		  }
 		  index = new MyData (docA,docB,transcript,LastdocA,LastdocB);
 		  lines_span.innerHTML = "Lines: "+ index.lines;
 		  words_span.innerHTML = " Words: "+ index.wordsTotal;
@@ -71,9 +74,7 @@ window.onload = function()
 		  if( request[0] == ''){
 			  request.splice(0,1);
 		  }
-		  if(transcript == "\n"){
-			  transcript = "<div><br \></div>";
-		  }
+
 	 console.log("request = " + request);
 	 console.log("request[0] = " + request[0]);
 	 console.log("request[1] = " + request[1]);
