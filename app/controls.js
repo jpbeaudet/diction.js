@@ -202,7 +202,109 @@ window.onload = function()
 			  return Isfalse(transcript, index);   
 	 }		 
     // space 
+	 case 'space': 
+		 switch(Sword)
+		 {
+		 case undefined:
+		  $("#final_span").css("color", "pink");
+		  docA_span.innerHTML = index.docA+ '  ';
+		  index.docA += '  ';
+		  return Istrue("Space", index);
+		  break;
+		  default:
+			  return Isfalse(transcript, index);   
+	 }		 
+		
+		 
+	//tab	
+	 case 'tab': 
+		 switch(Sword)
+		 {
+		 case undefined:
+		  $("#final_span").css("color", "pink");
+		  docA_span.innerHTML = index.docA+ '\t';
+		  index.docA += '\t';
+		  return Istrue("Tab", index);
+		  break;
+		  default:
+			  return Isfalse(transcript, index);   
+	 }		 
+	 case 'tad': 
+		 switch(Sword)
+		 {
+		 case undefined:
+		  $("#final_span").css("color", "pink");
+		  docA_span.innerHTML = index.docA+ '\t';
+		  index.docA += '\t';
+		  return Istrue("Tab", index);
+		  break;
+		  default:
+			  return Isfalse(transcript, index);   
+	 }					 
     // enter & newline 
+		 
+	 case 'Enter': 
+		 switch(Sword)
+		 {
+		 case undefined:
+		  $("#final_span").css("color", "pink");
+		  docA_span.innerHTML = index.docA+ '\r';
+		  index.docA += '\r';
+		  return Istrue("Tab", index);
+		  break;
+		  default:
+			  return Isfalse(transcript, index);   
+	 }
+	 case 'enter': 
+		 switch(Sword)
+		 {
+		 case undefined:
+		  $("#final_span").css("color", "pink");
+		  docA_span.innerHTML = index.docA+ '\r';
+		  index.docA += '\r';
+		  return Istrue("Tab", index);
+		  break;
+		  default:
+			  return Isfalse(transcript, index);   
+	 }
+	 case 'new': 
+		 switch(Sword)
+		 {
+		 
+		 
+		 case undefined:
+		  $("#final_span").css("color", "pink");
+		  docA_span.innerHTML = index.docA+ '\r';
+		  index.docA += '\r';
+		  return Istrue("Tab", index);
+		  break;
+		  default:
+			  return Isfalse(transcript, index);   
+	 }	
+		 
+	 case 'new': 
+		  
+		 switch(Sword)
+		 {
+		 case 'line':
+			 
+			 switch(Tword)
+			 {
+			 
+			 case undefined:
+				  $("#final_span").css("color", "pink");
+				  docA_span.innerHTML = index.docA+ '\n';
+				  index.docA += '\n';
+				  return Istrue("New Line", index);
+				  break;
+				  default:
+					  return Isfalse(transcript, index);  	
+			 }
+			 
+		 default:
+		 return Isfalse(transcript, index); 
+		 }
+		 
 	// caps (only next)
 	// :
     //;
