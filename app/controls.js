@@ -217,79 +217,79 @@ window.onload = function()
 		
 		 
 	//tab	
-	 case 'tab': 
-		 switch(Sword)
-		 {
-		 case undefined:
-		  $("#final_span").css("color", "pink");
-		  docA_span.innerHTML = index.docA+ '&nbsp;&nbsp;&nbsp;&nbsp;';
-		  index.docA += '&nbsp;&nbsp;&nbsp;&nbsp;';
-		  return Istrue("Tab", index);
-		  break;
-		  default:
-			  return Isfalse(transcript, index);   
-	 }		 
-	 case 'tad': 
-		 switch(Sword)
-		 {
-		 case undefined:
-		  $("#final_span").css("color", "pink");
-		  docA_span.innerHTML = index.docA+ '&nbsp;&nbsp;&nbsp;&nbsp;';
-		  index.docA += '&nbsp;&nbsp;&nbsp;&nbsp;';
-		  return Istrue("Tab", index);
-		  break;
-		  default:
-			  return Isfalse(transcript, index);   
-	 }					 
+	// case 'tab': 
+	//	 switch(Sword)
+	//	 {
+	//	 case undefined:
+	//	  $("#final_span").css("color", "pink");
+	//	  docA_span.innerHTML = index.docA+ '&nbsp;&nbsp;&nbsp;&nbsp;';
+	//	  index.docA += '&nbsp;&nbsp;&nbsp;&nbsp;';
+	//	  return Istrue("Tab", index);
+	//	  break;
+	//	  default:
+	//		  return Isfalse(transcript, index);   
+	// }		 
+	// case 'tad': 
+	//	 switch(Sword)
+	//	 {
+	//	 case undefined:
+	//	  $("#final_span").css("color", "pink");
+	//	  docA_span.innerHTML = index.docA+ '&nbsp;&nbsp;&nbsp;&nbsp;';
+	//	  index.docA += '&nbsp;&nbsp;&nbsp;&nbsp;';
+	//	  return Istrue("Tab", index);
+	//	  break;
+	//	  default:
+	//		  return Isfalse(transcript, index);   
+	// }					 
     // enter & newline 
 		 
-	 case 'Enter': 
-		 switch(Sword)
-		 {
-		 case undefined:
-		  $("#final_span").css("color", "pink");
-		  docA_span.innerHTML = index.docA+ '\r';
-		  index.docA += '\r';
-		  return Istrue("Tab", index);
-		  break;
-		  default:
-			  return Isfalse(transcript, index);   
-	 }
-	 case 'enter': 
-		 switch(Sword)
-		 {
-		 case undefined:
-		  $("#final_span").css("color", "pink");
-		  docA_span.innerHTML = index.docA+ ' <br>';
-		  index.docA += ' <br>';
-		  return Istrue("Tab", index);
-		  break;
-		  default:
-			  return Isfalse(transcript, index);   
-	 }
+	// case 'Enter': 
+	//	 switch(Sword)
+	//	 {
+	//	 case undefined:
+	//	  $("#final_span").css("color", "pink");
+	//	  docA_span.innerHTML = index.docA+ '\r';
+	//	  index.docA += '\r';
+	//	  return Istrue("Tab", index);
+	//	  break;
+	//	  default:
+	//		  return Isfalse(transcript, index);   
+	 //}
+	// case 'enter': 
+	//	 switch(Sword)
+	//	 {
+	//	 case undefined:
+	//	  $("#final_span").css("color", "pink");
+	//	  docA_span.innerHTML = index.docA+ ' <br>';
+	//	  index.docA += ' <br>';
+	//	  return Istrue("Tab", index);
+	//	  break;
+	//	  default:
+	//		  return Isfalse(transcript, index);   
+	// }
 	 
-	 case 'new': 
+	 //case 'new': 
 		  
-		 switch(Sword)
-		 {
-		 case 'line':
+		 //switch(Sword)
+		// {
+		// case 'line':
 			 
-			 switch(Tword)
-			 {
+			// switch(Tword)
+			// {
 			 
-			 case undefined:
-				  $("#final_span").css("color", "pink");
-				  docA_span.innerHTML = index.docA+ ' <br>';
-				  index.docA += ' \n';
-				  return Istrue("New Line", index);
-				  break;
-				  default:
-					  return Isfalse(transcript, index);  	
-			 }
+			// case undefined:
+				//  $("#final_span").css("color", "pink");
+				//  docA_span.innerHTML = index.docA+ ' <br>';
+				//  index.docA += ' \n';
+				//  return Istrue("New Line", index);
+				//  break;
+				//  default:
+				//	  return Isfalse(transcript, index);  	
+			// }
 			 
-		 default:
-		 return Isfalse(transcript, index); 
-		 }
+		// default:
+		 //return Isfalse(transcript, index); 
+		// }
 		 
 	// caps (only next)
 	// :
