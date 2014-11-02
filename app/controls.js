@@ -248,8 +248,8 @@ window.onload = function()
 		 {
 		 case undefined:
 		  $("#final_span").css("color", "pink");
-		  docA_span.innerHTML = index.docA+ ' <br /> ';
-		  index.docA += ' <br /> ';
+		  docA_span.innerHTML = index.docA+ String.fromCharCode(13);;
+		  index.docA +=  String.fromCharCode(13);;
 		  return Istrue("Enter", index);
 		  break;
 		  default:
@@ -276,8 +276,8 @@ window.onload = function()
 			 {
 			 case undefined:
 				  $("#final_span").css("color", "pink");
-				  docA_span.innerHTML = index.docA+ ' <br /> ';
-				  index.docA += ' <br /> ';
+				  docA_span.innerHTML = index.docA + String.fromCharCode(13);;
+				  index.docA +=  String.fromCharCode(13);;
 				  return Istrue("Enter", index);
 				  break;
 				  default:
