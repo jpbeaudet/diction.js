@@ -71,6 +71,9 @@ window.onload = function()
 		  if( request[0] == ''){
 			  request.splice(0,1);
 		  }
+		  if(transcript == "\n"){
+			  transcript = "<div><br \></div>";
+		  }
 	 console.log("request = " + request);
 	 console.log("request[0] = " + request[0]);
 	 console.log("request[1] = " + request[1]);
