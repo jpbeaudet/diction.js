@@ -143,9 +143,8 @@ window.onload = function()
 		 {
 		 case undefined:
 		  $("#final_span").css("color", "pink");
-		  docA_span.innerHTML = index.docA+ " /\/";
-		  docB_span.innerHTML = index.docB;
-		  return Istrue("/\/", index);
+		  docA_span.innerHTML = index.docA+ '\\';
+		  return Istrue("\\", index);
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
