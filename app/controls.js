@@ -243,18 +243,18 @@ window.onload = function()
 	 }					 
     // enter & newline 
 		 
-	// case 'Enter': 
-	//	 switch(Sword)
-	//	 {
-	//	 case undefined:
-	//	  $("#final_span").css("color", "pink");
-	//	  docA_span.innerHTML = index.docA+ '\r';
-	//	  index.docA += '\r';
-	//	  return Istrue("Tab", index);
-	//	  break;
-	//	  default:
-	//		  return Isfalse(transcript, index);   
-	 //}
+	 case 'Enter': 
+		 switch(Sword)
+		 {
+		 case undefined:
+		  $("#final_span").css("color", "pink");
+		  docA_span.innerHTML = index.docA+ '</br>';
+		  index.docA += '</br>';
+		  return Istrue("Tab", index);
+		  break;
+		  default:
+			  return Isfalse(transcript, index);   
+	 }
 	// case 'enter': 
 	//	 switch(Sword)
 	//	 {
