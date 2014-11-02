@@ -134,10 +134,21 @@ window.onload = function()
 		  
 		  break;
 		  
-	// Dash /
-		  
+	// Dash -
+	//-----------------------------------	  
+	 case 'dash': 
+		 switch(Sword)
+		 {
+		 case undefined:
+		  $("#final_span").css("color", "pink");
+		  docA_span.innerHTML = index.docA+ '-';
+		  return Istrue("-", index);
+		  break;
+		  default:
+			  return Isfalse(transcript, index);   
+	 } 		  
 	//backlash \	  
-		  
+	//------------------------------------------	  
 	 case 'backslash': 
 		 switch(Sword)
 		 {
@@ -155,13 +166,36 @@ window.onload = function()
 		 {
 		 case undefined:
 		  $("#final_span").css("color", "pink");
-		  docA_span.innerHTML = index.docA+ '\\';
-		  return Istrue("\\", index);
+		  docA_span.innerHTML = index.docA+ ' \\';
+		  return Istrue(" \\", index);
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
 	 } 			 
     // comma ,
+		 
+	 case 'comma': 
+		 switch(Sword)
+		 {
+		 case undefined:
+		  $("#final_span").css("color", "pink");
+		  docA_span.innerHTML = index.docA+ ' ,';
+		  return Istrue(",", index);
+		  break;
+		  default:
+			  return Isfalse(transcript, index);   
+	 }	
+	 case 'coma': 
+		 switch(Sword)
+		 {
+		 case undefined:
+		  $("#final_span").css("color", "pink");
+		  docA_span.innerHTML = index.docA+ ' ,';
+		  return Istrue(",", index);
+		  break;
+		  default:
+			  return Isfalse(transcript, index);   
+	 }		 
     // space 
     // enter & newline 
 	// caps (only next)
@@ -196,6 +230,7 @@ window.onload = function()
     
 	// cancel
 		  // 3 crtl-z like return
+	//------------------------------------	 
 	 case 'cancel': 
 		 switch(Sword)
 		 {
