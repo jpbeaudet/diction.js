@@ -229,18 +229,18 @@ window.onload = function()
 		  default:
 			  return Isfalse(transcript, index);   
 	 }		 
-	// case 'tad': 
-	//	 switch(Sword)
-	//	 {
-	//	 case undefined:
-	//	  $("#final_span").css("color", "pink");
-	//	  docA_span.innerHTML = index.docA+ '&nbsp;&nbsp;&nbsp;&nbsp;';
-	//	  index.docA += '&nbsp;&nbsp;&nbsp;&nbsp;';
-	//	  return Istrue("Tab", index);
-	//	  break;
-	//	  default:
-	//		  return Isfalse(transcript, index);   
-	// }					 
+	 case 'tad': 
+		 switch(Sword)
+		 {
+		 case undefined:
+		  $("#final_span").css("color", "pink");
+		  docA_span.innerHTML = index.docA+ '&nbsp;&nbsp;&nbsp;&nbsp;';
+		  index.docA += '&nbsp;&nbsp;&nbsp;&nbsp;';
+		  return Istrue("Tab", index);
+		  break;
+		  default:
+			  return Isfalse(transcript, index);   
+	 }					 
     // enter & newline 
 		 
 	// case 'Enter': 
