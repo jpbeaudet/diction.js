@@ -338,7 +338,51 @@ window.onload = function()
 			  return Isfalse(transcript, index);   
 	 }		 
 	// (
+	 case 'open': 
+		 switch(Sword)
+		 {
+		 case 'parenthesis':
+			 
+			 switch(Tword)
+			 {
+			 
+			 case undefined:
+				  $("#final_span").css("color", "pink");
+				  docA_span.innerHTML = index.docA+ '(';
+				  index.docA += '(';
+				  return Istrue("Open Parenthesis", index);
+				  break;
+				  
+				  default:
+					  return Isfalse(transcript, index); 
+			 }
+
+		  default:
+			  return Isfalse(transcript, index);   
+	 }		 
 	// )
+	 case 'close': 
+		 switch(Sword)
+		 {
+		 case 'parenthesis':
+			 
+			 switch(Tword)
+			 {
+			 
+			 case undefined:
+				  $("#final_span").css("color", "pink");
+				  docA_span.innerHTML = index.docA+ ')';
+				  index.docA += ')';
+				  return Istrue("Open Parenthesis", index);
+				  break;
+				  
+				  default:
+					  return Isfalse(transcript, index); 
+			 }
+
+		  default:
+			  return Isfalse(transcript, index);   
+	 }		 
 	//{
 	//}
 	//[
