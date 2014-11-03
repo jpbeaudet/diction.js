@@ -338,6 +338,8 @@ window.onload = function()
 			  return Isfalse(transcript, index);   
 	 }		 
 	// (
+	// Open section
+   //-------------------------------------------------		 
 	 case 'open': 
 		 switch(Sword)
 		 {
@@ -400,6 +402,8 @@ window.onload = function()
 			  return Isfalse(transcript, index);   
 	 }		 
 	// )
+	// Close section
+  //-------------------------------------------------			 
 	 case 'close': 
 		 switch(Sword)
 		 {
@@ -493,6 +497,8 @@ window.onload = function()
 		  $("#final_span").css("color", "pink");
 		  index.docA = index.LastdocA;
 		  index.docB = index.LastdocB;
+		  docA_span.innerHTML = "";
+		  docB_span.innerHTML = "";		  
 		  docA_span.innerHTML = index.LastdocA;
 		  docB_span.innerHTML = index.LastdocB;
 		  return Istrue('Cancel', index);
@@ -507,6 +513,8 @@ window.onload = function()
 		  $("#final_span").css("color", "pink");
 		  index.docA = index.LastdocA;
 		  index.docB = index.LastdocB;
+		  docA_span.innerHTML = "";
+		  docB_span.innerHTML = "";
 		  docA_span.innerHTML = index.LastdocA;
 		  docB_span.innerHTML = index.LastdocB;
 		  return Istrue('Cancel', index);
