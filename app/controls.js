@@ -285,7 +285,8 @@ window.onload = function()
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
-	 }		 
+	 }
+		 
     //;
 	 case 'semicolon': 
 		 switch(Sword)
@@ -298,9 +299,44 @@ window.onload = function()
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
-	 }		 
+	 }	
+		 
 	// " 
+	 case 'double': 
+		 switch(Sword)
+		 {
+		 case 'quote':
+			 
+			 switch(Tword)
+			 {
+			 
+			 case undefined:
+				  $("#final_span").css("color", "pink");
+				  docA_span.innerHTML = index.docA+ ' "';
+				  index.docA += '; ';
+				  return Istrue("Double Quote", index);
+				  break;
+				  
+				  default:
+					  return Isfalse(transcript, index); 
+			 }
+
+		  default:
+			  return Isfalse(transcript, index);   
+	 }
 	// '
+	 case 'quote': 
+		 switch(Sword)
+		 {
+		 case undefined:
+		  $("#final_span").css("color", "pink");
+		  docA_span.innerHTML = index.docA+ '; ';
+		  index.docA += '  &lsquo;';
+		  return Istrue("Semicolon", index);
+		  break;
+		  default:
+			  return Isfalse(transcript, index);   
+	 }		 
 	// (
 	// )
 	//{
