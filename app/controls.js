@@ -502,8 +502,6 @@ window.onload = function()
 		  docB_span.innerHTML = index.LastdocB;
 		  index.docA = index.LastdocA;
 		  index.docB = index.LastdocB;
-		  index.LastdocA = index.docA;
-		  index.LastdocB= index.docB;
 		  return Istrue('Cancel', index);
 		  break;
 		  default:
@@ -521,8 +519,6 @@ window.onload = function()
 		  docB_span.innerHTML = index.LastdocB;
 		  index.docA = index.LastdocA;
 		  index.docB = index.LastdocB;
-		  index.LastdocA = index.docA;
-		  index.LastdocB= index.docB;
 		  return Istrue('Cancel', index);
 		  break;
 		  default:
