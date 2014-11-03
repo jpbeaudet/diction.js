@@ -356,7 +356,19 @@ window.onload = function()
 				  default:
 					  return Isfalse(transcript, index); 
 			 }
-
+		 case 'quote':
+			 switch(Tword)
+			 {
+			 
+			 case undefined:
+				  $("#final_span").css("color", "pink");
+				  docA_span.innerHTML = index.docA+ ' &lsquo;';
+				  index.docA += '  &lsquo;';
+				  return Istrue("Open Quote", index);
+				  break;
+				  default:
+					  return Isfalse(transcript, index); 
+			 } 
 		  default:
 			  return Isfalse(transcript, index);   
 	 }		 
@@ -373,13 +385,25 @@ window.onload = function()
 				  $("#final_span").css("color", "pink");
 				  docA_span.innerHTML = index.docA+ ')';
 				  index.docA += ')';
-				  return Istrue("Open Parenthesis", index);
+				  return Istrue("Close Parenthesis", index);
 				  break;
 				  
 				  default:
 					  return Isfalse(transcript, index); 
 			 }
-
+		 case 'quote':
+			 switch(Tword)
+			 {
+			 
+			 case undefined:
+				  $("#final_span").css("color", "pink");
+				  docA_span.innerHTML = index.docA+ ' &rsquo;';
+				  index.docA += '  &rsquo;';
+				  return Istrue("Close Quote", index);
+				  break;
+				  default:
+					  return Isfalse(transcript, index); 
+			 } 
 		  default:
 			  return Isfalse(transcript, index);   
 	 }		 
