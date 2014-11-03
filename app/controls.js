@@ -497,6 +497,8 @@ window.onload = function()
 		  $("#final_span").css("color", "pink");
 		  index.docA = index.LastdocA;
 		  index.docB = index.LastdocB;
+		  index.LastdocA = index.docA;
+		  index.LastdocB= index.docB;
 		  docA_span.innerHTML = "";
 		  docB_span.innerHTML = "";		  
 		  docA_span.innerHTML = index.LastdocA;
