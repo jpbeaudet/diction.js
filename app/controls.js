@@ -274,7 +274,31 @@ window.onload = function()
 		 
 	// caps (only next)
 	// :
+	 case 'colon': 
+		 switch(Sword)
+		 {
+		 case undefined:
+		  $("#final_span").css("color", "pink");
+		  docA_span.innerHTML = index.docA+ ': ';
+		  index.docA += ': ';
+		  return Istrue("Colon", index);
+		  break;
+		  default:
+			  return Isfalse(transcript, index);   
+	 }		 
     //;
+	 case 'semicolon': 
+		 switch(Sword)
+		 {
+		 case undefined:
+		  $("#final_span").css("color", "pink");
+		  docA_span.innerHTML = index.docA+ '; ';
+		  index.docA += '; ';
+		  return Istrue("Semicolon", index);
+		  break;
+		  default:
+			  return Isfalse(transcript, index);   
+	 }		 
 	// " 
 	// '
 	// (
@@ -414,15 +438,15 @@ window.onload = function()
 		  // word
 		  // sentence
 		  
-	// accept
+	// accept and refuse confirm box
 		 
 	 case 'yes': 
 		 switch(Sword)
 		 {
 		 case undefined:
 		  $("#final_span").css("color", "pink");
-		  $('#confirmOverlay').find('#confirmBox').find('#confirmButtons').find('.button grey').click();
-		  //$("#confirmButtons.button grey").click();
+		 // $('#confirmOverlay').find('#confirmBox').find('#confirmButtons').find('.button grey').click();
+		  $("#confirmButtons).find(.button grey").click();
 		  return Istrue('Yes', index);
 		 
 		  break;
@@ -435,8 +459,8 @@ window.onload = function()
 		 {
 		 case undefined:
 		  $("#final_span").css("color", "pink");
-		  $('#confirmOverlay').find('#confirmBox').find('#confirmButtons').find('.button blue').click();
-		  //$("#confirmButtons.button blue").click();
+		  //$('#confirmOverlay').find('#confirmBox').find('#confirmButtons').find('.button blue').click();
+		  $("#confirmButtons).find(.button blue").click();
 		  return Istrue('No', index);
 		 
 		  break;
