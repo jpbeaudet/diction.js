@@ -330,7 +330,7 @@ window.onload = function()
 		 {
 		 case undefined:
 		  $("#final_span").css("color", "pink");
-		  docA_span.innerHTML = index.docA+ ' lsquo;';
+		  docA_span.innerHTML = index.docA+ ' &lsquo;';
 		  index.docA += '  &lsquo;';
 		  return Istrue("Quote", index);
 		  break;
