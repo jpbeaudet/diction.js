@@ -330,9 +330,9 @@ window.onload = function()
 		 {
 		 case undefined:
 		  $("#final_span").css("color", "pink");
-		  docA_span.innerHTML = index.docA+ '; ';
+		  docA_span.innerHTML = index.docA+ ' lsquo;';
 		  index.docA += '  &lsquo;';
-		  return Istrue("Semicolon", index);
+		  return Istrue("Quote", index);
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
