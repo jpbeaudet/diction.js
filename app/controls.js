@@ -369,6 +369,7 @@ window.onload = function()
 				  default:
 					  return Isfalse(transcript, index); 
 			 } 
+	//{
 		 case 'bracket':
 			 switch(Tword)
 			 {
@@ -378,6 +379,19 @@ window.onload = function()
 				  docA_span.innerHTML = index.docA+ '{';
 				  index.docA += '{';
 				  return Istrue("Open Bracket", index);
+				  break;
+				  default:
+					  return Isfalse(transcript, index); 
+			 }	
+		 case 'square':
+			 switch(Tword)
+			 {
+			 
+			 case 'bracket':
+				  $("#final_span").css("color", "pink");
+				  docA_span.innerHTML = index.docA+ '[';
+				  index.docA += '[';
+				  return Istrue("Open Square Bracket", index);
 				  break;
 				  default:
 					  return Isfalse(transcript, index); 
@@ -417,7 +431,7 @@ window.onload = function()
 				  default:
 					  return Isfalse(transcript, index); 
 			 } 
-			 
+				//}			 
 		 case 'bracket':
 			 switch(Tword)
 			 {
@@ -430,12 +444,24 @@ window.onload = function()
 				  break;
 				  default:
 					  return Isfalse(transcript, index); 
-			 }			 
+			 }
+		 case 'square':
+			 switch(Tword)
+			 {
+			 
+			 case 'bracket':
+				  $("#final_span").css("color", "pink");
+				  docA_span.innerHTML = index.docA+ ']';
+				  index.docA += ']';
+				  return Istrue("Close Square Bracket", index);
+				  break;
+				  default:
+					  return Isfalse(transcript, index); 
+			 }				 
 		  default:
 			  return Isfalse(transcript, index);   
 	 }		 
-	//{
-	//}
+
 	//[
     //]
 	// +
