@@ -168,7 +168,7 @@ io.on('connection', function(socket){
 				  console.log(" query =  :"+ query);
 				  console.log('doc.json in save ='+ doc.json)
 				
-				  MEMORY.update(query, { docA: memory.docA , docB: memory.docB, username: username}, options, callback);
+				  MEMORY.update(query, { docA: memory.docA , docB: memory.docB, username: username,lastsaveA:doc.docA,lastsaveB:doc.docB}, options, callback);
 				  function callback (err, numAffected) {
 					   //numAffected is the number of updated documents
 	
