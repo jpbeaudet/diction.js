@@ -146,6 +146,8 @@ io.on('connection', function(socket){
 				  console.log(" last doc for :: doc.docA for" + username+"  :"+ doc.docA);
 					console.log("lastsave A >> request = "+ doc.lastsaveA );
 					console.log("lastsave B >> request = "+ doc.lastsaveB );
+					console.log("doc.docA >> request = "+ doc.docA);
+					console.log("doc.docB>> request = "+ doc.docB);
 				  socket.emit("response", [doc.docA, doc.docB,doc.lastsaveA,doc.lastsaveB]);
 
 			});
