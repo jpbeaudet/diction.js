@@ -100,43 +100,43 @@ window.onload = function()
 	  // ------------------------------------
 	 
 	 //Dots
-	 case 'what': 
+	 //case 'what': 
 		  
-		 switch(Sword)
-		 {
-		 case 'is':
+		 //switch(Sword)
+		 //{
+		 //case 'is':
 			  
-			 switch(Tword)
-			 {
+			// switch(Tword)
+			// {
 			 
-			 case 'this':
-				 $("#final_span").css("color", "pink");		
+			// case 'this':
+			//	 $("#final_span").css("color", "pink");		
 				 
-				 return Istrue('what is this', index);
-				  break;
+			//	 return Istrue('what is this', index);
+			//	  break;
 				  
-			 case '1Bb':
+			// case '1Bb':
 				 
-				 return Istrue('2', index);
-				  break;
+			//	 return Istrue('2', index);
+			//	  break;
 				  
-				  default:
-					  return Isfalse(transcript, index); 
-			 }
+			//	  default:
+				//	  return Isfalse(transcript, index); 
+			// }
 			 
-			  break;
+			//  break;
 			  
-		 case '1B':	
+		// case '1B':	
 			 
-			 return Istrue('1B', index);
-			  break;
+			// return Istrue('1B', index);
+			 // break;
 			  
-			  default:
+			 // default:
 				   
-				  return Isfalse(transcript, index);
-		 }
+				//  return Isfalse(transcript, index);
+		// }
 		  
-		  break;
+		 // break;
 		  
 	// Dash -
 	//-----------------------------------	  
