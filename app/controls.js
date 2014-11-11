@@ -716,6 +716,8 @@ function Istrue(data, index){
 	console.log("istrue() fired");
 	var pretext = index.docA;
 	var afttext = index.docB;
+    console.log("pretext command = "+ pretext);
+    console.log("afttext command = "+ afttext);
 	final_span.innerHTML = " @@@->  " + data + "  <-@@@ ";
 	socket.emit("cmd", [ pretext , afttext]);
 	

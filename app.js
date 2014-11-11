@@ -167,14 +167,15 @@ io.on('connection', function(socket){
 				    options = { multi: true };
 				  console.log(" query =  :"+ query);
 				  console.log('doc.json in save ='+ doc.json)
-				
+						console.log("lastsave A >> before update = "+ doc.lastsaveA );
+						console.log("lastsave B >> before update = "+ doc.lastsaveB );
 				  MEMORY.update(query, { docA: memory.docA , docB: memory.docB, username: username,lastsaveA:doc.docA,lastsaveB:doc.docB}, options, callback);
 				  function callback (err, numAffected) {
 					   //numAffected is the number of updated documents
 	
 						console.log("socket save = "+ doc);
-						console.log("lastsave A >> save= "+ doc.lastsaveA );
-						console.log("lastsave B >> save= "+ doc.lastsaveB );
+						console.log("lastsave A >> after update = "+ doc.lastsaveA );
+						console.log("lastsave B >> after update = "+ doc.lastsaveB );
 						console.log("memory A >> save= "+ memory.docA );
 						console.log("memory B >> save= "+ memory.docB );
 						console.log("username >> save= "+ username);
@@ -194,10 +195,13 @@ io.on('connection', function(socket){
 				var query = {docA:doc.docA, docB:doc.docB, username: username,lastsaveA:doc.lastsaveA,lastsaveB:doc.lastsaveB},
 				    options = { multi: true };
 				  console.log(" query =  :"+ query);
-				
+					console.log("lastsave A >> command before update = "+ doc.lastsaveA );
+					console.log("lastsave B >> command before update = "+ doc.lastsaveB );
 				  MEMORY.update(query, { docA: memory.docA , docB: memory.docB, username: username,lastsaveA:doc.lastsaveA,lastsaveB:doc.lastsaveB}, options, callback);
 				  function callback (err, numAffected) {
 					   //numAffected is the number of updated documents
+						console.log("lastsave A >> command after update = "+ doc.lastsaveA );
+						console.log("lastsave B >> command after update = "+ doc.lastsaveB );
 						console.log("memory A >> save= "+ memory.docA );
 						console.log("memory B >> save= "+ memory.docB );
 					};
