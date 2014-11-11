@@ -144,8 +144,8 @@ io.on('connection', function(socket){
 			MEMORY.findOne({ username: username}, function (err, doc){
 				  console.log(" findOne did send :"+ doc);
 				  console.log(" last doc for :: doc.docA for" + username+"  :"+ doc.docA);
-					//console.log("lastsave A >> after update = "+ doc.lastsaveA );
-					//console.log("lastsave B >> after update = "+ doc.lastsaveB );
+					console.log("lastsave A >> request = "+ doc.lastsaveA );
+					console.log("lastsave B >> request = "+ doc.lastsaveB );
 				  socket.emit("response", [doc.docA, doc.docB,doc.lastsaveA,doc.lastsaveB]);
 
 			});
@@ -161,7 +161,9 @@ io.on('connection', function(socket){
 			var doc = data[0];			
 			memory.docA = data[1];
 			memory.docB = data[2];
-			var json = data[3];
+			var json = data[3]
+			console.log("memory A >> before save= "+ memory.docA );
+			console.log("memory B >> before save= "+ memory.docB );
 			console.log("final JSON.stringify(json) in app = "+JSON.stringify(json));
 
 			MEMORY.findOne({ username: username}, function (err, doc){
@@ -172,10 +174,10 @@ io.on('connection', function(socket){
 					   //numAffected is the number of updated documents
 	
 						console.log("socket save = "+ doc);
-						console.log("lastsave A >> after update = "+ doc.lastsaveA );
-						console.log("lastsave B >> after update = "+ doc.lastsaveB );
-						console.log("memory A >> save= "+ memory.docA );
-						console.log("memory B >> save= "+ memory.docB );
+						console.log("lastsave A >> db = "+ doc.lastsaveA );
+						console.log("lastsave B >> db = "+ doc.lastsaveB );
+						console.log("memory A >> db= "+ doc.docA );
+						console.log("memory B >> db= "+ doc.docB );
 						console.log("username >> save= "+ username);
 					};
 			});
