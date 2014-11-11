@@ -46,6 +46,8 @@ window.onload = function()
 		  index = new MyData (docA,docB,transcript,LastdocA,LastdocB);
 		  lines_span.innerHTML = "Lines: "+ index.lines;
 		  words_span.innerHTML = " Words: "+ index.wordsTotal;
+		  console.log('lastsaveA = '+index.LastdocA);
+		  console.log('lastsaveB = '+index.LastdocB);
 		  return command(transcript,index);
 		  
 	  });
