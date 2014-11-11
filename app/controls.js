@@ -40,6 +40,8 @@ window.onload = function()
 		  var docB = response[1];
 		  var LastdocA = response[2];
 		  var LastdocB = response[3];
+		  console.log('lastsaveA arrival= '+LastdocA);
+		  console.log('lastsaveB arrival = '+LastdocB);
 		  if(transcript == "\n"){
 			  transcript = "<div><br \></div>";
 		  }
