@@ -144,8 +144,8 @@ io.on('connection', function(socket){
 			MEMORY.findOne({ username: username}, function (err, doc){
 				  console.log(" findOne did send :"+ doc);
 				  console.log(" last doc for :: doc.docA for" + username+"  :"+ doc.docA);
-					console.log("lastsave A >> after update = "+ doc.lastsaveA );
-					console.log("lastsave B >> after update = "+ doc.lastsaveB );
+					//console.log("lastsave A >> after update = "+ doc.lastsaveA );
+					//console.log("lastsave B >> after update = "+ doc.lastsaveB );
 				  socket.emit("response", [doc.docA, doc.docB,doc.lastsaveA,doc.lastsaveB]);
 
 			});
