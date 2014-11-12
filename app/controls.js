@@ -398,7 +398,7 @@ window.onload = function()
 		  default:
 			  return Isfalse(transcript, index);   
 	 }		 
-    // *
+    
 	// &
 	 case 'and': 
 		 switch(Sword)
@@ -411,18 +411,101 @@ window.onload = function()
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
-	 }		 
-	// %
-	// $
+	 }
+	 case 'end': 
+		 switch(Sword)
+		 {
+		 case undefined:
+		  $("#final_span").css("color", "pink");
+		  docA_span.innerHTML = index.docA+ ' &';
+		  index.docA += '  &';
+		  return Istrue("&", index);
+		  break;
+		  default:
+			  return Isfalse(transcript, index);   
+	 }
+	// $		 
+	 case 'dollar': 
+		 switch(Sword)
+		 {
+		 case undefined:
+		  $("#final_span").css("color", "pink");
+		  docA_span.innerHTML = index.docA+ ' $';
+		  index.docA += '  $';
+		  return Istrue("$", index);
+		  break;
+		  default:
+			  return Isfalse(transcript, index);   
+	 }	
+
 	// #
+	 case 'number': 
+		 switch(Sword)
+		 {
+		 case 'sign':
+			 
+			 switch(Tword)
+			 {
+			 
+			 case undefined:
+				  $("#final_span").css("color", "pink");
+				  docA_span.innerHTML = index.docA+ ' #';
+				  index.docA += ' #';
+				  return Istrue("#", index);
+				  break;
+				  
+				  default:
+					  return Isfalse(transcript, index); 
+			 }
+
+		  default:
+			  return Isfalse(transcript, index);   
+	 }		 
 	// @
+	 case 'at': 
+		 switch(Sword)
+		 {
+		 case undefined:
+		  $("#final_span").css("color", "pink");
+		  docA_span.innerHTML = index.docA+ ' @';
+		  index.docA += '  @';
+		  return Istrue("@", index);
+		  break;
+		  default:
+			  return Isfalse(transcript, index);   
+	 }
+	 case 'hat': 
+		 switch(Sword)
+		 {
+		 case undefined:
+		  $("#final_span").css("color", "pink");
+		  docA_span.innerHTML = index.docA+ ' @';
+		  index.docA += '  @';
+		  return Istrue("@", index);
+		  break;
+		  default:
+			  return Isfalse(transcript, index);   
+	 }
+	 case 'app': 
+		 switch(Sword)
+		 {
+		 case undefined:
+		  $("#final_span").css("color", "pink");
+		  docA_span.innerHTML = index.docA+ ' @';
+		  index.docA += '  @';
+		  return Istrue("@", index);
+		  break;
+		  default:
+			  return Isfalse(transcript, index);   
+	 }		 
 	// !
 	// ?
 	// <
 	// >
 	// ~
-	// |	  		 
-		 
+	// |
+		// %		 
+		// *	 
 	// (
 	// Open section
    //-------------------------------------------------		 
