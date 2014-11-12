@@ -168,6 +168,8 @@ io.on('connection', function(socket){
 			console.log("memory B >> before save= "+ memory.docB );
 			console.log("final JSON.stringify(json) in app = "+JSON.stringify(json));
 			console.log("json.data= "+ json.data);
+			if(json.data != lock){
+				lock = json.data;
 			MEMORY.findOne({ username: username}, function (err, doc){
 				var query = {docA:doc.docA, docB:doc.docB, username: username,lastsaveA:doc.lastsaveA,lastsaveB:doc.lastsaveB},
 				    options = { multi: true };
@@ -182,7 +184,7 @@ io.on('connection', function(socket){
 						console.log("memory B >> db= "+ doc.docB );
 						console.log("username >> save= "+ username);
 					};
-			});
+			});}
 
 
 				
