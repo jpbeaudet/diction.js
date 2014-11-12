@@ -15,9 +15,14 @@ if ('webkitSpeechRecognition' in window) {
     recognition.interimResults = true;
     reset();
     recognition.onend = reset;
-    
+    recognition.onerror = function(e) {
+	    recognition.start();
+  	    recognizing = true;
+  	    button.innerHTML = "Click to Stop";
+	};
    
-    recognition.onresult = function (event) {   	
+    recognition.onresult = function (event) { 
+    	
       txt = "";
       var interim = "";
 
@@ -70,7 +75,7 @@ if ('webkitSpeechRecognition' in window) {
   		setTimeout(function(){toggleStartStop() ;}, 400);}
 
 	 }
-    
+   
 
 	
         
