@@ -635,8 +635,9 @@ window.onload = function()
 		 switch(Sword)
 		 {
 		 case undefined:
-		  $("#final_span").css("color", "pink");	
-		  toggleStartStop();
+		 // $("#final_span").css("color", "pink");	
+		  //toggleStartStop();
+			 recognizing = true;
 		 // return Istrue('stop', index);
 		 
 		 
