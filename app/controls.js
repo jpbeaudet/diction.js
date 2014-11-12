@@ -629,7 +629,7 @@ window.onload = function()
 			  return Isfalse(transcript, index);   
 	 }		 
 	// )
-	// Close section
+	// Close section 
   //-------------------------------------------------			 
 	 case 'close': 
 		 switch(Sword)
