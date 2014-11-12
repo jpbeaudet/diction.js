@@ -637,8 +637,8 @@ window.onload = function()
 		 case undefined:
 		  $("#final_span").css("color", "pink");	
 		  toggleStartStop();
-		  //return Istrue('stop', index);
-		  return null;
+		 // return Istrue('stop', index);
+		 
 		 
 		  break;
 		  default:
