@@ -156,7 +156,7 @@ io.on('connection', function(socket){
 		});
 
 		var lock;
-
+ var lock2;
 		socket.on("save",function(data){
 		console.log("save has fire()--------------------------------->>")
 			
@@ -205,8 +205,8 @@ io.on('connection', function(socket){
 					   //numAffected is the number of updated documents
 						console.log("lastsave A >> command after update = "+ doc.lastsaveA );
 						console.log("lastsave B >> command after update = "+ doc.lastsaveB );
-						console.log("memory A >> save= "+ memory.docA );
-						console.log("memory B >> save= "+ memory.docB );
+						console.log("memory A >> cmd= "+ memory.docA );
+						console.log("memory B >> cmd= "+ memory.docB );
 					};
 			});
 			});	
