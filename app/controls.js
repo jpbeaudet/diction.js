@@ -207,7 +207,7 @@ window.onload = function()
 		 case undefined:
 		  $("#final_span").css("color", "pink");
 		  docA_span.innerHTML = index.docA+ ' ,';
-		  index.docA += ' ,';
+		  index.docA = index.docA+ ' ,';
 		  return Istrue(",", index);
 		  break;
 		  default:
