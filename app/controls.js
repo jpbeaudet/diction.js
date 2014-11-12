@@ -220,7 +220,7 @@ window.onload = function()
 		 case undefined:
 		  $("#final_span").css("color", "pink");
 		  docA_span.innerHTML = index.docA+ '&nbsp;';
-		  index.docA += '&nbsp;';
+		  index.docA = index.docA+ '&nbsp;';
 		  return Istrue("Space", index);
 		  break;
 		  default:
@@ -235,7 +235,7 @@ window.onload = function()
 		 case undefined:
 		  $("#final_span").css("color", "pink");
 		  docA_span.innerHTML = index.docA+ '&nbsp;&nbsp;&nbsp;&nbsp;';
-		  index.docA += '&nbsp;&nbsp;&nbsp;&nbsp;';
+		  index.docA =  index.docA+ '&nbsp;&nbsp;&nbsp;&nbsp;';
 		  return Istrue("Tab", index);
 		  break;
 		  default:
@@ -247,7 +247,7 @@ window.onload = function()
 		 case undefined:
 		  $("#final_span").css("color", "pink");
 		  docA_span.innerHTML = index.docA+ '&nbsp;&nbsp;&nbsp;&nbsp;';
-		  index.docA += '&nbsp;&nbsp;&nbsp;&nbsp;';
+		  index.docA = index.docA+ '&nbsp;&nbsp;&nbsp;&nbsp;';
 		  return Istrue("Tab", index);
 		  break;
 		  default:
@@ -261,7 +261,7 @@ window.onload = function()
 		 case undefined:
 		  $("#final_span").css("color", "pink");
 		  docA_span.innerHTML = index.docA+ ' <div><br /></div> ';
-		  index.docA += ' <div><br /></div> ';
+		  index.docA = index.docA+ ' <div><br /></div> ';
 		  return Istrue("Enter", index);
 		  break;
 		  default:
@@ -273,7 +273,7 @@ window.onload = function()
 		 case undefined:
 		  $("#final_span").css("color", "pink");
 		  docA_span.innerHTML = index.docA+ ' <div><br /></div> ';
-		  index.docA += ' <div><br /></div> ';
+		  index.docA = index.docA+ ' <div><br /></div> ';
 		  return Istrue("Enter", index);
 		  break;
 		  default:
@@ -288,7 +288,7 @@ window.onload = function()
 		 case undefined:
 		  $("#final_span").css("color", "pink");
 		  docA_span.innerHTML = index.docA+ ': ';
-		  index.docA += ': ';
+		  index.docA = index.docA+ ': ';
 		  return Istrue("Colon", index);
 		  break;
 		  default:
@@ -302,7 +302,7 @@ window.onload = function()
 		 case undefined:
 		  $("#final_span").css("color", "pink");
 		  docA_span.innerHTML = index.docA+ '; ';
-		  index.docA += '; ';
+		  index.docA = index.docA+ '; ';
 		  return Istrue("Semicolon", index);
 		  break;
 		  default:
@@ -321,7 +321,7 @@ window.onload = function()
 			 case undefined:
 				  $("#final_span").css("color", "pink");
 				  docA_span.innerHTML = index.docA+ ' "';
-				  index.docA += '; ';
+				  index.docA = index.docA+ ' "';
 				  return Istrue("Double Quote", index);
 				  break;
 				  
@@ -339,7 +339,7 @@ window.onload = function()
 		 case undefined:
 		  $("#final_span").css("color", "pink");
 		  docA_span.innerHTML = index.docA+ ' &lsquo;';
-		  index.docA += '  &lsquo;';
+		  index.docA = index.docA+ ' &lsquo;';
 		  return Istrue("Quote", index);
 		  break;
 		  default:
@@ -354,7 +354,7 @@ window.onload = function()
 		 case undefined:
 		  $("#final_span").css("color", "pink");
 		  docA_span.innerHTML = index.docA+ ' +';
-		  index.docA += '  +;';
+		  index.docA = index.docA+ ' +';
 		  return Istrue("+", index);
 		  break;
 		  default:
@@ -366,7 +366,7 @@ window.onload = function()
 		 case undefined:
 		  $("#final_span").css("color", "pink");
 		  docA_span.innerHTML = index.docA+ ' +';
-		  index.docA += '  +';
+		  index.docA = index.docA+ ' +';
 		  return Istrue("+", index);
 		  break;
 		  default:
@@ -379,7 +379,7 @@ window.onload = function()
 		 case undefined:
 		  $("#final_span").css("color", "pink");
 		  docA_span.innerHTML = index.docA+ ' -';
-		  index.docA += '  -';
+		  index.docA = index.docA+ ' -';
 		  return Istrue("-", index);
 		  break;
 		  default:
@@ -392,7 +392,7 @@ window.onload = function()
 		 case undefined:
 		  $("#final_span").css("color", "pink");
 		  docA_span.innerHTML = index.docA+ ' =';
-		  index.docA += '  =';
+		  index.docA =  index.docA+ ' =';
 		  return Istrue("=", index);
 		  break;
 		  default:
@@ -406,7 +406,7 @@ window.onload = function()
 		 case undefined:
 		  $("#final_span").css("color", "pink");
 		  docA_span.innerHTML = index.docA+ ' &';
-		  index.docA += '  &';
+		  index.docA = index.docA+ ' &';
 		  return Istrue("&", index);
 		  break;
 		  default:
@@ -418,7 +418,7 @@ window.onload = function()
 		 case undefined:
 		  $("#final_span").css("color", "pink");
 		  docA_span.innerHTML = index.docA+ ' &';
-		  index.docA += '  &';
+		  index.docA = index.docA+ ' &';
 		  return Istrue("&", index);
 		  break;
 		  default:
@@ -431,7 +431,7 @@ window.onload = function()
 		 case undefined:
 		  $("#final_span").css("color", "pink");
 		  docA_span.innerHTML = index.docA+ ' $';
-		  index.docA += '  $';
+		  index.docA = index.docA+ ' $';
 		  return Istrue("$", index);
 		  break;
 		  default:
@@ -450,7 +450,7 @@ window.onload = function()
 			 case undefined:
 				  $("#final_span").css("color", "pink");
 				  docA_span.innerHTML = index.docA+ ' #';
-				  index.docA += ' #';
+				  index.docA = index.docA+ ' #';
 				  return Istrue("#", index);
 				  break;
 				  
@@ -468,7 +468,7 @@ window.onload = function()
 		 case undefined:
 		  $("#final_span").css("color", "pink");
 		  docA_span.innerHTML = index.docA+ ' @';
-		  index.docA += '  @';
+		  index.docA = index.docA+ ' @';
 		  return Istrue("@", index);
 		  break;
 		  default:
@@ -480,7 +480,7 @@ window.onload = function()
 		 case undefined:
 		  $("#final_span").css("color", "pink");
 		  docA_span.innerHTML = index.docA+ ' @';
-		  index.docA += '  @';
+		  index.docA = index.docA+ ' @';
 		  return Istrue("@", index);
 		  break;
 		  default:
@@ -492,7 +492,7 @@ window.onload = function()
 		 case undefined:
 		  $("#final_span").css("color", "pink");
 		  docA_span.innerHTML = index.docA+ ' @';
-		  index.docA += '  @';
+		  index.docA = index.docA+ ' @';
 		  return Istrue("@", index);
 		  break;
 		  default:
@@ -510,7 +510,7 @@ window.onload = function()
 			 case undefined:
 				  $("#final_span").css("color", "pink");
 				  docA_span.innerHTML = index.docA+ ' !';
-				  index.docA += ' !';
+				  index.docA = index.docA+ ' !';
 				  return Istrue("!", index);
 				  break;
 				  
@@ -533,7 +533,7 @@ window.onload = function()
 			 case undefined:
 				  $("#final_span").css("color", "pink");
 				  docA_span.innerHTML = index.docA+ ' ?';
-				  index.docA += ' ?';
+				  index.docA = index.docA+ ' ?';
 				  return Istrue("?", index);
 				  break;
 				  
@@ -555,7 +555,7 @@ window.onload = function()
 		 case undefined:
 		  $("#final_span").css("color", "pink");
 		  docA_span.innerHTML = index.docA+ ' |';
-		  index.docA += '  |';
+		  index.docA = index.docA+ ' |';
 		  return Istrue("|", index);
 		  break;
 		  default:
@@ -577,7 +577,7 @@ window.onload = function()
 			 case undefined:
 				  $("#final_span").css("color", "pink");
 				  docA_span.innerHTML = index.docA+ '(';
-				  index.docA += '(';
+				  index.docA = index.docA+ '(';
 				  return Istrue("Open Parenthesis", index);
 				  break;
 				  
@@ -591,7 +591,7 @@ window.onload = function()
 			 case undefined:
 				  $("#final_span").css("color", "pink");
 				  docA_span.innerHTML = index.docA+ ' &lsquo;';
-				  index.docA += '  &lsquo;';
+				  index.docA = index.docA+ ' &lsquo;';
 				  return Istrue("Open Quote", index);
 				  break;
 				  default:
@@ -605,7 +605,7 @@ window.onload = function()
 			 case undefined:
 				  $("#final_span").css("color", "pink");
 				  docA_span.innerHTML = index.docA+ '{';
-				  index.docA += '{';
+				  index.docA = index.docA+ '{';
 				  return Istrue("Open Bracket", index);
 				  break;
 				  default:
@@ -619,7 +619,7 @@ window.onload = function()
 			 case 'bracket':
 				  $("#final_span").css("color", "pink");
 				  docA_span.innerHTML = index.docA+ '[';
-				  index.docA += '[';
+				  index.docA = index.docA+ '[';
 				  return Istrue("Open Square Bracket", index);
 				  break;
 				  default:
@@ -642,7 +642,7 @@ window.onload = function()
 			 case undefined:
 				  $("#final_span").css("color", "pink");
 				  docA_span.innerHTML = index.docA+ ')';
-				  index.docA += ')';
+				  index.docA = index.docA+ ')';
 				  return Istrue("Close Parenthesis", index);
 				  break;
 				  
@@ -656,7 +656,7 @@ window.onload = function()
 			 case undefined:
 				  $("#final_span").css("color", "pink");
 				  docA_span.innerHTML = index.docA+ ' &rsquo;';
-				  index.docA += '  &rsquo;';
+				  index.docA = index.docA+ ' &rsquo;';
 				  return Istrue("Close Quote", index);
 				  break;
 				  default:
@@ -670,7 +670,7 @@ window.onload = function()
 			 case undefined:
 				  $("#final_span").css("color", "pink");
 				  docA_span.innerHTML = index.docA+ '}';
-				  index.docA += '}';
+				  index.docA = index.docA+ '}';
 				  return Istrue("Close Bracket", index);
 				  break;
 				  default:
@@ -684,7 +684,7 @@ window.onload = function()
 			 case 'bracket':
 				  $("#final_span").css("color", "pink");
 				  docA_span.innerHTML = index.docA+ ']';
-				  index.docA += ']';
+				  index.docA = index.docA+ ']';
 				  return Istrue("Close Square Bracket", index);
 				  break;
 				  default:
