@@ -627,24 +627,8 @@ window.onload = function()
 		  //words
 		  //sentence
 		  //line
-    // return 
-		  //top
-		  //end
-	// stop
-	 case 'stop': 
-		 switch(Sword)
-		 {
-		 case undefined:
-		 // $("#final_span").css("color", "pink");	
-		  //toggleStartStop();
-			 recognizing = true;
-		 // return Istrue('stop', index);
-		 
-		 
-		  break;
-		  default:
-			  return Isfalse(transcript, index);   
-	 }
+
+
 	// go to :
 		  // line
 		  // word
