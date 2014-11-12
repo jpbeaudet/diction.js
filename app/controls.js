@@ -353,18 +353,65 @@ window.onload = function()
 		 {
 		 case undefined:
 		  $("#final_span").css("color", "pink");
-		  docA_span.innerHTML = index.docA+ ' &lsquo;';
-		  index.docA += '  &lsquo;';
-		  return Istrue("Quote", index);
+		  docA_span.innerHTML = index.docA+ ' +';
+		  index.docA += '  +;';
+		  return Istrue("+", index);
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
 	 }
-		 		 
+	 case 'Plus': 
+		 switch(Sword)
+		 {
+		 case undefined:
+		  $("#final_span").css("color", "pink");
+		  docA_span.innerHTML = index.docA+ ' +';
+		  index.docA += '  +';
+		  return Istrue("+", index);
+		  break;
+		  default:
+			  return Isfalse(transcript, index);   
+	 }		 		 
     // -
+	 case 'minus': 
+		 switch(Sword)
+		 {
+		 case undefined:
+		  $("#final_span").css("color", "pink");
+		  docA_span.innerHTML = index.docA+ ' -';
+		  index.docA += '  -';
+		  return Istrue("-", index);
+		  break;
+		  default:
+			  return Isfalse(transcript, index);   
+	 }		 
 	// =
+	 case 'equal': 
+		 switch(Sword)
+		 {
+		 case undefined:
+		  $("#final_span").css("color", "pink");
+		  docA_span.innerHTML = index.docA+ ' =';
+		  index.docA += '  =';
+		  return Istrue("=", index);
+		  break;
+		  default:
+			  return Isfalse(transcript, index);   
+	 }		 
     // *
 	// &
+	 case 'and': 
+		 switch(Sword)
+		 {
+		 case undefined:
+		  $("#final_span").css("color", "pink");
+		  docA_span.innerHTML = index.docA+ ' &';
+		  index.docA += '  &';
+		  return Istrue("&", index);
+		  break;
+		  default:
+			  return Isfalse(transcript, index);   
+	 }		 
 	// %
 	// $
 	// #
