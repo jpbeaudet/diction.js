@@ -25,13 +25,13 @@ if ('webkitSpeechRecognition' in window) {
     	  txt = "";
         if (event.results[i].isFinal) {
         	$("#final_span").css("color", "grey");
-        	toggleStartStop() ;
+        	//toggleStartStop() ;
             txt = event.results[i][0].transcript;
         	interim = ""; 
         	var isCmd="";
         	
         	var isCmd = controls(txt) ;
-        	restart(); 
+        	//restart(); 
         	
         	
         } else {
