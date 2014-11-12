@@ -344,7 +344,38 @@ window.onload = function()
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
-	 }		 
+	 }
+		 
+		  
+	// +
+	 case 'plus': 
+		 switch(Sword)
+		 {
+		 case undefined:
+		  $("#final_span").css("color", "pink");
+		  docA_span.innerHTML = index.docA+ ' &lsquo;';
+		  index.docA += '  &lsquo;';
+		  return Istrue("Quote", index);
+		  break;
+		  default:
+			  return Isfalse(transcript, index);   
+	 }
+		 		 
+    // -
+	// =
+    // *
+	// &
+	// %
+	// $
+	// #
+	// @
+	// !
+	// ?
+	// <
+	// >
+	// ~
+	// |	  		 
+		 
 	// (
 	// Open section
    //-------------------------------------------------		 
@@ -477,22 +508,7 @@ window.onload = function()
 	 }		 
 
 	
-   
-	// +
-	// -
-	// =
-    // *
-	// &
-	// %
-	// $
-	// #
-	// @
-	// !
-	// ?
-	// <
-	// >
-	// ~
-	// |	  
+ 
 		  
 	 // Movement section				//
 	 // ------------------------------------
@@ -534,6 +550,23 @@ window.onload = function()
 		  default:
 			  return Isfalse(transcript, index);   
 	 } 
+	 case 'Kenzo': 
+		 switch(Sword)
+		 {
+		 case undefined:
+		  $("#final_span").css("color", "pink");
+
+		  docA_span.innerHTML = "";
+		  docB_span.innerHTML = "";
+		  docA_span.innerHTML = index.LastdocA;
+		  docB_span.innerHTML = index.LastdocB;
+		  index.docA = index.LastdocA;
+		  index.docB = index.LastdocB;
+		  return Istrue('Cancel', index);
+		  break;
+		  default:
+			  return Isfalse(transcript, index);   
+	 } 		 
 	// top
 	 case 'top': 
 		 switch(Sword)
@@ -604,7 +637,8 @@ window.onload = function()
 		 case undefined:
 		  $("#final_span").css("color", "pink");	
 		  toggleStartStop();
-		  return Istrue('stop', index);
+		  //return Istrue('stop', index);
+		  return null;
 		 
 		  break;
 		  default:
