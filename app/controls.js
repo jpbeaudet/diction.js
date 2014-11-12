@@ -499,7 +499,51 @@ window.onload = function()
 			  return Isfalse(transcript, index);   
 	 }		 
 	// !
+	 case 'exclamation': 
+		 switch(Sword)
+		 {
+		 case 'mark':
+			 
+			 switch(Tword)
+			 {
+			 
+			 case undefined:
+				  $("#final_span").css("color", "pink");
+				  docA_span.innerHTML = index.docA+ ' !';
+				  index.docA += ' !';
+				  return Istrue("!", index);
+				  break;
+				  
+				  default:
+					  return Isfalse(transcript, index); 
+			 }
+
+		  default:
+			  return Isfalse(transcript, index);   
+	 }		 
 	// ?
+	 case 'question': 
+		 switch(Sword)
+		 {
+		 case 'mark':
+			 
+			 switch(Tword)
+			 {
+			 
+			 case undefined:
+				  $("#final_span").css("color", "pink");
+				  docA_span.innerHTML = index.docA+ ' ?';
+				  index.docA += ' ?';
+				  return Istrue("?", index);
+				  break;
+				  
+				  default:
+					  return Isfalse(transcript, index); 
+			 }
+
+		  default:
+			  return Isfalse(transcript, index);   
+	 }			 
 	// <
 	// >
 	// ~
