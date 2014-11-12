@@ -700,6 +700,70 @@ window.onload = function()
 	 // Movement section				//
 	 // ------------------------------------
     
+	 case 'move': 
+		 switch(Sword)
+		 {
+		 case 'rigth':
+			 
+			 switch(Tword)
+			 {
+			 
+			 case undefined:
+				  $("#final_span").css("color", "pink");
+				 var word = index.docB.split(" ");
+				 
+				 index.docA =index.docA + word[0];
+				  
+				  word = word.splice(0,1);
+				  index.docB= word.toString();
+				  icon_span.innerHTML = "-->";
+				  docA_span.innerHTML = index.docA;
+				  docB_span.innerHTML = index.docB;
+				  return Istrue("Move rigth", index);
+				  break;
+				  
+				  default:
+					  return Isfalse(transcript, index); 
+			 }
+		 case 'left':
+			 switch(Tword)
+			 {
+			 
+			 case undefined:
+				  $("#final_span").css("color", "pink");
+		
+				  return Istrue("Close Quote", index);
+				  break;
+				  default:
+					  return Isfalse(transcript, index); 
+			 } 
+
+		 case 'sentence':
+			 switch(Tword)
+			 {
+			 
+			 case 'left':
+				  $("#final_span").css("color", "pink");
+				
+				  return Istrue("Close Square Bracket", index);
+				  break;
+				  
+			 case 'rigth':
+				  $("#final_span").css("color", "pink");
+				
+				  return Istrue("Close Square Bracket", index);
+				  break;
+				  
+				  default:
+					  return Isfalse(transcript, index); 
+			 }				 
+		  default:
+			  return Isfalse(transcript, index);   
+	 }		 
+		 
+		 
+		 
+		 
 	// cancel
 		  // 3 crtl-z like return
 	//------------------------------------	 
