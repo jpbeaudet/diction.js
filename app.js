@@ -167,7 +167,7 @@ io.on('connection', function(socket){
 			console.log("memory A >> before save= "+ memory.docA );
 			console.log("memory B >> before save= "+ memory.docB );
 			console.log("final JSON.stringify(json) in app = "+JSON.stringify(json));
-
+			console.log("json.data= "+ json.data);
 			MEMORY.findOne({ username: username}, function (err, doc){
 				var query = {docA:doc.docA, docB:doc.docB, username: username,lastsaveA:doc.lastsaveA,lastsaveB:doc.lastsaveB},
 				    options = { multi: true };
