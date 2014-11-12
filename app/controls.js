@@ -12,7 +12,8 @@
 // the function handling the interim, the final ,doc and mode html will be placed after the controls function.
 //var Data= new Object();
 
-//var socket = io.connect('https://54.68.32.250:3000');	
+//var socket = io.connect('https://54.68.32.250:3000');
+var _USERNAME;
 var socket = io.connect('https://54.68.32.250:3000', {'force new connection': true});
 window.onload = function()
 {
@@ -20,6 +21,7 @@ window.onload = function()
 	socket.on("res.load", function(response){
 		var docA =response[0];
 		var docB =response[1];
+		_USERNAME =response[2];
 		icon_span.innerHTML = "-->";
 		docA_span.innerHTML = docA;
 	    docB_span.innerHTML = docB;	
@@ -33,7 +35,8 @@ window.onload = function()
 	  // start by building the index object which will contain all relevant info 
 	
 
-	  socket.emit("request", "test -------------------------------->");
+	  //socket.emit("request", "test -------------------------------->");
+	   socket.to(_USERNAME).emit("request", "test -------------------------------->");
 	  socket.on("response", function(response){
 		  console.log("response fired");
 		  $("#final_span").css("color", "grey");
@@ -722,7 +725,8 @@ function Istrue(data, index){
     console.log("pretext command = "+ pretext);
     console.log("afttext command = "+ afttext);
 	final_span.innerHTML = " @@@->  " + data + "  <-@@@ ";
-	socket.emit("cmd", [ pretext , afttext]);
+	//socket.emit("cmd", [ pretext , afttext]);
+	socket.to(_USERNAME).emit("cmd", [ pretext , afttext]);
 	
 	return true;
 
@@ -747,7 +751,8 @@ function Isfalse(data, index){
     final_span.innerHTML = " @@@->  " + doc + "  <-@@@ ";
   	diction = doc;  
        
-	socket.emit("save", [data, pretext , afttext,json]);	
+	//socket.emit("save", [data, pretext , afttext,json]);	
+  	socket.to(_USERNAME).emit("save", [data, pretext , afttext,json]);	
 	return false;
     } 
    

@@ -78,7 +78,7 @@ db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function callback () {
   console.log("db started ------------");
 });
-
+ 
 // routes
 
 require('./routes')(app);
@@ -98,6 +98,7 @@ console.log(("Express server listening on port " + app.get('port')));
 var io = require('socket.io').listen(server);
 
 io.on('connection', function(socket){ 
+	 socket.join(username);
 	var MEMORY = mongoose.model('memory', memoryDb);
 	var memory = new Object();	
 	memory.docA = "";
@@ -120,7 +121,8 @@ io.on('connection', function(socket){
 			Memory.save(function (err, Memory) {
 			if (err) return console.error(err);
 			});
-	    	socket.emit("res.load", ["", ""]);    
+	    	//socket.emit("res.load", ["", "",username]);   
+			socket.to(username).emit("res.load", ["", "",username]);  
 	        }				  
 			});	    	
 	    });
@@ -148,7 +150,7 @@ io.on('connection', function(socket){
 					console.log("lastsave B >> request = "+ doc.lastsaveB );
 					console.log("doc.docA >> request = "+ doc.docA);
 					console.log("doc.docB>> request = "+ doc.docB);
-				  socket.emit("response", [doc.docA, doc.docB,doc.lastsaveA,doc.lastsaveB]);
+				  socket.to(username).emit("response", [doc.docA, doc.docB,doc.lastsaveA,doc.lastsaveB]);
 
 			});
 
