@@ -548,6 +548,19 @@ window.onload = function()
 	// >
 	// ~
 	// |
+	 
+	 case 'bar': 
+		 switch(Sword)
+		 {
+		 case undefined:
+		  $("#final_span").css("color", "pink");
+		  docA_span.innerHTML = index.docA+ ' |';
+		  index.docA += '  |';
+		  return Istrue("|", index);
+		  break;
+		  default:
+			  return Isfalse(transcript, index);   
+	 }		 
 		// %		 
 		// *	 
 	// (
