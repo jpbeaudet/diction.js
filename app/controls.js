@@ -36,7 +36,7 @@ window.onload = function()
 	
 
 	  //socket.emit("request", "test -------------------------------->");
-	   socket.to(_USERNAME).emit("request", "test -------------------------------->");
+	   io.to(_USERNAME).emit("request", "test -------------------------------->");
 	  socket.on("response", function(response){
 		  console.log("response fired");
 		  $("#final_span").css("color", "grey");
@@ -726,7 +726,7 @@ function Istrue(data, index){
     console.log("afttext command = "+ afttext);
 	final_span.innerHTML = " @@@->  " + data + "  <-@@@ ";
 	//socket.emit("cmd", [ pretext , afttext]);
-	socket.to(_USERNAME).emit("cmd", [ pretext , afttext]);
+	io.to(_USERNAME).emit("cmd", [ pretext , afttext]);
 	
 	return true;
 
@@ -752,7 +752,7 @@ function Isfalse(data, index){
   	diction = doc;  
        
 	//socket.emit("save", [data, pretext , afttext,json]);	
-  	socket.to(_USERNAME).emit("save", [data, pretext , afttext,json]);	
+  	io.to(_USERNAME).emit("save", [data, pretext , afttext,json]);	
 	return false;
     } 
    
