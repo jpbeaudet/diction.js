@@ -502,10 +502,10 @@ window.onload = function()
 
 		  docA_span.innerHTML = "";
 		  docB_span.innerHTML = "";		  
-		  docA_span.innerHTML = index.docA;
-		  docB_span.innerHTML = index.docB;
-		  //index.docA = index.LastdocA;
-		  //index.docB = index.LastdocB;
+		  docA_span.innerHTML = index.LastdocA;
+		  docB_span.innerHTML = index.LastdocB;
+		  index.docA = index.LastdocA;
+		  index.docB = index.LastdocB;
 		  return Istrue('Cancel', index);
 		  break;
 		  default:
@@ -519,10 +519,10 @@ window.onload = function()
 
 		  docA_span.innerHTML = "";
 		  docB_span.innerHTML = "";
-		  docA_span.innerHTML = index.docA;
-		  docB_span.innerHTML = index.docB;
-		  //index.docA = index.LastdocA;
-		  //index.docB = index.LastdocB;
+		  docA_span.innerHTML = index.LastdocA;
+		  docB_span.innerHTML = index.LastdocB;
+		  index.docA = index.LastdocA;
+		  index.docB = index.LastdocB;
 		  return Istrue('Cancel', index);
 		  break;
 		  default:

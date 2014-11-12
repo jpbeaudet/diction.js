@@ -148,7 +148,7 @@ io.on('connection', function(socket){
 					console.log("lastsave B >> request = "+ doc.lastsaveB );
 					console.log("doc.docA >> request = "+ doc.docA);
 					console.log("doc.docB>> request = "+ doc.docB);
-				  socket.emit("response", [doc.docA, doc.docB,doc.docA,doc.docB]);
+				  socket.emit("response", [doc.docA, doc.docB,doc.lastsaveA,doc.lastsaveB]);
 
 			});
 
@@ -198,7 +198,7 @@ io.on('connection', function(socket){
 				    options = { multi: true };
 				  //console.log(" query =  :"+ query);
 
-				  MEMORY.update(query, { docA: memory.docA , docB: memory.docB, username: username,lastsaveA:doc.lastsaveA,lastsaveB:doc.lastsaveB}, options, callback);
+				  MEMORY.update(query, { docA: memory.docA , docB: memory.docB, username: username}, options, callback);
 				  function callback (err, numAffected) {
 					   //numAffected is the number of updated documents
 						console.log("lastsave A >> command after update = "+ doc.lastsaveA );
