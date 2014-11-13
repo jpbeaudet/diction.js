@@ -15,13 +15,14 @@
 //var socket = io.connect('https://54.68.32.250:3000');
 //var _USERNAME;
 var socket = io.connect('https://54.68.32.250:3000', {'force new connection': true});
+var _USERNAME;
 window.onload = function()
 {
 	socket.emit("load", "load -------------------------------->");	
 	socket.on("res.load", function(response){
 		var docA =response[0];
 		var docB =response[1];
-		var _USERNAME =response[2];
+		_USERNAME =response[2];
 		welcome_span.innerHTML = "Welcome "+ _USERNAME;
 		icon_span.innerHTML = "-->";
 		docA_span.innerHTML = docA;
