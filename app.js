@@ -115,7 +115,7 @@ io.on('connection', function(socket){
 	    	MEMORY.findOne({ username: username}, function (err, doc){
 	    		
 	    	if(doc != null){
-	    	socket.emit("res.load", [doc.docA, doc.docB]);  
+	    	socket.emit("res.load", [doc.docA, doc.docB,username]);  
 	    	}else{
 	    	var Memory = new MEMORY({ docA: "", docB: "" , username: username,lastsaveA:"",lastsaveB:""});
 			Memory.save(function (err, Memory) {
