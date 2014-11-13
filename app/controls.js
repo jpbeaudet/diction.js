@@ -22,6 +22,7 @@ window.onload = function()
 		var docA =response[0];
 		var docB =response[1];
 		_USERNAME =response[2];
+		welcome_span.innerHTML = "Welcome "+ _USERNAME;
 		icon_span.innerHTML = "-->";
 		docA_span.innerHTML = docA;
 	    docB_span.innerHTML = docB;	
