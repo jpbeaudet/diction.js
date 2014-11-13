@@ -37,8 +37,8 @@ window.onload = function()
 	  // start by building the index object which will contain all relevant info 
 	
 
-	  socket.emit("request", "test -------------------------------->");
-	   //socket.to(_USERNAME).emit("request", "test -------------------------------->");
+	  //socket.emit("request", "test -------------------------------->");
+	   socket.to(_USERNAME).emit("request", "test -------------------------------->");
 	  socket.on("response", function(response){
 		  console.log("response fired");
 		  $("#final_span").css("color", "grey");
@@ -1081,8 +1081,8 @@ function Istrue(data, index){
     console.log("pretext command = "+ pretext);
     console.log("afttext command = "+ afttext);
 	final_span.innerHTML = " @@@->  " + data + "  <-@@@ ";
-	socket.emit("cmd", [ pretext , afttext]);
-	//socket.to(_USERNAME).emit("cmd", [ pretext , afttext]);
+	//socket.emit("cmd", [ pretext , afttext]);
+	socket.to(_USERNAME).emit("cmd", [ pretext , afttext]);
 	
 	return true;
 
@@ -1107,8 +1107,8 @@ function Isfalse(data, index){
     final_span.innerHTML = " @@@->  " + doc + "  <-@@@ ";
   	diction = doc;  
        
-	socket.emit("save", [data, pretext , afttext,json]);	
-  	//socket.to(_USERNAME).emit("save", [data, pretext , afttext,json]);	
+	//socket.emit("save", [data, pretext , afttext,json]);	
+  	socket.to(_USERNAME).emit("save", [data, pretext , afttext,json]);	
 	return false;
     } 
    
@@ -1123,11 +1123,12 @@ $.confirm({
             'class'	: 'blue',
             'action': function(){
 	 $("#final_span").css("color", "pink");	
- index.docA = "";
+ index.docA = ""; 
  index.docB ="";
  docA_span.innerHTML = "";
  docB_span.innerHTML = "";
- socket.emit('newtext',"new text----------------->>");
+// socket.emit('newtext',"new text----------------->>");
+ socket.to(_USERNAME).emit('newtext',"new text----------------->>");
  location.reload(true);
             }
         },
