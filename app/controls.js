@@ -749,7 +749,7 @@ window.onload = function()
 				  if(word[n]== ""){word.splice(n,1);}
 				  if(word[n]== ""){word.splice(n,1);}
 				  index.docB = index.docB + word[n]+ " ";
-				  console.log("word[n] = "+ word[n]);
+				  console.log("word[n-1] = "+ word[n-1]);
 				  console.log("word[0] = "+ word[0]);
 				  //index.docA = index.docB.replace(/  /g," ");
 				  index.docA = index.docA.replace(word[n],"");
