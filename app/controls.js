@@ -749,11 +749,10 @@ window.onload = function()
 				  if(word[n]== ""){word.splice(n,1);}
 				  if(word[n]== ""){word.splice(n,1);}
 				  if(word[n]== ""){word.splice(n,1);}
-				  index.docB = index.docB + word[n]+ " ";
+				  index.docB = index.docB + word[n-1]+ " ";
 				  console.log("word[n-1] = "+ word[n-1]);
-				  console.log("word[0] = "+ word[0]);
 				  //index.docA = index.docB.replace(/  /g," ");
-				  index.docA = index.docA.replace(word[n],"");
+				  index.docA = index.docA.replace(word[n-1],"");
 
 				  icon_span.innerHTML = "-->";
 				  docA_span.innerHTML = index.docA;
