@@ -712,9 +712,6 @@ window.onload = function()
 				  $("#final_span").css("color", "pink");
 				  var word = index.docB.split(" ");
 				  console.log("word = "+ word);
-				 // for (x in word){
-					 // if(word[0]== ""){word.splice(0,1);}
-				 //}
 				  word.splice(0,1);
 				  if(word[0]== ""){word.splice(0,1);}
 				  if(word[0]== ""){word.splice(0,1);}
@@ -740,7 +737,22 @@ window.onload = function()
 			 
 			 case undefined:
 				  $("#final_span").css("color", "pink");
-		
+				  var word = index.docA.split(" ");
+				  console.log("word = "+ word);
+				  word.splice(0,1);
+				  var n = (word.length -1);
+				  if(word[n]== ""){word.splice(n,1);}
+				  if(word[n]== ""){word.splice(n,1);}
+				  if(word[n]== ""){word.splice(n,1);}
+				  if(word[n]== ""){word.splice(n,1);}
+				  index.docB = index.docB + word[n]+ " ";
+				  console.log("word[n] = "+ word[n]);
+				  index.docA = index.docB.replace(/  /g," ");
+				  index.docA = index.docA.replace(word[n],"");
+
+				  icon_span.innerHTML = "-->";
+				  docA_span.innerHTML = index.docA;
+				  docB_span.innerHTML = index.docB;
 				  return Istrue("Close Quote", index);
 				  break;
 				  default:
