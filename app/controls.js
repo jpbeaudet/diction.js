@@ -715,10 +715,10 @@ window.onload = function()
 				 index.docA = index.docA + word[1];
 				 console.log("word[1] = "+ word[1]);
 				 
-				  word = word.splice(0,2);
-				  console.log("word2 = "+ word);
-				  index.docB = word.replace(/,/g," ");
-				  console.log("word.toString() = "+ word.toString());
+				  //word = word.splice(0,2);
+				 // console.log("word2 = "+ word);
+				  index.docB = index.docB.replace(word[1]," ");
+				 // console.log("word.toString() = "+ word.toString());
 				  icon_span.innerHTML = "-->";
 				  docA_span.innerHTML = index.docA;
 				  docB_span.innerHTML = index.docB;
