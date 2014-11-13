@@ -743,7 +743,7 @@ window.onload = function()
 				  var n = Number(word.length );
 				  console.log("n = "+ n);
 				  //word.splice(n,1);
-				  
+				  n = (n -1);
 				  if(word[n]== ""){word.splice(n,1);}
 				  if(word[n]== ""){word.splice(n,1);}
 				  if(word[n]== ""){word.splice(n,1);}
