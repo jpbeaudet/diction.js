@@ -712,10 +712,12 @@ window.onload = function()
 				  $("#final_span").css("color", "pink");
 				 var word = index.docB.split(" ");
 				 console.log("word = "+ word);
-				 index.docA = index.docA + word[0];
-				  
+				 index.docA = index.docA + word[0].toString();
+				 console.log("word[0] = "+ word[0].toString());
+				 
 				  word = word.splice(0,1);
-				  index.docB= word.toString();
+				  index.docB = word.toString();
+				  console.log("word.toString() = "+ word.toString());
 				  icon_span.innerHTML = "-->";
 				  docA_span.innerHTML = index.docA;
 				  docB_span.innerHTML = index.docB;
