@@ -710,15 +710,12 @@ window.onload = function()
 			 
 			 case undefined:
 				  $("#final_span").css("color", "pink");
-				 var word = index.docB.split(" ");
-				 console.log("word = "+ word);
-				 index.docA = index.docA + word[1];
-				 console.log("word[1] = "+ word[1]);
-				 
-				  //word = word.splice(0,2);
-				 // console.log("word2 = "+ word);
+				  var word = index.docB.split(" ");
+				  console.log("word = "+ word);
+				  index.docA = index.docA + word[1]+ " ";
+				  console.log("word[1] = "+ word[1]);
 				  index.docB = index.docB.replace(word[1]," ");
-				 // console.log("word.toString() = "+ word.toString());
+
 				  icon_span.innerHTML = "-->";
 				  docA_span.innerHTML = index.docA;
 				  docB_span.innerHTML = index.docB;
