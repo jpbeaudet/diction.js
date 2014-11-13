@@ -742,8 +742,9 @@ window.onload = function()
 				  console.log("word = "+ word);
 				  var n = Number(word.length );
 				  console.log("n = "+ n);
-				  //word.splice(n,1);
+				  
 				  n = (n -1);
+				  word.splice(n,1);
 				  if(word[n]== ""){word.splice(n,1);}
 				  if(word[n]== ""){word.splice(n,1);}
 				  if(word[n]== ""){word.splice(n,1);}
