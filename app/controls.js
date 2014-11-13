@@ -740,7 +740,7 @@ window.onload = function()
 				  var word = index.docA.split(" ");
 				  word.splice(0,1);
 				  console.log("word = "+ word);
-				  var n = (word.length -1);
+				  var n = Number(word.length -1);
 				  console.log("n = "+ n);
 				  word.splice(n,1);
 				  
