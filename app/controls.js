@@ -711,8 +711,8 @@ window.onload = function()
 			 case undefined:
 				  $("#final_span").css("color", "pink");
 				 var word = index.docB.split(" ");
-				 
-				 index.docA =index.docA + word[0];
+				 console.log("word = "+ word);
+				 index.docA = index.docA + word[0];
 				  
 				  word = word.splice(0,1);
 				  index.docB= word.toString();
