@@ -121,7 +121,7 @@ io.on('connection', function(socket){
 			Memory.save(function (err, Memory) {
 			if (err) return console.error(err);
 			});
-	    	socket.emit("res.load", ["", "",username]);   
+	    	socket.emit("res.load", ["", "", username]);   
 			//socket.to(username).emit("res.load", ["", "",username]);  
 	        }				  
 			});	    	

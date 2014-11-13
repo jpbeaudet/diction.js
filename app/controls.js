@@ -13,7 +13,7 @@
 //var Data= new Object();
 
 //var socket = io.connect('https://54.68.32.250:3000');
-var _USERNAME;
+//var _USERNAME;
 var socket = io.connect('https://54.68.32.250:3000', {'force new connection': true});
 window.onload = function()
 {
@@ -21,7 +21,7 @@ window.onload = function()
 	socket.on("res.load", function(response){
 		var docA =response[0];
 		var docB =response[1];
-		_USERNAME =response[2];
+		var _USERNAME =response[2];
 		welcome_span.innerHTML = "Welcome "+ _USERNAME;
 		icon_span.innerHTML = "-->";
 		docA_span.innerHTML = docA;
