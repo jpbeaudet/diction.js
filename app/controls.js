@@ -715,7 +715,7 @@ window.onload = function()
 				  //for (x in word){
 					 // if (word[x] == " "){ word.splice(x,1);}
 				 // }
-				  word = word.splice(0,1);
+				  word = word.splice(0,2);
 				  index.docA = index.docA + word[0]+ " ";
 				  console.log("word[0] = "+ word[0]);
 				  index.docB = index.docB.replace(word[0],"");
