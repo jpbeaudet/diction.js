@@ -703,7 +703,7 @@ window.onload = function()
 	 case 'move': 
 		 switch(Sword)
 		 {
-		 case 'rigth':
+		 case 'right':
 			 
 			 switch(Tword)
 			 {
@@ -748,7 +748,7 @@ window.onload = function()
 				  return Istrue("Close Square Bracket", index);
 				  break;
 				  
-			 case 'rigth':
+			 case 'right':
 				  $("#final_span").css("color", "pink");
 				
 				  return Istrue("Close Square Bracket", index);
