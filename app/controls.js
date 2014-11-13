@@ -766,7 +766,6 @@ window.onload = function()
 			 case undefined:
 				  $("#final_span").css("color", "pink");
 				  var word = index.docA.split(" ");
-				  //word.splice(0,1);
 				  console.log("word = "+ word);
 				  var n = Number(word.length );
 				  console.log("n = "+ n);
@@ -778,7 +777,6 @@ window.onload = function()
 				  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
 				  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
 				  index.docB = word[n-1]+ " "+ index.docB +  " ";
-				  //index.docB = index.docB + word[n-1]+ " ";
 				  console.log("word[n-1] = "+ word[n-1]);
 				  index.docA = index.docA.replace(/  /g," ");
 				  index.docA = index.docA.replace(word[n-1],"");
@@ -799,7 +797,6 @@ window.onload = function()
 			 case undefined:
 				  $("#final_span").css("color", "pink");
 				  var word = index.docA.split(" ");
-				  //word.splice(0,1);
 				  console.log("word = "+ word);
 				  var n = Number(word.length );
 				  console.log("n = "+ n);
@@ -811,7 +808,6 @@ window.onload = function()
 				  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
 				  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
 				  index.docB = word[n-1]+ " "+ index.docB +  " ";
-				  //index.docB = index.docB + word[n-1]+ " ";
 				  console.log("word[n-1] = "+ word[n-1]);
 				  index.docA = index.docA.replace(/  /g," ");
 				  index.docA = index.docA.replace(word[n-1],"");
