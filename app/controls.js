@@ -715,10 +715,10 @@ window.onload = function()
 				  //for (x in word){
 					 // if (word[x] == " "){ word.splice(x,1);}
 				 // }
-				  word = word.splice(0,2);
-				  index.docA = index.docA + word[0]+ " ";
-				  console.log("word[0] = "+ word[0]);
-				  index.docB = index.docB.replace(word[0],"");
+				  word.splice(0,1);
+				  index.docA = index.docA + word[1]+ " ";
+				  console.log("word[1] = "+ word[1]);
+				  index.docB = index.docB.replace(word[1],"");
 
 				  icon_span.innerHTML = "-->";
 				  docA_span.innerHTML = index.docA;
