@@ -745,12 +745,12 @@ window.onload = function()
 				  
 				  n = (n -1);
 				  word.splice(n,1);
-				  if(word[n-1]== ""){word.splice(n-1,1);}
-				  if(word[n-1]== ""){word.splice(n-1,1);}
-				  if(word[n-1]== ""){word.splice(n-1,1);}
-				  if(word[n-1]== ""){word.splice(n-1,1);}
-				 // index.docB = word[n-1]+ " "+ index.docB +  " ";
-				  index.docB = index.docB + word[n-1]+ " ";
+				  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
+				  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
+				  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
+				  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
+				  index.docB = word[n-1]+ " "+ index.docB +  " ";
+				  //index.docB = index.docB + word[n-1]+ " ";
 				  console.log("word[n-1] = "+ word[n-1]);
 				  index.docA = index.docA.replace(/  /g," ");
 				  index.docA = index.docA.replace(word[n-1],"");
