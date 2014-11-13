@@ -700,7 +700,7 @@ window.onload = function()
 	 // Movement section				//
 	 // ------------------------------------
     
-	 case 'move': 
+	 case 'go': 
 		 switch(Sword)
 		 {
 		 case 'right':
