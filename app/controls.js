@@ -712,12 +712,12 @@ window.onload = function()
 				  $("#final_span").css("color", "pink");
 				  var word = index.docB.split(" ");
 				  console.log("word = "+ word);
-				  //for (x in word){
-					 // if (word[x] == " "){ word.splice(x,1);}
-				 // }
-				  word.splice(0,1);
+				  for (x in word){
+					  if (word[x] == ""){ word.splice(x,1);}
+				 }
+				  //word.splice(0,1);
 				  if(word[0]== ""){word.splice(0,1);}
-				  if(word[0]== ""){word.splice(0,1);}
+				  //if(word[0]== ""){word.splice(0,1);}
 				  index.docA = index.docA + word[0]+ " ";
 				  console.log("word[0] = "+ word[0]);
 				  index.docB = index.docB.replace(word[0],"");
