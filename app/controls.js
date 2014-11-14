@@ -846,7 +846,7 @@ window.onload = function()
 				  icon_span.innerHTML = "-->";
 				  docA_span.innerHTML = index.docA;
 				  docB_span.innerHTML = index.docB;
-				  return Istrue("Go back", index);
+				  return Istrue("Go back sentence", index);
 				  break;				  
 				  default:
 					  return Isfalse(transcript, index); 
@@ -1193,8 +1193,8 @@ $.confirm({
  index.docB ="";
  docA_span.innerHTML = "";
  docB_span.innerHTML = "";
-// socket.emit('newtext',"new text----------------->>");
- socket.to(_USERNAME).emit('newtext',"new text----------------->>");
+ socket.emit('newtext',"new text----------------->>");
+ //socket.to(_USERNAME).emit('newtext',"new text----------------->>");
  location.reload(true);
             }
         },
