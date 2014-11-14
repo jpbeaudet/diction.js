@@ -840,7 +840,10 @@ window.onload = function()
 				  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
 				  index.docB = word[n-1]+ " "+ index.docB +  " ";
 				  console.log("word[n-1] = "+ word[n-1]);
+				  word.splice(n-1,1);
+				  index.docA = word;
 				  index.docA = index.docA.replace(/  /g," ");
+				  index.docA = index.docA.replace(/,/g,".");
 				  index.docA = index.docA.replace(word[n-1],"");
 
 				  icon_span.innerHTML = "-->";
