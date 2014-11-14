@@ -799,7 +799,7 @@ window.onload = function()
 			 }				  
 				  default:
 					  return Isfalse(transcript, index); 
-			 }			 
+			 			 
 		 case 'back':
 			 switch(Tword)
 			 {
@@ -881,6 +881,7 @@ window.onload = function()
 				  docB_span.innerHTML = index.docB;
 				  return Istrue("Go left", index);
 				  break;
+				  
 			 case 'sentence':
 				  $("#final_span").css("color", "pink");
 				  var word = index.docA.split(".");
@@ -907,25 +908,7 @@ window.onload = function()
 				  default:
 					  return Isfalse(transcript, index); 
 			 } 			 
-		 case 'sentence':
-			 switch(Tword)
-			 {
-			 
-			 case 'left':
-				  $("#final_span").css("color", "pink");
-				
-				  return Istrue("Close Square Bracket", index);
-				  break;
-				  
-			 case 'right':
-				  $("#final_span").css("color", "pink");
-				
-				  return Istrue("Close Square Bracket", index);
-				  break;
-				  
-				  default:
-					  return Isfalse(transcript, index); 
-			 }				 
+				 
 		  default:
 			  return Isfalse(transcript, index);   
 	 }		 
