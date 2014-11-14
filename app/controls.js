@@ -797,9 +797,7 @@ window.onload = function()
 				  default:
 					  return Isfalse(transcript, index); 
 			 }				  
-				  default:
-					  return Isfalse(transcript, index); 
-			 			 
+
 		 case 'back':
 			 switch(Tword)
 			 {
