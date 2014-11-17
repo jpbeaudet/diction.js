@@ -742,8 +742,12 @@ window.onload = function()
 				  console.log("word = "+ word);
 				  index.docA = index.docA + word[0]+ " ";
 				  console.log("word[0] = "+ word[0]);
-				  index.docB = index.docB.replace(/  /g," ");
-				  index.docB = index.docB.replace(word[0],"");
+				  var toDelete = word[0].split(" ");
+				  //index.docB = index.docB.replace(".","");
+				  for( x in toDelete ){
+					  index.docB = index.docB.replace(toDelete[x],""); 
+					  index.docB = index.docB.replace(/  /g," ");
+				  }
 
 				  icon_span.innerHTML = "-->";
 				  docA_span.innerHTML = index.docA;
@@ -769,8 +773,12 @@ window.onload = function()
 				  console.log("word = "+ word);
 				  index.docA = index.docA + word[0]+ " ";
 				  console.log("word[0] = "+ word[0]);
-				  index.docB = index.docB.replace(/  /g," ");
-				  index.docB = index.docB.replace(word[0],"");
+				  var toDelete = word[0].split(" ");
+				  //index.docB = index.docB.replace(".","");
+				  for( x in toDelete ){
+					  index.docB = index.docB.replace(toDelete[x],""); 
+					  index.docB = index.docB.replace(/  /g," ");
+				  }
 
 				  icon_span.innerHTML = "-->";
 				  docA_span.innerHTML = index.docA;
@@ -901,20 +909,31 @@ window.onload = function()
 				  console.log("n = "+ n);
 				  
 				  n = (n -1);
-				  word.splice(n,1);
-				  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
-				  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
-				  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
-				  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
-				  index.docB = word[n-1]+ " "+ index.docB +  " ";
+				  //word.splice(n,1);
+				  if(word[0]== ""){word.splice(0,1);}
+				  if(word[0]== ""){word.splice(0,1);}
+				 // if(word[n]== ""){word.splice(n,1);n = (n-1);}
+				  //if(word[n]== " "){word.splice(n,1);n = (n-1);}
+				  //if(word[n]== ""){word.splice(n,1);n = (n-1);}
 				  console.log("word[n-1] = "+ word[n-1]);
-				  index.docA = index.docA.replace(/  /g," ");
-				  index.docA = index.docA.replace(word[n-1],"");
+				  console.log("word[n] = "+ word[n]);
+				  if(word[n]== ""){n= (n-1);}
+				  index.docB = word[n]+ ". "+ index.docB +  " ";
+
+				  //var toDelete = word[n-1].split(" ");
+				  var toDelete = word[n].split(" ");
+				  index.docA = index.docA.replace(".","");
+				  for( x in toDelete ){
+					  index.docA = index.docA.replace(toDelete[x],""); 
+					  index.docA = index.docA.replace(/  /g," ");
+				  }
+				  
+				 // index.docA = index.docA.replace(word[n-1],"");
 
 				  icon_span.innerHTML = "-->";
 				  docA_span.innerHTML = index.docA;
 				  docB_span.innerHTML = index.docB;
-				  return Istrue("Go back", index);
+				  return Istrue("Go left sentence", index);
 				  break;				  
 				  default:
 					  return Isfalse(transcript, index); 
