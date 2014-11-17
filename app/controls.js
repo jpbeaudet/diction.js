@@ -834,13 +834,15 @@ window.onload = function()
 				  
 				  n = (n -1);
 				  //word.splice(n,1);
-				  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
+				  if(word[n]== ""){word.splice(n,1);n = (n-1);}
 				  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
 				  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
 				  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
 				  index.docB = word[n-1]+ " "+ index.docB +  " ";
 				  console.log("word[n-1] = "+ word[n-1]);
-				  var toDelete = word[n-1].split(" ");
+				  console.log("word[n] = "+ word[n]);
+				  //var toDelete = word[n-1].split(" ");
+				  var toDelete = word[n].split(" ");
 				  for( x in toDelete ){
 					  index.docA = index.docA.replace(toDelete[x],""); 
 				  }
