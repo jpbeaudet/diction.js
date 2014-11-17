@@ -760,7 +760,7 @@ window.onload = function()
 				  $("#final_span").css("color", "pink");
 				  var word = index.docB.split(" ");
 				  console.log("word = "+ word);
-				  word.splice(0,1);
+				  //word.splice(0,1);
 				  if(word[0]== ""){word.splice(0,1);}
 				  if(word[0]== ""){word.splice(0,1);}
 				  if(word[0]== ""){word.splice(0,1);}
@@ -779,7 +779,7 @@ window.onload = function()
 				  $("#final_span").css("color", "pink");
 				  var word = index.docB.split(".");
 				  console.log("word = "+ word);
-				  word.splice(0,1);
+				  //word.splice(0,1);
 				  if(word[0]== ""){word.splice(0,1);}
 				  if(word[0]== ""){word.splice(0,1);}
 				  if(word[0]== ""){word.splice(0,1);}
