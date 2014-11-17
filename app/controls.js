@@ -840,8 +840,12 @@ window.onload = function()
 				  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
 				  index.docB = word[n-1]+ " "+ index.docB +  " ";
 				  console.log("word[n-1] = "+ word[n-1]);
+				  var toDelete = word[n-1].split(" ");
+				  for( x in toDelete ){
+					  index.docA = index.docA.replace(toDelete[x],""); 
+				  }
 				  index.docA = index.docA.replace(/  /g," ");
-				  index.docA = index.docA.replace(word[n-1],"");
+				 // index.docA = index.docA.replace(word[n-1],"");
 
 				  icon_span.innerHTML = "-->";
 				  docA_span.innerHTML = index.docA;
