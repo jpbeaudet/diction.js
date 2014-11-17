@@ -837,7 +837,7 @@ window.onload = function()
 				  if(word[0]== ""){word.splice(0,1);}
 				  if(word[0]== ""){word.splice(0,1);}
 				  if(word[n]== ""){word.splice(n,1);n = (n-1);}
-				  if(word[n]== ""){word.splice(n,1);n = (n-1);}
+				  if(word[n]== " "){word.splice(n,1);n = (n-1);}
 				  if(word[n]== ""){word.splice(n,1);n = (n-1);}
 				  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
 				  index.docB = word[n]+ " "+ index.docB +  " ";
