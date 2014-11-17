@@ -836,10 +836,10 @@ window.onload = function()
 				  //word.splice(n,1);
 				  if(word[0]== ""){word.splice(0,1);}
 				  if(word[0]== ""){word.splice(0,1);}
-				  if(word[n]== ""){word.splice(n,1);n = (n-1);}
-				  if(word[n]== " "){word.splice(n,1);n = (n-1);}
-				  if(word[n]== ""){word.splice(n,1);n = (n-1);}
-				  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
+				 // if(word[n]== ""){word.splice(n,1);n = (n-1);}
+				  //if(word[n]== " "){word.splice(n,1);n = (n-1);}
+				  //if(word[n]== ""){word.splice(n,1);n = (n-1);}
+				  //if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
 				  index.docB = word[n]+ " "+ index.docB +  " ";
 				  console.log("word[n-1] = "+ word[n-1]);
 				  console.log("word[n] = "+ word[n]);
@@ -847,8 +847,9 @@ window.onload = function()
 				  var toDelete = word[n].split(" ");
 				  for( x in toDelete ){
 					  index.docA = index.docA.replace(toDelete[x],""); 
+					  index.docA = index.docA.replace(/  /g," ");
 				  }
-				  index.docA = index.docA.replace(/  /g," ");
+				  
 				 // index.docA = index.docA.replace(word[n-1],"");
 
 				  icon_span.innerHTML = "-->";
