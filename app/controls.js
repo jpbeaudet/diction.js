@@ -740,10 +740,10 @@ window.onload = function()
 				  if(word[0]== ""){word.splice(0,1);}
 				  if(word[0]== ""){word.splice(0,1);}
 				  console.log("word = "+ word);
-				  index.docA = index.docA + word[0]+ " ";
+				  index.docA = index.docA + word[0]+ ". ";
 				  console.log("word[0] = "+ word[0]);
 				  var toDelete = word[0].split(" ");
-				  //index.docB = index.docB.replace(".","");
+				  index.docB = index.docB.replace(".","");
 				  for( x in toDelete ){
 					  index.docB = index.docB.replace(toDelete[x],""); 
 					  index.docB = index.docB.replace(/  /g," ");
@@ -773,12 +773,8 @@ window.onload = function()
 				  console.log("word = "+ word);
 				  index.docA = index.docA + word[0]+ " ";
 				  console.log("word[0] = "+ word[0]);
-				  var toDelete = word[0].split(" ");
-				  //index.docB = index.docB.replace(".","");
-				  for( x in toDelete ){
-					  index.docB = index.docB.replace(toDelete[x],""); 
-					  index.docB = index.docB.replace(/  /g," ");
-				  }
+				  index.docB = index.docB.replace(/  /g," ");
+				  index.docB = index.docB.replace(word[0],"");
 
 				  icon_span.innerHTML = "-->";
 				  docA_span.innerHTML = index.docA;
@@ -794,10 +790,14 @@ window.onload = function()
 				  if(word[0]== ""){word.splice(0,1);}
 				  if(word[0]== ""){word.splice(0,1);}
 				  console.log("word = "+ word);
-				  index.docA = index.docA + word[0]+ " ";
+				  index.docA = index.docA + word[0]+ ". ";
 				  console.log("word[0] = "+ word[0]);
-				  index.docB = index.docB.replace(/  /g," ");
-				  index.docB = index.docB.replace(word[0],"");
+				  var toDelete = word[0].split(" ");
+				  index.docB = index.docB.replace(".","");
+				  for( x in toDelete ){
+					  index.docB = index.docB.replace(toDelete[x],""); 
+					  index.docB = index.docB.replace(/  /g," ");
+				  }
 
 				  icon_span.innerHTML = "-->";
 				  docA_span.innerHTML = index.docA;
