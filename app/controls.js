@@ -846,6 +846,7 @@ window.onload = function()
 
 				  //var toDelete = word[n-1].split(" ");
 				  var toDelete = word[n].split(" ");
+				  index.docA = index.docA.replace(".","");
 				  for( x in toDelete ){
 					  index.docA = index.docA.replace(toDelete[x],""); 
 					  index.docA = index.docA.replace(/  /g," ");
