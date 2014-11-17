@@ -16,9 +16,10 @@ if ('webkitSpeechRecognition' in window) {
     reset();
     recognition.onend = reset;
     recognition.onerror = function(e) {
-	    recognition.start();
-  	    recognizing = true;
-  	    button.innerHTML = "Click to Stop";
+    	restart(); 
+	    //recognition.start();
+  	    //recognizing = true;
+  	    //button.innerHTML = "Click to Stop";
 	};
    
     recognition.onresult = function (event) { 
