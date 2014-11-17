@@ -838,7 +838,7 @@ window.onload = function()
 				  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
 				  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
 				  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
-				  index.docB = word[n-1]+ " "+ index.docB +  " ";
+				  index.docB = word[n]+ " "+ index.docB +  " ";
 				  console.log("word[n-1] = "+ word[n-1]);
 				  console.log("word[n] = "+ word[n]);
 				  //var toDelete = word[n-1].split(" ");
