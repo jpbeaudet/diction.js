@@ -833,7 +833,7 @@ window.onload = function()
 				  console.log("n = "+ n);
 				  
 				  n = (n -1);
-				  word.splice(n,1);
+				  //word.splice(n,1);
 				  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
 				  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
 				  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
