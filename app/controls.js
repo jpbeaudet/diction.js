@@ -713,12 +713,13 @@ window.onload = function()
 			 case undefined:
 				  $("#final_span").css("color", "pink");
 				  var word = index.docB.split(" ");
-				  console.log("word = "+ word);
+				 
 				  word.splice(0,1);
 				  if(word[0]== ""){word.splice(0,1);}
 				  if(word[0]== ""){word.splice(0,1);}
 				  if(word[0]== ""){word.splice(0,1);}
 				  if(word[0]== ""){word.splice(0,1);}
+				  console.log("word = "+ word);
 				  index.docA = index.docA + word[0]+ " ";
 				  console.log("word[0] = "+ word[0]);
 				  index.docB = index.docB.replace(/  /g," ");
@@ -732,12 +733,13 @@ window.onload = function()
 			 case 'sentence':
 				  $("#final_span").css("color", "pink");
 				  var word = index.docB.split(".");
+				 
+				 // word.splice(0,1);				 
+				  if(word[0]== ""){word.splice(0,1);}
+				  if(word[0]== ""){word.splice(0,1);}
+				  if(word[0]== ""){word.splice(0,1);}
+				  if(word[0]== ""){word.splice(0,1);}
 				  console.log("word = "+ word);
-				  word.splice(0,1);
-				  if(word[0]== ""){word.splice(0,1);}
-				  if(word[0]== ""){word.splice(0,1);}
-				  if(word[0]== ""){word.splice(0,1);}
-				  if(word[0]== ""){word.splice(0,1);}
 				  index.docA = index.docA + word[0]+ " ";
 				  console.log("word[0] = "+ word[0]);
 				  index.docB = index.docB.replace(/  /g," ");
@@ -759,12 +761,12 @@ window.onload = function()
 			 case undefined:
 				  $("#final_span").css("color", "pink");
 				  var word = index.docB.split(" ");
+				  word.splice(0,1);
+				  if(word[0]== ""){word.splice(0,1);}
+				  if(word[0]== ""){word.splice(0,1);}
+				  if(word[0]== ""){word.splice(0,1);}
+				  if(word[0]== ""){word.splice(0,1);}
 				  console.log("word = "+ word);
-				  //word.splice(0,1);
-				  if(word[0]== ""){word.splice(0,1);}
-				  if(word[0]== ""){word.splice(0,1);}
-				  if(word[0]== ""){word.splice(0,1);}
-				  if(word[0]== ""){word.splice(0,1);}
 				  index.docA = index.docA + word[0]+ " ";
 				  console.log("word[0] = "+ word[0]);
 				  index.docB = index.docB.replace(/  /g," ");
@@ -778,12 +780,12 @@ window.onload = function()
 			 case 'sentence':
 				  $("#final_span").css("color", "pink");
 				  var word = index.docB.split(".");
-				  console.log("word = "+ word);
 				  //word.splice(0,1);
 				  if(word[0]== ""){word.splice(0,1);}
 				  if(word[0]== ""){word.splice(0,1);}
 				  if(word[0]== ""){word.splice(0,1);}
 				  if(word[0]== ""){word.splice(0,1);}
+				  console.log("word = "+ word);
 				  index.docA = index.docA + word[0]+ " ";
 				  console.log("word[0] = "+ word[0]);
 				  index.docB = index.docB.replace(/  /g," ");
