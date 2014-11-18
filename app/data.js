@@ -10,7 +10,7 @@
 		var n = 77;
 		var docAll = docA + docB + transcript;
 
-	var nbDiv = (new RegExp('<div><br \></div>', 'g')).length;
+	var nbDiv = docAll.match(new RegExp('<div><br \></div>', 'g')).length;
         this.lines=  docAll.match(new RegExp('.{1,'+n+'}', 'g')).length + nbDiv;
 	 //this.lines= nbDiv;
         //this.lines.position= (spanB.match(/\n/g)||[]).length;
