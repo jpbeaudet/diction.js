@@ -26,7 +26,7 @@ if (lh === 'normal') {
     lh = $sent.height();
     $sent.css('white-space', ws);
 }
-	var nbDiv = Math.ceil($('docB_span').height() / parseInt(lh, 10))+ Math.ceil($('docA_span').height() / parseInt(LH, 10))
+	var nbDiv = Math.ceil($('docB_span').height() / parseInt(lh, 10)+ $('docA_span').height() / parseInt(LH, 10));
         //this.lines=  docAll.match(new RegExp('.{1,'+n+'}', 'g')).length + nbDiv;
 	 this.lines= nbDiv;
         //this.lines.position= (spanB.match(/\n/g)||[]).length;
