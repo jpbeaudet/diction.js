@@ -927,7 +927,258 @@ window.onload = function()
 	 }		 
 		 
 		 
+	//Delete section
+    //--------------------------------------------
+		    
+	 case 'delete': 
+		 switch(Sword)
+		 {
 		 
+		 case undefined:
+			  $("#final_span").css("color", "pink");
+			  var word = index.docA.split(" ");
+			  console.log("word = "+ word);
+			  var n = Number(word.length );
+			  console.log("n = "+ n);
+			  
+			  n = (n -1);
+			  word.splice(n,1);
+			  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
+			  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
+			  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
+			  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
+			  //index.docB = word[n-1]+ " "+ index.docB +  " ";
+			  console.log("word[n-1] = "+ word[n-1]);
+			  index.docA = index.docA.replace(/  /g," ");
+			  index.docA = index.docA.replace(word[n-1],"");
+
+			  icon_span.innerHTML = "-->";
+			  docA_span.innerHTML = index.docA;
+			  docB_span.innerHTML = index.docB;
+			  return Istrue("Go back", index);
+			  break;
+			  
+		 case 'right':
+			 
+			 switch(Tword)
+			 {
+			 
+			 case undefined:
+				  $("#final_span").css("color", "pink");
+				  var word = index.docB.split(" ");
+				 
+				  word.splice(0,1);
+				  if(word[0]== ""){word.splice(0,1);}
+				  if(word[0]== ""){word.splice(0,1);}
+				  if(word[0]== ""){word.splice(0,1);}
+				  if(word[0]== ""){word.splice(0,1);}
+				  console.log("word = "+ word);
+				  //index.docA = index.docA + word[0]+ " ";
+				  console.log("word[0] = "+ word[0]);
+				  index.docB = index.docB.replace(/  /g," ");
+				  index.docB = index.docB.replace(word[0],"");
+
+				  icon_span.innerHTML = "-->";
+				  docA_span.innerHTML = index.docA;
+				  docB_span.innerHTML = index.docB;
+				  return Istrue("Go rigth", index);
+				  break;
+			 case 'sentence':
+				  $("#final_span").css("color", "pink");
+				  var word = index.docB.split(".");
+				 
+				 // word.splice(0,1);				 
+				  if(word[0]== ""){word.splice(0,1);}
+				  if(word[0]== ""){word.splice(0,1);}
+				  if(word[0]== ""){word.splice(0,1);}
+				  if(word[0]== ""){word.splice(0,1);}
+				  console.log("word = "+ word);
+				  //index.docA = index.docA + word[0]+ ". ";
+				  console.log("word[0] = "+ word[0]);
+				  var toDelete = word[0].split(" ");
+				  index.docB = index.docB.replace(".","");
+				  for( x in toDelete ){
+					  index.docB = index.docB.replace(toDelete[x],""); 
+					  index.docB = index.docB.replace(/  /g," ");
+				  }
+
+				  icon_span.innerHTML = "-->";
+				  docA_span.innerHTML = index.docA;
+				  docB_span.innerHTML = index.docB;
+				  return Istrue("Go forward sentence", index);
+				  break;				  
+				  default:
+					  return Isfalse(transcript, index); 
+			 }
+		 case 'forward':
+			 
+			 switch(Tword)
+			 {
+			 
+			 case undefined:
+				  $("#final_span").css("color", "pink");
+				  var word = index.docB.split(" ");
+				  word.splice(0,1);
+				  if(word[0]== ""){word.splice(0,1);}
+				  if(word[0]== ""){word.splice(0,1);}
+				  if(word[0]== ""){word.splice(0,1);}
+				  if(word[0]== ""){word.splice(0,1);}
+				  console.log("word = "+ word);
+				  //index.docA = index.docA + word[0]+ " ";
+				  console.log("word[0] = "+ word[0]);
+				  index.docB = index.docB.replace(/  /g," ");
+				  index.docB = index.docB.replace(word[0],"");
+
+				  icon_span.innerHTML = "-->";
+				  docA_span.innerHTML = index.docA;
+				  docB_span.innerHTML = index.docB;
+				  return Istrue("Go forward", index);
+				  break;
+			 case 'sentence':
+				  $("#final_span").css("color", "pink");
+				  var word = index.docB.split(".");
+				  if(word[0]== ""){word.splice(0,1);}
+				  if(word[0]== ""){word.splice(0,1);}
+				  if(word[0]== ""){word.splice(0,1);}
+				  if(word[0]== ""){word.splice(0,1);}
+				  console.log("word = "+ word);
+				  //index.docA = index.docA + word[0]+ ". ";
+				  console.log("word[0] = "+ word[0]);
+				  var toDelete = word[0].split(" ");
+				  index.docB = index.docB.replace(".","");
+				  for( x in toDelete ){
+					  index.docB = index.docB.replace(toDelete[x],""); 
+					  index.docB = index.docB.replace(/  /g," ");
+				  }
+
+				  icon_span.innerHTML = "-->";
+				  docA_span.innerHTML = index.docA;
+				  docB_span.innerHTML = index.docB;
+				  return Istrue("Go rigth sentence", index);
+				  break;				  
+				  default:
+					  return Isfalse(transcript, index); 
+			 }				  
+
+		 case 'back':
+			 switch(Tword)
+			 {
+			 
+			 case undefined:
+				  $("#final_span").css("color", "pink");
+				  var word = index.docA.split(" ");
+				  console.log("word = "+ word);
+				  var n = Number(word.length );
+				  console.log("n = "+ n);
+				  
+				  n = (n -1);
+				  word.splice(n,1);
+				  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
+				  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
+				  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
+				  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
+				  //index.docB = word[n-1]+ " "+ index.docB +  " ";
+				  console.log("word[n-1] = "+ word[n-1]);
+				  index.docA = index.docA.replace(/  /g," ");
+				  index.docA = index.docA.replace(word[n-1],"");
+
+				  icon_span.innerHTML = "-->";
+				  docA_span.innerHTML = index.docA;
+				  docB_span.innerHTML = index.docB;
+				  return Istrue("Go back", index);
+				  break;
+			 case 'sentence':
+				  $("#final_span").css("color", "pink");
+				  var word = index.docA.split(".");
+				  console.log("word = "+ word);
+				  var n = Number(word.length );
+				  console.log("n = "+ n);
+				  
+				  n = (n -1);
+				  if(word[0]== ""){word.splice(0,1);}
+				  if(word[0]== ""){word.splice(0,1);}
+				  console.log("word[n-1] = "+ word[n-1]);
+				  console.log("word[n] = "+ word[n]);
+				  if(word[n]== ""){n= (n-1);}
+				 // index.docB = word[n]+ ". "+ index.docB +  " ";
+				  var toDelete = word[n].split(" ");
+				  index.docA = index.docA.replace(".","");
+				  for( x in toDelete ){
+					  index.docA = index.docA.replace(toDelete[x],""); 
+					  index.docA = index.docA.replace(/  /g," ");
+				  }
+				  icon_span.innerHTML = "-->";
+				  docA_span.innerHTML = index.docA;
+				  docB_span.innerHTML = index.docB;
+				  return Istrue("Go back sentence", index);
+				  break;				  
+				  default:
+					  return Isfalse(transcript, index); 
+			 } 
+
+		 case 'left':
+			 switch(Tword)
+			 {
+			 
+			 case undefined:
+				  $("#final_span").css("color", "pink");
+				  var word = index.docA.split(" ");
+				  console.log("word = "+ word);
+				  var n = Number(word.length );
+				  console.log("n = "+ n);
+				  
+				  n = (n -1);
+				  word.splice(n,1);
+				  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
+				  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
+				  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
+				  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
+				  //index.docB = word[n-1]+ " "+ index.docB +  " ";
+				  console.log("word[n-1] = "+ word[n-1]);
+				  index.docA = index.docA.replace(/  /g," ");
+				  index.docA = index.docA.replace(word[n-1],"");
+
+				  icon_span.innerHTML = "-->";
+				  docA_span.innerHTML = index.docA;
+				  docB_span.innerHTML = index.docB;
+				  return Istrue("Go left", index);
+				  break;
+				  
+			 case 'sentence':
+				  $("#final_span").css("color", "pink");
+				  var word = index.docA.split(".");
+				  console.log("word = "+ word);
+				  var n = Number(word.length );
+				  console.log("n = "+ n);
+				  
+				  n = (n -1);
+
+				  if(word[0]== ""){word.splice(0,1);}
+				  if(word[0]== ""){word.splice(0,1);}
+				  console.log("word[n-1] = "+ word[n-1]);
+				  console.log("word[n] = "+ word[n]);
+				  if(word[n]== ""){n= (n-1);}
+				  //index.docB = word[n]+ ". "+ index.docB +  " ";
+
+				  var toDelete = word[n].split(" ");
+				  index.docA = index.docA.replace(".","");
+				  for( x in toDelete ){
+					  index.docA = index.docA.replace(toDelete[x],""); 
+					  index.docA = index.docA.replace(/  /g," ");
+				  }
+				  icon_span.innerHTML = "-->";
+				  docA_span.innerHTML = index.docA;
+				  docB_span.innerHTML = index.docB;
+				  return Istrue("Go left sentence", index);
+				  break;				  
+				  default:
+					  return Isfalse(transcript, index); 
+			 } 			 
+				 
+		  default:
+			  return Isfalse(transcript, index);   
+	 }		 
+						 
 		 
 	// cancel
 		  // 3 crtl-z like return
