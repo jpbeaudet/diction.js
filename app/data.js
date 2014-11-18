@@ -9,7 +9,7 @@
 	function MyData (docA,docB,transcript,LastdocA,LastdocB){
 		var n = 77;
 		var docAll = docA + docB + transcript;
-        this.lines=  docAll.match(new RegExp('.{1,'+n+'}', 'g')).length;
+        this.lines=  docAll.match(new RegExp('.{1,'+n+'}', 'g')).length + docAll.match("<div><br \></div>").length;
         //this.lines.position= (spanB.match(/\n/g)||[]).length;
 		this.docA = docA;
 		this.LastdocA = LastdocA;
