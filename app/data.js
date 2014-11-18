@@ -9,7 +9,7 @@
 	function MyData (docA,docB,transcript,LastdocA,LastdocB){
 		var n = 77;
 		var docAll = docA + docB + transcript;
-		var element = document.getElementById(".subpage");
+		var element = document.getElementById("page");
 		var nbDiv= getCount(element, true);
         this.lines=  docAll.match(new RegExp('.{1,'+n+'}', 'g')).length + nbDiv;
         //this.lines.position= (spanB.match(/\n/g)||[]).length;
