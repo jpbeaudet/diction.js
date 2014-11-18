@@ -947,7 +947,6 @@ window.onload = function()
 			  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
 			  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
 			  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
-			  //index.docB = word[n-1]+ " "+ index.docB +  " ";
 			  console.log("word[n-1] = "+ word[n-1]);
 			  index.docA = index.docA.replace(/  /g," ");
 			  index.docA = index.docA.replace(word[n-1],"");
@@ -955,7 +954,7 @@ window.onload = function()
 			  icon_span.innerHTML = "-->";
 			  docA_span.innerHTML = index.docA;
 			  docB_span.innerHTML = index.docB;
-			  return Istrue("Go back", index);
+			  return Istrue("Delete", index);
 			  break;
 			  
 		 case 'right':
@@ -973,7 +972,6 @@ window.onload = function()
 				  if(word[0]== ""){word.splice(0,1);}
 				  if(word[0]== ""){word.splice(0,1);}
 				  console.log("word = "+ word);
-				  //index.docA = index.docA + word[0]+ " ";
 				  console.log("word[0] = "+ word[0]);
 				  index.docB = index.docB.replace(/  /g," ");
 				  index.docB = index.docB.replace(word[0],"");
@@ -981,19 +979,16 @@ window.onload = function()
 				  icon_span.innerHTML = "-->";
 				  docA_span.innerHTML = index.docA;
 				  docB_span.innerHTML = index.docB;
-				  return Istrue("Go rigth", index);
+				  return Istrue("Delete rigth", index);
 				  break;
 			 case 'sentence':
 				  $("#final_span").css("color", "pink");
-				  var word = index.docB.split(".");
-				 
-				 // word.splice(0,1);				 
+				  var word = index.docB.split(".");				 				 
 				  if(word[0]== ""){word.splice(0,1);}
 				  if(word[0]== ""){word.splice(0,1);}
 				  if(word[0]== ""){word.splice(0,1);}
 				  if(word[0]== ""){word.splice(0,1);}
 				  console.log("word = "+ word);
-				  //index.docA = index.docA + word[0]+ ". ";
 				  console.log("word[0] = "+ word[0]);
 				  var toDelete = word[0].split(" ");
 				  index.docB = index.docB.replace(".","");
@@ -1005,7 +1000,7 @@ window.onload = function()
 				  icon_span.innerHTML = "-->";
 				  docA_span.innerHTML = index.docA;
 				  docB_span.innerHTML = index.docB;
-				  return Istrue("Go forward sentence", index);
+				  return Istrue("Delete forward sentence", index);
 				  break;				  
 				  default:
 					  return Isfalse(transcript, index); 
@@ -1024,7 +1019,6 @@ window.onload = function()
 				  if(word[0]== ""){word.splice(0,1);}
 				  if(word[0]== ""){word.splice(0,1);}
 				  console.log("word = "+ word);
-				  //index.docA = index.docA + word[0]+ " ";
 				  console.log("word[0] = "+ word[0]);
 				  index.docB = index.docB.replace(/  /g," ");
 				  index.docB = index.docB.replace(word[0],"");
@@ -1042,7 +1036,6 @@ window.onload = function()
 				  if(word[0]== ""){word.splice(0,1);}
 				  if(word[0]== ""){word.splice(0,1);}
 				  console.log("word = "+ word);
-				  //index.docA = index.docA + word[0]+ ". ";
 				  console.log("word[0] = "+ word[0]);
 				  var toDelete = word[0].split(" ");
 				  index.docB = index.docB.replace(".","");
@@ -1054,7 +1047,7 @@ window.onload = function()
 				  icon_span.innerHTML = "-->";
 				  docA_span.innerHTML = index.docA;
 				  docB_span.innerHTML = index.docB;
-				  return Istrue("Go rigth sentence", index);
+				  return Istrue("Delete rigth sentence", index);
 				  break;				  
 				  default:
 					  return Isfalse(transcript, index); 
@@ -1077,7 +1070,6 @@ window.onload = function()
 				  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
 				  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
 				  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
-				  //index.docB = word[n-1]+ " "+ index.docB +  " ";
 				  console.log("word[n-1] = "+ word[n-1]);
 				  index.docA = index.docA.replace(/  /g," ");
 				  index.docA = index.docA.replace(word[n-1],"");
@@ -1085,7 +1077,7 @@ window.onload = function()
 				  icon_span.innerHTML = "-->";
 				  docA_span.innerHTML = index.docA;
 				  docB_span.innerHTML = index.docB;
-				  return Istrue("Go back", index);
+				  return Istrue("Delete back", index);
 				  break;
 			 case 'sentence':
 				  $("#final_span").css("color", "pink");
@@ -1100,7 +1092,6 @@ window.onload = function()
 				  console.log("word[n-1] = "+ word[n-1]);
 				  console.log("word[n] = "+ word[n]);
 				  if(word[n]== ""){n= (n-1);}
-				 // index.docB = word[n]+ ". "+ index.docB +  " ";
 				  var toDelete = word[n].split(" ");
 				  index.docA = index.docA.replace(".","");
 				  for( x in toDelete ){
@@ -1110,7 +1101,7 @@ window.onload = function()
 				  icon_span.innerHTML = "-->";
 				  docA_span.innerHTML = index.docA;
 				  docB_span.innerHTML = index.docB;
-				  return Istrue("Go back sentence", index);
+				  return Istrue("Delete back sentence", index);
 				  break;				  
 				  default:
 					  return Isfalse(transcript, index); 
@@ -1133,7 +1124,6 @@ window.onload = function()
 				  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
 				  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
 				  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
-				  //index.docB = word[n-1]+ " "+ index.docB +  " ";
 				  console.log("word[n-1] = "+ word[n-1]);
 				  index.docA = index.docA.replace(/  /g," ");
 				  index.docA = index.docA.replace(word[n-1],"");
@@ -1141,7 +1131,7 @@ window.onload = function()
 				  icon_span.innerHTML = "-->";
 				  docA_span.innerHTML = index.docA;
 				  docB_span.innerHTML = index.docB;
-				  return Istrue("Go left", index);
+				  return Istrue("Delete left", index);
 				  break;
 				  
 			 case 'sentence':
@@ -1158,8 +1148,6 @@ window.onload = function()
 				  console.log("word[n-1] = "+ word[n-1]);
 				  console.log("word[n] = "+ word[n]);
 				  if(word[n]== ""){n= (n-1);}
-				  //index.docB = word[n]+ ". "+ index.docB +  " ";
-
 				  var toDelete = word[n].split(" ");
 				  index.docA = index.docA.replace(".","");
 				  for( x in toDelete ){
@@ -1169,7 +1157,7 @@ window.onload = function()
 				  icon_span.innerHTML = "-->";
 				  docA_span.innerHTML = index.docA;
 				  docB_span.innerHTML = index.docB;
-				  return Istrue("Go left sentence", index);
+				  return Istrue("Delete left sentence", index);
 				  break;				  
 				  default:
 					  return Isfalse(transcript, index); 
