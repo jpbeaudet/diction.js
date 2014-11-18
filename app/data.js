@@ -9,9 +9,18 @@
 	function MyData (docA,docB,transcript,LastdocA,LastdocB){
 		var n = 77;
 		var docAll = docA + docB + transcript;
-		var element = document.getElementById("page");
-		var nbDiv= (getCount(element, true));
-        this.lines=  docAll.match(new RegExp('.{1,'+n+'}', 'g')).length + nbDiv;
+		//var element = document.getElementById("page");
+		var $sent = $('.subpage'),
+	    lh = $sent.css('line-height'),
+	    ws = $sent.css('white-space');
+	if (lh === 'normal') {
+	    $sent.css('white-space', 'nowrap');
+	    lh = $sent.height();
+	    $sent.css('white-space', ws);
+	}
+	var nbDiv = Math.ceil($('.sentences').height() / parseInt(lh, 10))
+        //this.lines=  docAll.match(new RegExp('.{1,'+n+'}', 'g')).length + nbDiv;
+	 this.lines= nbDiv;
         //this.lines.position= (spanB.match(/\n/g)||[]).length;
 		this.docA = docA;
 		this.LastdocA = LastdocA;
@@ -28,16 +37,3 @@
 		this.request.num = transcript.split(" ").length;
 	}
 		
-	
-	function getCount(parent, getChildrensChildren){
-	    var relevantChildren = 0;
-	    var children = parent.childNodes.length;
-	    for(var i=0; i < children; i++){
-	        if(parent.childNodes[i].nodeType == 1){
-	            if(getChildrensChildren)
-	                relevantChildren += getCount(parent.childNodes[i],true);
-	            relevantChildren++;
-	        }
-	    }
-	    return relevantChildren;
-	}
