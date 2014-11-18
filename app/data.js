@@ -12,7 +12,7 @@
 
 	var nbDiv = (new RegExp('<div><br \></div>', 'g')).length;
         this.lines=  docAll.match(new RegExp('.{1,'+n+'}', 'g')).length + nbDiv;
-	 this.lines= nbDiv;
+	 //this.lines= nbDiv;
         //this.lines.position= (spanB.match(/\n/g)||[]).length;
 		this.docA = docA;
 		this.LastdocA = LastdocA;
