@@ -10,15 +10,23 @@
 		var n = 77;
 		var docAll = docA + docB + transcript;
 		//var element = document.getElementById("page");
-		var $sent = $('.subpage'),
-	    lh = $sent.css('line-height'),
-	    ws = $sent.css('white-space');
+		var $sentA = $('.docA_span'),
+	    LH = $sentA .css('line-height'),
+	    WS = $sentA .css('white-space');
 	if (lh === 'normal') {
-	    $sent.css('white-space', 'nowrap');
-	    lh = $sent.height();
-	    $sent.css('white-space', ws);
+		$sentA .css('white-space', 'nowrap');
+	    LH = $sentA .height();
+	    $sentA .css('white-space', WS);
 	}
-	var nbDiv = Math.ceil($('.subpage').height() / parseInt(lh, 10))
+	var $sent = $('.docB_span'),
+    lh = $sent.css('line-height'),
+    ws = $sent.css('white-space');
+if (lh === 'normal') {
+    $sent.css('white-space', 'nowrap');
+    lh = $sent.height();
+    $sent.css('white-space', ws);
+}
+	var nbDiv = Math.ceil($('.docB_span').height() / parseInt(lh, 10))+ Math.ceil($('.docA_span').height() / parseInt(LH, 10))
         //this.lines=  docAll.match(new RegExp('.{1,'+n+'}', 'g')).length + nbDiv;
 	 this.lines= nbDiv;
         //this.lines.position= (spanB.match(/\n/g)||[]).length;
