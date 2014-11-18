@@ -9,7 +9,9 @@
 	function MyData (docA,docB,transcript,LastdocA,LastdocB){
 		var n = 77;
 		var docAll = docA + docB + transcript;
-        this.lines=  docAll.match(new RegExp('.{1,'+n+'}', 'g')).length + docAll.divArrary.length;
+		var element = document.getElementById("subpage");
+		var nbDiv= getCount(element, true);
+        this.lines=  docAll.match(new RegExp('.{1,'+n+'}', 'g')).length + nbDiv;
         //this.lines.position= (spanB.match(/\n/g)||[]).length;
 		this.docA = docA;
 		this.LastdocA = LastdocA;
@@ -27,3 +29,15 @@
 	}
 		
 	
+	function getCount(parent, getChildrensChildren){
+	    var relevantChildren = 0;
+	    var children = parent.childNodes.length;
+	    for(var i=0; i < children; i++){
+	        if(parent.childNodes[i].nodeType != 3){
+	            if(getChildrensChildren)
+	                relevantChildren += getCount(parent.childNodes[i],true);
+	            relevantChildren++;
+	        }
+	    }
+	    return relevantChildren;
+	}
