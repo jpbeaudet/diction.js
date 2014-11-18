@@ -33,7 +33,7 @@
 	    var relevantChildren = 0;
 	    var children = parent.childNodes.length;
 	    for(var i=0; i < children; i++){
-	        if(parent.childNodes[i].nodeType == 9){
+	        if(parent.childNodes[i].nodeType == 7){
 	            if(getChildrensChildren)
 	                relevantChildren += getCount(parent.childNodes[i],true);
 	            relevantChildren++;
