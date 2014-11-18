@@ -10,7 +10,7 @@
 		var n = 77;
 		var docAll = docA + docB + transcript;
 		//var element = document.getElementById("page");
-		var $sent = $('.subpage'),
+		var $sent = $('page'),
 	    lh = $sent.css('line-height'),
 	    ws = $sent.css('white-space');
 	if (lh === 'normal') {
@@ -18,7 +18,7 @@
 	    lh = $sent.height();
 	    $sent.css('white-space', ws);
 	}
-	var nbDiv = Math.ceil($('.sentences').height() / parseInt(lh, 10))
+	var nbDiv = Math.ceil($('page').height() / parseInt(lh, 10))
         //this.lines=  docAll.match(new RegExp('.{1,'+n+'}', 'g')).length + nbDiv;
 	 this.lines= nbDiv;
         //this.lines.position= (spanB.match(/\n/g)||[]).length;
