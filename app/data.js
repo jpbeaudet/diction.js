@@ -11,7 +11,7 @@
 		var docAll = docA + docB + transcript;
 		var nbDiv=0;
 if(docAll.match(new RegExp('<div>', 'g'))!= null){
-	 nbDiv = docAll.match(new RegExp('<div>', 'g')).length;
+	 nbDiv = (docAll.match(new RegExp('<div>', 'g')).length+1);
 }
         this.lines=  docAll.match(new RegExp('.{1,'+n+'}', 'g')).length + nbDiv;
 	 //this.lines= nbDiv;
