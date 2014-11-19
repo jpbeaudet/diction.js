@@ -14,8 +14,15 @@
 
 //var socket = io.connect('https://54.68.32.250:3000');
 //var _USERNAME;
+
+
 var socket = io.connect('https://54.68.32.250:3000', {'force new connection': true});
 var _USERNAME;
+var on = false;
+$('#commandlist').click(function(){
+	if(on){ $(".nav").toggleClass(".nav--active");}else{$(".nav--active").toggleClass(".nav");}
+	
+});
 window.onload = function()
 {
 	socket.emit("load", "load -------------------------------->");	
@@ -1461,7 +1468,3 @@ $.confirm({
 });	 	
 	
 }
- 
- $('#commandlist').click(function(){
-	 $(".nav").toggleClass(".nav--active");
- });
