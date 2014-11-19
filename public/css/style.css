@@ -36,5 +36,5 @@ body {
 
 .nav--active {
   transform: translate(0px, 0px);
-  overflow: visible;
+
 }
