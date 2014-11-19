@@ -1333,9 +1333,12 @@ window.onload = function()
              confirmNewText(index);
 	
 			 break;
-			  default:
-				  return Isfalse(transcript, index);   
-		 }	 
+		case 'title':
+			if(Tword != undefined){
+				  transcript = transcript.replace("new","");
+				  transcript = transcript.replace("title","");
+				title_span.innerHTML = transcript;
+			}
 	     default:
 	     return Isfalse(transcript, index); 
 		 }
