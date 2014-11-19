@@ -31,8 +31,10 @@ body {
   width: 200px;
   transform: translate(200px, 0px);
   transition: all 1s ease-out;
+  
 }
 
 .nav--active {
   transform: translate(0px, 0px);
+  overflow: visible;
 }
