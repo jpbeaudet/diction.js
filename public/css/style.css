@@ -29,7 +29,6 @@ body {
   top: 0;
   left: 0;
   border: 2px grey solid;
-  margin: 25px; 
   background-color: #D8D8D8 ;  
   width: 200px;
   transform: translate(0px, 0px);
@@ -42,7 +41,6 @@ body {
   top: 0;
   right: 0;
   border: 2px grey solid;   
-  margin: 25px;
   background-color: #D8D8D8 ;
   width: 200px;
   transform: translate(0px, 0px);
