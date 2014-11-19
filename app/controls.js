@@ -1341,7 +1341,7 @@ window.onload = function()
 			if(Tword != undefined){
 				  transcript = transcript.replace("new","");
 				  transcript = transcript.replace("title","");
-				title_span.innerHTML = transcript;
+				title_span.innerHTML = '<h1>'+transcript+ '</h1>';
 				return Istrue('New title'+ '"'+ transcript+'"', index);	
 			}			  			 
 			break;
