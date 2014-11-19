@@ -28,7 +28,9 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  border: 2px grey solid;  
+  border: 2px grey solid;
+  margin: 1cm auto; 
+  background-color: #D8D8D8 ;  
   width: 200px;
   transform: translate(25px, 0px);
   transition: all 1s ease-out;
@@ -40,6 +42,8 @@ body {
   top: 0;
   right: 0;
   border: 2px grey solid;   
+  margin: 1cm auto;
+  background-color: #D8D8D8 ;
   width: 200px;
   transform: translate(0px, 0px);
   transition: all 1s ease-out;
