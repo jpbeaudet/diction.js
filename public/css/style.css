@@ -26,19 +26,19 @@ body {
 }
 .nav {
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 600px;
-  transform: translate(600px, 0px);
+  top: 1000;
+  right: 1000;
+  width: 200px;
+  transform: translate(200px, 0px);
   transition: all 1s ease-out;
   
 }
 
 .nav--active {
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 600px;
+  top: 1000;
+  right: 1000;
+  width: 200px;
   transform: translate(0px, 0px);
   transition: all 1s ease-out;
 }
