@@ -1462,6 +1462,6 @@ $.confirm({
 	
 }
  
- $('commandlist').click(function(){
+ $('#commandlist').click(function(){
 	 $(".nav").toggleClass(".nav--active");
  });
