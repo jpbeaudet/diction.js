@@ -26,6 +26,7 @@ body {
 }
 .nav {
   position: absolute;
+  height:100%;
   top: 0;
   left: 0;
   border: 2px grey solid;
@@ -39,6 +40,7 @@ body {
 
 .nav--active {
   position: absolute;
+  height:100%;
   top: 0;
   right: 0;
   border: 2px grey solid;  
