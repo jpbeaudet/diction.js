@@ -1466,6 +1466,6 @@ $.confirm({
 }
  var on = false;
  $('#commandlist').click(function(){
- 	if(on){ $(".nav--active").toggleClass(".nav");}else{$(".nav").toggleClass(".nav--active");}
+ 	if(on){ $(".nav--active").toggleClass(".nav");$(".nav").css("overflow: hidden");}else{$(".nav").toggleClass(".nav--active");$(".nav--active").css("overflow: visible");}
  	//$(".nav").toggleClass(".nav--active");
  });
