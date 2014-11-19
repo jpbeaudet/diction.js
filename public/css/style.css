@@ -28,8 +28,8 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-  width: 200px;
-  transform: translate(200px, 0px);
+  width: 600px;
+  transform: translate(600px, 0px);
   transition: all 1s ease-out;
   
 }
@@ -38,7 +38,7 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-  width: 200px;
+  width: 600px;
   transform: translate(0px, 0px);
   transition: all 1s ease-out;
 }
