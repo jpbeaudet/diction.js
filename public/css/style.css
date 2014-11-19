@@ -26,8 +26,8 @@ body {
 }
 .nav {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 25;
+  right: 25;
   width: 200px;
   transform: translate(200px, 0px);
   transition: all 1s ease-out;
