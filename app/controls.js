@@ -1461,3 +1461,7 @@ $.confirm({
 });	 	
 	
 }
+ 
+ $('commandlist').click(function(){
+	 $(".nav").toggleClass(".nav--active");
+ }

@@ -24,3 +24,15 @@ body {
     height: 256mm;
     outline: 2cm #FFEAEA solid;
 }
+.nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
+  transform: translate(200px, 0px);
+  transition: all 1s ease-out;
+}
+
+.nav--active {
+  transform: translate(0px, 0px);
+}
