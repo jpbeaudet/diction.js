@@ -31,7 +31,7 @@ body {
   border: 2px grey solid;
   padding: 10px;        
   background-color: #D8D8D8 ;  
-  width: 200px;
+  width: 300px;
   transform: translate(0px, 0px);
   transition: all 1s ease-out;
   
@@ -44,7 +44,7 @@ body {
   border: 2px grey solid;  
   padding: 10px;     
   background-color: #D8D8D8 ;
-  width: 200px;
+  width: 300px;
   transform: translate(0px, 0px);
   transition: all 1s ease-out;
 }
