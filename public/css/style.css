@@ -28,6 +28,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+  border: 2px grey solid;  
   width: 200px;
   transform: translate(25px, 0px);
   transition: all 1s ease-out;
@@ -38,6 +39,7 @@ body {
   position: absolute;
   top: 0;
   right: 0;
+  border: 2px grey solid;   
   width: 200px;
   transform: translate(0px, 0px);
   transition: all 1s ease-out;
