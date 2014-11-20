@@ -1495,7 +1495,7 @@ $.confirm({
  	}else{ 
  		//help_span.innerHTLM = '';
  		//removeHelp();
- 	$(".nav").toggleClass(".nav--active");}
+ 	$(".nav").toggleClass(".nav--active");
  	//$(".nav").toggleClass(".nav--active");
  	}
  });
