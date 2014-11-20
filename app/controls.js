@@ -1489,8 +1489,8 @@ $.confirm({
                   //    '<p>','New line : Say "return" or "enter"','</p>',    
                   //    '</div></div>'
                 //  ].join('');
- 	var markup = '<div id="help" class=".nav"> ' + '<div id="command"> '+'<h2>"Command List"</h2> ' + '<p>New line : Say "return" or "enter" </p> '+'</div></div> ';
-    help_span.innerHTLM = markup;
+ 	//var markup = '<div id="help" class=".nav"> ' + '<div id="command"> '+'<h2>"Command List"</h2> ' + '<p>New line : Say "return" or "enter" </p> '+'</div></div> ';
+    //help_span.innerHTLM = markup;
                  // $(markup).hide().appendTo('body').fadeIn();		
  		
  	}else{ 
