@@ -1482,16 +1482,16 @@ $.confirm({
  $('#commandlist').click(function(){
  	if(on){ 
  	$(".nav--active").toggleClass(".nav"); 
-       // var markup = [
-                   //   '<div id="help" class=".nav">',
-                   //   '<div id="command">',
-                   //   '<h2>',"Command List",'</h2>',
-                  //    '<p>','New line : Say "return" or "enter"','</p>',    
-                  //    '</div></div>'
-                //  ].join('');
+        var markup = [
+                      '<div id="help">',
+                      '<div id="command">',
+                      '<h2>',"Command List",'</h2>',
+                      '<p>','New line : Say "return" or "enter"','</p>',    
+                      '</div></div>'
+                  ].join('');
  	//var markup = '<div id="help" class=".nav"> ' + '<div id="command"> '+'<h2>"Command List"</h2> ' + '<p>New line : Say "return" or "enter" </p> '+'</div></div> ';
     //help_span.innerHTLM = markup;
-                 // $(markup).hide().appendTo('body').fadeIn();		
+                  $(markup).hide().appendTo('body').fadeIn();		
  		
  	}else{ 
  		//help_span.innerHTLM = '';

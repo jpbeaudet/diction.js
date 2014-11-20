@@ -37,13 +37,28 @@ body {
   transition: all 1s ease-out;
   
 }
-
+#help {
+  position: absolute;
+  height:100%;
+  top: 0;
+  left: 0;
+  border: 2px grey solid;
+  padding: 10px;        
+  background-color: #D8D8D8 ;  
+  width: 300px;
+  transform: translate(0px, 0px);
+  transition: all 1s ease-out;
+  
+}
 .nav--active {
   position: absolute;
-  height:0%;
+  height:100%;
   top: 0;
-  right: 0;    
-  width: 0px;
+  right: 0;
+  border: 2px grey solid;  
+  padding: 10px;     
+  background-color: #D8D8D8 ;
+  width: 300px;
   transform: translate(0px, 0px);
   transition: all 1s ease-out;
 }
