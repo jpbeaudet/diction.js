@@ -6,7 +6,8 @@ var mongoose = require('mongoose'),
 	    docB: String,
 	    username: String,
 	    lastsaveA: String,
-	    lastsaveB: String
+	    lastsaveB: String,
+	    title: String
 	});
 
 module.exports = mongoose.model('memory', memoryDb);;

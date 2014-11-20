@@ -26,7 +26,9 @@ window.onload = function()
 		var docA =response[0];
 		var docB =response[1];
 		_USERNAME =response[2];
+		var title = response[3];
 		welcome_span.innerHTML = "Welcome "+ _USERNAME;
+		title_span.innerHTML = title;
 		icon_span.innerHTML = "-->";
 		docA_span.innerHTML = docA;
 	    docB_span.innerHTML = docB;	
@@ -49,12 +51,13 @@ window.onload = function()
 		  var docB = response[1];
 		  var LastdocA = response[2];
 		  var LastdocB = response[3];
+		  var title = response[4];
 		  console.log('lastsaveA arrival= '+LastdocA);
 		  console.log('lastsaveB arrival = '+LastdocB);
 		  if(transcript == "\n"){
 			  transcript = "<div><br \></div>";
 		  }
-		  index = new MyData (docA,docB,transcript,LastdocA,LastdocB);
+		  index = new MyData (docA,docB,transcript,LastdocA,LastdocB,title);
 		  lines_span.innerHTML = "Lines: "+ index.lines;
 		  words_span.innerHTML = " Words: "+ index.wordsTotal;
 		  console.log('lastsaveA = '+index.LastdocA);
@@ -1342,6 +1345,7 @@ window.onload = function()
 				  transcript = transcript.replace("new","");
 				  transcript = transcript.replace("title","");
 				title_span.innerHTML = '<h1>'+transcript+ '</h1>';
+				index.title = transcript;
 				return Istrue('New title'+ '"'+ transcript+'"', index);	
 			}			  			 
 			break;
@@ -1413,7 +1417,8 @@ function Istrue(data, index){
     console.log("pretext command = "+ pretext);
     console.log("afttext command = "+ afttext);
 	final_span.innerHTML = " @@@->  " + data + "  <-@@@ ";
-	socket.emit("cmd", [ pretext , afttext]);
+	var title = index.title;
+	socket.emit("cmd", [ pretext , afttext,title]);
 	//socket.to(_USERNAME).emit("cmd", [ pretext , afttext]);
 	
 	return true;
@@ -1438,8 +1443,8 @@ function Isfalse(data, index){
     afttext = afttext + "";  
     final_span.innerHTML = " @@@->  " + doc + "  <-@@@ ";
   	diction = doc;  
-       
-	socket.emit("save", [data, pretext , afttext,json]);	
+    var title = index.title;  
+	socket.emit("save", [data, pretext , afttext,json,title]);	
   	//socket.to(_USERNAME).emit("save", [data, pretext , afttext,json]);	
 	return false;
     } 
