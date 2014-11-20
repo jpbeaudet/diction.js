@@ -1489,11 +1489,12 @@ $.confirm({
                       '<p>','New line : Say "return" or "enter"','</p>',    
                       '</div></div>'
                   ].join('');
-
-                  $(markup).hide().appendTo('body').fadeIn();		
+help_span.innerHTLM = markup;
+                 // $(markup).hide().appendTo('body').fadeIn();		
  		
  	}else{ 
- 		removeHelp();
+ 		help_span.innerHTLM = '';
+ 		//removeHelp();
  	//$(".nav").toggleClass(".nav--active");}
  	//$(".nav").toggleClass(".nav--active");
  	}
