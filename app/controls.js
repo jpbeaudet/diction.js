@@ -1480,7 +1480,8 @@ $.confirm({
 }
  var on = false;
  $('#commandlist').click(function(){
- 	if(on){ 
+ 	if(on){
+ 	on = false;
  	$(".nav--active").toggleClass(".nav"); 
        // var markup = [
                    //   '<div id="help">',
@@ -1490,13 +1491,12 @@ $.confirm({
                    //   '</div></div>'
                  // ].join('');
  	//var markup = '<div id="help" class=".nav"> ' + '<div id="command"> '+'<h2>"Command List"</h2> ' + '<p>New line : Say "return" or "enter" </p> '+'</div></div> ';
-    help_span.innerHTLM = '';
+    help_span.innerHTML = '';
                   ///$(markup).hide().appendTo('body').fadeIn();		
  		
  	}else{ 
- 		help_span.innerHTLM = 'My button works !';
+ 		help_span.innerHTML = 'My button works !';
  		on = true;
- 		//help_span.innerHTLM = '';
  		//removeHelp();
  	$(".nav").toggleClass(".nav--active");
  	//$(".nav").toggleClass(".nav--active");
