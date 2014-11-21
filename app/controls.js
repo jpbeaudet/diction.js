@@ -1478,10 +1478,10 @@ $.confirm({
 });	 	
 	
 }
- var on = false;
+ var onHelp = false;
  $('#commandlist').click(function(){
- 	if(on){
- 	on = false; 
+ 	if(onHelp){
+ 	onHelp = false; 
 	removeHelp();
 	
  	}else{ 
@@ -1508,14 +1508,39 @@ $.confirm({
                   ].join('');
 
         $(markup).hide().appendTo('body').fadeIn();
- 		on = true;
+ 		onHelp = true;
 
  	}
  });
- 
+ var onSettings = false;
+ $('#settings').click(function(){
+ 	if(onSettings){
+ 	onSettings = false; 
+ 	removeSettings();
+	
+ 	}else{ 
+        var markupS = [
+                      '<div id="settings">',
+                      '<h2>',"Settings",'</h2>',
+                      '<p>','Here you can changes settings and preferences','</p>',                       
+                      '<div id="preference">',
+                      '<h3>',"Language",'</h3>',
+                      '</div></div>'
+                  ].join('');
+
+        $(markupS).hide().appendTo('body').fadeIn();
+        onSettings = true;
+
+ 	}
+ });
 	function removeHelp(){
 	        $('#help').fadeOut(function(){
 	            $(this).remove();
 	        });
 	    }
+	function removeSettings(){
+        $('#settings').fadeOut(function(){
+            $(this).remove();
+        });
+    }	
  
