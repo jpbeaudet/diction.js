@@ -1483,22 +1483,22 @@ $.confirm({
  	if(on){
  	on = false;
  	$(".nav--active").toggleClass(".nav"); 
-       // var markup = [
-                   //   '<div id="help">',
-                   //   '<div id="command">',
-                   //   '<h2>',"Command List",'</h2>',
-                   //   '<p>','New line : Say "return" or "enter"','</p>',    
-                   //   '</div></div>'
-                 // ].join('');
-
+	//removeHelp();
     help_span.innerHTML = '';
                   ///$(markup).hide().appendTo('body').fadeIn();		
  		
  	}else{ 
- 	 	var markup = '<div id="help" class=".nav"> ' + '<div id="command"> '+'<h2>"Command List"</h2> ' + '<p>New line : Say "return" or "enter" </p> '+'</div></div> ';
+        var markup = [
+                      '<div id="help">',
+                      '<div id="command">',
+                      '<h2>',"Command List",'</h2>',
+                      '<p>','New line : Say "return" or "enter"','</p>',    
+                      '</div></div>'
+                  ].join('');
+ 	 	//var markup = '<div id="help" class=".nav"> ' + '<div id="command"> '+'<h2>"Command List"</h2> ' + '<p>New line : Say "return" or "enter" </p> '+'</div></div> ';
  		help_span.innerHTML = markup;
  		on = true;
- 		//removeHelp();
+ 	
 
  	//$(".nav").toggleClass(".nav--active");
  	}
