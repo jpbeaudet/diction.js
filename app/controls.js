@@ -1190,6 +1190,7 @@ window.onload = function()
 		  index.docA = index.LastdocA;
 		  index.docB = index.LastdocB;
 		 // return Istrue('Cancel', index);
+		  return true;
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
@@ -1207,6 +1208,7 @@ window.onload = function()
 		  index.docA = index.LastdocA;
 		  index.docB = index.LastdocB;
 		  //return Istrue('Cancel', index);
+		  return true;
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
