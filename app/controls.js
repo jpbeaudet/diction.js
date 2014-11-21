@@ -1481,29 +1481,30 @@ $.confirm({
  var on = false;
  $('#commandlist').click(function(){
  	if(on){
- 	on = false;
- 	//$(".nav--active").toggleClass(".nav"); 
+ 	on = false; 
 	removeHelp();
-   // help_span.innerHTML = '';
- 		
- 		
+	
  	}else{ 
         var markup = [
                       '<div id="help">',
+                      '<h2>',"Help",'</h2>',
                       '<div id="command">',
-                      '<h2>',"Command List",'</h2>',
-                      '<p>','New line : Say "return" or "enter"','</p>',    
+                      '<h3>',"Command List",'</h3>',
+                      '<p>','New line : Say "return" or "enter"','</p>', 
+                      '<p>','Symbols : Say "open" "parenthesis, bracket, quote, double quote"','</p>',
+                      '<p>','Delete : Say "delete" for last word','</p>',
+                      '<p>','Delete : Say "delete forward or rigth" for next word','</p>',
+                      '<p>','Delete : Say "delete back sentence" for next word','</p>',
+                      '<p>','Star a new text : Say "new text" and accept confirmation','</p>',
                       '</div></div>'
                   ].join('');
-        
- 		//help_span.innerHTML = markup;
+
         $(markup).hide().appendTo('body').fadeIn();
  		on = true;
- 	
 
- 	//$(".nav").toggleClass(".nav--active");
  	}
  });
+ 
 	function removeHelp(){
 	        $('#help').fadeOut(function(){
 	            $(this).remove();
