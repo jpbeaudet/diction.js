@@ -1547,7 +1547,7 @@ $.confirm({
 	        });
 	    }
 	function removeSettings(){
-        $('#settings').fadeOut(function(){
+        $('#settingsMenu').fadeOut(function(){
             $(this).remove();
         });
     }	
