@@ -52,7 +52,7 @@ body {
   transition: all 1s ease-out;
   
 }
-#settings {
+#settingsMenu {
   position: absolute;
   height:29.7cm;;
   top: 0;

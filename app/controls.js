@@ -1526,8 +1526,9 @@ $.confirm({
  	 	if(onHelp){//if help screen is there remove it
  	 	 	onHelp = false; 
  	 		removeHelp();
+ 	 	}
         var markupS = [
-                      '<div id="settings">',
+                      '<div id="settingsMenu">',
                       '<h2>',"Settings",'</h2>',
                       '<p>','Here you can changes settings and preferences','</p>',                       
                       '<div id="preference">',
