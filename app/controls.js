@@ -1485,6 +1485,10 @@ $.confirm({
 	removeHelp();
 	
  	}else{ 
+ 	 	if(onSettings){// if settings screen is there remove it 
+ 	 	 	onSettings = false; 
+ 	 	 	removeSettings();
+ 	 	}
         var markup = [
                       '<div id="help">',
                       '<h2>',"Help",'</h2>',
@@ -1519,6 +1523,9 @@ $.confirm({
  	removeSettings();
 	
  	}else{ 
+ 	 	if(onHelp){//if help screen is there remove it
+ 	 	 	onHelp = false; 
+ 	 		removeHelp();
         var markupS = [
                       '<div id="settings">',
                       '<h2>',"Settings",'</h2>',
