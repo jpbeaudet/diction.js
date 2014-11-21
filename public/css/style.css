@@ -9,9 +9,7 @@ body {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
 }
-html {
-    height: 100%;
-}
+
 .page {
     width: 21cm;
     min-height: 29.7cm;
@@ -30,7 +28,7 @@ html {
 }
 .nav {
   position: absolute;
-  height:100%;
+  height:29.7cm;;
   top: 0;
   left: 0;
   border: 2px grey solid;
@@ -43,7 +41,7 @@ html {
 }
 #help {
   position: absolute;
-  height:100%;
+  height:29.7cm;;
   top: 0;
   left: 0;
   border: 2px grey solid;
@@ -56,7 +54,7 @@ html {
 }
 .nav--active {
   position: absolute;
-  height:100%;
+  height:29.7cm;;
   top: 0;
   right: 0;
   border: 2px grey solid;  
