@@ -1482,10 +1482,10 @@ $.confirm({
  $('#commandlist').click(function(){
  	if(on){
  	on = false;
- 	$(".nav--active").toggleClass(".nav"); 
-	//removeHelp();
-    help_span.innerHTML = '';
-                  ///$(markup).hide().appendTo('body').fadeIn();		
+ 	//$(".nav--active").toggleClass(".nav"); 
+	removeHelp();
+   // help_span.innerHTML = '';
+ 		
  		
  	}else{ 
         var markup = [
@@ -1495,8 +1495,9 @@ $.confirm({
                       '<p>','New line : Say "return" or "enter"','</p>',    
                       '</div></div>'
                   ].join('');
- 	 	//var markup = '<div id="help" class=".nav"> ' + '<div id="command"> '+'<h2>"Command List"</h2> ' + '<p>New line : Say "return" or "enter" </p> '+'</div></div> ';
- 		help_span.innerHTML = markup;
+        
+ 		//help_span.innerHTML = markup;
+        $(markup).hide().appendTo('body').fadeIn();
  		on = true;
  	
 
