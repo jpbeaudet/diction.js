@@ -1490,7 +1490,7 @@ $.confirm({
                    //   '</div></div>'
                  // ].join('');
  	//var markup = '<div id="help" class=".nav"> ' + '<div id="command"> '+'<h2>"Command List"</h2> ' + '<p>New line : Say "return" or "enter" </p> '+'</div></div> ';
-    //help_span.innerHTLM = markup;
+    help_span.innerHTLM = 'My button works !';
                   ///$(markup).hide().appendTo('body').fadeIn();		
  		
  	}else{ 
