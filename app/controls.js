@@ -1494,9 +1494,14 @@ $.confirm({
                       '<p>','<b>New line :</b> Say "return" or "enter"','</p>', 
                       '<p>','<b>Symbols :</b> Say "open" "parenthesis, bracket, quote, double quote"','</p>',
                       '<p>','<b>Title :</b> Say "new title" followed by a one-word title like "Google"','</p>',                       
-                      '<p>','<b>Delete :</b> Say "delete" for last word','</p>',
-                      '<p>','<b>Delete :</b> Say "delete forward or rigth" for next word','</p>',
-                      '<p>','<b>Delete :</b> Say "delete back sentence" for next word','</p>',
+                      '<p>','<b>Delete last word:</b> Say "delete" for last word','</p>',
+                      '<p>','<b>Delete next word:</b> Say "delete forward or rigth" for next word','</p>',
+                      '<p>','<b>Delete last sentence :</b> Say "delete back sentence" for last sentence','</p>',
+                      '<p>','<b>Delete next sentence :</b> Say "delete forward sentence" for the next sentence','</p>',   
+                      '<p>','<b>Move back:</b> Say "go back or left" to get back to last word','</p>', 
+                      '<p>','<b>Move next:</b> Say "go forward or rigth" to get back to last word','</p>', 
+                      '<p>','<b>Move back sentence:</b> Say "go back sentence" to get back to last sentence','</p>',
+                      '<p>','<b>Move next sentence:</b> Say "go forward sentence" to get back to next sentence','</p>',                      
                       '<p>','<b>Star a new text :</b> Say "new text" and accept confirmation','</p>',
                       '</div></div>'
                   ].join('');
