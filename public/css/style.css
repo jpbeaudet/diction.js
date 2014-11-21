@@ -9,6 +9,9 @@ body {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
 }
+html {
+    height: 100%;
+}
 .page {
     width: 21cm;
     min-height: 29.7cm;
