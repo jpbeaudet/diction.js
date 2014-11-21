@@ -1490,15 +1490,16 @@ $.confirm({
                    //   '<p>','New line : Say "return" or "enter"','</p>',    
                    //   '</div></div>'
                  // ].join('');
- 	//var markup = '<div id="help" class=".nav"> ' + '<div id="command"> '+'<h2>"Command List"</h2> ' + '<p>New line : Say "return" or "enter" </p> '+'</div></div> ';
+
     help_span.innerHTML = '';
                   ///$(markup).hide().appendTo('body').fadeIn();		
  		
  	}else{ 
- 		help_span.innerHTML = 'My button works !';
+ 	 	var markup = '<div id="help" class=".nav"> ' + '<div id="command"> '+'<h2>"Command List"</h2> ' + '<p>New line : Say "return" or "enter" </p> '+'</div></div> ';
+ 		help_span.innerHTML = markup;
  		on = true;
  		//removeHelp();
- 	$(".nav").toggleClass(".nav--active");
+
  	//$(".nav").toggleClass(".nav--active");
  	}
  });
