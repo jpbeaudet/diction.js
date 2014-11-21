@@ -1189,8 +1189,7 @@ window.onload = function()
 		  docB_span.innerHTML = index.LastdocB;
 		  index.docA = index.LastdocA;
 		  index.docB = index.LastdocB;
-		 // return Istrue('Cancel', index);
-		  return true;
+		  return Istrue('Cancel', index);
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
@@ -1207,8 +1206,7 @@ window.onload = function()
 		  docB_span.innerHTML = index.LastdocB;
 		  index.docA = index.LastdocA;
 		  index.docB = index.LastdocB;
-		  //return Istrue('Cancel', index);
-		  return true;
+		  return Istrue('Cancel', index);
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
@@ -1225,7 +1223,7 @@ window.onload = function()
 		  docB_span.innerHTML = index.LastdocB;
 		  index.docA = index.LastdocA;
 		  index.docB = index.LastdocB;
-		 // return Istrue('Cancel', index);
+		  return Istrue('Cancel', index);
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
