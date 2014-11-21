@@ -1478,6 +1478,10 @@ $.confirm({
 });	 	
 	
 }
+ 
+ ///Menu section : 
+ ///-----------------------------------------------------------------------------
+ 
  var onHelp = false;
  $('#commandlist').click(function(){
  	if(onHelp){
