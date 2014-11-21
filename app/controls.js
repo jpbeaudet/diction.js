@@ -1488,10 +1488,12 @@ $.confirm({
         var markup = [
                       '<div id="help">',
                       '<h2>',"Help",'</h2>',
+                      '<p>','Just click the speak button and you can dictate your text','</p>',                       
                       '<div id="command">',
                       '<h3>',"Command List",'</h3>',
-                      '<p>','New line : Say "return" or "enter"','</p>', 
+                      '<p>','<b>New line :</b> Say "return" or "enter"','</p>', 
                       '<p>','Symbols : Say "open" "parenthesis, bracket, quote, double quote"','</p>',
+                      '<p>','Title : Say "new title" followed by a one-word title like "Google"','</p>',                       
                       '<p>','Delete : Say "delete" for last word','</p>',
                       '<p>','Delete : Say "delete forward or rigth" for next word','</p>',
                       '<p>','Delete : Say "delete back sentence" for next word','</p>',
