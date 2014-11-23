@@ -20,8 +20,6 @@ var txt = "";
 var diction='';	 
 if ('webkitSpeechRecognition' in window) {
 	console.log('webSpeech recognition has started');
-	var e = document.getElementById("language");
-	strUser = e.options[e.selectedIndex].value;
 	if( strUser== undefined){
 		strUser = 0;
 	}else{strUser= Number(strUser);}
