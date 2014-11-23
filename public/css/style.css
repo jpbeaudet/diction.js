@@ -65,6 +65,17 @@ body {
   transition: all 1s ease-out;
   
 }
+
+
+#mainMenu {
+  position: absolute;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 14px;
+  top: 1%;
+  border: 2px ;
+  padding: 10px;         
+ 
+}
 .nav--active {
   position: absolute;
   height:29.7cm;;

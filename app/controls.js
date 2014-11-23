@@ -21,12 +21,17 @@ var _USERNAME;
 
 window.onload = function()
 {
+	
 	socket.emit("load", "load -------------------------------->");	
 	socket.on("res.load", function(response){
 		var docA =response[0];
 		var docB =response[1];
 		_USERNAME =response[2];
 		var title = response[3];
+		//if(language == undefined){
+		//language = window.navigator.userLanguage || window.navigator.language;
+		//console.log("language detected is : "+ language);
+		//}
 		welcome_span.innerHTML = "Welcome "+ _USERNAME;
 		title_span.innerHTML = "<h1>"+title+"</h1>";
 		icon_span.innerHTML = "-->";

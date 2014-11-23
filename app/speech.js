@@ -1,7 +1,7 @@
 // Author: Jean-Philippe Beaudet @ S3R3NITY Technology
 // Diction4js - Web based hands-free text editor
 //
-
+var language;
 var doc= " ";
 var txt = "";
 var diction='';	 
