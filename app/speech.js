@@ -1,15 +1,34 @@
 // Author: Jean-Philippe Beaudet @ S3R3NITY Technology
 // Diction4js - Web based hands-free text editor
 //
-var language;
+var language = new Array();
+language[0] = "en-EN";
+language[0].index = "English";
+language[1] = "en-US";
+language[1].index = "English - United States";
+language[2] = "en-CA";
+language[2].index = "English - Canada";
+language[3] = "en-GB";
+language[3].index = "English - Great Britain";
+language[4] = "en-AU";
+language[4].index = "English - Australia";
+language[5] = "en-NZ";
+language[5].index = "English - New Zeeland";
+var strUser;
 var doc= " ";
 var txt = "";
 var diction='';	 
 if ('webkitSpeechRecognition' in window) {
 	console.log('webSpeech recognition has started');
+	var e = document.getElementById("language");
+	strUser = e.options[e.selectedIndex].value;
+	if( strUser== undefined){
+		strUser = 0;
+	}else{strUser= Number(strUser);}
 	var recognizing;
     var recognition = new webkitSpeechRecognition();
-    recognition.lang = "en-EN";
+    //recognition.lang = "en-EN";
+    recognition.lang = language[strUser];
     recognition.continuous = true;
     recognition.interimResults = true;
     reset();

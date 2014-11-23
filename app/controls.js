@@ -18,6 +18,19 @@
 
 var socket = io.connect('https://54.68.32.250:3000', {'force new connection': true});
 var _USERNAME;
+var language = new Array();
+language[0] = "en-EN";
+language[0].index = "English";
+language[1] = "en-US";
+language[1].index = "English - United States";
+language[2] = "en-CA";
+language[2].index = "English - Canada";
+language[3] = "en-GB";
+language[3].index = "English - Great Britain";
+language[4] = "en-AU";
+language[4].index = "English - Australia";
+language[5] = "en-NZ";
+language[5].index = "English - New Zeeland";
 
 window.onload = function()
 {
@@ -1542,6 +1555,15 @@ $.confirm({
                       '<p>','Here you can changes settings and preferences','</p>',                       
                       '<div id="preference">',
                       '<h3>',"Language",'</h3>',
+                      '<p>','Select your region for better results','</p>',                      
+                      '<select id="language">',
+                      '<option value="0"> English </option>',
+                      '<option value="1">English - United States</option>',
+                      '<option value="2">English - Canada</option>',
+                      '<option value="3">English - Great Britain</option>',
+                      '<option value="4">English - Australia</option>',
+                      '<option value="5">English - New Zeeland </option>',                      
+                      '</select>',
                       '</div></div>'
                   ].join('');
 
@@ -1560,4 +1582,8 @@ $.confirm({
             $(this).remove();
         });
     }	
- 
+	$('#language').click(function(){
+		var e = document.getElementById("language");
+		strUser = e.options[e.selectedIndex].value;
+		
+	});
