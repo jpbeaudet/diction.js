@@ -23,6 +23,7 @@ if ('webkitSpeechRecognition' in window) {
 	if( strUser== undefined){
 		strUser = 0;
 	}else{strUser= Number(strUser);}
+	language_span.innerHTML = language[strUser].index;
 	var recognizing;
     var recognition = new webkitSpeechRecognition();
     //recognition.lang = "en-EN";
