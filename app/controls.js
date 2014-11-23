@@ -31,6 +31,9 @@ language[4] = "en-AU";
 language[4].index = "English - Australia";
 language[5] = "en-NZ";
 language[5].index = "English - New Zeeland";
+if( strUser== undefined){
+	strUser = 0;
+}else{strUser= Number(strUser);}
 language_span.innerHTML = language[strUser].index;
 
 window.onload = function()
