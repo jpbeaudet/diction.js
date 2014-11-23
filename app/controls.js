@@ -31,7 +31,7 @@ language[4] = "en-AU";
 language[4].index = "English - Australia";
 language[5] = "en-NZ";
 language[5].index = "English - New Zeeland";
-language_span.innerHTML = language[strUser];
+language_span.innerHTML = language[strUser].index;
 
 window.onload = function()
 {
@@ -1586,5 +1586,5 @@ $.confirm({
 	$('#language').click(function(){
 		var e = document.getElementById("language");
 		strUser = e.options[e.selectedIndex].value;
-		language_span.innerHTML = language[strUser];
+		language_span.innerHTML = language[strUser].index;
 	});
