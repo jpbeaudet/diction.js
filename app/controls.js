@@ -18,6 +18,7 @@
 
 var socket = io.connect('https://54.68.32.250:3000', {'force new connection': true});
 var _USERNAME;
+var strUser;
 var language = new Array();
 language[0] = "en-EN";
 language[0].index = "English";
@@ -41,10 +42,10 @@ window.onload = function()
 		var docB =response[1];
 		_USERNAME =response[2];
 		var title = response[3];
-		//if(language == undefined){
-		//language = window.navigator.userLanguage || window.navigator.language;
-		//console.log("language detected is : "+ language);
-		//}
+		if( strUser== undefined){
+			strUser = 0;
+		}
+   	    language_span.innerHTML = language[strUser];
 		welcome_span.innerHTML = "Welcome "+ _USERNAME;
 		title_span.innerHTML = "<h1>"+title+"</h1>";
 		icon_span.innerHTML = "-->";
@@ -1554,11 +1555,15 @@ $.confirm({
                       '<h2>',"Settings",'</h2>',
                       '<p>','Here you can changes settings and preferences','</p>',                       
                       '<div id="preference">',
-                      '<h3>',"Preferences",'</h3>',
+                      '<h3>',"Language",'</h3>',
+                      '<p>','Select your region for better results !','</p>',                       
                       '<select id="language" name="language">',
                       '<option value="0"> English </option>',
-                      '<option value="1"> English - United States</option>',   
-                      '<option value="1"> English - Great Britain</option>',                        
+                      '<option value="1"> English - United States </option>',   
+                      '<option value="2"> English - Canada </option>',   
+                      '<option value="3"> English - Great Britain</option>',
+                      '<option value="4"> English - Australia </option>',  
+                      '<option value="5"> English - New Zeeland </option>',                       
                       '</select>',
                       '</div></div>'
                   ].join('');
@@ -1576,6 +1581,7 @@ $.confirm({
         	 console.log("strUser = " + strUser);
         	 recognition.lang = language[strUser];
         	 console.log(" recognition.lang= " +  recognition.lang);
+        	 language_span.innerHTML = language[strUser];
          });
  	}
  });

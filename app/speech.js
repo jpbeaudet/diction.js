@@ -30,14 +30,6 @@ if ('webkitSpeechRecognition' in window) {
 	 console.log("language[strUser] = " + language[strUser]);
 	var recognizing;
     var recognition = new webkitSpeechRecognition();
-    $("#select").click(function(){
-    	var e = document.getElementById("select");
-    	 strUser = e.options[e.selectedIndex].value;
-    	 console.log("strUser = " + strUser);
-    	 recognition.lang = language[strUser];
-    	 console.log(" recognition.lang= " +  recognition.lang);
-    });
-    //recognition.lang = "en-EN";
     recognition.lang = language[strUser];
     recognition.continuous = true;
     recognition.interimResults = true;
