@@ -1556,7 +1556,7 @@ $.confirm({
                       '<div id="preference">',
                       '<h3>',"Language",'</h3>',
                       '<p>','Select your region for better results','</p>',                      
-                      '<select id="language" name="language">',
+                      '<select id="select" name="select">',
                       '<option value="0"> English </option>',
                       '<option value="1">English - United States</option>',
                       '<option value="2">English - Canada</option>',
@@ -1572,6 +1572,14 @@ $.confirm({
 
  	}
  });
+ 
+	$('#select').click(function(){
+		var e = document.getElementById("language");
+		 var strUser = e.options[e.selectedIndex].value;
+		 console.log("strUser = " + strUser);
+		language_span.innerHTML = language[strUser].index;
+	});
+	
 	function removeHelp(){
 	        $('#help').fadeOut(function(){
 	            $(this).remove();
@@ -1582,9 +1590,3 @@ $.confirm({
             $(this).remove();
         });
     }	
-	$('#language').click(function(){
-		var e = document.getElementById("language");
-		 var strUser = e.options[e.selectedIndex].value;
-		 console.log("strUser = " + strUser);
-		language_span.innerHTML = language[strUser].index;
-	});
