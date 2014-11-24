@@ -1581,7 +1581,7 @@ $.confirm({
         	 console.log("strUser = " + strUser);
         	 recognition.lang = language[strUser];
         	 console.log(" recognition.lang= " +  recognition.lang);
-        	 console.log(" language[strUser].index= " + language[strUser]);
+        	 console.log(" language[strUser].index= " + language[strUser].index);
         	 language_span.innerHTML = language[strUser];
          });
  	}
