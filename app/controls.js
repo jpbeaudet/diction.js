@@ -1561,8 +1561,8 @@ $.confirm({
         $(markupS).hide().appendTo('body').fadeIn();
         var $test = $('body');
         var $test2 = $('div.settingsMenu');
-        console.log("body = "+ $test);
-        console.log("div.settingsMenubody = "+ $test2);
+        console.log("body = "+ JSON.stringify($test));
+        console.log("div.settingsMenubody = "+ JSON.stringify($test2));
         onSettings = true;
 
  	}
