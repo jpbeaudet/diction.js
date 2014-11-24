@@ -82,7 +82,7 @@ if ('webkitSpeechRecognition' in window) {
     function reset() {
     button = document.getElementById("button");
   	  recognizing = false;
-  	 // button.innerHTML = "Click to Speak";
+  	  button.innerHTML = "Click to Speak";
   	}
 
   	function toggleStartStop() {
@@ -94,7 +94,7 @@ if ('webkitSpeechRecognition' in window) {
   	  } else {
   	    recognition.start();
   	    recognizing = true;
-  	    //button.innerHTML = "Click to Stop";
+  	    button.innerHTML = "Click to Stop";
 
   	  } };
   	  
