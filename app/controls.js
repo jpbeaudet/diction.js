@@ -1582,7 +1582,7 @@ $.confirm({
             $(this).remove();
         });
     }	
-	$('#language').select(function(){
+	$('#language').click(function(){
 		var e = document.getElementById("language");
 		 var strUser = e.options[e.selectedIndex].value;
 		 console.log("strUser = " + strUser);
