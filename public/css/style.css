@@ -66,7 +66,11 @@ body {
   
 }
 #button{
-  background:url(/images/micro.png) no-repeat;
+  background:url(/images/start_button.png) no-repeat;
+  cursor:pointer;
+  width: 50px;
+  height: 50px;
+  border: none;
 }
 
 .nav--active {
