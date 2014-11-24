@@ -261,10 +261,7 @@ window.onload = function()
 		 switch(Sword)
 		 {
 		 case undefined:
-		  $("#final_span").css("color", "pink");
-		  docA_span.innerHTML = index.docA+ '&nbsp;&nbsp;&nbsp;&nbsp;';
-		  index.docA =  index.docA+ '&nbsp;&nbsp;&nbsp;&nbsp;';
-		  return Istrue("Tab", index);
+			 _tab(transcript,index)
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
@@ -273,10 +270,7 @@ window.onload = function()
 		 switch(Sword)
 		 {
 		 case undefined:
-		  $("#final_span").css("color", "pink");
-		  docA_span.innerHTML = index.docA+ '&nbsp;&nbsp;&nbsp;&nbsp;';
-		  index.docA = index.docA+ '&nbsp;&nbsp;&nbsp;&nbsp;';
-		  return Istrue("Tab", index);
+			 _tab(transcript,index)
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
