@@ -28,16 +28,14 @@ if ('webkitSpeechRecognition' in window) {
 	}
 	 console.log("strUser = " + strUser);
 	 console.log("language[strUser] = " + language[strUser]);
-	//language_span.innerHTML = language[strUser];
 	var recognizing;
     var recognition = new webkitSpeechRecognition();
     $("#select").click(function(){
-    	//var conceptName = $('#select').find(":selected").text();
     	var e = document.getElementById("select");
     	 strUser = e.options[e.selectedIndex].value;
     	 console.log("strUser = " + strUser);
     	 recognition.lang = language[strUser];
-    	 //language_span.innerHTML = language[strUser];
+    	 console.log(" recognition.lang= " +  recognition.lang);
     });
     //recognition.lang = "en-EN";
     recognition.lang = language[strUser];
@@ -48,9 +46,6 @@ if ('webkitSpeechRecognition' in window) {
     recognition.onerror = function(e) {
     	recognition.onend = null;	
     	restart(); 
-	    //recognition.start();
-  	    //recognizing = true;
-  	    //button.innerHTML = "Click to Stop";
 	};
    
     recognition.onresult = function (event) { 
