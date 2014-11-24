@@ -1555,20 +1555,31 @@ $.confirm({
                       '<p>','Here you can changes settings and preferences','</p>',                       
                       '<div id="preference">',
                       '<h3>',"Preferences",'</h3>',
+                      '<select id="language">',
+                      '<option value="0"> English </option>',
+                      '<option value="1"> English - United States</option>',   
+                      '<option value="1"> English - Great Britain</option>',                        
+                      '</select>',
                       '</div></div>'
                   ].join('');
 
         $(markupS).hide().appendTo('body').fadeIn();
         var $test = $('body');
+        $test.update();
         var $test2 = $('div.settingsMenu');
-        console.log("body = "+ JSON.stringify($test));
-        console.log("div.settingsMenubody = "+ JSON.stringify($test2));
+        console.log("body = "+ $test);
+        console.log("div.settingsMenubody = "+ $test2);
         onSettings = true;
 
  	}
  });
  
 
+ $('#language').click(function(){ 
+ 	var e = document.getElementById("language");
+	 strUser = e.options[e.selectedIndex].value;
+	 console.log("strUser = " + strUser);
+ });
 	
 	function removeHelp(){
 	        $('#help').fadeOut(function(){
