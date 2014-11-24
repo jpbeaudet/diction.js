@@ -1574,6 +1574,8 @@ $.confirm({
          	var e = document.getElementById("language");
         	 strUser = e.options[e.selectedIndex].value;
         	 console.log("strUser = " + strUser);
+        	 recognition.lang = language[strUser];
+        	 console.log(" recognition.lang= " +  recognition.lang);
          });
  	}
  });
