@@ -1573,7 +1573,7 @@ $.confirm({
  	}
  });
  
-	$('select').click(function(){
+	$("select").click(function(){
 		var e = document.getElementById("language");
 		 var strUser = e.options[e.selectedIndex].value;
 		 console.log("strUser = " + strUser);
