@@ -261,7 +261,7 @@ window.onload = function()
 		 switch(Sword)
 		 {
 		 case undefined:
-			 _tab(transcript,index)
+			 return _tab(transcript,index);
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
@@ -270,7 +270,7 @@ window.onload = function()
 		 switch(Sword)
 		 {
 		 case undefined:
-			 _tab(transcript,index)
+			return _tab(transcript,index);
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
