@@ -20,18 +20,19 @@ var socket = io.connect('https://54.68.32.250:3000', {'force new connection': tr
 var _USERNAME;
 var strUser;
 var language = new Array();
+var languageIndex = new Array();
 language[0] = "en-EN";
-language[0].index = "English";
+languageIndex[0] = "English";
 language[1] = "en-US";
-language[1].index = "English - United States";
+languageIndex [1] = "English - United States";
 language[2] = "en-CA";
-language[2].index = "English - Canada";
+languageIndex [2] = "English - Canada";
 language[3] = "en-GB";
-language[3].index = "English - Great Britain";
+languageIndex [3] = "English - Great Britain";
 language[4] = "en-AU";
-language[4].index = "English - Australia";
+languageIndex [4] = "English - Australia";
 language[5] = "en-NZ";
-language[5].index = "English - New Zeeland";
+languageIndex [5] = "English - New Zeeland";
 
 window.onload = function()
 {
@@ -45,7 +46,7 @@ window.onload = function()
 		if( strUser== undefined){
 			strUser = 0;
 		}
-   	    language_span.innerHTML = language[strUser];
+   	    language_span.innerHTML = languageIndex[strUser];
 		welcome_span.innerHTML = "Welcome "+ _USERNAME;
 		title_span.innerHTML = "<h1>"+title+"</h1>";
 		icon_span.innerHTML = "-->";
@@ -1581,8 +1582,8 @@ $.confirm({
         	 console.log("strUser = " + strUser);
         	 recognition.lang = language[strUser];
         	 console.log(" recognition.lang= " +  recognition.lang);
-        	 console.log(" language[strUser].index= " + language[strUser].index);
-        	 language_span.innerHTML = language[strUser];
+        	 console.log(" language[strUser].index= " + languageIndex[strUser]);
+        	 language_span.innerHTML = languageIndex[strUser];
          });
  	}
  });

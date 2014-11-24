@@ -3,17 +3,11 @@
 //
 var language = new Array();
 language[0] = "en-EN";
-language[0].index = "English";
 language[1] = "en-US";
-language[1].index = "English - United States";
 language[2] = "en-CA";
-language[2].index = "English - Canada";
 language[3] = "en-GB";
-language[3].index = "English - Great Britain";
 language[4] = "en-AU";
-language[4].index = "English - Australia";
 language[5] = "en-NZ";
-language[5].index = "English - New Zeeland";
 var strUser;
 var doc= " ";
 var txt = "";
