@@ -19,24 +19,26 @@ var doc= " ";
 var txt = "";
 var diction='';	
 
-$("#select").click(function(){
-	//var conceptName = $('#select').find(":selected").text();
-	var e = document.getElementById("select");
-	 strUser = e.options[e.selectedIndex].value;
-	 console.log("strUser = " + strUser);
-	 //language_span.innerHTML = language[strUser];
-});
+
 
 if ('webkitSpeechRecognition' in window) {
 	console.log('webSpeech recognition has started');
 	if( strUser== undefined){
 		strUser = 0;
-	}else{strUser= Number(strUser);}
+	}
 	 console.log("strUser = " + strUser);
 	 console.log("language[strUser] = " + language[strUser]);
 	//language_span.innerHTML = language[strUser];
 	var recognizing;
     var recognition = new webkitSpeechRecognition();
+    $("#select").click(function(){
+    	//var conceptName = $('#select').find(":selected").text();
+    	var e = document.getElementById("select");
+    	 strUser = e.options[e.selectedIndex].value;
+    	 console.log("strUser = " + strUser);
+    	 recognition.lang = language[strUser];
+    	 //language_span.innerHTML = language[strUser];
+    });
     //recognition.lang = "en-EN";
     recognition.lang = language[strUser];
     recognition.continuous = true;
