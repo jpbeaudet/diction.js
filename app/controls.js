@@ -1556,7 +1556,7 @@ $.confirm({
                       '<div id="preference">',
                       '<h3>',"Language",'</h3>',
                       '<p>','Select your region for better results','</p>',                      
-                      '<select id="language">',
+                      '<select id="language" name="language">',
                       '<option value="0"> English </option>',
                       '<option value="1">English - United States</option>',
                       '<option value="2">English - Canada</option>',
