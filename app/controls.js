@@ -1559,8 +1559,10 @@ $.confirm({
                   ].join('');
 
         $(markupS).hide().appendTo('body').fadeIn();
-        var $test = ('body');
+        var $test = $('body');
+        var $test2 = $('div.settingsMenu');
         console.log("body = "+ $test);
+        console.log("div.settingsMenubody = "+ $test2);
         onSettings = true;
 
  	}
