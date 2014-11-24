@@ -1554,16 +1554,7 @@ $.confirm({
                       '<h2>',"Settings",'</h2>',
                       '<p>','Here you can changes settings and preferences','</p>',                       
                       '<div id="preference">',
-                      '<h3>',"Language",'</h3>',
-                      '<p>','Select your region for better results','</p>',                      
-                      '<select id="select" name="select">',
-                      '<option value="0"> English </option>',
-                      '<option value="1">English - United States</option>',
-                      '<option value="2">English - Canada</option>',
-                      '<option value="3">English - Great Britain</option>',
-                      '<option value="4">English - Australia</option>',
-                      '<option value="5">English - New Zeeland </option>',                      
-                      '</select>',
+                      '<h3>',"Preferences",'</h3>',
                       '</div></div>'
                   ].join('');
 
@@ -1573,12 +1564,7 @@ $.confirm({
  	}
  });
  
-	$("select").click(function(){
-		var e = document.getElementById("language");
-		 var strUser = e.options[e.selectedIndex].value;
-		 console.log("strUser = " + strUser);
-		language_span.innerHTML = language[strUser];
-	});
+
 	
 	function removeHelp(){
 	        $('#help').fadeOut(function(){

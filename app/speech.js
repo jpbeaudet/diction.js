@@ -17,7 +17,16 @@ language[5].index = "English - New Zeeland";
 var strUser;
 var doc= " ";
 var txt = "";
-var diction='';	 
+var diction='';	
+
+$("#select").click(function(){
+	//var conceptName = $('#select').find(":selected").text();
+	var e = document.getElementById("select");
+	 strUser = e.options[e.selectedIndex].value;
+	 console.log("strUser = " + strUser);
+	 //language_span.innerHTML = language[strUser];
+});
+
 if ('webkitSpeechRecognition' in window) {
 	console.log('webSpeech recognition has started');
 	if( strUser== undefined){
