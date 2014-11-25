@@ -296,3 +296,93 @@ function _gobacksentence(transcript,index){
 	  docB_span.innerHTML = index.docB;
 	  return Istrue("Go back sentence", index);
 }
+
+function _deleterigth(transcript,index){
+	  $("#final_span").css("color", "pink");
+	  var word = index.docB.split(" ");
+	 
+	  word.splice(0,1);
+	  if(word[0]== ""){word.splice(0,1);}
+	  if(word[0]== ""){word.splice(0,1);}
+	  if(word[0]== ""){word.splice(0,1);}
+	  if(word[0]== ""){word.splice(0,1);}
+	  console.log("word = "+ word);
+	  console.log("word[0] = "+ word[0]);
+	  index.docB = index.docB.replace(/  /g," ");
+	  index.docB = index.docB.replace(word[0],"");
+
+	  icon_span.innerHTML = "-->";
+	  docA_span.innerHTML = index.docA;
+	  docB_span.innerHTML = index.docB;
+	  return Istrue("Delete rigth", index);
+}
+
+function _deleterigthsentence(transcript,index){
+	  $("#final_span").css("color", "pink");
+	  var word = index.docB.split(".");				 				 
+	  if(word[0]== ""){word.splice(0,1);}
+	  if(word[0]== ""){word.splice(0,1);}
+	  if(word[0]== ""){word.splice(0,1);}
+	  if(word[0]== ""){word.splice(0,1);}
+	  console.log("word = "+ word);
+	  console.log("word[0] = "+ word[0]);
+	  var toDelete = word[0].split(" ");
+	  index.docB = index.docB.replace(".","");
+	  for( x in toDelete ){
+		  index.docB = index.docB.replace(toDelete[x],""); 
+		  index.docB = index.docB.replace(/  /g," ");
+	  }
+
+	  icon_span.innerHTML = "-->";
+	  docA_span.innerHTML = index.docA;
+	  docB_span.innerHTML = index.docB;
+	  return Istrue("Delete forward sentence", index);
+}
+
+function _deleteback(transcript,index){
+	  $("#final_span").css("color", "pink");
+	  var word = index.docA.split(" ");
+	  console.log("word = "+ word);
+	  var n = Number(word.length );
+	  console.log("n = "+ n);
+	  
+	  n = (n -1);
+	  word.splice(n,1);
+	  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
+	  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
+	  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
+	  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
+	  console.log("word[n-1] = "+ word[n-1]);
+	  index.docA = index.docA.replace(/  /g," ");
+	  index.docA = index.docA.replace(word[n-1],"");
+
+	  icon_span.innerHTML = "-->";
+	  docA_span.innerHTML = index.docA;
+	  docB_span.innerHTML = index.docB;
+	  return Istrue("Delete", index);
+}
+
+function _deletebacksentence(transcript,index){
+	  $("#final_span").css("color", "pink");
+	  var word = index.docA.split(".");
+	  console.log("word = "+ word);
+	  var n = Number(word.length );
+	  console.log("n = "+ n);
+	  
+	  n = (n -1);
+	  if(word[0]== ""){word.splice(0,1);}
+	  if(word[0]== ""){word.splice(0,1);}
+	  console.log("word[n-1] = "+ word[n-1]);
+	  console.log("word[n] = "+ word[n]);
+	  if(word[n]== ""){n= (n-1);}
+	  var toDelete = word[n].split(" ");
+	  index.docA = index.docA.replace(".","");
+	  for( x in toDelete ){
+		  index.docA = index.docA.replace(toDelete[x],""); 
+		  index.docA = index.docA.replace(/  /g," ");
+	  }
+	  icon_span.innerHTML = "-->";
+	  docA_span.innerHTML = index.docA;
+	  docB_span.innerHTML = index.docB;
+	  return Istrue("Delete last sentence", index);
+}

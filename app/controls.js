@@ -601,6 +601,20 @@ window.onload = function()
 				  default:
 					  return Isfalse(transcript, index); 
 			 }
+		 case 'next':
+			 
+			 switch(Tword)
+			 {
+			 
+			 case undefined:
+				return _gorigth(transcript,index);
+				  break;
+			 case 'sentence':
+				 return _gorigthsentence(transcript,index);
+				  break;				  
+				  default:
+					  return Isfalse(transcript, index); 
+			 }			 
 		 case 'forward':
 			 
 			 switch(Tword)
@@ -629,7 +643,19 @@ window.onload = function()
 				  default:
 					  return Isfalse(transcript, index); 
 			 } 
-
+		 case 'last':
+			 switch(Tword)
+			 {
+			 
+			 case undefined:
+				return _goback(transcript,index);
+				  break;
+			 case 'sentence':
+				 return _gobacksentence(transcript,index);
+				  break;				  
+				  default:
+					  return Isfalse(transcript, index); 
+			 } 
 		 case 'left':
 			 switch(Tword)
 			 {
@@ -657,26 +683,7 @@ window.onload = function()
 		 {
 		 
 		 case undefined:
-			  $("#final_span").css("color", "pink");
-			  var word = index.docA.split(" ");
-			  console.log("word = "+ word);
-			  var n = Number(word.length );
-			  console.log("n = "+ n);
-			  
-			  n = (n -1);
-			  word.splice(n,1);
-			  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
-			  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
-			  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
-			  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
-			  console.log("word[n-1] = "+ word[n-1]);
-			  index.docA = index.docA.replace(/  /g," ");
-			  index.docA = index.docA.replace(word[n-1],"");
-
-			  icon_span.innerHTML = "-->";
-			  docA_span.innerHTML = index.docA;
-			  docB_span.innerHTML = index.docB;
-			  return Istrue("Delete", index);
+			 return _deleteback(transcript,index);
 			  break;
 			  
 		 case 'right':
@@ -685,91 +692,38 @@ window.onload = function()
 			 {
 			 
 			 case undefined:
-				  $("#final_span").css("color", "pink");
-				  var word = index.docB.split(" ");
-				 
-				  word.splice(0,1);
-				  if(word[0]== ""){word.splice(0,1);}
-				  if(word[0]== ""){word.splice(0,1);}
-				  if(word[0]== ""){word.splice(0,1);}
-				  if(word[0]== ""){word.splice(0,1);}
-				  console.log("word = "+ word);
-				  console.log("word[0] = "+ word[0]);
-				  index.docB = index.docB.replace(/  /g," ");
-				  index.docB = index.docB.replace(word[0],"");
-
-				  icon_span.innerHTML = "-->";
-				  docA_span.innerHTML = index.docA;
-				  docB_span.innerHTML = index.docB;
-				  return Istrue("Delete rigth", index);
+				return _deleterigth(transcript,index);
 				  break;
 			 case 'sentence':
-				  $("#final_span").css("color", "pink");
-				  var word = index.docB.split(".");				 				 
-				  if(word[0]== ""){word.splice(0,1);}
-				  if(word[0]== ""){word.splice(0,1);}
-				  if(word[0]== ""){word.splice(0,1);}
-				  if(word[0]== ""){word.splice(0,1);}
-				  console.log("word = "+ word);
-				  console.log("word[0] = "+ word[0]);
-				  var toDelete = word[0].split(" ");
-				  index.docB = index.docB.replace(".","");
-				  for( x in toDelete ){
-					  index.docB = index.docB.replace(toDelete[x],""); 
-					  index.docB = index.docB.replace(/  /g," ");
-				  }
-
-				  icon_span.innerHTML = "-->";
-				  docA_span.innerHTML = index.docA;
-				  docB_span.innerHTML = index.docB;
-				  return Istrue("Delete forward sentence", index);
+				return _deleterigthsentence(transcript,index);
 				  break;				  
 				  default:
 					  return Isfalse(transcript, index); 
 			 }
+		 case 'next':
+			 
+			 switch(Tword)
+			 {
+			 
+			 case undefined:
+				return _deleterigth(transcript,index);
+				  break;
+			 case 'sentence':
+				return _deleterigthsentence(transcript,index);
+				  break;				  
+				  default:
+					  return Isfalse(transcript, index); 
+			 }			 
 		 case 'forward':
 			 
 			 switch(Tword)
 			 {
 			 
 			 case undefined:
-				  $("#final_span").css("color", "pink");
-				  var word = index.docB.split(" ");
-				  word.splice(0,1);
-				  if(word[0]== ""){word.splice(0,1);}
-				  if(word[0]== ""){word.splice(0,1);}
-				  if(word[0]== ""){word.splice(0,1);}
-				  if(word[0]== ""){word.splice(0,1);}
-				  console.log("word = "+ word);
-				  console.log("word[0] = "+ word[0]);
-				  index.docB = index.docB.replace(/  /g," ");
-				  index.docB = index.docB.replace(word[0],"");
-
-				  icon_span.innerHTML = "-->";
-				  docA_span.innerHTML = index.docA;
-				  docB_span.innerHTML = index.docB;
-				  return Istrue("Go forward", index);
+				 return _deleterigth(transcript,index);
 				  break;
 			 case 'sentence':
-				  $("#final_span").css("color", "pink");
-				  var word = index.docB.split(".");
-				  if(word[0]== ""){word.splice(0,1);}
-				  if(word[0]== ""){word.splice(0,1);}
-				  if(word[0]== ""){word.splice(0,1);}
-				  if(word[0]== ""){word.splice(0,1);}
-				  console.log("word = "+ word);
-				  console.log("word[0] = "+ word[0]);
-				  var toDelete = word[0].split(" ");
-				  index.docB = index.docB.replace(".","");
-				  for( x in toDelete ){
-					  index.docB = index.docB.replace(toDelete[x],""); 
-					  index.docB = index.docB.replace(/  /g," ");
-				  }
-
-				  icon_span.innerHTML = "-->";
-				  docA_span.innerHTML = index.docA;
-				  docB_span.innerHTML = index.docB;
-				  return Istrue("Delete rigth sentence", index);
+					return _deleterigthsentence(transcript,index);
 				  break;				  
 				  default:
 					  return Isfalse(transcript, index); 
@@ -780,106 +734,37 @@ window.onload = function()
 			 {
 			 
 			 case undefined:
-				  $("#final_span").css("color", "pink");
-				  var word = index.docA.split(" ");
-				  console.log("word = "+ word);
-				  var n = Number(word.length );
-				  console.log("n = "+ n);
-				  
-				  n = (n -1);
-				  word.splice(n,1);
-				  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
-				  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
-				  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
-				  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
-				  console.log("word[n-1] = "+ word[n-1]);
-				  index.docA = index.docA.replace(/  /g," ");
-				  index.docA = index.docA.replace(word[n-1],"");
-
-				  icon_span.innerHTML = "-->";
-				  docA_span.innerHTML = index.docA;
-				  docB_span.innerHTML = index.docB;
-				  return Istrue("Delete back", index);
+				 return _deleteback(transcript,index);
 				  break;
 			 case 'sentence':
-				  $("#final_span").css("color", "pink");
-				  var word = index.docA.split(".");
-				  console.log("word = "+ word);
-				  var n = Number(word.length );
-				  console.log("n = "+ n);
-				  
-				  n = (n -1);
-				  if(word[0]== ""){word.splice(0,1);}
-				  if(word[0]== ""){word.splice(0,1);}
-				  console.log("word[n-1] = "+ word[n-1]);
-				  console.log("word[n] = "+ word[n]);
-				  if(word[n]== ""){n= (n-1);}
-				  var toDelete = word[n].split(" ");
-				  index.docA = index.docA.replace(".","");
-				  for( x in toDelete ){
-					  index.docA = index.docA.replace(toDelete[x],""); 
-					  index.docA = index.docA.replace(/  /g," ");
-				  }
-				  icon_span.innerHTML = "-->";
-				  docA_span.innerHTML = index.docA;
-				  docB_span.innerHTML = index.docB;
-				  return Istrue("Delete back sentence", index);
+				 return _deletebacksentence(transcript,index);
 				  break;				  
 				  default:
 					  return Isfalse(transcript, index); 
 			 } 
-
+		 case 'last':
+			 switch(Tword)
+			 {
+			 
+			 case undefined:
+				 return _deleteback(transcript,index);
+				  break;
+			 case 'sentence':
+				 return _deletebacksentence(transcript,index);
+				  break;				  
+				  default:
+					  return Isfalse(transcript, index); 
+			 } 
 		 case 'left':
 			 switch(Tword)
 			 {
 			 
 			 case undefined:
-				  $("#final_span").css("color", "pink");
-				  var word = index.docA.split(" ");
-				  console.log("word = "+ word);
-				  var n = Number(word.length );
-				  console.log("n = "+ n);
-				  
-				  n = (n -1);
-				  word.splice(n,1);
-				  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
-				  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
-				  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
-				  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
-				  console.log("word[n-1] = "+ word[n-1]);
-				  index.docA = index.docA.replace(/  /g," ");
-				  index.docA = index.docA.replace(word[n-1],"");
-
-				  icon_span.innerHTML = "-->";
-				  docA_span.innerHTML = index.docA;
-				  docB_span.innerHTML = index.docB;
-				  return Istrue("Delete left", index);
+				 return _deleteback(transcript,index);
 				  break;
 				  
 			 case 'sentence':
-				  $("#final_span").css("color", "pink");
-				  var word = index.docA.split(".");
-				  console.log("word = "+ word);
-				  var n = Number(word.length );
-				  console.log("n = "+ n);
-				  
-				  n = (n -1);
-
-				  if(word[0]== ""){word.splice(0,1);}
-				  if(word[0]== ""){word.splice(0,1);}
-				  console.log("word[n-1] = "+ word[n-1]);
-				  console.log("word[n] = "+ word[n]);
-				  if(word[n]== ""){n= (n-1);}
-				  var toDelete = word[n].split(" ");
-				  index.docA = index.docA.replace(".","");
-				  for( x in toDelete ){
-					  index.docA = index.docA.replace(toDelete[x],""); 
-					  index.docA = index.docA.replace(/  /g," ");
-				  }
-				  icon_span.innerHTML = "-->";
-				  docA_span.innerHTML = index.docA;
-				  docB_span.innerHTML = index.docB;
-				  return Istrue("Delete left sentence", index);
+				 return _deletebacksentence(transcript,index);
 				  break;				  
 				  default:
 					  return Isfalse(transcript, index); 
@@ -1314,6 +1199,14 @@ $.confirm({
                       '&nbsp;',
                       '<button type="button" id ="space"> Space </button>',
                       '&nbsp;',
+                      '<button type="button" id ="delete"> Delete last </button>',
+                      '&nbsp;',
+                      '<button type="button" id ="deletelastsentence"> Delete last sentence</button>',
+                      '&nbsp;',
+                      '<button type="button" id ="deletenext"> Delete next </button>',
+                      '&nbsp;',
+                      '<button type="button" id ="deletenextsentence"> Delete next sentence</button>',
+                      '&nbsp;',
                       '<button type="button" id ="goright"> Go forward </button>',
                       '&nbsp;', 
                       '<button type="button" id ="goback"> Go back </button>',
@@ -1470,6 +1363,15 @@ $.confirm({
         $('#gobacksentence').click(function(){ 
           	 return controls("go back sentence");
            });
+        $('#delete').click(function(){ 
+         	 return controls("delete");
+          });
+        $('#deletelastsentence').click(function(){ 
+        	 return controls("delete left sentence");
+         });
+        $('#deletenextsentence').click(function(){ 
+       	 return controls("delete right sentence");
+        });
  	}
  });
 
