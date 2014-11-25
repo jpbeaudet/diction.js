@@ -621,52 +621,10 @@ window.onload = function()
 			 {
 			 
 			 case undefined:
-				  $("#final_span").css("color", "pink");
-				  var word = index.docA.split(" ");
-				  console.log("word = "+ word);
-				  var n = Number(word.length );
-				  console.log("n = "+ n);
-				  
-				  n = (n -1);
-				  word.splice(n,1);
-				  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
-				  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
-				  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
-				  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
-				  index.docB = word[n-1]+ " "+ index.docB +  " ";
-				  console.log("word[n-1] = "+ word[n-1]);
-				  index.docA = index.docA.replace(/  /g," ");
-				  index.docA = index.docA.replace(word[n-1],"");
-
-				  icon_span.innerHTML = "-->";
-				  docA_span.innerHTML = index.docA;
-				  docB_span.innerHTML = index.docB;
-				  return Istrue("Go back", index);
+				return _goback(transcript,index);
 				  break;
 			 case 'sentence':
-				  $("#final_span").css("color", "pink");
-				  var word = index.docA.split(".");
-				  console.log("word = "+ word);
-				  var n = Number(word.length );
-				  console.log("n = "+ n);
-				  
-				  n = (n -1);
-				  if(word[0]== ""){word.splice(0,1);}
-				  if(word[0]== ""){word.splice(0,1);}
-				  console.log("word[n-1] = "+ word[n-1]);
-				  console.log("word[n] = "+ word[n]);
-				  if(word[n]== ""){n= (n-1);}
-				  index.docB = word[n]+ ". "+ index.docB +  " ";
-				  var toDelete = word[n].split(" ");
-				  index.docA = index.docA.replace(".","");
-				  for( x in toDelete ){
-					  index.docA = index.docA.replace(toDelete[x],""); 
-					  index.docA = index.docA.replace(/  /g," ");
-				  }
-				  icon_span.innerHTML = "-->";
-				  docA_span.innerHTML = index.docA;
-				  docB_span.innerHTML = index.docB;
-				  return Istrue("Go back sentence", index);
+				 return _gobacksentence(transcript,index);
 				  break;				  
 				  default:
 					  return Isfalse(transcript, index); 
@@ -677,58 +635,13 @@ window.onload = function()
 			 {
 			 
 			 case undefined:
-				  $("#final_span").css("color", "pink");
-				  var word = index.docA.split(" ");
-				  console.log("word = "+ word);
-				  var n = Number(word.length );
-				  console.log("n = "+ n);
-				  
-				  n = (n -1);
-				  word.splice(n,1);
-				  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
-				  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
-				  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
-				  if(word[n-1]== ""){word.splice(n-1,1);n = (n-1);}
-				  index.docB = word[n-1]+ " "+ index.docB +  " ";
-				  console.log("word[n-1] = "+ word[n-1]);
-				  index.docA = index.docA.replace(/  /g," ");
-				  index.docA = index.docA.replace(word[n-1],"");
-
-				  icon_span.innerHTML = "-->";
-				  docA_span.innerHTML = index.docA;
-				  docB_span.innerHTML = index.docB;
-				  return Istrue("Go left", index);
-				  break;
-				  
-			 case 'sentence':
-				  $("#final_span").css("color", "pink");
-				  var word = index.docA.split(".");
-				  console.log("word = "+ word);
-				  var n = Number(word.length );
-				  console.log("n = "+ n);
-				  
-				  n = (n -1);
-
-				  if(word[0]== ""){word.splice(0,1);}
-				  if(word[0]== ""){word.splice(0,1);}
-				  console.log("word[n-1] = "+ word[n-1]);
-				  console.log("word[n] = "+ word[n]);
-				  if(word[n]== ""){n= (n-1);}
-				  index.docB = word[n]+ ". "+ index.docB +  " ";
-
-				  var toDelete = word[n].split(" ");
-				  index.docA = index.docA.replace(".","");
-				  for( x in toDelete ){
-					  index.docA = index.docA.replace(toDelete[x],""); 
-					  index.docA = index.docA.replace(/  /g," ");
-				  }
-				  icon_span.innerHTML = "-->";
-				  docA_span.innerHTML = index.docA;
-				  docB_span.innerHTML = index.docB;
-				  return Istrue("Go left sentence", index);
+					return _goback(transcript,index);
 				  break;				  
-				  default:
-					  return Isfalse(transcript, index); 
+			 case 'sentence':
+				 return _gobacksentence(transcript,index);
+			 break;				  
+			 default:
+				return Isfalse(transcript, index); 
 			 } 			 
 				 
 		  default:
@@ -1403,6 +1316,10 @@ $.confirm({
                       '&nbsp;',
                       '<button type="button" id ="goright"> Go forward </button>',
                       '&nbsp;', 
+                      '<button type="button" id ="goback"> Go back </button>',
+                      '&nbsp;', 
+                      '<button type="button" id ="gobacksentence"> Go last sentence </button>',
+                      '&nbsp;', 
                       '<button type="button" id ="gorightsentence"> Go next sentence </button>',
                       '&nbsp;',
                       '</br>',
@@ -1547,6 +1464,12 @@ $.confirm({
         $('#gorightsentence').click(function(){ 
        	 return controls("go right sentence");
         });
+        $('#goback').click(function(){ 
+       	 return controls("go back");
+        });
+        $('#gobacksentence').click(function(){ 
+          	 return controls("go back sentence");
+           });
  	}
  });
 
