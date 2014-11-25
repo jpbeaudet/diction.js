@@ -430,15 +430,12 @@ window.onload = function()
 			 switch(Tword)
 			 {
 			 
-			 case undefined:
-				  $("#final_span").css("color", "pink");
-				  docA_span.innerHTML = index.docA+ ' !';
-				  index.docA = index.docA+ ' !';
-				  return Istrue("!", index);
-				  break;
+			case undefined:
+			  return _exclamation(transcript,index);
+			break;
 				  
-				  default:
-					  return Isfalse(transcript, index); 
+			 default:
+			  return Isfalse(transcript, index); 
 			 }
 
 		  default:
@@ -454,10 +451,7 @@ window.onload = function()
 			 {
 			 
 			 case undefined:
-				  $("#final_span").css("color", "pink");
-				  docA_span.innerHTML = index.docA+ ' ?';
-				  index.docA = index.docA+ ' ?';
-				  return Istrue("?", index);
+				return  _question(transcript,index);
 				  break;
 				  
 				  default:
@@ -476,10 +470,7 @@ window.onload = function()
 		 switch(Sword)
 		 {
 		 case undefined:
-		  $("#final_span").css("color", "pink");
-		  docA_span.innerHTML = index.docA+ ' |';
-		  index.docA = index.docA+ ' |';
-		  return Istrue("|", index);
+			 return _bar(transcript,index)
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
@@ -1543,7 +1534,13 @@ $.confirm({
                       '<button type="button" id ="numbersign"> # </button>',
                       '&nbsp;' , 
                       '<button type="button" id ="at"> @ </button>',
-                      '&nbsp;' ,                      
+                      '&nbsp;' ,     
+                      '<button type="button" id ="exclamation"> ! </button>',
+                      '&nbsp;' ,
+                      '<button type="button" id ="question"> ? </button>',
+                      '&nbsp;' , 
+                      '<button type="button" id ="bar"> | </button>',
+                      '&nbsp;' , 
                       '</div></div>'
                   ].join('');
 
@@ -1603,6 +1600,15 @@ $.confirm({
         $('#at').click(function(){ 
         	 return controls("at");
          });
+        $('#exclamation').click(function(){ 
+       	 return controls("exclamation mark");
+        });
+        $('#question').click(function(){ 
+          	 return controls("question mark");
+           });
+        $('#bar').click(function(){ 
+         	 return controls("bar");
+          });
  	}
  });
 

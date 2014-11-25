@@ -123,3 +123,24 @@ function _at(transcript,index){
 	  index.docA = index.docA+ ' @';
 	  return Istrue("@", index);
 }
+
+function _exclamation(transcript,index){
+	  $("#final_span").css("color", "pink");
+	  docA_span.innerHTML = index.docA+ ' !';
+	  index.docA = index.docA+ ' !';
+	  return Istrue("!", index);
+}
+
+function _question(transcript,index){
+	  $("#final_span").css("color", "pink");
+	  docA_span.innerHTML = index.docA+ ' ?';
+	  index.docA = index.docA+ ' ?';
+	  return Istrue("?", index);
+}
+
+function _bar(transcript,index){
+	  $("#final_span").css("color", "pink");
+	  docA_span.innerHTML = index.docA+ ' |';
+	  index.docA = index.docA+ ' |';
+	  return Istrue("|", index);
+}
