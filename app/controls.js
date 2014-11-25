@@ -134,45 +134,6 @@ window.onload = function()
 	 { 	 	  
 	  // character section 		//
 	  // ------------------------------------
-	 
-	 //Dots
-	 //case 'what': 
-		  
-		 //switch(Sword)
-		 //{
-		 //case 'is':
-			  
-			// switch(Tword)
-			// {
-			 
-			// case 'this':
-			//	 $("#final_span").css("color", "pink");		
-				 
-			//	 return Istrue('what is this', index);
-			//	  break;
-				  
-			// case '1Bb':
-				 
-			//	 return Istrue('2', index);
-			//	  break;
-				  
-			//	  default:
-				//	  return Isfalse(transcript, index); 
-			// }
-			 
-			//  break;
-			  
-		// case '1B':	
-			 
-			// return Istrue('1B', index);
-			 // break;
-			  
-			 // default:
-				   
-				//  return Isfalse(transcript, index);
-		// }
-		  
-		 // break;
 		  
 	// Dash -
 	//-----------------------------------	  
@@ -191,7 +152,7 @@ window.onload = function()
 		 switch(Sword)
 		 {
 		 case undefined:
-		 _backslash(transcript,index)
+		 _backslash(transcript,index);
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
@@ -201,10 +162,7 @@ window.onload = function()
 		 switch(Sword)
 		 {
 		 case undefined:
-		  $("#final_span").css("color", "pink");
-		  index.docA += ' \\';
-		  docA_span.innerHTML = index.docA+ ' \\';
-		  return Istrue(" \\", index);
+		 _backslash(transcript,index);
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
@@ -215,10 +173,7 @@ window.onload = function()
 		 switch(Sword)
 		 {
 		 case undefined:
-		  $("#final_span").css("color", "pink");
-		  index.docA += ' ,';
-		  docA_span.innerHTML = index.docA+ ' ,';
-		  return Istrue(",", index);
+		 _comma(transcript,index);
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
@@ -227,10 +182,7 @@ window.onload = function()
 		 switch(Sword)
 		 {
 		 case undefined:
-		  $("#final_span").css("color", "pink");
-		  docA_span.innerHTML = index.docA+ ' ,';
-		  index.docA = index.docA+ ' ,';
-		  return Istrue(",", index);
+		  _comma(transcript,index);
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
@@ -268,7 +220,16 @@ window.onload = function()
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
-	 }					 
+	 }	
+	 case 'pad': 
+		 switch(Sword)
+		 {
+		 case undefined:
+			return _tab(transcript,index);
+		  break;
+		  default:
+			  return Isfalse(transcript, index);   
+	 }		 
     // enter & newline 
 		 
 	 case 'Enter': 
@@ -1595,9 +1556,12 @@ $.confirm({
                       '<h2>',"Panel",'</h2>',                       
                       '<div id="panel">',
                       '<h3>',"Commands :",'</h3>',
-                      '<button type="button" id ="tab"> Tab</button>',
+                      '<button type="button" id ="tab"> Tab </button>',
                       '&nbsp;&nbsp;',
-                      '<button type="button" id ="dash"> Dash </button>',
+                      '</br>',                      
+                      '<button type="button" id ="comma"> , </button>',
+                      '&nbsp;&nbsp;' ,                     
+                      '<button type="button" id ="dash"> - </button>',
                       '&nbsp;&nbsp;',
                       '<button type="button" id ="backslash"> Backslash </button>',                      
                       '</br>',
@@ -1618,6 +1582,9 @@ $.confirm({
         $('#backslash').click(function(){ 
           	 return controls("backslash");
            });
+        $('#comma').click(function(){ 
+         	 return controls("comma");
+          });        
  	}
  });
 
