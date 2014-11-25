@@ -1401,9 +1401,9 @@ $.confirm({
                       '&nbsp;',
                       '<button type="button" id ="space"> Space </button>',
                       '&nbsp;',
-                      '<button type="button" id ="gorigth"> Go forward </button>',
+                      '<button type="button" id ="goright"> Go forward </button>',
                       '&nbsp;', 
-                      '<button type="button" id ="gorigthsentence"> Go next sentence </button>',
+                      '<button type="button" id ="gorightsentence"> Go next sentence </button>',
                       '&nbsp;',
                       '</br>',
                       '<p>','Symbols:','</p>',                       
@@ -1541,11 +1541,11 @@ $.confirm({
         $('#closesquarebracket').click(function(){ 
          	 return controls("close square bracket");
           });
-        $('#gorigth').click(function(){ 
-        	 return controls("go rigth");
+        $('#goright').click(function(){ 
+        	 return controls("go right");
          });
-        $('#gorigthsentence').click(function(){ 
-       	 return controls("go rigth sentence");
+        $('#gorightsentence').click(function(){ 
+       	 return controls("go right sentence");
         });
  	}
  });
