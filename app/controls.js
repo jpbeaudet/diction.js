@@ -141,7 +141,7 @@ window.onload = function()
 		 switch(Sword)
 		 {
 		 case undefined:
-		 _dash(transcript,index);
+		  return _dash(transcript,index);
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
@@ -152,10 +152,7 @@ window.onload = function()
 		 switch(Sword)
 		 {
 		 case undefined:
-			  $("#final_span").css("color", "pink");
-			  index.docA = index.docA+ '\\';
-			  docA_span.innerHTML = index.docA+ '\\';		  
-			  return Istrue("\\", index);
+			return _backslash(transcript,index);
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
@@ -165,10 +162,7 @@ window.onload = function()
 		 switch(Sword)
 		 {
 		 case undefined:
-			  $("#final_span").css("color", "pink");
-			  index.docA = index.docA+ '\\';
-			  docA_span.innerHTML = index.docA+ '\\';		  
-			  return Istrue("\\", index);
+		 return _backslash(transcript,index);
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
@@ -179,7 +173,7 @@ window.onload = function()
 		 switch(Sword)
 		 {
 		 case undefined:
-		 _comma(transcript,index);
+		 return _comma(transcript,index);
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
@@ -188,7 +182,7 @@ window.onload = function()
 		 switch(Sword)
 		 {
 		 case undefined:
-		  _comma(transcript,index);
+		 return  _comma(transcript,index);
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
