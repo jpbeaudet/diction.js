@@ -180,10 +180,7 @@ window.onload = function()
 		 switch(Sword)
 		 {
 		 case undefined:
-		  $("#final_span").css("color", "pink");
-		  index.docA = index.docA+ ' -';
-		  docA_span.innerHTML = index.docA+ ' -';
-		  return Istrue("-", index);
+		 _dash(transcript,index);
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
@@ -194,10 +191,7 @@ window.onload = function()
 		 switch(Sword)
 		 {
 		 case undefined:
-		  $("#final_span").css("color", "pink");
-		  index.docA = index.docA+ '\\';
-		  docA_span.innerHTML = index.docA+ '\\';		  
-		  return Istrue("\\", index);
+		 _backslash(transcript,index)
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
@@ -1603,7 +1597,10 @@ $.confirm({
                       '<h3>',"Commands :",'</h3>',
                       '<button type="button" id ="tab"> Tab</button>',
                       '&nbsp;&nbsp;',
-                      '<button type="button"> placeHolder </button>','</br>',
+                      '<button type="button" id ="dash"> Dash </button>',
+                      '&nbsp;&nbsp;',
+                      '<button type="button" id ="backslash"> Backslash </button>',                      
+                      '</br>',
                       '</div></div>'
                   ].join('');
 
@@ -1615,6 +1612,12 @@ $.confirm({
         $('#tab').click(function(){ 
         	 return controls("tab");
          });
+        $('#dash').click(function(){ 
+       	 return controls("dash");
+        });
+        $('#backslash').click(function(){ 
+          	 return controls("backslash");
+           });
  	}
  });
 
