@@ -860,11 +860,7 @@ window.onload = function()
 		 switch(Sword)
 		 {
 		 case undefined:
-		  $("#final_span").css("color", "pink");
-		 // $('#confirmOverlay').find('#confirmBox').find('#confirmButtons').find('.button grey').click();
-		  $("#confirmButtons).find(.button grey").click();
-		  return Istrue('Yes', index);
-		 
+			return _yes(transcript,index);		 
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
@@ -874,11 +870,7 @@ window.onload = function()
 		 switch(Sword)
 		 {
 		 case undefined:
-		  $("#final_span").css("color", "pink");
-		  //$('#confirmOverlay').find('#confirmBox').find('#confirmButtons').find('.button blue').click();
-		  $("#confirmButtons).find(.button blue").click();
-		  return Istrue('No', index);
-		 
+			 return _no(transcript,index);		 
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
@@ -891,9 +883,7 @@ window.onload = function()
 			 switch(Tword)
 			 {
 			 case undefined:
-
              confirmNewText(index);
-	
 			 break;
 		     default:
 			 return Isfalse(transcript, index); 
@@ -901,11 +891,7 @@ window.onload = function()
 			 
 		case 'title':
 			if(Tword != undefined){
-				  transcript = transcript.replace("new","");
-				  transcript = transcript.replace("title","");
-				title_span.innerHTML = '<h1>'+transcript+ '</h1>';
-				index.title = transcript;
-				return Istrue('New title'+ '"'+ transcript+'"', index);	
+				return _newtitle(transcript,index);
 			}			  			 
 			break;
 	     default:
@@ -922,11 +908,6 @@ window.onload = function()
 		  //3
 		  //4
 		  //5
-		  
-	case  '3':
-		
-		return Istrue('3', index);
-		  break;
 		  
 	//select
 		  //copy
@@ -948,13 +929,9 @@ window.onload = function()
 	// numerotation
 		  // number
 		  // letter
-		  
-		  
-		  
-		  
-		  
-		  
-		  
+
+		 
+		 
 	// final default to main switch	  
 	default:		
 		return Isfalse(transcript, index); 

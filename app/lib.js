@@ -418,3 +418,25 @@ function _bottom(transcript,index){
 	  docB_span.innerHTML = index.docB;
 	  return Istrue('Bottom', index);
 }
+
+function _yes(transcript,index){
+	  $("#final_span").css("color", "pink");
+		 // $('#confirmOverlay').find('#confirmBox').find('#confirmButtons').find('.button grey').click();
+		  $("#confirmButtons).find(.button grey").click();
+		  return Istrue('Yes', index);
+}
+
+function _no(transcript,index){
+	  $("#final_span").css("color", "pink");
+	  //$('#confirmOverlay').find('#confirmBox').find('#confirmButtons').find('.button blue').click();
+	  $("#confirmButtons).find(.button blue").click();
+	  return Istrue('No', index);
+}
+
+function _newtitle(transcript,index){
+	  transcript = transcript.replace("new","");
+	  transcript = transcript.replace("title","");
+	title_span.innerHTML = '<h1>'+transcript+ '</h1>';
+	index.title = transcript;
+	return Istrue('New title'+ '"'+ transcript+'"', index);	
+}
