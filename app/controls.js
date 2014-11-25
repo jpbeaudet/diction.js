@@ -327,10 +327,7 @@ window.onload = function()
 		 switch(Sword)
 		 {
 		 case undefined:
-		  $("#final_span").css("color", "pink");
-		  docA_span.innerHTML = index.docA+ ' -';
-		  index.docA = index.docA+ ' -';
-		  return Istrue("-", index);
+			 return _minus(transcript,index);
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
@@ -340,10 +337,7 @@ window.onload = function()
 		 switch(Sword)
 		 {
 		 case undefined:
-		  $("#final_span").css("color", "pink");
-		  docA_span.innerHTML = index.docA+ ' =';
-		  index.docA =  index.docA+ ' =';
-		  return Istrue("=", index);
+			return _equal(transcript,index);
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
@@ -354,10 +348,7 @@ window.onload = function()
 		 switch(Sword)
 		 {
 		 case undefined:
-		  $("#final_span").css("color", "pink");
-		  docA_span.innerHTML = index.docA+ ' &';
-		  index.docA = index.docA+ ' &';
-		  return Istrue("&", index);
+			 return _and(transcript,index);
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
@@ -366,10 +357,7 @@ window.onload = function()
 		 switch(Sword)
 		 {
 		 case undefined:
-		  $("#final_span").css("color", "pink");
-		  docA_span.innerHTML = index.docA+ ' &';
-		  index.docA = index.docA+ ' &';
-		  return Istrue("&", index);
+			 return _and(transcript,index);
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
@@ -1558,6 +1546,14 @@ $.confirm({
                       '&nbsp;' ,
                       '<button type="button" id ="plus"> + </button>',
                       '&nbsp;' , 
+                      '</br>',
+                      '<button type="button" id ="minus"> - </button>',
+                      '&nbsp;' , 
+                      '</br>',
+                      '<button type="button" id ="equal"> = </button>',
+                      '&nbsp;' , 
+                      '<button type="button" id ="and"> & </button>',
+                      '&nbsp;' ,
                       '</div></div>'
                   ].join('');
 
@@ -1599,6 +1595,15 @@ $.confirm({
         $('#plus').click(function(){ 
           	 return controls("Plus");
            });
+        $('#minus').click(function(){ 
+         	 return controls("minus");
+          });
+        $('#equal').click(function(){ 
+        	 return controls("equal");
+         });
+        $('#and').click(function(){ 
+       	 return controls("and");
+        });
  	}
  });
 
