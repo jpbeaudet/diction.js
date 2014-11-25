@@ -6,7 +6,6 @@
 
 
 function _dash(transcript,index){
-	  $("#final_span").css("color", "pink");
 	  index.docA = index.docA+ ' -';
 	  docA_span.innerHTML = index.docA+ ' -';
 	  return Istrue("-", index);
@@ -19,189 +18,162 @@ function _backslash(transcript,index){
 }
 
 function _comma(transcript,index){
-	  $("#final_span").css("color", "pink");
 	  index.docA += ' ,';
 	  docA_span.innerHTML = index.docA+ ' ,';
 	  return Istrue(",", index);
 }
 
 function _space(transcript,index){
-	  $("#final_span").css("color", "pink");
 	  docA_span.innerHTML = index.docA+ '&nbsp;';
 	  index.docA = index.docA+ '&nbsp;';
 	  return Istrue("Space", index);
 }
 
 function _tab(transcript,index){
-	  $("#final_span").css("color", "pink");
 	  docA_span.innerHTML = index.docA+ '&nbsp;&nbsp;&nbsp;&nbsp;';
 	  index.docA =  index.docA+ '&nbsp;&nbsp;&nbsp;&nbsp;';
 	  return Istrue("Tab", index);
 }
 
 function _enter(transcript,index){
-	  $("#final_span").css("color", "pink");
 	  docA_span.innerHTML = index.docA+ ' <div><br /></div> ';
 	  index.docA = index.docA+ ' <div><br /></div> ';
 	  return Istrue("Enter", index);
 }
 
 function _colon(transcript,index){
-	  $("#final_span").css("color", "pink");
 	  docA_span.innerHTML = index.docA+ ': ';
 	  index.docA = index.docA+ ': ';
 	  return Istrue("Colon", index);
 }
 
 function _semicolon(transcript,index){
-	  $("#final_span").css("color", "pink");
 	  docA_span.innerHTML = index.docA+ '; ';
 	  index.docA = index.docA+ '; ';
 	  return Istrue("Semicolon", index);
 }
 
 function _doublequote(transcript,index){
-	  $("#final_span").css("color", "pink");
 	  docA_span.innerHTML = index.docA+ ' "';
 	  index.docA = index.docA+ ' "';
 	  return Istrue("Double Quote", index);
 }
 
 function _quote(transcript,index){
-	  $("#final_span").css("color", "pink");
 	  docA_span.innerHTML = index.docA+ ' &lsquo;';
 	  index.docA = index.docA+ ' &lsquo;';
 	  return Istrue("Quote", index);
 }
 
 function _plus(transcript,index){
-	  $("#final_span").css("color", "pink");
 	  docA_span.innerHTML = index.docA+ ' +';
 	  index.docA = index.docA+ ' +';
 	  return Istrue("+", index);
 }
 
 function _minus(transcript,index){
-	  $("#final_span").css("color", "pink");
 	  docA_span.innerHTML = index.docA+ ' -';
 	  index.docA = index.docA+ ' -';
 	  return Istrue("-", index);
 }
 
 function _equal(transcript,index){
-	  $("#final_span").css("color", "pink");
 	  docA_span.innerHTML = index.docA+ ' =';
 	  index.docA =  index.docA+ ' =';
 	  return Istrue("=", index);
 }
 
 function _and(transcript,index){
-	  $("#final_span").css("color", "pink");
 	  docA_span.innerHTML = index.docA+ ' &';
 	  index.docA = index.docA+ ' &';
 	  return Istrue("&", index);
 }
 
 function _dollar(transcript,index){
-	  $("#final_span").css("color", "pink");
 	  docA_span.innerHTML = index.docA+ ' $';
 	  index.docA = index.docA+ ' $';
 	  return Istrue("$", index);
 }
 
 function _numbersign(transcript,index){
-	  $("#final_span").css("color", "pink");
 	  docA_span.innerHTML = index.docA+ ' #';
 	  index.docA = index.docA+ ' #';
 	  return Istrue("#", index);
 }
 
 function _at(transcript,index){
-	  $("#final_span").css("color", "pink");
 	  docA_span.innerHTML = index.docA+ ' @';
 	  index.docA = index.docA+ ' @';
 	  return Istrue("@", index);
 }
 
 function _exclamation(transcript,index){
-	  $("#final_span").css("color", "pink");
 	  docA_span.innerHTML = index.docA+ ' !';
 	  index.docA = index.docA+ ' !';
 	  return Istrue("!", index);
 }
 
 function _question(transcript,index){
-	  $("#final_span").css("color", "pink");
 	  docA_span.innerHTML = index.docA+ ' ?';
 	  index.docA = index.docA+ ' ?';
 	  return Istrue("?", index);
 }
 
 function _bar(transcript,index){
-	  $("#final_span").css("color", "pink");
 	  docA_span.innerHTML = index.docA+ ' |';
 	  index.docA = index.docA+ ' |';
 	  return Istrue("|", index);
 }
 
 function _openparenthesis(transcript,index){
-	  $("#final_span").css("color", "pink");
 	  docA_span.innerHTML = index.docA+ '(';
 	  index.docA = index.docA+ '(';
 	  return Istrue("Open Parenthesis", index);
 }
 
 function _openquote(transcript,index){
-	  $("#final_span").css("color", "pink");
 	  docA_span.innerHTML = index.docA+ ' &lsquo;';
 	  index.docA = index.docA+ ' &lsquo;';
 	  return Istrue("Open Quote", index);
 }
 
 function _openbracket(transcript,index){
-	  $("#final_span").css("color", "pink");
 	  docA_span.innerHTML = index.docA+ '{';
 	  index.docA = index.docA+ '{';
 	  return Istrue("Open Bracket", index);
 }
 
 function _opensquarebracket(transcript,index){
-	  $("#final_span").css("color", "pink");
 	  docA_span.innerHTML = index.docA+ '[';
 	  index.docA = index.docA+ '[';
 	  return Istrue("Open Square Bracket", index);
 }
 
 function _closeparenthesis(transcript,index){
-	  $("#final_span").css("color", "pink");
 	  docA_span.innerHTML = index.docA+ ')';
 	  index.docA = index.docA+ ')';
 	  return Istrue("Close Parenthesis", index);
 }
 
 function _closequote(transcript,index){
-	  $("#final_span").css("color", "pink");
 	  docA_span.innerHTML = index.docA+ ' &rsquo;';
 	  index.docA = index.docA+ ' &rsquo;';
 	  return Istrue("Close Quote", index);
 }
 
 function _closebracket(transcript,index){
-	  $("#final_span").css("color", "pink");
 	  docA_span.innerHTML = index.docA+ '}';
 	  index.docA = index.docA+ '}';
 	  return Istrue("Close Bracket", index);
 }
 
 function _closesquarebracket(transcript,index){
-	  $("#final_span").css("color", "pink");
 	  docA_span.innerHTML = index.docA+ ']';
 	  index.docA = index.docA+ ']';
 	  return Istrue("Close Square Bracket", index);
 }
 
 function _gorigth(transcript,index){
-	  $("#final_span").css("color", "pink");
 	  var word = index.docB.split(" ");
 	 
 	  word.splice(0,1);
@@ -222,7 +194,6 @@ function _gorigth(transcript,index){
 }
 
 function _gorigthsentence(transcript,index){
-	  $("#final_span").css("color", "pink");
 	  var word = index.docB.split(".");
 	 
 	 // word.splice(0,1);				 
@@ -247,7 +218,6 @@ function _gorigthsentence(transcript,index){
 }
 
 function _goback(transcript,index){
-	  $("#final_span").css("color", "pink");
 	  var word = index.docA.split(" ");
 	  console.log("word = "+ word);
 	  var n = Number(word.length );
@@ -271,7 +241,6 @@ function _goback(transcript,index){
 }
 
 function _gobacksentence(transcript,index){
-	  $("#final_span").css("color", "pink");
 	  var word = index.docA.split(".");
 	  console.log("word = "+ word);
 	  var n = Number(word.length );
@@ -297,7 +266,6 @@ function _gobacksentence(transcript,index){
 }
 
 function _deleterigth(transcript,index){
-	  $("#final_span").css("color", "pink");
 	  var word = index.docB.split(" ");
 	 
 	  word.splice(0,1);
@@ -317,7 +285,6 @@ function _deleterigth(transcript,index){
 }
 
 function _deleterigthsentence(transcript,index){
-	  $("#final_span").css("color", "pink");
 	  var word = index.docB.split(".");				 				 
 	  if(word[0]== ""){word.splice(0,1);}
 	  if(word[0]== ""){word.splice(0,1);}
@@ -339,7 +306,6 @@ function _deleterigthsentence(transcript,index){
 }
 
 function _deleteback(transcript,index){
-	  $("#final_span").css("color", "pink");
 	  var word = index.docA.split(" ");
 	  console.log("word = "+ word);
 	  var n = Number(word.length );
@@ -362,7 +328,6 @@ function _deleteback(transcript,index){
 }
 
 function _deletebacksentence(transcript,index){
-	  $("#final_span").css("color", "pink");
 	  var word = index.docA.split(".");
 	  console.log("word = "+ word);
 	  var n = Number(word.length );
@@ -387,8 +352,6 @@ function _deletebacksentence(transcript,index){
 }
 
 function _cancel(transcript,index){
-	  $("#final_span").css("color", "pink");
-
 	  docA_span.innerHTML = "";
 	  docB_span.innerHTML = "";		  
 	  docA_span.innerHTML = index.LastdocA;
@@ -399,7 +362,6 @@ function _cancel(transcript,index){
 }
 
 function _top(transcript,index){
-	 $("#final_span").css("color", "pink");
 	  index.docB = index.docA + index.docB;
 	  index.docA ="";
 	  icon_span.innerHTML = "-->";
@@ -409,7 +371,6 @@ function _top(transcript,index){
 }
 
 function _bottom(transcript,index){
-	  $("#final_span").css("color", "pink");
 	  index.docA = index.docA + index.docB;
 	  index.docB ="";	
 	  icon_span.innerHTML = "-->";
@@ -419,14 +380,12 @@ function _bottom(transcript,index){
 }
 
 function _yes(transcript,index){
-	  $("#final_span").css("color", "pink");
 		 // $('#confirmOverlay').find('#confirmBox').find('#confirmButtons').find('.button grey').click();
 		  $("#confirmButtons).find(.button grey").click();
 		  return Istrue('Yes', index);
 }
 
 function _no(transcript,index){
-
 	  //$('#confirmOverlay').find('#confirmBox').find('#confirmButtons').find('.button blue').click();
 	  $("#confirmButtons).find(.button blue").click();
 	  return Istrue('No', index);
