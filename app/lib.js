@@ -25,6 +25,14 @@ function _comma(transcript,index){
 	  docA_span.innerHTML = index.docA+ ' ,';
 	  return Istrue(",", index);
 }
+
+function _space(transcript,index){
+	  $("#final_span").css("color", "pink");
+	  docA_span.innerHTML = index.docA+ '&nbsp;';
+	  index.docA = index.docA+ '&nbsp;';
+	  return Istrue("Space", index);
+}
+
 function _tab(transcript,index){
 	  $("#final_span").css("color", "pink");
 	  docA_span.innerHTML = index.docA+ '&nbsp;&nbsp;&nbsp;&nbsp;';
@@ -37,4 +45,18 @@ function _enter(transcript,index){
 	  docA_span.innerHTML = index.docA+ ' <div><br /></div> ';
 	  index.docA = index.docA+ ' <div><br /></div> ';
 	  return Istrue("Enter", index);
+}
+
+function _colon(transcript,index){
+	  $("#final_span").css("color", "pink");
+	  docA_span.innerHTML = index.docA+ ': ';
+	  index.docA = index.docA+ ': ';
+	  return Istrue("Colon", index);
+}
+
+function _semicolon(transcript,index){
+	  $("#final_span").css("color", "pink");
+	  docA_span.innerHTML = index.docA+ '; ';
+	  index.docA = index.docA+ '; ';
+	  return Istrue("Semicolon", index);
 }

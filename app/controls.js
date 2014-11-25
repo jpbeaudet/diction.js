@@ -192,10 +192,7 @@ window.onload = function()
 		 switch(Sword)
 		 {
 		 case undefined:
-		  $("#final_span").css("color", "pink");
-		  docA_span.innerHTML = index.docA+ '&nbsp;';
-		  index.docA = index.docA+ '&nbsp;';
-		  return Istrue("Space", index);
+			return _space(transcript,index)
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
@@ -257,10 +254,7 @@ window.onload = function()
 		 switch(Sword)
 		 {
 		 case undefined:
-		  $("#final_span").css("color", "pink");
-		  docA_span.innerHTML = index.docA+ ': ';
-		  index.docA = index.docA+ ': ';
-		  return Istrue("Colon", index);
+			return _colon(transcript,index)
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
@@ -271,10 +265,7 @@ window.onload = function()
 		 switch(Sword)
 		 {
 		 case undefined:
-		  $("#final_span").css("color", "pink");
-		  docA_span.innerHTML = index.docA+ '; ';
-		  index.docA = index.docA+ '; ';
-		  return Istrue("Semicolon", index);
+			return _semicolon(transcript,index)
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
@@ -1557,7 +1548,9 @@ $.confirm({
                       '<button type="button" id ="tab"> Tab </button>',
                       '&nbsp;',
                       '<button type="button" id ="enter"> Enter </button>',
-                      '&nbsp;',                     
+                      '&nbsp;',
+                      '<button type="button" id ="space"> Space </button>',
+                      '&nbsp;',                       
                       '</br>',                      
                       '<button type="button" id ="comma"> , </button>',
                       '&nbsp;' ,                     
@@ -1588,6 +1581,9 @@ $.confirm({
         $('#enter').click(function(){ 
         	 return controls("Enter");
          }); 
+        $('#space').click(function(){ 
+       	 return controls("space");
+        });
  	}
  });
 
