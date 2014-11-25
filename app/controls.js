@@ -152,7 +152,10 @@ window.onload = function()
 		 switch(Sword)
 		 {
 		 case undefined:
-		 _backslash(transcript,index);
+			  $("#final_span").css("color", "pink");
+			  index.docA = index.docA+ '\\';
+			  docA_span.innerHTML = index.docA+ '\\';		  
+			  return Istrue("\\", index);
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
@@ -162,7 +165,10 @@ window.onload = function()
 		 switch(Sword)
 		 {
 		 case undefined:
-		 _backslash(transcript,index);
+			  $("#final_span").css("color", "pink");
+			  index.docA = index.docA+ '\\';
+			  docA_span.innerHTML = index.docA+ '\\';		  
+			  return Istrue("\\", index);
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
