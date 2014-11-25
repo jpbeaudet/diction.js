@@ -1419,6 +1419,10 @@ function Isfalse(data, index){
     } 
    
 }
+//Confirmation section :
+//-------------------------------------------------------------------
+//
+
  function confirmNewText(index)	{      
 	
 $.confirm({
@@ -1557,13 +1561,13 @@ $.confirm({
                       '<div id="panel">',
                       '<h3>',"Commands :",'</h3>',
                       '<button type="button" id ="tab"> Tab </button>',
-                      '&nbsp;&nbsp;',
+                      '&nbsp;',
                       '</br>',                      
                       '<button type="button" id ="comma"> , </button>',
-                      '&nbsp;&nbsp;' ,                     
+                      '&nbsp;' ,                     
                       '<button type="button" id ="dash"> - </button>',
-                      '&nbsp;&nbsp;',
-                      '<button type="button" id ="backslash"> Backslash </button>',                      
+                      '&nbsp;',
+                      '<button type="button" id ="backslash"> \ </button>',                      
                       '</br>',
                       '</div></div>'
                   ].join('');
@@ -1572,7 +1576,7 @@ $.confirm({
         var $test = $('body');
         $test.update();
  		onPanel = true;
- 		
+ // all button action will be returned to controls here directly		
         $('#tab').click(function(){ 
         	 return controls("tab");
          });
