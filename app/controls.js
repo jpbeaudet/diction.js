@@ -1366,6 +1366,9 @@ $.confirm({
         $('#delete').click(function(){ 
          	 return controls("delete");
           });
+        $('#deletenext').click(function(){ 
+        	 return controls("delete right");
+         });
         $('#deletelastsentence').click(function(){ 
         	 return controls("delete left sentence");
          });
