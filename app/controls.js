@@ -593,48 +593,10 @@ window.onload = function()
 			 {
 			 
 			 case undefined:
-				  $("#final_span").css("color", "pink");
-				  var word = index.docB.split(" ");
-				 
-				  word.splice(0,1);
-				  if(word[0]== ""){word.splice(0,1);}
-				  if(word[0]== ""){word.splice(0,1);}
-				  if(word[0]== ""){word.splice(0,1);}
-				  if(word[0]== ""){word.splice(0,1);}
-				  console.log("word = "+ word);
-				  index.docA = index.docA + word[0]+ " ";
-				  console.log("word[0] = "+ word[0]);
-				  index.docB = index.docB.replace(/  /g," ");
-				  index.docB = index.docB.replace(word[0],"");
-
-				  icon_span.innerHTML = "-->";
-				  docA_span.innerHTML = index.docA;
-				  docB_span.innerHTML = index.docB;
-				  return Istrue("Go rigth", index);
+				return _gorigth(transcript,index);
 				  break;
 			 case 'sentence':
-				  $("#final_span").css("color", "pink");
-				  var word = index.docB.split(".");
-				 
-				 // word.splice(0,1);				 
-				  if(word[0]== ""){word.splice(0,1);}
-				  if(word[0]== ""){word.splice(0,1);}
-				  if(word[0]== ""){word.splice(0,1);}
-				  if(word[0]== ""){word.splice(0,1);}
-				  console.log("word = "+ word);
-				  index.docA = index.docA + word[0]+ ". ";
-				  console.log("word[0] = "+ word[0]);
-				  var toDelete = word[0].split(" ");
-				  index.docB = index.docB.replace(".","");
-				  for( x in toDelete ){
-					  index.docB = index.docB.replace(toDelete[x],""); 
-					  index.docB = index.docB.replace(/  /g," ");
-				  }
-
-				  icon_span.innerHTML = "-->";
-				  docA_span.innerHTML = index.docA;
-				  docB_span.innerHTML = index.docB;
-				  return Istrue("Go forward sentence", index);
+				 return _gorigthsentence(transcript,index);
 				  break;				  
 				  default:
 					  return Isfalse(transcript, index); 
@@ -645,45 +607,10 @@ window.onload = function()
 			 {
 			 
 			 case undefined:
-				  $("#final_span").css("color", "pink");
-				  var word = index.docB.split(" ");
-				  word.splice(0,1);
-				  if(word[0]== ""){word.splice(0,1);}
-				  if(word[0]== ""){word.splice(0,1);}
-				  if(word[0]== ""){word.splice(0,1);}
-				  if(word[0]== ""){word.splice(0,1);}
-				  console.log("word = "+ word);
-				  index.docA = index.docA + word[0]+ " ";
-				  console.log("word[0] = "+ word[0]);
-				  index.docB = index.docB.replace(/  /g," ");
-				  index.docB = index.docB.replace(word[0],"");
-
-				  icon_span.innerHTML = "-->";
-				  docA_span.innerHTML = index.docA;
-				  docB_span.innerHTML = index.docB;
-				  return Istrue("Go forward", index);
+					return _gorigth(transcript,index);
 				  break;
 			 case 'sentence':
-				  $("#final_span").css("color", "pink");
-				  var word = index.docB.split(".");
-				  if(word[0]== ""){word.splice(0,1);}
-				  if(word[0]== ""){word.splice(0,1);}
-				  if(word[0]== ""){word.splice(0,1);}
-				  if(word[0]== ""){word.splice(0,1);}
-				  console.log("word = "+ word);
-				  index.docA = index.docA + word[0]+ ". ";
-				  console.log("word[0] = "+ word[0]);
-				  var toDelete = word[0].split(" ");
-				  index.docB = index.docB.replace(".","");
-				  for( x in toDelete ){
-					  index.docB = index.docB.replace(toDelete[x],""); 
-					  index.docB = index.docB.replace(/  /g," ");
-				  }
-
-				  icon_span.innerHTML = "-->";
-				  docA_span.innerHTML = index.docA;
-				  docB_span.innerHTML = index.docB;
-				  return Istrue("Go rigth sentence", index);
+				 return _gorigthsentence(transcript,index);
 				  break;				  
 				  default:
 					  return Isfalse(transcript, index); 
