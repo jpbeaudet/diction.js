@@ -1567,7 +1567,7 @@ $.confirm({
                       '&nbsp;' ,                     
                       '<button type="button" id ="dash"> - </button>',
                       '&nbsp;',
-                      '<button type="button" id ="backslash"> \ </button>',                      
+                      '<button type="button" id ="backslash"> Backslash </button>',                      
                       '</br>',
                       '</div></div>'
                   ].join('');
