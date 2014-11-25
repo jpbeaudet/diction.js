@@ -102,3 +102,24 @@ function _and(transcript,index){
 	  index.docA = index.docA+ ' &';
 	  return Istrue("&", index);
 }
+
+function _dollar(transcript,index){
+	  $("#final_span").css("color", "pink");
+	  docA_span.innerHTML = index.docA+ ' $';
+	  index.docA = index.docA+ ' $';
+	  return Istrue("$", index);
+}
+
+function _numbersign(transcript,index){
+	  $("#final_span").css("color", "pink");
+	  docA_span.innerHTML = index.docA+ ' #';
+	  index.docA = index.docA+ ' #';
+	  return Istrue("#", index);
+}
+
+function _at(transcript,index){
+	  $("#final_span").css("color", "pink");
+	  docA_span.innerHTML = index.docA+ ' @';
+	  index.docA = index.docA+ ' @';
+	  return Istrue("@", index);
+}

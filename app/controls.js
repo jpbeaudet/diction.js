@@ -367,10 +367,7 @@ window.onload = function()
 		 switch(Sword)
 		 {
 		 case undefined:
-		  $("#final_span").css("color", "pink");
-		  docA_span.innerHTML = index.docA+ ' $';
-		  index.docA = index.docA+ ' $';
-		  return Istrue("$", index);
+			return _dollar(transcript,index)
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
@@ -386,10 +383,7 @@ window.onload = function()
 			 {
 			 
 			 case undefined:
-				  $("#final_span").css("color", "pink");
-				  docA_span.innerHTML = index.docA+ ' #';
-				  index.docA = index.docA+ ' #';
-				  return Istrue("#", index);
+				return _numbersign(transcript,index);
 				  break;
 				  
 				  default:
@@ -404,10 +398,7 @@ window.onload = function()
 		 switch(Sword)
 		 {
 		 case undefined:
-		  $("#final_span").css("color", "pink");
-		  docA_span.innerHTML = index.docA+ ' @';
-		  index.docA = index.docA+ ' @';
-		  return Istrue("@", index);
+			return _at(transcript,index);
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
@@ -416,10 +407,7 @@ window.onload = function()
 		 switch(Sword)
 		 {
 		 case undefined:
-		  $("#final_span").css("color", "pink");
-		  docA_span.innerHTML = index.docA+ ' @';
-		  index.docA = index.docA+ ' @';
-		  return Istrue("@", index);
+			return _at(transcript,index);
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
@@ -428,10 +416,7 @@ window.onload = function()
 		 switch(Sword)
 		 {
 		 case undefined:
-		  $("#final_span").css("color", "pink");
-		  docA_span.innerHTML = index.docA+ ' @';
-		  index.docA = index.docA+ ' @';
-		  return Istrue("@", index);
+			return _at(transcript,index);
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
@@ -1549,11 +1534,16 @@ $.confirm({
                       '</br>',
                       '<button type="button" id ="minus"> - </button>',
                       '&nbsp;' , 
-                      '</br>',
                       '<button type="button" id ="equal"> = </button>',
                       '&nbsp;' , 
                       '<button type="button" id ="and"> & </button>',
                       '&nbsp;' ,
+                      '<button type="button" id ="dollar"> $ </button>',
+                      '&nbsp;' , 
+                      '<button type="button" id ="numbersign"> # </button>',
+                      '&nbsp;' , 
+                      '<button type="button" id ="at"> @ </button>',
+                      '&nbsp;' ,                      
                       '</div></div>'
                   ].join('');
 
@@ -1604,6 +1594,15 @@ $.confirm({
         $('#and').click(function(){ 
        	 return controls("and");
         });
+        $('#dollar').click(function(){ 
+          	 return controls("dollar");
+           });
+        $('#numbersign').click(function(){ 
+         	 return controls("number sign");
+          });
+        $('#at').click(function(){ 
+        	 return controls("at");
+         });
  	}
  });
 
