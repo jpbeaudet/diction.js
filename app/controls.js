@@ -1582,7 +1582,41 @@ $.confirm({
  	}
  });
  
+ var onPanel = false;
+ $('#commandlist').click(function(){
+	 if(onPanel){// if settings screen is there remove it 
+ 	 		onPanel= false; 
+ 	 	 	removePanel();	
+ 	}else{ 
+ 	 	if(onHelp){
+ 	 	 	onHelp = false; 
+ 	 		removeHelp();
+ 	 	}
+ 	 	if(onSettings){// if settings screen is there remove it 
+ 	 	 	onSettings = false; 
+ 	 	 	removeSettings();
+ 	 	}
+        var markup = [
+                      '<div id="panelmenu">',
+                      '<h2>',"Panel",'</h2>',                       
+                      '<div id="panel">',
+                      '<h3>',"Commands :",'</h3>',
+                      '<button type="button" id ="tab"> Tab</button>',
+                      '&nbsp;&nbsp;',
+                      '<button type="button"> placeHolder </button>','</br>',
+                      '</div></div>'
+                  ].join('');
 
+        $(markup).hide().appendTo('body').fadeIn();
+        var $test = $('body');
+        $test.update();
+ 		onPanel = true;
+ 		
+        $('#tab').click(function(){ 
+        	 return controls("tab");
+         });
+ 	}
+ });
 
 	
 	function removeHelp(){
@@ -1595,7 +1629,11 @@ $.confirm({
             $(this).remove();
         });
     }
-	
+	function removePanel(){
+        $('#panelmenu').fadeOut(function(){
+            $(this).remove();
+        });
+    }	
 	 $.fn.update = function(){
 		    var newElements = $(this.selector),i;    
 		    for(i=0;i<newElements.length;i++){
