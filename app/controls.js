@@ -1586,7 +1586,7 @@ $.confirm({
          	 return controls("comma");
           });  
         $('#enter').click(function(){ 
-        	 return controls("enter");
+        	 return controls("Enter");
          }); 
  	}
  });
