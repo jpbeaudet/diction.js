@@ -952,6 +952,7 @@ function Istrue(data, index){
 	var afttext = index.docB;
     console.log("pretext command = "+ pretext);
     console.log("afttext command = "+ afttext);
+	$("#final_span").css("color", "pink");
 	final_span.innerHTML = " @@@->  " + data + "  <-@@@ ";
 	var title = index.title;
 	socket.emit("cmd", [ pretext , afttext,title]);

@@ -13,7 +13,6 @@ function _dash(transcript,index){
 }
 
 function _backslash(transcript,index){
-	  $("#final_span").css("color", "pink");
 	  index.docA = index.docA+ '\\';
 	  docA_span.innerHTML = index.docA+ '\\';		  
 	  return Istrue("\\", index);
@@ -427,7 +426,7 @@ function _yes(transcript,index){
 }
 
 function _no(transcript,index){
-	  $("#final_span").css("color", "pink");
+
 	  //$('#confirmOverlay').find('#confirmBox').find('#confirmButtons').find('.button blue').click();
 	  $("#confirmButtons).find(.button blue").click();
 	  return Istrue('No', index);
