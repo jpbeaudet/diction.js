@@ -144,3 +144,31 @@ function _bar(transcript,index){
 	  index.docA = index.docA+ ' |';
 	  return Istrue("|", index);
 }
+
+function _openparenthesis(transcript,index){
+	  $("#final_span").css("color", "pink");
+	  docA_span.innerHTML = index.docA+ '(';
+	  index.docA = index.docA+ '(';
+	  return Istrue("Open Parenthesis", index);
+}
+
+function _openquote(transcript,index){
+	  $("#final_span").css("color", "pink");
+	  docA_span.innerHTML = index.docA+ ' &lsquo;';
+	  index.docA = index.docA+ ' &lsquo;';
+	  return Istrue("Open Quote", index);
+}
+
+function _openbracket(transcript,index){
+	  $("#final_span").css("color", "pink");
+	  docA_span.innerHTML = index.docA+ '{';
+	  index.docA = index.docA+ '{';
+	  return Istrue("Open Bracket", index);
+}
+
+function _opensquarebracket(transcript,index){
+	  $("#final_span").css("color", "pink");
+	  docA_span.innerHTML = index.docA+ '[';
+	  index.docA = index.docA+ '[';
+	  return Istrue("Open Square Bracket", index);
+}

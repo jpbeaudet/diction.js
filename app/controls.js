@@ -470,7 +470,7 @@ window.onload = function()
 		 switch(Sword)
 		 {
 		 case undefined:
-			 return _bar(transcript,index)
+			 return _bar(transcript,index);
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
@@ -483,33 +483,24 @@ window.onload = function()
 	 case 'open': 
 		 switch(Sword)
 		 {
-		 case 'parenthesis':
-			 
+		 case 'parenthesis':			 
 			 switch(Tword)
-			 {
-			 
+			 {			 
 			 case undefined:
-				  $("#final_span").css("color", "pink");
-				  docA_span.innerHTML = index.docA+ '(';
-				  index.docA = index.docA+ '(';
-				  return Istrue("Open Parenthesis", index);
-				  break;
-				  
-				  default:
-					  return Isfalse(transcript, index); 
+				return _openparenthesis(transcript,index);
+			 break;				  
+			 default:
+				return Isfalse(transcript, index); 
 			 }
 		 case 'quote':
 			 switch(Tword)
 			 {
 			 
 			 case undefined:
-				  $("#final_span").css("color", "pink");
-				  docA_span.innerHTML = index.docA+ ' &lsquo;';
-				  index.docA = index.docA+ ' &lsquo;';
-				  return Istrue("Open Quote", index);
-				  break;
-				  default:
-					  return Isfalse(transcript, index); 
+				return _openquote(transcript,index);
+			 break;
+			 default:
+				return Isfalse(transcript, index); 
 			 } 
 	//{
 		 case 'bracket':
@@ -517,13 +508,10 @@ window.onload = function()
 			 {
 			 
 			 case undefined:
-				  $("#final_span").css("color", "pink");
-				  docA_span.innerHTML = index.docA+ '{';
-				  index.docA = index.docA+ '{';
-				  return Istrue("Open Bracket", index);
-				  break;
-				  default:
-					  return Isfalse(transcript, index); 
+				return _openbracket(transcript,index)
+			break;
+			default:
+				return Isfalse(transcript, index); 
 			 }
 			//[
 		 case 'square':
@@ -531,13 +519,10 @@ window.onload = function()
 			 {
 			 
 			 case 'bracket':
-				  $("#final_span").css("color", "pink");
-				  docA_span.innerHTML = index.docA+ '[';
-				  index.docA = index.docA+ '[';
-				  return Istrue("Open Square Bracket", index);
-				  break;
-				  default:
-					  return Isfalse(transcript, index); 
+				return _opensquarebracket(transcript,index)
+			 break;
+			 default:
+				 return Isfalse(transcript, index); 
 			 }			 
 		  default:
 			  return Isfalse(transcript, index);   
@@ -1496,8 +1481,8 @@ $.confirm({
                       '<div id="panelmenu">',
                       '<h2>',"Panel",'</h2>',                       
                       '<div id="panel">',
-                      '<h3>',"Commands :",'</h3>',
-                      '<p>','Controls:','</p>',                       
+                      '<h3>',"Controls Pad",'</h3>',
+                      '<p>','Actions:','</p>',                       
                       '<button type="button" id ="tab"> Tab </button>',
                       '&nbsp;',
                       '<button type="button" id ="enter"> Enter </button>',
@@ -1539,7 +1524,14 @@ $.confirm({
                       '&nbsp;' ,
                       '<button type="button" id ="question"> ? </button>',
                       '&nbsp;' , 
+                      '</br>',                      
                       '<button type="button" id ="bar"> | </button>',
+                      '&nbsp;' , 
+                      '<button type="button" id ="openparenthesis"> ( </button>',
+                      '&nbsp;' ,
+                      '<button type="button" id ="openbracket"> { </button>',
+                      '&nbsp;' , 
+                      '<button type="button" id ="opensquarebracket"> [ </button>',
                       '&nbsp;' , 
                       '</div></div>'
                   ].join('');
@@ -1609,6 +1601,15 @@ $.confirm({
         $('#bar').click(function(){ 
          	 return controls("bar");
           });
+        $('#openparenthesis').click(function(){ 
+        	 return controls("open parenthesis");
+         });
+        $('#openbracket').click(function(){ 
+       	 return controls("open bracket");
+        });
+        $('#opensquarebracket').click(function(){ 
+          	 return controls("open square bracket");
+           });
  	}
  });
 
