@@ -1583,7 +1583,7 @@ $.confirm({
  });
  
  var onPanel = false;
- $('#commandlist').click(function(){
+ $('#panel').click(function(){
 	 if(onPanel){// if settings screen is there remove it 
  	 		onPanel= false; 
  	 	 	removePanel();	
