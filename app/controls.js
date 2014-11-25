@@ -782,15 +782,7 @@ window.onload = function()
 		 switch(Sword)
 		 {
 		 case undefined:
-		  $("#final_span").css("color", "pink");
-
-		  docA_span.innerHTML = "";
-		  docB_span.innerHTML = "";		  
-		  docA_span.innerHTML = index.LastdocA;
-		  docB_span.innerHTML = index.LastdocB;
-		  index.docA = index.LastdocA;
-		  index.docB = index.LastdocB;
-		  return Istrue('Cancel', index);
+			return _cancel(transcript,index);
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
@@ -799,15 +791,7 @@ window.onload = function()
 		 switch(Sword)
 		 {
 		 case undefined:
-		  $("#final_span").css("color", "pink");
-
-		  docA_span.innerHTML = "";
-		  docB_span.innerHTML = "";
-		  docA_span.innerHTML = index.LastdocA;
-		  docB_span.innerHTML = index.LastdocB;
-		  index.docA = index.LastdocA;
-		  index.docB = index.LastdocB;
-		  return Istrue('Cancel', index);
+			return _cancel(transcript,index);
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
@@ -816,15 +800,7 @@ window.onload = function()
 		 switch(Sword)
 		 {
 		 case undefined:
-		  $("#final_span").css("color", "pink");
-
-		  docA_span.innerHTML = "";
-		  docB_span.innerHTML = "";
-		  docA_span.innerHTML = index.LastdocA;
-		  docB_span.innerHTML = index.LastdocB;
-		  index.docA = index.LastdocA;
-		  index.docB = index.LastdocB;
-		  return Istrue('Cancel', index);
+			return _cancel(transcript,index);
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
@@ -834,13 +810,7 @@ window.onload = function()
 		 switch(Sword)
 		 {
 		 case undefined:
-			 $("#final_span").css("color", "pink");
-			  index.docB = index.docA + index.docB;
-			  index.docA ="";
-			  icon_span.innerHTML = "-->";
-			  docA_span.innerHTML = index.docA;
-			  docB_span.innerHTML = index.docB;
-			  return Istrue('Top', index);
+			return _top(transcript,index);
 			  break;
 			  
 			  default:
@@ -853,13 +823,7 @@ window.onload = function()
 		 switch(Sword)
 		 {
 		 case undefined:
-		  $("#final_span").css("color", "pink");
-		  index.docA = index.docA + index.docB;
-		  index.docB ="";	
-		  icon_span.innerHTML = "-->";
-		  docA_span.innerHTML = index.docA;
-		  docB_span.innerHTML = index.docB;
-		  return Istrue('Bottom', index);
+			return _bottom(transcript,index);
 		  break;  
 		  default:
 			  return Isfalse(transcript, index);   
@@ -869,13 +833,7 @@ window.onload = function()
 		 switch(Sword)
 		 {
 		 case undefined:
-		  $("#final_span").css("color", "pink");
-		  index.docA = index.docA + index.docB;
-		  index.docB ="";	
-		  icon_span.innerHTML = "-->";
-		  docA_span.innerHTML = index.docA;
-		  docB_span.innerHTML = index.docB;
-		  return Istrue('Bottom', index);
+			return _bottom(transcript,index);
 		  break;  
 		  default:
 			  return Isfalse(transcript, index);   
@@ -1215,6 +1173,12 @@ $.confirm({
                       '&nbsp;', 
                       '<button type="button" id ="gorightsentence"> Go next sentence </button>',
                       '&nbsp;',
+                      '<button type="button" id ="cancel"> Cancel last </button>',
+                      '&nbsp;',
+                      '<button type="button" id ="top"> Go to top </button>',
+                      '&nbsp;',
+                      '<button type="button" id ="bottom"> Go to bottom </button>',
+                      '&nbsp;',
                       '</br>',
                       '<p>','Symbols:','</p>',                       
                       '<button type="button" id ="comma"> , </button>',
@@ -1375,6 +1339,15 @@ $.confirm({
         $('#deletenextsentence').click(function(){ 
        	 return controls("delete right sentence");
         });
+        $('#cancel').click(function(){ 
+          	 return controls("cancel");
+           });
+        $('#top').click(function(){ 
+         	 return controls("top");
+          });
+        $('#bottom').click(function(){ 
+        	 return controls("bottom");
+         });
  	}
  });
 

@@ -386,3 +386,35 @@ function _deletebacksentence(transcript,index){
 	  docB_span.innerHTML = index.docB;
 	  return Istrue("Delete last sentence", index);
 }
+
+function _cancel(transcript,index){
+	  $("#final_span").css("color", "pink");
+
+	  docA_span.innerHTML = "";
+	  docB_span.innerHTML = "";		  
+	  docA_span.innerHTML = index.LastdocA;
+	  docB_span.innerHTML = index.LastdocB;
+	  index.docA = index.LastdocA;
+	  index.docB = index.LastdocB;
+	  return Istrue('Cancel', index);
+}
+
+function _top(transcript,index){
+	 $("#final_span").css("color", "pink");
+	  index.docB = index.docA + index.docB;
+	  index.docA ="";
+	  icon_span.innerHTML = "-->";
+	  docA_span.innerHTML = index.docA;
+	  docB_span.innerHTML = index.docB;
+	  return Istrue('Top', index);
+}
+
+function _bottom(transcript,index){
+	  $("#final_span").css("color", "pink");
+	  index.docA = index.docA + index.docB;
+	  index.docB ="";	
+	  icon_span.innerHTML = "-->";
+	  docA_span.innerHTML = index.docA;
+	  docB_span.innerHTML = index.docB;
+	  return Istrue('Bottom', index);
+}
