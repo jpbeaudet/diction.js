@@ -848,7 +848,6 @@ window.onload = function()
 		  //sentence
 		  //line
 
-
 	// go to :
 		  // line
 		  // word
