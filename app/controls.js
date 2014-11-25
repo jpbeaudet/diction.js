@@ -281,10 +281,7 @@ window.onload = function()
 			 {
 			 
 			 case undefined:
-				  $("#final_span").css("color", "pink");
-				  docA_span.innerHTML = index.docA+ ' "';
-				  index.docA = index.docA+ ' "';
-				  return Istrue("Double Quote", index);
+				 return _doublequote(transcript,index)
 				  break;
 				  
 				  default:
@@ -299,10 +296,7 @@ window.onload = function()
 		 switch(Sword)
 		 {
 		 case undefined:
-		  $("#final_span").css("color", "pink");
-		  docA_span.innerHTML = index.docA+ ' &lsquo;';
-		  index.docA = index.docA+ ' &lsquo;';
-		  return Istrue("Quote", index);
+			return _quote(transcript,index);
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
@@ -314,10 +308,7 @@ window.onload = function()
 		 switch(Sword)
 		 {
 		 case undefined:
-		  $("#final_span").css("color", "pink");
-		  docA_span.innerHTML = index.docA+ ' +';
-		  index.docA = index.docA+ ' +';
-		  return Istrue("+", index);
+			return _plus(transcript,index);
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
@@ -326,10 +317,7 @@ window.onload = function()
 		 switch(Sword)
 		 {
 		 case undefined:
-		  $("#final_span").css("color", "pink");
-		  docA_span.innerHTML = index.docA+ ' +';
-		  index.docA = index.docA+ ' +';
-		  return Istrue("+", index);
+			return _plus(transcript,index);
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
@@ -1545,13 +1533,15 @@ $.confirm({
                       '<h2>',"Panel",'</h2>',                       
                       '<div id="panel">',
                       '<h3>',"Commands :",'</h3>',
+                      '<p>','Controls:','</p>',                       
                       '<button type="button" id ="tab"> Tab </button>',
                       '&nbsp;',
                       '<button type="button" id ="enter"> Enter </button>',
                       '&nbsp;',
                       '<button type="button" id ="space"> Space </button>',
                       '&nbsp;',                       
-                      '</br>',                      
+                      '</br>',
+                      '<p>','Symbols:','</p>',                       
                       '<button type="button" id ="comma"> , </button>',
                       '&nbsp;' ,                     
                       '<button type="button" id ="dash"> - </button>',
@@ -1561,7 +1551,13 @@ $.confirm({
                       '<button type="button" id ="colon"> : </button>',
                       '&nbsp;' , 
                       '<button type="button" id ="semicolon"> ; </button>',
-                      '&nbsp;' ,                       
+                      '&nbsp;' ,
+                      '<button type="button" id ="doublequote"> Double Quote </button>',
+                      '&nbsp;' , 
+                      '<button type="button" id ="quote"> Quote </button>',
+                      '&nbsp;' ,
+                      '<button type="button" id ="plus"> + </button>',
+                      '&nbsp;' , 
                       '</div></div>'
                   ].join('');
 
@@ -1594,6 +1590,15 @@ $.confirm({
         $('#semicolon').click(function(){ 
          	 return controls("semicolon");
           });
+        $('#doublequote').click(function(){ 
+        	 return controls("double quote");
+         });
+        $('#quote').click(function(){ 
+       	 return controls("quote");
+        });
+        $('#plus').click(function(){ 
+          	 return controls("Plus");
+           });
  	}
  });
 

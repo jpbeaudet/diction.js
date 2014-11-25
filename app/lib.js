@@ -60,3 +60,24 @@ function _semicolon(transcript,index){
 	  index.docA = index.docA+ '; ';
 	  return Istrue("Semicolon", index);
 }
+
+function _doublequote(transcript,index){
+	  $("#final_span").css("color", "pink");
+	  docA_span.innerHTML = index.docA+ ' "';
+	  index.docA = index.docA+ ' "';
+	  return Istrue("Double Quote", index);
+}
+
+function _quote(transcript,index){
+	  $("#final_span").css("color", "pink");
+	  docA_span.innerHTML = index.docA+ ' &lsquo;';
+	  index.docA = index.docA+ ' &lsquo;';
+	  return Istrue("Quote", index);
+}
+
+function _plus(transcript,index){
+	  $("#final_span").css("color", "pink");
+	  docA_span.innerHTML = index.docA+ ' +';
+	  index.docA = index.docA+ ' +';
+	  return Istrue("+", index);
+}
