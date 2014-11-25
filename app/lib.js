@@ -172,3 +172,31 @@ function _opensquarebracket(transcript,index){
 	  index.docA = index.docA+ '[';
 	  return Istrue("Open Square Bracket", index);
 }
+
+function _closeparenthesis(transcript,index){
+	  $("#final_span").css("color", "pink");
+	  docA_span.innerHTML = index.docA+ ')';
+	  index.docA = index.docA+ ')';
+	  return Istrue("Close Parenthesis", index);
+}
+
+function _closequote(transcript,index){
+	  $("#final_span").css("color", "pink");
+	  docA_span.innerHTML = index.docA+ ' &rsquo;';
+	  index.docA = index.docA+ ' &rsquo;';
+	  return Istrue("Close Quote", index);
+}
+
+function _closebracket(transcript,index){
+	  $("#final_span").css("color", "pink");
+	  docA_span.innerHTML = index.docA+ '}';
+	  index.docA = index.docA+ '}';
+	  return Istrue("Close Bracket", index);
+}
+
+function _closesquarebracket(transcript,index){
+	  $("#final_span").css("color", "pink");
+	  docA_span.innerHTML = index.docA+ ']';
+	  index.docA = index.docA+ ']';
+	  return Istrue("Close Square Bracket", index);
+}

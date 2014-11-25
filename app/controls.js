@@ -508,7 +508,7 @@ window.onload = function()
 			 {
 			 
 			 case undefined:
-				return _openbracket(transcript,index)
+				return _openbracket(transcript,index);
 			break;
 			default:
 				return Isfalse(transcript, index); 
@@ -519,7 +519,7 @@ window.onload = function()
 			 {
 			 
 			 case 'bracket':
-				return _opensquarebracket(transcript,index)
+				return _opensquarebracket(transcript,index);
 			 break;
 			 default:
 				 return Isfalse(transcript, index); 
@@ -533,33 +533,24 @@ window.onload = function()
 	 case 'close': 
 		 switch(Sword)
 		 {
-		 case 'parenthesis':
-			 
+		 case 'parenthesis':			 
 			 switch(Tword)
-			 {
-			 
+			 {			 
 			 case undefined:
-				  $("#final_span").css("color", "pink");
-				  docA_span.innerHTML = index.docA+ ')';
-				  index.docA = index.docA+ ')';
-				  return Istrue("Close Parenthesis", index);
-				  break;
-				  
-				  default:
-					  return Isfalse(transcript, index); 
+			  return _closeparenthesis(transcript,index);
+			break;				  
+			default:
+				return Isfalse(transcript, index); 
 			 }
 		 case 'quote':
 			 switch(Tword)
 			 {
 			 
 			 case undefined:
-				  $("#final_span").css("color", "pink");
-				  docA_span.innerHTML = index.docA+ ' &rsquo;';
-				  index.docA = index.docA+ ' &rsquo;';
-				  return Istrue("Close Quote", index);
-				  break;
-				  default:
-					  return Isfalse(transcript, index); 
+				return _closequote(transcript,index);
+			break;
+			default:
+				return Isfalse(transcript, index); 
 			 } 
 				//}			 
 		 case 'bracket':
@@ -567,13 +558,10 @@ window.onload = function()
 			 {
 			 
 			 case undefined:
-				  $("#final_span").css("color", "pink");
-				  docA_span.innerHTML = index.docA+ '}';
-				  index.docA = index.docA+ '}';
-				  return Istrue("Close Bracket", index);
-				  break;
-				  default:
-					  return Isfalse(transcript, index); 
+				 return _closebracket(transcript,index);
+			break;
+			default:
+				return Isfalse(transcript, index); 
 			 }
 			 //]
 		 case 'square':
@@ -581,13 +569,10 @@ window.onload = function()
 			 {
 			 
 			 case 'bracket':
-				  $("#final_span").css("color", "pink");
-				  docA_span.innerHTML = index.docA+ ']';
-				  index.docA = index.docA+ ']';
-				  return Istrue("Close Square Bracket", index);
-				  break;
-				  default:
-					  return Isfalse(transcript, index); 
+				return _closesquarebracket(transcript,index);
+			break;
+			default:
+			   return Isfalse(transcript, index); 
 			 }				 
 		  default:
 			  return Isfalse(transcript, index);   
@@ -1529,9 +1514,15 @@ $.confirm({
                       '&nbsp;' , 
                       '<button type="button" id ="openparenthesis"> ( </button>',
                       '&nbsp;' ,
+                      '<button type="button" id ="closeparenthesis"> ) </button>',
+                      '&nbsp;' ,
                       '<button type="button" id ="openbracket"> { </button>',
                       '&nbsp;' , 
+                      '<button type="button" id ="closebracket"> } </button>',
+                      '&nbsp;' , 
                       '<button type="button" id ="opensquarebracket"> [ </button>',
+                      '&nbsp;' , 
+                      '<button type="button" id ="closesquarebracket"> ] </button>',
                       '&nbsp;' , 
                       '</div></div>'
                   ].join('');
@@ -1610,6 +1601,15 @@ $.confirm({
         $('#opensquarebracket').click(function(){ 
           	 return controls("open square bracket");
            });
+        $('#closeparenthesis').click(function(){ 
+       	 return controls("close parenthesis");
+        });
+        $('#closebracket').click(function(){ 
+          	 return controls("close bracket");
+           });
+        $('#closesquarebracket').click(function(){ 
+         	 return controls("close square bracket");
+          });
  	}
  });
 
