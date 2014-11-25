@@ -1558,6 +1558,10 @@ $.confirm({
                       '&nbsp;',
                       '<button type="button" id ="backslash"> Backslash </button>',                      
                       '</br>',
+                      '<button type="button" id ="colon"> : </button>',
+                      '&nbsp;' , 
+                      '<button type="button" id ="semicolon"> ; </button>',
+                      '&nbsp;' ,                       
                       '</div></div>'
                   ].join('');
 
@@ -1584,6 +1588,12 @@ $.confirm({
         $('#space').click(function(){ 
        	 return controls("space");
         });
+        $('#colon').click(function(){ 
+          	 return controls("colon");
+           });
+        $('#semicolon').click(function(){ 
+         	 return controls("semicolon");
+          });
  	}
  });
 
