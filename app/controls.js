@@ -236,10 +236,7 @@ window.onload = function()
 		 switch(Sword)
 		 {
 		 case undefined:
-		  $("#final_span").css("color", "pink");
-		  docA_span.innerHTML = index.docA+ ' <div><br /></div> ';
-		  index.docA = index.docA+ ' <div><br /></div> ';
-		  return Istrue("Enter", index);
+			 return _enter(transcript,index);
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
@@ -248,10 +245,7 @@ window.onload = function()
 		 switch(Sword)
 		 {
 		 case undefined:
-		  $("#final_span").css("color", "pink");
-		  docA_span.innerHTML = index.docA+ ' <div><br /></div> ';
-		  index.docA = index.docA+ ' <div><br /></div> ';
-		  return Istrue("Enter", index);
+			 return _enter(transcript,index);
 		  break;
 		  default:
 			  return Isfalse(transcript, index);   
@@ -1562,6 +1556,8 @@ $.confirm({
                       '<h3>',"Commands :",'</h3>',
                       '<button type="button" id ="tab"> Tab </button>',
                       '&nbsp;',
+                      '<button type="button" id ="enter"> Enter </button>',
+                      '&nbsp;',                     
                       '</br>',                      
                       '<button type="button" id ="comma"> , </button>',
                       '&nbsp;' ,                     
@@ -1588,7 +1584,10 @@ $.confirm({
            });
         $('#comma').click(function(){ 
          	 return controls("comma");
-          });        
+          });  
+        $('#enter').click(function(){ 
+        	 return controls("enter");
+         }); 
  	}
  });
 

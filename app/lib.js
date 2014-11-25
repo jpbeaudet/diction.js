@@ -32,3 +32,9 @@ function _tab(transcript,index){
 	  return Istrue("Tab", index);
 }
 
+function _enter(transcript,index){
+	  $("#final_span").css("color", "pink");
+	  docA_span.innerHTML = index.docA+ ' <div><br /></div> ';
+	  index.docA = index.docA+ ' <div><br /></div> ';
+	  return Istrue("Enter", index);
+}
