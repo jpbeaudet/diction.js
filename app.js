@@ -94,8 +94,19 @@ var username= "";
   // // failureFlash : true // allow flash messages
 //} ));
 app.post('/login', passport.authenticate('local'), function(req, res,next) {
+    req.assert('username', 'required').notEmpty();
+    req.assert('username', 'valid email required').isEmail();
+    req.assert('password', 'required').notEmpty();
+    //req.assert('password', '6 to 20 characters required with at least 1 number, 1 upper case character and 1 special symbol').isStrongPassword();
+
+    var errors = req.validationErrors();
+
+    if (errors) {
+        return res.render("login", {errors: errors});
+    }
 	username = req.body.username;
 	console.log(username);
+	
     //res.redirect('/home');
     next();
 }, passport.authenticate('local', {
