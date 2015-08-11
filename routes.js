@@ -47,7 +47,7 @@ module.exports = function (app) {
 
 	      successRedirect : '/home', // redirect to the secure account section
 	      failureRedirect : '/register' // redirect back to the signup page if there is an error
-	      //failureFlash : true // allow flash messages
+	      failureFlash : true // allow flash messages
 	  }));
     
  // app.post('/register', function(req, res, next) {

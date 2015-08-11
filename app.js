@@ -17,6 +17,7 @@ var LocalStrategy = require('passport-local').Strategy;
 var passphrase = "";
 var sessionStore = new express.session.MemoryStore();
 var expressValidator = require('express-validator');
+var flash    = require('connect-flash');
 var EXPRESS_SID_KEY = 'express.sid';
 var COOKIE_SECRET ='J976dd78Hffr#$%68h';
 
@@ -37,6 +38,7 @@ app.configure(function () {
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
 app.set('view options', { layout: false });
+app.use(flash());
 app.use(express.logger());
 app.use(express.bodyParser());
 app.use(expressValidator());
