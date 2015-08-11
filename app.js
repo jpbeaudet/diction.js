@@ -95,7 +95,6 @@ app.post('/login', passport.authenticate('local'), function(req, res) {
 	username = req.body.username;
 	console.log(username);
     res.redirect('/home');
-	next();
 });
 
 var server = https.createServer(options, app);
