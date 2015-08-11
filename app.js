@@ -93,7 +93,7 @@ var username= "";
  //   failureRedirect : '/login', // redirect back to the signup page if there is an error
   // // failureFlash : true // allow flash messages
 //} ));
-app.post('/login', passport.authenticate('local'), function(req, res,next) {
+app.post('/login', function(req, res,next) {
     req.assert('username', 'required').notEmpty();
     req.assert('username', 'valid email required').isEmail();
     req.assert('password', 'required').notEmpty();
