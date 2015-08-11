@@ -198,7 +198,16 @@ window.onload = function()
 			  return Isfalse(transcript, index);   
 	 }		 
 		
-		 
+		    // clear all
+	 case 'clear': 
+		 switch(Sword)
+		 {
+		 case undefined:
+			 confirmNewText(index);
+		  break;
+		  default:
+			  return Isfalse(transcript, index);   
+	 }			 
 	//tab	
 	 case 'tab': 
 		 switch(Sword)
@@ -1002,8 +1011,10 @@ $.confirm({
 	 $("#final_span").css("color", "pink");	
  index.docA = ""; 
  index.docB ="";
+ index.title = "Untitled";
  docA_span.innerHTML = "";
  docB_span.innerHTML = "";
+ 
  socket.emit('newtext',"new text----------------->>");
  //socket.to(_USERNAME).emit('newtext',"new text----------------->>");
  location.reload(true);
