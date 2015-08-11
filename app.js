@@ -96,12 +96,12 @@ var username= "";
 app.post('/login', passport.authenticate('local'), function(req, res,next) {
 	username = req.body.username;
 	console.log(username);
-    res.redirect('/home');
+    //res.redirect('/home');
     next();
 }, passport.authenticate('local', {
 
     successRedirect : '/home', // redirect to the secure account section
-    failureRedirect : '/register' ,// redirect back to the signup page if there is an error
+    failureRedirect : '/login' ,// redirect back to the signup page if there is an error
     failureFlash : true // allow flash messages
 }));
 
