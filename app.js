@@ -93,11 +93,17 @@ var username= "";
  //   failureRedirect : '/login', // redirect back to the signup page if there is an error
   // // failureFlash : true // allow flash messages
 //} ));
-app.post('/login', passport.authenticate('local'), function(req, res) {
+app.post('/login', passport.authenticate('local'), function(req, res,next) {
 	username = req.body.username;
 	console.log(username);
     res.redirect('/home');
-});
+    next();
+}, {
+
+	    successRedirect : '/home', // redirect to the secure account section
+	    failureRedirect : '/login', // redirect back to the signup page if there is an error
+	   failureFlash : true // allow flash messages
+	});
 
 var server = https.createServer(options, app);
 app.set('port', process.env.PORT || 3000);
