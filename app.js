@@ -83,7 +83,7 @@ db.once('open', function callback () {
 
 require('./routes')(app);
 var username= "";
-app.post('/login', passport.authenticate('local-login', {
+app.post('/login', passport.authenticate('local', {
 
     successRedirect : '/home', // redirect to the secure account section
     failureRedirect : '/login', // redirect back to the signup page if there is an error
