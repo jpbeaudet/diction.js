@@ -88,15 +88,29 @@ app.get('/login', function(req, res) {
       }
       console.error(err.stack);
       // error page
+      if (req.user) {
+		    // logged in
+		  res.redirect("/home");
+		} else {
+		    // not logged in
       res.status(500).render('500', {error: err.stack});
+		}
   });
 
   // assume 404 since no middleware responded
   app.use(function (req, res, next) {
+	  var logged;
+	  if (req.user) {
+		    // logged in
+		  res.redirect("/home");
+		} else {
+		    // not logged in
+		
       res.status(404).render('404', {
           url: req.originalUrl,
           error: 'Not found'
       });
+		}
   });
 
 };
