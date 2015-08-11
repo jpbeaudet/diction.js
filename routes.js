@@ -12,19 +12,38 @@ module.exports = function (app) {
       res.render('register', { });
   });
 
-  app.post('/register', function(req, res) {
-    Account.register(new Account({ username : req.body.username }), req.body.password, function(err, account) {
-        if (err) {
-            return res.render('register', { account : account });
-        }
+ // app.post('/register', function(req, res) {
+ //   Account.register(new Account({ username : req.body.username }), req.body.password, function(err, account) {
+ //       if (err) {
+  //          return res.render('register', { account : account });
+  //      }
 
-        passport.authenticate('local')(req, res, function () {
+   //     passport.authenticate('local')(req, res, function () {
         	
-          res.redirect('/');
-        });
-    });
-  });
+  //        res.redirect('/');
+  //      });
+  //  });
+ // });
+  app.post('/register', function(req, res, next) {
+      req.assert('email', 'required').notEmpty();
+      req.assert('email', 'valid email required').isEmail();
+      req.assert('password', 'required').notEmpty();
+      //req.assert('password', '6 to 20 characters required with at least 1 number, 1 upper case character and 1 special symbol').isStrongPassword();
 
+      var errors = req.validationErrors();
+
+      if (errors) {
+          return res.render("register", {errors: errors});
+      }
+  	var username = req.body.username;
+
+      next();
+  }, passport.authenticate('local-signup', {
+
+      successRedirect : '/home', // redirect to the secure account section
+      failureRedirect : '/register', // redirect back to the signup page if there is an error
+      failureFlash : true // allow flash messages
+  }));
   app.get('/home', function(req, res) {
 
 	  res.render('home', { user : req.user });

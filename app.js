@@ -83,11 +83,16 @@ db.once('open', function callback () {
 
 require('./routes')(app);
 var username= "";
+app.post('/login', passport.authenticate('local-login', {
 
+    successRedirect : '/home', // redirect to the secure account section
+    failureRedirect : '/login', // redirect back to the signup page if there is an error
+    failureFlash : true // allow flash messages
+} ));
 app.post('/login', passport.authenticate('local'), function(req, res) {
 	username = req.body.username;
 	console.log(username);
-    res.redirect('/home');
+    //res.redirect('/home');
 });
 
 var server = https.createServer(options, app);
