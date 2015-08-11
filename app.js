@@ -39,7 +39,7 @@ app.set('view engine', 'jade');
 app.set('view options', { layout: false });
 app.use(express.logger());
 app.use(express.bodyParser());
-app.use(expressValidator);
+app.use(expressValidator());
 app.use(express.methodOverride());
 app.use(cookieParser);
 app.use(express.session({
