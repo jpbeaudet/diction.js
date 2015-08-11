@@ -98,12 +98,12 @@ app.post('/login', passport.authenticate('local'), function(req, res,next) {
 	console.log(username);
     res.redirect('/home');
     next();
-}, {
+}, passport.authenticate('local', {
 
-	    successRedirect : '/home', // redirect to the secure account section
-	    failureRedirect : '/login', // redirect back to the signup page if there is an error
-	   failureFlash : true // allow flash messages
-	});
+    successRedirect : '/home', // redirect to the secure account section
+    failureRedirect : '/register' ,// redirect back to the signup page if there is an error
+    failureFlash : true // allow flash messages
+}));
 
 var server = https.createServer(options, app);
 app.set('port', process.env.PORT || 3000);
