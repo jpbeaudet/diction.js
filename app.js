@@ -38,6 +38,7 @@ app.set('view engine', 'jade');
 app.set('view options', { layout: false });
 app.use(express.logger());
 app.use(express.bodyParser());
+app.use(expressValidator);
 app.use(express.methodOverride());
 app.use(cookieParser);
 app.use(express.session({
@@ -83,16 +84,22 @@ db.once('open', function callback () {
 
 require('./routes')(app);
 var username= "";
-app.post('/login', passport.authenticate('local', {
+//app.post('/login', passport.authenticate('local', {
 
-    successRedirect : '/home', // redirect to the secure account section
-    failureRedirect : '/login' // redirect back to the signup page if there is an error
-   // failureFlash : true // allow flash messages
-} ));
+  //  successRedirect : '/home', // redirect to the secure account section
+  //  failureRedirect : '/login' // redirect back to the signup page if there is an error
+  // // failureFlash : true // allow flash messages
+//} ));
 app.post('/login', passport.authenticate('local'), function(req, res) {
 	username = req.body.username;
 	console.log(username);
     //res.redirect('/home');
+	next();
+}, {
+
+    successRedirect : '/home', // redirect to the secure account section
+    failureRedirect : '/login' // redirect back to the signup page if there is an error
+   // failureFlash : true // allow flash messages
 });
 
 var server = https.createServer(options, app);
