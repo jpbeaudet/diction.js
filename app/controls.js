@@ -1014,7 +1014,7 @@ $.confirm({
  index.title = "Untitled";
  docA_span.innerHTML = "";
  docB_span.innerHTML = "";
- 
+ final_span.innerHTML = " @@@->  New Text  <-@@@ ";
  socket.emit('newtext',"new text----------------->>");
  //socket.to(_USERNAME).emit('newtext',"new text----------------->>");
  location.reload(true);
