@@ -90,7 +90,7 @@ var username= "";
 //app.post('/login', passport.authenticate('local', {
 
  //   successRedirect : '/home', // redirect to the secure account section
- //   failureRedirect : '/login' // redirect back to the signup page if there is an error
+ //   failureRedirect : '/login', // redirect back to the signup page if there is an error
   // // failureFlash : true // allow flash messages
 //} ));
 app.post('/login', passport.authenticate('local'), function(req, res) {
