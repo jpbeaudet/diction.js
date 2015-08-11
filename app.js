@@ -87,12 +87,7 @@ db.once('open', function callback () {
 
 require('./routes')(app);
 var username= "";
-//app.post('/login', passport.authenticate('local', {
 
- //   successRedirect : '/home', // redirect to the secure account section
- //   failureRedirect : '/login', // redirect back to the signup page if there is an error
-  // // failureFlash : true // allow flash messages
-//} ));
 app.post('/login', function(req, res,next) {
     req.assert('username', 'required').notEmpty();
     req.assert('username', 'valid email required').isEmail();
@@ -106,8 +101,6 @@ app.post('/login', function(req, res,next) {
     }
 	username = req.body.username;
 	console.log(username);
-	
-    //res.redirect('/home');
     next();
 }, passport.authenticate('local', {
 

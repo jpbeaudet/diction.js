@@ -12,18 +12,6 @@ module.exports = function (app) {
       res.render('register', { });
   });
 
- // app.post('/register', function(req, res) {
- //   Account.register(new Account({ username : req.body.username }), req.body.password, function(err, account) {
- //       if (err) {
-  //          return res.render('register', { account : account });
-  //      }
-
-   //     passport.authenticate('local')(req, res, function () {
-        	
-  //        res.redirect('/');
-  //      });
-  //  });
- // });
   
    app.post('/register', function(req, res,next) {
        req.assert('username', 'required').notEmpty();
@@ -49,27 +37,7 @@ module.exports = function (app) {
 	      failureRedirect : '/register' ,// redirect back to the signup page if there is an error
 	      failureFlash : true // allow flash messages
 	  }));
-    
- // app.post('/register', function(req, res, next) {
-    //  req.assert('username', 'required').notEmpty();
-   //   req.assert('username', 'valid email required').isEmail();
-   //   req.assert('password', 'required').notEmpty();
-      //req.assert('password', '6 to 20 characters required with at least 1 number, 1 upper case character and 1 special symbol').isStrongPassword();
 
-   //   var errors = req.validationErrors();
-
-   //   if (errors) {
-   //       return res.render("register", {errors: errors});
-   //   }
-  //	var username = req.body.username;
-
-  //    next();
-//  }, passport.authenticate('local', {
-
-   //   successRedirect : '/home', // redirect to the secure account section
-   //   failureRedirect : '/register' // redirect back to the signup page if there is an error
-      //failureFlash : true // allow flash messages
- // }));
   app.get('/home', function(req, res) {
 
 	  res.render('home', { user : req.user });
@@ -111,8 +79,24 @@ app.get('/login', function(req, res) {
 	});
   
   
-  //app.get('*', function(req, res){
-	//  res.render('error', { user : req.user });
-  //});
+  app.use(function (err, req, res, next) {
+      // treat as 404
+      if (err.message
+          && (~err.message.indexOf('not found')
+          || (~err.message.indexOf('Cast to ObjectId failed')))) {
+          return next();
+      }
+      console.error(err.stack);
+      // error page
+      res.status(500).render('500', {error: err.stack});
+  });
+
+  // assume 404 since no middleware responded
+  app.use(function (req, res, next) {
+      res.status(404).render('404', {
+          url: req.originalUrl,
+          error: 'Not found'
+      });
+  });
 
 };
