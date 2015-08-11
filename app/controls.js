@@ -1000,7 +1000,7 @@ function Isfalse(data, index){
 //
 
  function confirmNewText(index)	{      
-	
+	 final_span.innerHTML = " @@@->  New Text  <-@@@ ";	
 $.confirm({
     'title'		: 'Delete Confirmation',
     'message'	: 'You are about to delete your current text. <br />It cannot be restored at a later time! Continue?',
@@ -1014,7 +1014,7 @@ $.confirm({
  index.title = "Untitled";
  docA_span.innerHTML = "";
  docB_span.innerHTML = "";
- final_span.innerHTML = " @@@->  New Text  <-@@@ ";
+
  socket.emit('newtext',"new text----------------->>");
  //socket.to(_USERNAME).emit('newtext',"new text----------------->>");
  location.reload(true);
