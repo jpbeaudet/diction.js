@@ -25,8 +25,8 @@ module.exports = function (app) {
   //  });
  // });
   app.post('/register', function(req, res, next) {
-      req.assert('email', 'required').notEmpty();
-      req.assert('email', 'valid email required').isEmail();
+      req.assert('username', 'required').notEmpty();
+      req.assert('username', 'valid email required').isEmail();
       req.assert('password', 'required').notEmpty();
       //req.assert('password', '6 to 20 characters required with at least 1 number, 1 upper case character and 1 special symbol').isStrongPassword();
 
