@@ -87,15 +87,27 @@ app.get('/login', function(req, res) {
   });	
   // facebook -------------------------------
 
+
   // send to facebook to do the authentication
-  app.get('/connect/facebook', passport.authorize('facebook', { scope : 'email' }));
+  app.get('/auth/facebook', function(req, res, next) {
+  	 next();
+  }, passport.authenticate('facebook', { scope : 'email' }));
+
+  // handle the callback after facebook has authenticated the user
+  app.get('/auth/facebook/callback', passport.authenticate('facebook', {
+          successRedirect : '/home',
+          failureRedirect : '/',
+          scope : ['email']
+      }));
+  // send to facebook to do the authentication
+  //app.get('/connect/facebook', passport.authorize('facebook', { scope : 'email' }));
 
   // handle the callback after facebook has authorized the user
-  app.get('/connect/facebook/callback',
-      passport.authorize('facebook', {
-          successRedirect : '/home',
-          failureRedirect : '/'
-      }));
+  //app.get('/connect/facebook/callback',
+     // passport.authorize('facebook', {
+     //     successRedirect : '/home',
+      //    failureRedirect : '/'
+     // }));
 
   // twitter --------------------------------
 
