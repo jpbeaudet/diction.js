@@ -32,7 +32,7 @@ module.exports = function (app) {
      });
      //next();
      }
-   
+   //}, passport.authenticate('local-signup', {
    }, passport.authenticate('local', {
 
 	      successRedirect : '/home', // redirect to the secure account section
