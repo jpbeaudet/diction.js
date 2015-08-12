@@ -31,7 +31,7 @@ module.exports = function (app,passport) {
      });
      }
    
-   }, passport.authenticate('local', {
+   }, passport.authenticate('local-login', {
 
 	      successRedirect : '/home', // redirect to the secure account section
 	      failureRedirect : '/register' ,// redirect back to the signup page if there is an error
