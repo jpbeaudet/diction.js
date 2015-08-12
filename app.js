@@ -136,9 +136,18 @@ app.get('/download', function(req, res){
 	  res.download(file); // Set disposition and send it.
 	  fs.unlinkSync(file);
 	});
+
 app.get('/download_txt', function(req, res){
-	var fs = require('fs');
-	  var filepath = path.join(__dirname, 'public/tmp/');
+	 var file_content,
+	 file_title ;
+	 var fs = require('fs');
+	 var filepath = path.join(__dirname, 'public/tmp/');
+	 var MEMORY = mongoose.model('memory', memoryDb);
+	MEMORY.findOne({ username: username}, function (err, doc){
+		file_content=doc.docA+doc.docB;
+	 file_title = doc.title || "Untitled";
+	 console.log("download has sent title= "+file_title+" content = "+file_content+" at path ="+ filepath);
+	});		
 	  var file_title = "title.txt";
 	  var md = "foo===\n* bar\n* baz\n\nThis should be orking when i get text content"
 	fs.writeFile(filepath+ file_title, md, function(err) {
