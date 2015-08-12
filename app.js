@@ -133,7 +133,6 @@ app.get('/download', function(req, res){
 	    console.log("Created", outputPath);
 		  var file = filepath + "title.pdf";
 		  res.download(file); // Set disposition and send it.
-		  fs.unlinkSync(file);
 	  });
 
 	});
