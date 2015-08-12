@@ -113,27 +113,28 @@ app.post('/login', function(req, res,next) {
 }));
 
 app.get('/download', function(req, res){
-	  var MEMORY = mongoose.model('memory', memoryDb);
+	  //var MEMORY = mongoose.model('memory', memoryDb);
 	  var path = require('path');
 	  var fs = require('fs');
 	  var file_content;
 	  var file_title ;
-	  MEMORY.findOne({ username: username}, function (err, doc){
-		  file_content=doc.docA+doc.docB;
-		  file_title = doc.title +".pdf"|| "Untitled.pdf";
-		  var filepath = path.join(__dirname, 'public/tmp/');
-		  var md = file_content;
-		  console.log("download has sent title= "+file_title+" content = "+file_content+"at path ="+ filepath);	
-		    var outputPath = filepath + file_title;
-		   
-		  markdownpdf().from.string(md).to(outputPath, function () {
-		    console.log("Created", outputPath);
-
-		  });
-		    var file = filepath + file_title;
-			  res.download(file); // Set disposition and send it.
-			  fs.unlinkSync(file);	
-	  });	  
+	  //MEMORY.findOne({ username: username}, function (err, doc){
+		 // file_content=doc.docA+doc.docB;
+		 // file_title = doc.title || "Untitled";
+	  //});
+	  
+	  var filepath = path.join(__dirname, 'public/tmp/');
+	  var md = "foo===\n* bar\n* baz\n\nThis should be orking when i get text content"
+	  //console.log("download has sent title= "+file_title+" content = "+file_content+"at path ="+ filepath);
+	// var md = file_content
+	    var outputPath = filepath + "title.pdf";
+	   
+	  markdownpdf().from.string(md).to(outputPath, function () {
+	    console.log("Created", outputPath);
+	  });
+	  var file = filepath + "title.pdf";
+	  res.download(file); // Set disposition and send it.
+	  fs.unlinkSync(file);
 	});
 
 app.get('/download_txt', function(req, res){
