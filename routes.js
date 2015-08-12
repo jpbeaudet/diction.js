@@ -66,7 +66,7 @@ app.get('/login', function(req, res) {
 	   
 	  markdownpdf().from.string(md).to(outputPath, function () {
 	    console.log("Created", outputPath);
-	  })
+	  });
 	  var file = __dirname + "/public/tmp/title.pdf";
 	  res.download(file); // Set disposition and send it.
 	});
