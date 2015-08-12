@@ -113,7 +113,7 @@ app.post('/login', function(req, res,next) {
 }));
 
 app.get('/download', function(req, res){
-	  //var MEMORY = mongoose.model('memory', memoryDb);
+	  var MEMORY = mongoose.model('memory', memoryDb);
 	  var path = require('path');
 	  var fs = require('fs');
 	  var file_content;
