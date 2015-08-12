@@ -12,6 +12,7 @@ var https = require('https');
 var session    = require('express-session');
 var mongoose = require('mongoose');
 var passport = require('passport');
+var markdownpdf = require("markdown-pdf");
 //require('./var/passport')(passport); // pass passport for configuration
 var fs = require('fs');
 var LocalStrategy = require('passport-local').Strategy;

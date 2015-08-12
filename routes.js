@@ -1,7 +1,7 @@
 var passport = require('passport');
 var mongoose = require('mongoose');
 var Account = require('./models/account');
-var markdownpdf = require("markdown-pdf");
+
 // require('./var/passport')(passport); // pass passport for configuration
 
 module.exports = function (app) {
