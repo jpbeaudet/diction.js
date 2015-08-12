@@ -147,7 +147,7 @@ app.get('/download_txt', function(req, res){
 	    }
 	    var file = filepath + file_title;
 		  res.download(file); // Set disposition and send it.
-		  fs.unlinkSync(file);
+		 // fs.unlinkSync(file);
 	    console.log("The file was saved!");
 	}); 
 });
