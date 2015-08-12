@@ -12,7 +12,7 @@ var https = require('https');
 var session    = require('express-session');
 var mongoose = require('mongoose');
 var passport = require('passport');
-require('./var/passport')(passport); // pass passport for configuration
+//require('./var/passport')(passport); // pass passport for configuration
 var fs = require('fs');
 var LocalStrategy = require('passport-local').Strategy;
 var passphrase = "";
@@ -69,10 +69,10 @@ app.configure('production', function(){
 });
 
 // passport config
-//var Account = require('./models/account');
-//passport.use(new LocalStrategy(Account.authenticate()));
-//passport.serializeUser(Account.serializeUser());
-//passport.deserializeUser(Account.deserializeUser());
+var Account = require('./models/account');
+passport.use(new LocalStrategy(Account.authenticate()));
+passport.serializeUser(Account.serializeUser());
+passport.deserializeUser(Account.deserializeUser());
 
 // mongoose
 mongoose.connect('mongodb://localhost/passport_local_mongoose');
@@ -103,7 +103,7 @@ app.post('/login', function(req, res,next) {
 	username = req.body.username;
 	console.log(username);
     next();
-}, passport.authenticate('local-login', {
+}, passport.authenticate('local', {
 
     successRedirect : '/home', // redirect to the secure account section
     failureRedirect : '/login' ,// redirect back to the signup page if there is an error

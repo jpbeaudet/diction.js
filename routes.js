@@ -1,8 +1,9 @@
 var passport = require('passport');
 var Account = require('./models/account');
-require('./var/passport')(passport); // pass passport for configuration
+//require('./var/passport')(passport); // pass passport for configuration
 
-module.exports = function (app,passport) {
+module.exports = function (app) {
+	//module.exports = function (app,passport) {
 
   app.get('/', function (req, res) {
       res.render('index', { user : req.user });
