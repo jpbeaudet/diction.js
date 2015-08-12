@@ -8,6 +8,15 @@ module.exports = function (app) {
 	//module.exports = function (app,passport) {
 
   app.get('/', function (req, res) {
+	  var fs = require('fs');
+	  var child_process = require('child_process');
+	  // verify that there is NOT any unwanted files in /tmp directory
+	  if(fs.readdirSync(__dirname+ '/public/tmp/').length > 0 ){
+	  // if so, delete them in a for/in loop
+	  var badFile = fs.readdirSync(__dirname+ '/public/tmp/');
+	  for(var x in badFile )
+	  fs.unlink(__dirname+ '/public/tmp/' + badFile[x]);	
+	  }
       res.render('index', { user : req.user });
   });
 

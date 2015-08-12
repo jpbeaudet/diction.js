@@ -136,7 +136,7 @@ app.get('/download', function(req, res){
 	  res.download(file); // Set disposition and send it.
 	  fs.unlinkSync(file);
 	});
-app.get('/download_txt', function(req, res,next){
+app.get('/download_txt', function(req, res){
 	var fs = require('fs');
 	  var filepath = path.join(__dirname, 'public/tmp/');
 	  var file_title = "title.txt";
@@ -149,15 +149,10 @@ app.get('/download_txt', function(req, res,next){
 		  res.download(file); // Set disposition and send it.
 		 // fs.unlinkSync(file);
 	    console.log("The file was saved!");
-	    next();
+	   
 	}); 
 });
-app.get('/download_txt', function(req, res){
-	var filepath = path.join(__dirname, 'public/tmp/');
-	  var file_title = "title.txt";
-	var file = filepath + file_title;
-	fs.unlinkSync(file);
-});
+
 var server = https.createServer(options, app);
 app.set('port', process.env.PORT || 3000);
 console.log(("Express server listening on port " + app.get('port')));
