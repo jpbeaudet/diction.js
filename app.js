@@ -85,9 +85,9 @@ db.once('open', function callback () {
 });
  
 // routes
-
-require('./routes')(app);
 var username= "";
+require('./routes')(app);
+
 
 app.post('/login', function(req, res,next) {
     req.assert('username', 'required').notEmpty();

@@ -27,7 +27,7 @@ module.exports = function (app) {
        }else{ 
     // Account.register(new Account({ username : req.body.username }), req.body.password, function(err, account) {
   
-     	//var username = req.body.username;
+     	var username = req.body.username;
      	//  next();
     // });
      next();
@@ -100,6 +100,7 @@ app.get('/login', function(req, res) {
 
   // send to facebook to do the authentication
   app.get('/auth/facebook', function(req, res, next) {
+	  username = req.body.username;
   	 next();
   }, passport.authenticate('facebook', { scope : 'email' }));
 //}, passport.authenticate('facebook'));
