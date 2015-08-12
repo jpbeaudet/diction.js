@@ -68,7 +68,7 @@ if ('webkitSpeechRecognition' in window) {
     function reset() {
     button = document.getElementById("button");
   	  recognizing = false;
-  	  button.innerHTML = "<img src='images/micro.png', width='50', height='60' >";
+  	  button.innerHTML = "<img src='images/btn_record.png', width='40', height='50' >";
   	}
 
   	function toggleStartStop() {
@@ -80,7 +80,7 @@ if ('webkitSpeechRecognition' in window) {
   	  } else {
   	    recognition.start();
   	    recognizing = true;
-  	    button.innerHTML = "Click to Stop";
+  	    button.innerHTML = "<img src='images/btn_stop2.png', width='40', height='50' >";
 
   	  } };
   	  
