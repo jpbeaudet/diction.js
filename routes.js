@@ -2,7 +2,7 @@ var passport = require('passport');
 var Account = require('./models/account');
 
 
-module.exports = function (app) {
+module.exports = function (app,passport) {
 
   app.get('/', function (req, res) {
       res.render('index', { user : req.user });
@@ -77,7 +77,12 @@ app.get('/login', function(req, res) {
 	  res.set('Content-Type', 'text/javascript');
 	  res.sendfile('./controls.js');
 	});
-	
+  // PROFILE SECTION =========================
+  app.get('/profile',  function(req, res) {
+      res.render('profile', {
+          user : req.user
+      });
+  });	
   // facebook -------------------------------
 
   // send to facebook to do the authentication
