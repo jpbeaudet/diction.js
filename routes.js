@@ -60,14 +60,16 @@ app.get('/login', function(req, res) {
   
   app.get('/download', function(req, res){
 	 
-	  
+	  var path = require('path');
+
+	  var filepath = path.join(__dirname, 'public/tmp/');
 	  var md = "foo===\n* bar\n* baz\n\nThis should be orking when i get text content"
-	    , outputPath = __dirname +"/public/tmp/title.pdf";
+	    , outputPath = filepath + "title.pdf";
 	   
 	  markdownpdf().from.string(md).to(outputPath, function () {
 	    console.log("Created", outputPath);
 	  });
-	  var file = __dirname + "/public/tmp/title.pdf";
+	  var file = filepath + "title.pdf";
 	  res.download(file); // Set disposition and send it.
 	});
   
