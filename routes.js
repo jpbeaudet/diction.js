@@ -1,6 +1,6 @@
 var passport = require('passport');
 var Account = require('./models/account');
- require('./var/passport')(passport); // pass passport for configuration
+// require('./var/passport')(passport); // pass passport for configuration
 
 module.exports = function (app) {
 	//module.exports = function (app,passport) {
@@ -25,15 +25,15 @@ module.exports = function (app) {
        if (errors) {
            return res.render("register", {errors: errors});
        }else{ 
-    // Account.register(new Account({ username : req.body.username }), req.body.password, function(err, account) {
+     Account.register(new Account({ username : req.body.username }), req.body.password, function(err, account) {
   
      	var username = req.body.username;
-     	//  next();
-    // });
-     next();
+     	  next();
+     });
+     //next();
      }
    
-   }, passport.authenticate('local-signup', {
+   }, passport.authenticate('local', {
 
 	      successRedirect : '/home', // redirect to the secure account section
 	      failureRedirect : '/register' ,// redirect back to the signup page if there is an error
