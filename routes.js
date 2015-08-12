@@ -62,7 +62,7 @@ app.get('/login', function(req, res) {
 	 
 	  
 	  var md = "foo===\n* bar\n* baz\n\nThis should be orking when i get text content"
-	    , outputPath = "/public/tmp/title.pdf";
+	    , outputPath = __dirname +"/public/tmp/title.pdf";
 	   
 	  markdownpdf().from.string(md).to(outputPath, function () {
 	    console.log("Created", outputPath);
