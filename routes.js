@@ -1,4 +1,5 @@
 var passport = require('passport');
+var mongoose = require('mongoose');
 var Account = require('./models/account');
 var markdownpdf = require("markdown-pdf");
 // require('./var/passport')(passport); // pass passport for configuration
@@ -58,21 +59,7 @@ app.get('/login', function(req, res) {
       res.redirect('/');
   });
   
-  app.get('/download', function(req, res){
-	 
-	  var path = require('path');
 
-	  var filepath = path.join(__dirname, 'public/tmp/');
-	  var md = "foo===\n* bar\n* baz\n\nThis should be orking when i get text content"
-	    , outputPath = filepath + "title.pdf";
-	   
-	  markdownpdf().from.string(md).to(outputPath, function () {
-	    console.log("Created", outputPath);
-	  });
-	  var file = filepath + "title.pdf";
-	  res.download(file); // Set disposition and send it.
-	});
-  
 
   app.get('/ping', function(req, res){
       res.send("pong!", 200);

@@ -111,6 +111,30 @@ app.post('/login', function(req, res,next) {
     failureFlash : true // allow flash messages
 }));
 
+app.get('/download', function(req, res){
+	  var MEMORY = mongoose.model('memory', memoryDb);
+	  var path = require('path');
+	  var file_content;
+	  var file_title ;
+	  MEMORY.findOne({ username: username}, function (err, doc){
+		  file_content=doc.docA+doc.docB;
+		  file_title = doc.title || "Untitled";
+	  });
+	  
+	  var filepath = path.join(__dirname, 'public/tmp/');
+	 // var md = "foo===\n* bar\n* baz\n\nThis should be orking when i get text content"
+	  console.log("download has sent title= "+file_title+" content = "+file_content+"at path ="+ filepath);
+	 var md = file_content
+	    , outputPath = filepath + file_title+".pdf";
+	   
+	  markdownpdf().from.string(md).to(outputPath, function () {
+	    console.log("Created", outputPath);
+	  });
+	  var file = filepath + file_title+".pdf";
+	  res.download(file); // Set disposition and send it.
+	});
+
+
 var server = https.createServer(options, app);
 app.set('port', process.env.PORT || 3000);
 console.log(("Express server listening on port " + app.get('port')));
