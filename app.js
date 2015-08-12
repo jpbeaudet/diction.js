@@ -147,9 +147,9 @@ app.get('/download_txt', function(req, res){
 		file_content=doc.docA+doc.docB;
 	 file_title = doc.title+".txt" || "Untitled.txt";
 	 console.log("download has sent title= "+file_title+" content = "+file_content+" at path ="+ filepath);
-	});		
-	  var file_title = "title.txt";
-	  var md = "foo===\n* bar\n* baz\n\nThis should be orking when i get text content";
+	  //var file_title = "title.txt";
+	  var md = file_content;
+	  //var md = "foo===\n* bar\n* baz\n\nThis should be orking when i get text content";
 	fs.writeFile(filepath+ file_title, md, function(err) {
 	    if(err) {
 	        return console.log(err);
@@ -160,6 +160,8 @@ app.get('/download_txt', function(req, res){
 	    console.log("The file was saved!");
 	   
 	}); 
+	});		
+
 });
 
 var server = https.createServer(options, app);
