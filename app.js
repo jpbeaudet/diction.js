@@ -141,7 +141,7 @@ app.get('/download_txt', function(req, res){
 	  var filepath = path.join(__dirname, 'public/tmp/');
 	  var file_title = "title.txt";
 	  var md = "foo===\n* bar\n* baz\n\nThis should be orking when i get text content"
-	fs.writeFile(filepath, md, function(err) {
+	fs.writeFile(filepath+ file_title, md, function(err) {
 	    if(err) {
 	        return console.log(err);
 	    }
