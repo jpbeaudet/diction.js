@@ -68,10 +68,10 @@ app.configure('production', function(){
 });
 
 // passport config
-var Account = require('./models/account');
-passport.use(new LocalStrategy(Account.authenticate()));
-passport.serializeUser(Account.serializeUser());
-passport.deserializeUser(Account.deserializeUser());
+//var Account = require('./models/account');
+//passport.use(new LocalStrategy(Account.authenticate()));
+//passport.serializeUser(Account.serializeUser());
+//passport.deserializeUser(Account.deserializeUser());
 
 // mongoose
 mongoose.connect('mongodb://localhost/passport_local_mongoose');
