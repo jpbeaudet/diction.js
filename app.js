@@ -145,11 +145,11 @@ app.get('/download_txt', function(req, res){
 	 var MEMORY = mongoose.model('memory', memoryDb);
 	MEMORY.findOne({ username: username}, function (err, doc){
 		file_content=doc.docA+doc.docB;
-	 file_title = doc.title || "Untitled";
+	 file_title = doc.title+".txt" || "Untitled.txt";
 	 console.log("download has sent title= "+file_title+" content = "+file_content+" at path ="+ filepath);
 	});		
 	  var file_title = "title.txt";
-	  var md = "foo===\n* bar\n* baz\n\nThis should be orking when i get text content"
+	  var md = file_content;
 	fs.writeFile(filepath+ file_title, md, function(err) {
 	    if(err) {
 	        return console.log(err);
