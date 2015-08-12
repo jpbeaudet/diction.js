@@ -128,11 +128,11 @@ app.get('/download', function(req, res){
 		   
 		  markdownpdf().from.string(md).to(outputPath, function () {
 		    console.log("Created", outputPath);
+
+		  });
 		    var file = filepath + file_title;
 			  res.download(file); // Set disposition and send it.
-			  fs.unlinkSync(file);
-		  });
-		
+			  fs.unlinkSync(file);	
 	  });	  
 	});
 
