@@ -115,6 +115,7 @@ app.post('/login', function(req, res,next) {
 app.get('/download', function(req, res){
 	  //var MEMORY = mongoose.model('memory', memoryDb);
 	  var path = require('path');
+	  var fs = require('fs');
 	  var file_content;
 	  var file_title ;
 	  //MEMORY.findOne({ username: username}, function (err, doc){
@@ -133,8 +134,23 @@ app.get('/download', function(req, res){
 	  });
 	  var file = filepath + "title.pdf";
 	  res.download(file); // Set disposition and send it.
+	  fs.unlinkSync(file);
 	});
-
+app.get('/download_txt', function(req, res){
+	var fs = require('fs');
+	  var filepath = path.join(__dirname, 'public/tmp/');
+	  var file_title = "title.txt";
+	  var md = "foo===\n* bar\n* baz\n\nThis should be orking when i get text content"
+	fs.writeFile(filepath, md, function(err) {
+	    if(err) {
+	        return console.log(err);
+	    }
+	    var file = filepath + file_title;
+		  res.download(file); // Set disposition and send it.
+		  fs.unlinkSync(file);
+	    console.log("The file was saved!");
+	}); 
+});
 
 var server = https.createServer(options, app);
 app.set('port', process.env.PORT || 3000);
