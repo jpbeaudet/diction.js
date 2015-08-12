@@ -68,7 +68,7 @@ if ('webkitSpeechRecognition' in window) {
     function reset() {
     button = document.getElementById("button");
   	  recognizing = false;
-  	  button.innerHTML = "<img src='images/micro.png' >";
+  	  button.innerHTML = "<img src='images/micro.png', width='50', height='60' >";
   	}
 
   	function toggleStartStop() {
