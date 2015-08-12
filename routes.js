@@ -33,7 +33,7 @@ module.exports = function (app) {
      next();
      }
    
-   }, passport.authenticate('local', {
+   }, passport.authenticate('local-signup', {
 
 	      successRedirect : '/home', // redirect to the secure account section
 	      failureRedirect : '/register' ,// redirect back to the signup page if there is an error
