@@ -89,6 +89,16 @@ app.get('/login', function(req, res) {
 
 
   // send to facebook to do the authentication
+  app.get('/connect/facebook', passport.authorize('facebook', { scope : 'email' }));
+
+  // handle the callback after facebook has authorized the user
+  app.get('/connect/facebook/callback',
+      passport.authorize('facebook', {
+          successRedirect : '/home',
+          failureRedirect : '/'
+      }));
+
+  // send to facebook to do the authentication
   app.get('/auth/facebook', function(req, res, next) {
   	 next();
   }, passport.authenticate('facebook', { scope : 'email' }));
@@ -99,16 +109,6 @@ app.get('/login', function(req, res) {
           failureRedirect : '/',
           scope : ['email']
       }));
-  // send to facebook to do the authentication
-  //app.get('/connect/facebook', passport.authorize('facebook', { scope : 'email' }));
-
-  // handle the callback after facebook has authorized the user
-  //app.get('/connect/facebook/callback',
-     // passport.authorize('facebook', {
-     //     successRedirect : '/home',
-      //    failureRedirect : '/'
-     // }));
-
   // twitter --------------------------------
 
   /*// send to twitter to do the authentication
