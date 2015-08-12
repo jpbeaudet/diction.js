@@ -68,7 +68,7 @@ if ('webkitSpeechRecognition' in window) {
     function reset() {
     button = document.getElementById("button");
   	  recognizing = false;
-  	  button.innerHTML = "Click to Speak";
+  	  button.innerHTML = "<img src='images/micro.png' >";
   	}
 
   	function toggleStartStop() {
