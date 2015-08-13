@@ -38,14 +38,6 @@ head
     center     
      button#button(onclick='toggleStartStop()')   
      br
-     button#buttonnewtext(onclick='controls("clear")') New text
-     br
-     a#download(href='/download') Download to pdf
-     br
-     a#downloadtxt(href='/download_txt') Download to txt
-     br
-     a#email(href='/email') Send to your email account
-     br
      span#final_span(style='color: grey; font-size: 20px;')
      br
      p
@@ -55,13 +47,21 @@ head
      
    div(align='right', style='margin: 2cm 4cm 3cm 4cm')
     br
+    h1 Utilities
+    br
+    br
     button#buttonnewtext(onclick='controls("clear")') New text
+    br
     br
     a#download(href='/download') Download to pdf
     br
+    br
     a#downloadtxt(href='/download_txt') Download to txt
     br
+    br
     a#email(href='/email') Send to your email account   
+    br
+    br
      .clear_all              
    .page     
        .subpage#page 
