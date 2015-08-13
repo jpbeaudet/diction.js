@@ -196,7 +196,8 @@ app.get('/email', function(req, res){
 				    }else{
 				    	console.log('stderr: ' + stderr);	
 				    }				    	    
-				    });				   				   
+				    });	
+				 res.redirect("/home");
 					});
 	 });
 });
