@@ -191,8 +191,8 @@ app.get('/email', function(req, res){
 				    
 				    if (error !== null) {
 				     console.log("email was sent to : "+username );
-				     //var file = filepath + file_title;					 
-					 // fs.unlinkSync(file);
+				     var file = filepath + file_title;					 
+					  fs.unlinkSync(file);
 				    }else{
 				    	console.log('stderr: ' + stderr);	
 				    }				    	    
