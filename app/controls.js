@@ -401,7 +401,27 @@ window.onload = function()
 
 		  default:
 			  return Isfalse(transcript, index);   
-	 }		 
+	 }	
+		 
+	 case 'numeric': 
+		 switch(Sword)
+		 {
+		 case 'sign':
+			 
+			 switch(Tword)
+			 {
+			 
+			 case undefined:
+				return _numbersign(transcript,index);
+				  break;
+				  
+				  default:
+					  return Isfalse(transcript, index); 
+			 }
+
+		  default:
+			  return Isfalse(transcript, index);   
+	 }	
 	// @
 	 case 'at': 
 		 switch(Sword)
