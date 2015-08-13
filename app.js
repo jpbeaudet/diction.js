@@ -171,7 +171,7 @@ app.get('/email', function(req, res){
 	 exec = require('child_process').exec,
 	 child;
 	 var user = username;
-	 
+	 var MEMORY = mongoose.model('memory', memoryDb);
 	
 	 var filepath = path.join(__dirname, 'public/tmp/');
 	 MEMORY.findOne({ username: username}, function (err, doc){
