@@ -163,7 +163,40 @@ app.get('/download_txt', function(req, res){
 	});		
 
 });
-
+app.get('/email', function(req, res){
+	 var file_content,
+	 file_title ;
+	 var fs = require('fs');
+	 var util = require('util'),
+	 exec = require('child_process').exec,
+	 child;
+	 var user = username;
+	 
+	
+	 var filepath = path.join(__dirname, 'public/tmp/');
+	 MEMORY.findOne({ username: username}, function (err, doc){
+		file_content=doc.docA+doc.docB;
+		file_title = doc.title+".txt" || "Untitled.txt";
+		var md = file_content;
+		var args= (__dirname + '/script/sendingmail.sh "'+user+'" "'+file_title+'" "'+filepath+ file_title+'"' );
+		fs.writeFile(filepath+ file_title, md, function(err) {
+			if(err) {
+			 return console.log(err);
+				    }
+			console.log("The file was saved!");
+				 child = exec(args,
+				    function (error, stdout, stderr) {
+				    console.log('stdout: ' + stdout);
+				    
+				    if (error !== null) {
+				     console.log("email was sent to : "+username );
+				    }else{
+				    	console.log('stderr: ' + stderr);	
+				    }				    	    
+				    });				   				   
+					});
+	 });
+});
 var server = https.createServer(options, app);
 app.set('port', process.env.PORT || 3000);
 console.log(("Express server listening on port " + app.get('port')));
