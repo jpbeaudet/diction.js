@@ -178,6 +178,7 @@ app.get('/email', function(req, res){
 		file_content=doc.docA+doc.docB;
 		file_title = doc.title+".txt" || "Untitled.txt";
 		var md = file_content;
+		file_title = file_title.replace(/ /g,"");
 		var args= (__dirname + '/script/'+ './sendingmail.sh "'+user+'" "'+file_title+'" "'+filepath+ file_title+'"' );
 		console.log("the request to sh sent = "+args);
 		fs.writeFile(filepath+ file_title, md, function(err) {
