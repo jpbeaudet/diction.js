@@ -33,15 +33,6 @@ head
      span#language_span(style='color: grey; font-size: 16px;')
      p
      
-   div(align='left')
-    br
-    button#buttonnewtext(onclick='controls("clear")') New text
-    br
-    a#download(href='/download') Download to pdf
-    br
-    a#downloadtxt(href='/download_txt') Download to txt
-    br
-    a#email(href='/email') Send to your email account
            
    .container
     center     
@@ -61,7 +52,17 @@ head
      span#lines_span
      &nbsp;&nbsp;
      span#words_span
-             
+     
+   div(align='rigth')
+    br
+    button#buttonnewtext(onclick='controls("clear")') New text
+    br
+    a#download(href='/download') Download to pdf
+    br
+    a#downloadtxt(href='/download_txt') Download to txt
+    br
+    a#email(href='/email') Send to your email account   
+     .clear_all              
    .page     
        .subpage#page 
         span#title_span
