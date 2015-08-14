@@ -180,8 +180,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0d7ec4', end
 }
 button span{
 	background: url(../images/arrow.png) repeat-x -8px -4px;
-	height: 18px;
-	width: 28px;
+	height: 14px;
+	width: 21px;
 	display: block;
 	-webkit-transition: all 0.6s;
 	-moz-transition: all 0.6s;
