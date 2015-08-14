@@ -68,7 +68,7 @@ if ('webkitSpeechRecognition' in window) {
     function reset() {
     button = document.getElementById("button");
   	  recognizing = false;
-  	  button.innerHTML = "<img src='images/btn_record.png', width='60', height='60',border='0' >";
+  	  button.innerHTML = "<img src='images/btn_record.png', width='100', height='100',border='0' >";
   	}
 
   	function toggleStartStop() {
@@ -80,7 +80,7 @@ if ('webkitSpeechRecognition' in window) {
   	  } else {
   	    recognition.start();
   	    recognizing = true;
-  	    button.innerHTML = "<img src='images/btn_stop2.png', width='60', height='60',border='0' >";
+  	    button.innerHTML = "<img src='images/btn_stop2.png', width='100', height='100',border='0' >";
 
   	  } };
   	  
