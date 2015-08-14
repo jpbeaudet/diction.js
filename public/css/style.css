@@ -22,7 +22,7 @@ nav.horizontal ul li{	display: inline-block;}/* horizontal menu */
 img{max-width:100%;}
 /*end reset*/
 body {
-    background: url(../images/notepad-407197_1920.jpg) no-repeat #fff;
+    background: url(../images/notepadgrey.png) no-repeat #fff;
     backgroud-opacity: 0.7;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
