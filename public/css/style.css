@@ -76,7 +76,7 @@ form {
 	font-family: 'Petit Formal Script', cursive;
 	color: #294FB7;
 	display: block;
-	font-size: 1.6em;
+	font-size: 2.0em;
 	font-weight: 2000;
 	text-align: center;
 }
@@ -85,8 +85,8 @@ form {
 	color: #294FB7;
 	display: block;
 	padding-bottom: 0.5em;
-	font-size: 5.0em;
-	padding-top: 1.5em;
+	font-size: 6.0em;
+	padding-top: 1.0em;
 	font-weight: 2000;
 	text-align: center;
 }
@@ -94,7 +94,7 @@ form {
 	font-family: 'Petit Formal Script', cursive;
 	color: #294FB7;
 	display: block;
-	padding-bottom: 1.5em;
+	padding-bottom: 1.0em;
 	font-size: 2.6em;
 	padding-top: 0.5em;
 	font-weight: 600;
