@@ -15,14 +15,14 @@ html
   body
    .grid
     center
-     h1 Login to Smartnotes the good old way !
+     h3 Login to smartnotes
      br
      form(role='form', action="/login",method="post", style='max-width: 750px;')
        .form-group
            input.form-control(type='text', name="username", placeholder='Enter Email')
        .form-group
          input.form-control(type='password', name="password", placeholder='Password')
-       button.btn(type='submit') Submit
-       &nbsp;
+       button.btn-4(type='submit') Submit
+       &nbsp; 
        a(href='/')
-         button.btn(type="button") Cancel 
+         button(type="button") Cancel 
