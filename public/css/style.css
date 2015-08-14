@@ -72,13 +72,20 @@ form {
 	text-align: center;
 	margin-top: 1em;
 }
-
+.grid p {
+	font-family: 'Petit Formal Script', cursive;
+	color: #FFF;
+	display: block;
+	font-size: 1.6em;
+	font-weight: 2000;
+	text-align: center;
+}
 .grid h1 {
 	font-family: 'Petit Formal Script', cursive;
 	color: #FFF;
 	display: block;
 	padding-bottom: 2.5em;
-	font-size: 1.6em;
+	font-size: 5.0em;
 	padding-top: 1.5em;
 	font-weight: 2000;
 	text-align: center;
@@ -87,9 +94,9 @@ form {
 	font-family: 'Petit Formal Script', cursive;
 	color: #FFF;
 	display: block;
-	padding-bottom: 2.5em;
-	font-size: 1.6em;
-	padding-top: 1.5em;
+	padding-bottom: 2.0em;
+	font-size: 2.6em;
+	padding-top: 1.0em;
 	font-weight: 600;
 	text-align: center;
 }
