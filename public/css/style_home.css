@@ -1,0 +1,93 @@
+body {
+	height:100%;
+    margin: 0;
+    padding: 0;
+    background-color: #FAFAFA;
+    font: 12pt "Tahoma";
+}
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.page {
+    width: 21cm;
+    min-height: 29.7cm;
+    padding: 2cm;
+    margin: 1cm auto;
+    border: 1px #D3D3D3 solid;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.subpage {
+    padding: 1cm;
+    border: 5px red solid;
+    height: 256mm;
+    outline: 2cm #FFEAEA solid;
+}
+.nav {
+  position: absolute;
+  height:29.7cm;;
+  top: 0;
+  left: 0;
+  border: 2px grey solid;
+  padding: 10px;        
+  background-color: #D8D8D8 ;  
+  width: 300px;
+  transform: translate(0px, 0px);
+  transition: all 1s ease-out;
+  
+}
+#help {
+  position: absolute;
+  height:29.7cm;;
+  top: 0;
+  left: 0;
+  border: 2px grey solid;
+  padding: 10px;        
+  background-color: #D8D8D8 ;  
+  width: 300px;
+  transform: translate(0px, 0px);
+  transition: all 1s ease-out;
+  
+}
+#settingsMenu {
+  position: absolute;
+  height:29.7cm;;
+  top: 0;
+  left: 0;
+  border: 2px grey;
+  padding: 10px;        
+  background-color: #D0D0D0  ;  
+  width: 300px;
+  transform: translate(0px, 0px);
+  transition: all 1s ease-out;
+  
+}
+#panelmenu {
+  position: absolute;
+  height:29.7cm;;
+  top: 0;
+  left: 0;
+  border: 2px grey;
+  padding: 10px;        
+  background-color: #D0D0D0  ;  
+  width: 300px;
+  transform: translate(0px, 0px);
+  transition: all 1s ease-out;
+  
+}
+
+.nav--active {
+  position: absolute;
+  height:29.7cm;;
+  top: 0;
+  right: 0;
+  border: 2px grey solid;  
+  padding: 10px;     
+  background-color: #D8D8D8 ;
+  width: 300px;
+  transform: translate(0px, 0px);
+  transition: all 1s ease-out;
+}
