@@ -74,7 +74,7 @@ form {
 }
 .grid p {
 	font-family: 'Petit Formal Script', cursive;
-	color: #354B86;
+	color: #294FB7;
 	display: block;
 	font-size: 1.6em;
 	font-weight: 2000;
@@ -82,7 +82,7 @@ form {
 }
 .grid h1 {
 	font-family: 'Petit Formal Script', cursive;
-	color: #354B86;
+	color: #294FB7;
 	display: block;
 	padding-bottom: 0.5em;
 	font-size: 5.0em;
@@ -92,9 +92,9 @@ form {
 }
 .grid h3 {
 	font-family: 'Petit Formal Script', cursive;
-	color: #354B86;
+	color: #294FB7;
 	display: block;
-	padding-bottom: 2.0em;
+	padding-bottom: 1.5em;
 	font-size: 2.6em;
 	padding-top: 0.5em;
 	font-weight: 600;
