@@ -42,8 +42,8 @@ head
             br  
             br
             h2 Click play to start !
-            br   
-            button#button(onclick='toggleStartStop()')   
+            br 
+            a#button(href='javascript:toggleStartStop();')     
             br
             br
             span#final_span(style='color: grey; font-size: 20px;')
@@ -58,9 +58,6 @@ head
            h2 Utilities
            br
            a#buttonnewtext(href='javascript:controls("clear");')
-             img(src='images/pages.png', width='40', height='40',alt="New text")
-           br
-           button#buttonnewtext(onclick='controls("clear")')
              img(src='images/pages.png', width='40', height='40',alt="New text")
            br
            br
