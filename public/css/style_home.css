@@ -22,7 +22,7 @@ body {
 }
 .subpage {
     padding: 1cm;
-    border: 5px #12A5F4 solid;
+    border: 5px blue solid;
     height: 256mm;
     outline: 2cm #FFEAEA solid;
 }
