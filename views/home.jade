@@ -34,7 +34,21 @@ head
      span#language_span(style='color: grey; font-size: 16px;')
      p
    .container 
-    center    
+    center 
+     h2 Utilities
+     br
+     a#buttonnewtext(href='javascript:controls("clear");')
+       img(src='images/pages.png', width='40', height='40',alt="New text") 
+     &nbsp;&nbsp;&nbsp;&nbsp; 
+     a#download(href='/download') 
+       img(src='images/pdf19.png', width='40', height='40',alt="Download to pdf")
+     &nbsp;&nbsp;&nbsp;&nbsp; 
+     a#downloadtxt(href='/download_txt') 
+       img(src='images/document263.png', width='40', height='40',alt="Download to txt")     
+     &nbsp;&nbsp;&nbsp;&nbsp;
+     a#email(href='/email')    
+       img(src='images/mail115.png', width='40', height='40',alt="Send to your email account")     
+                         
      table
        tr
          th
@@ -66,27 +80,7 @@ head
                span#manual_span    
                span#docB_span
                br       
-         th
-          div(align='left', style='margin: 0cm 4cm 0cm 4cm')
-           br
-           h2 Utilities
-           br
-           a#buttonnewtext(href='javascript:controls("clear");')
-             img(src='images/pages.png', width='40', height='40',alt="New text")
-           br
-           br
-           a#download(href='/download') 
-             img(src='images/pdf19.png', width='40', height='40',alt="Download to pdf")
-           br
-           br
-           a#downloadtxt(href='/download_txt') 
-             img(src='images/document263.png', width='40', height='40',alt="Download to txt")
-           br
-           br
-           a#email(href='/email')    
-             img(src='images/mail115.png', width='40', height='40',alt="Send to your email account")
-           br
-       .clear_all 
+          .clear_all 
 
 
    script(type='text/javascript')     
