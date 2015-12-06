@@ -2,7 +2,7 @@ var passport = require('passport');
 var mongoose = require('mongoose');
 var Account = require('./models/account');
 
- require('./var/passport')(passport); // pass passport for configuration
+ //require('./var/passport')(passport); // pass passport for configuration
 
 //module.exports = function (app) {
 	module.exports = function (app,passport) {
