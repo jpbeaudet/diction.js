@@ -43,7 +43,8 @@ var Account = require('./models/account');
      });
      //next();
      }
-   }, passport.authenticate('local-signup', {
+   //}, passport.authenticate('local-signup', {
+   }, passport.authenticate('local-login', {
    //}, passport.authenticate('local', {
 
 	      successRedirect : '/home', // redirect to the secure account section
