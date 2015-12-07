@@ -108,18 +108,18 @@ body {
 
 .page {
     width: 90%;
-    min-height: 70%;
-    padding: 2%;
-    margin: 2% auto;
+    min-height: 60%;
+    padding: 1%;
+    margin: 1% auto;
     border: 1px #3b5998 solid;
-    border-radius: 5px;
+    border-radius: 2px;
     background: white;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 .subpage {
     padding: 1%;
     border: 5px blue solid;
-    height: 69%;
+    height: 59%;
     outline: 1% #749DFC solid;
 }	
 	
