@@ -52,6 +52,8 @@ window.onload = function()
 		icon_span.innerHTML = "<img src='images/blinking-cursor.GIF', height='25'>";
 		docA_span.innerHTML = docA;
 	    docB_span.innerHTML = docB;	
+		lines_span.innerHTML = "Lines: ";
+		words_span.innerHTML = " Words: ";	    
 	    restart();
 });
 };
