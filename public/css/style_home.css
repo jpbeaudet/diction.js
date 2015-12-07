@@ -28,52 +28,52 @@ body {
 }
 .nav {
   position: absolute;
-  height:29.7cm;;
+  height:100%;
   top: 0;
   left: 0;
   border: 2px grey solid;
   padding: 10px;        
   background-color: #D8D8D8 ;  
-  width: 300px;
+  width: 25%;
   transform: translate(0px, 0px);
   transition: all 1s ease-out;
   
 }
 #help {
   position: absolute;
-  height:29.7cm;;
+  height:100%;
   top: 0;
   left: 0;
   border: 2px grey solid;
   padding: 10px;        
   background-color: #D8D8D8 ;  
-  width: 300px;
+  width: 25%;
   transform: translate(0px, 0px);
   transition: all 1s ease-out;
   
 }
 #settingsMenu {
   position: absolute;
-  height:29.7cm;;
+  height:100%;
   top: 0;
   left: 0;
   border: 2px grey;
   padding: 10px;        
   background-color: #D0D0D0  ;  
-  width: 300px;
+  width: 25%;
   transform: translate(0px, 0px);
   transition: all 1s ease-out;
   
 }
 #panelmenu {
   position: absolute;
-  height:29.7cm;;
+  height:100%;
   top: 0;
   left: 0;
   border: 2px grey;
   padding: 10px;        
   background-color: #D0D0D0  ;  
-  width: 300px;
+  width: 25%;
   transform: translate(0px, 0px);
   transition: all 1s ease-out;
   
@@ -81,13 +81,13 @@ body {
 
 .nav--active {
   position: absolute;
-  height:29.7cm;;
+  height:100%;;
   top: 0;
   right: 0;
   border: 2px grey solid;  
   padding: 10px;     
   background-color: #D8D8D8 ;
-  width: 300px;
+  width: 25%;
   transform: translate(0px, 0px);
   transition: all 1s ease-out;
 }
