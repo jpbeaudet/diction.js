@@ -66,7 +66,7 @@ window.onload = function()
 	  // socket.to(_USERNAME).emit("request", "test -------------------------------->");
 	  socket.on("response", function(response){
 		  console.log("response fired");
-		  $("#final_span").css("color", "grey");
+		  //$("#final_span").css("color", "grey");
 		  var docA = response[0];
 		  var docB = response[1];
 		  var LastdocA = response[2];
@@ -980,8 +980,8 @@ function Istrue(data, index){
 	var afttext = index.docB;
     console.log("pretext command = "+ pretext);
     console.log("afttext command = "+ afttext);
-	$("#final_span").css("color", "pink");
-	final_span.innerHTML = " @@@->  " + data + "  <-@@@ ";
+	//$("#final_span").css("color", "pink");
+	//final_span.innerHTML = " @@@->  " + data + "  <-@@@ ";
 	var title = index.title;
 	socket.emit("cmd", [ pretext , afttext,title]);
 	//socket.to(_USERNAME).emit("cmd", [ pretext , afttext]);
@@ -1006,7 +1006,7 @@ function Isfalse(data, index){
     docB_span.innerHTML = afttext + " ";
     pretext = pretext + " " + doc + " ";
     afttext = afttext + "";  
-    final_span.innerHTML = " @@@->  " + doc + "  <-@@@ ";
+    //final_span.innerHTML = " @@@->  " + doc + "  <-@@@ ";
   	diction = doc;  
     var title = index.title;  
 	socket.emit("save", [data, pretext , afttext,json,title]);	
@@ -1028,13 +1028,13 @@ $.confirm({
         'Yes'	: {
             'class'	: 'blue',
             'action': function(){
-	 $("#final_span").css("color", "pink");	
+	 //$("#final_span").css("color", "pink");	
  index.docA = ""; 
  index.docB ="";
  index.title = "Untitled";
  docA_span.innerHTML = "";
  docB_span.innerHTML = "";
- final_span.innerHTML = " @@@->  New Text  <-@@@ ";
+ //final_span.innerHTML = " @@@->  New Text  <-@@@ ";
  socket.emit('newtext',"new text----------------->>");
  //socket.to(_USERNAME).emit('newtext',"new text----------------->>");
  location.reload(true);

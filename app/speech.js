@@ -42,7 +42,7 @@ if ('webkitSpeechRecognition' in window) {
       for (var i = 0; i < event.results.length; ++i) {
     	  txt = "";
         if (event.results[i].isFinal) {
-        	$("#final_span").css("color", "grey");
+        	//$("#final_span").css("color", "grey");
         	toggleStartStop() ;
             txt = event.results[i][0].transcript;
         	interim = ""; 
@@ -60,7 +60,7 @@ if ('webkitSpeechRecognition' in window) {
        
    //   final_span.innerHTML = " @@@->  " + txt + "  <-@@@ ";
       interim_span.innerHTML = interim;
-      icon_span.innerHTML = '<span style="padding-right:2px; padding-left: 2px;"><img src="images/blinking-cursor.GIF.gif" /></span>';
+      icon_span.innerHTML = '<span style="padding-right:2px; padding-left: 2px;"><img src="images/blinking-cursor.gif" /></span>';
       
     }; 
 
