@@ -120,7 +120,7 @@ app.get('/download', function(req, res){
 	  var file_title ;
 	  MEMORY.findOne({ username: username}, function (err, doc){
 		  file_content=doc.docA+doc.docB;
-		  file_content = file_content.replace('<div>',"").replace('</div>',"/n").replace('&nbsp',"	").replace('</br>',"/n").replace('<br>',"/n");
+	      file_content = file_content.replace('<div>',"").replace('</div>',"\n").replace('&nbsp',"	").replace('</br>',"\n").replace('<br >',"\n");
 		  file_title = doc.title+".pdf" || "Untitled.pdf";
 	
 	  
@@ -146,7 +146,7 @@ app.get('/download_txt', function(req, res){
 	 var MEMORY = mongoose.model('memory', memoryDb);
 	MEMORY.findOne({ username: username}, function (err, doc){
 		file_content=doc.docA+doc.docB;
-		file_content = file_content.replace('<div>',"").replace('</div>',"/n").replace('&nbsp',"	").replace('</br>',"/n").replace('<br>',"/n");
+		file_content = file_content.replace('<div>',"").replace('</div>',"\n").replace('&nbsp',"	").replace('</br>',"\n").replace('<br >',"\n");
 
 	 file_title = doc.title+".txt" || "Untitled.txt";
 	 console.log("download has sent title= "+file_title+" content = "+file_content+" at path ="+ filepath);
@@ -179,7 +179,7 @@ app.get('/email', function(req, res){
 	 var filepath = path.join(__dirname, 'public/tmp/');
 	 MEMORY.findOne({ username: username}, function (err, doc){
 		file_content=doc.docA+doc.docB;
-		file_content = file_content.replace('<div>',"").replace('</div>',"/n").replace('&nbsp',"	").replace('</br>',"/n").replace('<br>',"/n");
+		file_content = file_content.replace('<div>',"").replace('</div>',"\n").replace('&nbsp',"	").replace('</br>',"\n").replace('<br >',"\n");
 		
 		file_title = doc.title+".txt" || "Untitled.txt";
 		var md = file_content;
