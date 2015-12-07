@@ -131,7 +131,7 @@ body {
   border: 1px grey solid;
   padding: 5px;        
   background-color: #D8D8D8 ;  
-  width: 50%;
+  width: 55%;
   transform: translate(0px, 0px);
   transition: all 1s ease-out;
   
@@ -145,7 +145,7 @@ body {
   border: 1px grey;
   padding: 5px;        
   background-color: #D0D0D0  ;  
-  width: 50%;
+  width: 55%;
   transform: translate(0px, 0px);
   transition: all 1s ease-out;
   
@@ -159,7 +159,7 @@ body {
   border: 1px grey;
   padding: 5px;        
   background-color: #D0D0D0  ;  
-  width: 50%;
+  width: 55%;
   transform: translate(0px, 0px);
   transition: all 1s ease-out;
   

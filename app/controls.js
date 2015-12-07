@@ -49,7 +49,7 @@ window.onload = function()
    	    language_span.innerHTML = languageIndex[strUser];
 		welcome_span.innerHTML = "Welcome "+ _USERNAME;
 		title_span.innerHTML = "<h1>"+title+"</h1>";
-		icon_span.innerHTML = "<img src='images/blinking-cursor.GIF'>";
+		icon_span.innerHTML = "<img src='images/blinking-cursor.GIF', height='25'>";
 		docA_span.innerHTML = docA;
 	    docB_span.innerHTML = docB;	
 	    restart();
