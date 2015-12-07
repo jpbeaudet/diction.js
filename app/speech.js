@@ -60,7 +60,7 @@ if ('webkitSpeechRecognition' in window) {
        
    //   final_span.innerHTML = " @@@->  " + txt + "  <-@@@ ";
       interim_span.innerHTML = interim;
-      icon_span.innerHTML = "-->";
+      icon_span.innerHTML = '<span style="padding-right:2px; padding-left: 2px;"><img src="images/blinking-cursor.GIF.gif" /></span>';
       
     }; 
 

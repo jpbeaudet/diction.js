@@ -91,3 +91,37 @@ body {
   transform: translate(0px, 0px);
   transition: all 1s ease-out;
 }
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+body {
+	height:100%;
+    margin: 10px;
+    padding: 10px;
+    background-color: #FAFAFA;
+    font: 12pt "Tahoma";
+}
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.page {
+    width: 90%;
+    min-height: 80%;
+    padding: 5%;
+    margin: 5% auto;
+    border: 1px #3b5998 solid;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.subpage {
+    padding: 5%;
+    border: 5px blue solid;
+    height: 70%;
+    outline: 2cm #749DFC solid;
+}	
+	
+	
+	}
