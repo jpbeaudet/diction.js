@@ -122,6 +122,47 @@ body {
     height: 59%;
     outline: 1% #749DFC solid;
 }	
-	
+#help {
+  position: absolute;
+  height:100%;
+  font-size:20px;
+  top: 0;
+  left: 0;
+  border: 1px grey solid;
+  padding: 5px;        
+  background-color: #D8D8D8 ;  
+  width: 50%;
+  transform: translate(0px, 0px);
+  transition: all 1s ease-out;
+  
+}
+#settingsMenu {
+  position: absolute;
+  height:100%;
+  font-size:20px;
+  top: 0;
+  left: 0;
+  border: 1px grey;
+  padding: 5px;        
+  background-color: #D0D0D0  ;  
+  width: 50%;
+  transform: translate(0px, 0px);
+  transition: all 1s ease-out;
+  
+}
+#panelmenu {
+  position: absolute;
+  height:100%;
+  font-size:20px;
+  top: 0;
+  left: 0;
+  border: 1px grey;
+  padding: 5px;        
+  background-color: #D0D0D0  ;  
+  width: 50%;
+  transform: translate(0px, 0px);
+  transition: all 1s ease-out;
+  
+}	
 	
 	}
