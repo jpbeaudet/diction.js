@@ -11,7 +11,9 @@ head
     link(rel='stylesheet', href='css/jquery.confirm.css')
     link(rel='stylesheet', href='css/bootstrap.min.css')
     script(src='js/jquery-1.11.1.min.js')
-    
+    //script(src='js/jquery.min.js')
+    //script(src='js/jquery.dropotron.min.js')
+    script(src='js/bootstrap.min.js')    
   body
    .container(style='font-family: Arial Black; font-size: 20px; color: black;padding: 10px;')
     center
@@ -30,44 +32,62 @@ head
        img(src='images/menu29.png', width='32', height='32',alt="Panel")
      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
      span#language_span(style='color: grey; font-size: 16px;')
-                       
+     p
+   .container 
+    center    
+     table
+       tr
+         th
+          .container(style='margin: 0cm 4cm 0cm 4cm')
+           center
+            br  
+            br
+            h2 Click play to start !
+            br 
+            a#button(href='javascript:toggleStartStop();')     
+            br
+            br
+      
+         th
+          div(align='right', style='margin: 0cm 4cm 0cm 4cm')
+           br
+           h2 Utilities
+           br
+           a#buttonnewtext(href='javascript:controls("clear");')
+             img(src='images/pages.png', width='40', height='40',alt="New text")
+           br
+           br
+           a#download(href='/download') 
+             img(src='images/pdf19.png', width='40', height='40',alt="Download to pdf")
+           br
+           br
+           a#downloadtxt(href='/download_txt') 
+             img(src='images/document263.png', width='40', height='40',alt="Download to txt")
+           br
+           br
+           a#email(href='/email')    
+             img(src='images/mail115.png', width='40', height='40',alt="Send to your email account")
+           br
+       .clear_all 
    .container
-    center
-     br 
-     a#button(href='javascript:toggleStartStop();')     
+    center       
+     span#final_span(style='color: grey; font-size: 20px;')
      br
-               
-    .page
-     left     
-        .subpage#page 
-         span#lines_span(style='color: grey; font-size: 10px;')
-         &nbsp;&nbsp;
-         span#words_span(style='color: grey; font-size: 10px;')
-         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-         a#buttonnewtext(href='javascript:controls("clear");')
-           img(src='images/pages.png', width='30', height='30',alt="New text") 
-         &nbsp;&nbsp;&nbsp;&nbsp; 
-         a#download(href='/download') 
-           img(src='images/pdf19.png', width='30', height='30',alt="Download to pdf")
-         &nbsp;&nbsp;&nbsp;&nbsp; 
-         a#downloadtxt(href='/download_txt') 
-           img(src='images/document263.png', width='30', height='30',alt="Download to txt")     
-         &nbsp;&nbsp;&nbsp;&nbsp;
-         a#email(href='/email')    
-           img(src='images/mail115.png', width='30', height='30',alt="Send to your email account")
-         br 
-         span#title_span
-         p
-         br 
-         span#docA_span(style='color: black; font-size: 20px;')
-         span#icon_span(style='padding-right:2px; padding-left: 2px;')
-           img(src='images/blinking-cursor.GIF.gif')
-         span#interim_span(style='color: grey; font-size: 25px;')
-         span#manual_span(style='color: black; font-size: 20px;')    
-         span#docB_span(style='color: black; font-size: 20px;')
-         br       
-     .clear_all 
-
+     p
+     span#lines_span
+     &nbsp;&nbsp;
+     span#words_span               
+   .page     
+       .subpage#page 
+        span#title_span
+        p
+        br 
+        span#docA_span
+        span#icon_span
+        span#interim_span(style='color: red;')
+        span#manual_span    
+        span#docB_span
+        br 
 
    script(type='text/javascript')     
    script(src='/socket.io/socket.io.js')  
@@ -77,7 +97,6 @@ head
    script(src="./app/controls.js")
    script(src="./app/jquery.confirm.js")
    script(src="./app/lib.js")
-   script(src='js/bootstrap.min.js')   
    script
      var domain = document.domain;
      document.domain = "54.68.32.250"
