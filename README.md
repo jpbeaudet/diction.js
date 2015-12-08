@@ -42,12 +42,13 @@ For information about the code contact jpbeaudet84@gmail.com
 3. Start mongodb in a screen `./mongod`
 4. Run in home directory of the project `node app.js`
 ## TODO :
-1. Add congig file on server side
-2. Add config constructor on client-side
-3. Add facebook,twitter,google+ integration (auth and api for contacts and share and tweets)
-4. Troubleshoot socket.io multifire bug
-5. Add more command and command variants
-6 Add new command_<language>() command traduction in nthe function and add defalut command_en()
-7. Add sms
-8. Add better UX
+* Things to add and/or change
+  * Add congig file on server side
+  * Add config constructor on client-side
+  * Add facebook,twitter,google+ integration (auth and api for contacts and share and tweets)
+  * Troubleshoot socket.io multifire bug
+  * Add more command and command variants
+  * Add new command_<language>() command traduction in nthe function and add defalut command_en()
+  * Add sms
+  * Add better UX
 
