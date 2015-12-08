@@ -1,7 +1,8 @@
 # diction.js:
 Hands free notes with voice command formatting
 ## Contributors are welcome !
-If you want to contrubute to this little practical I will be enchanted. The GNu 2.0 License permits it.
+If you want to contribute to this little practical App I will be enchanted! The GNu 2.0 License permits it.
+Dont hesitate to make a pull request if you added something interesting
 For information about the code contact jpbeaudet84@gmail.com
 
 ## Features:
@@ -48,4 +49,5 @@ For information about the code contact jpbeaudet84@gmail.com
 5. Add more command and command variants
 6 Add new command_<language>() command traduction in nthe function and add defalut command_en()
 7. Add sms
+8. Add better UX
 
