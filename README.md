@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # diction.js:
 Hands free notes with voice command formatting
 ## Contributors are welcome !
