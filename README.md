@@ -12,7 +12,7 @@ Hands free notes with voice command formatting
   *Send with:
     *email (to yourself until google+integration)
 ## Dependencies:
-Install the package.json `npm install`
+1.Install the package.json `npm install`
   *express:3.3.4
   *jade: 0.34.1
   *passport: 0.1.18
