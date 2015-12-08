@@ -3,14 +3,14 @@
 Hands free notes with voice command formatting
 ## Contributors are welcome !
 ## Features:
-1. Format and edit text with voice command
-..* English language
-..* English sub-language
-2. Download in:
-..* Pdf files
-..* Txt files
-3.Send with:
-..* email (to yourself until google+integration)
+..* Format and edit text with voice command
+ ..* English language
+ ..* English sub-language
+..* Download in:
+ ..* Pdf files
+ ..* Txt files
+..* Send with:
+ ..* email (to yourself until google+integration)
 ## Dependencies:
 Install the package.json `npm install`
 ··*express:3.3.4
