@@ -5,14 +5,14 @@ If you want to contrubute to this little practical I will be enchanted. The GNu 
 For information about the code contact jpbeaudet84@gmail.com
 
 ## Features:
-*Format and edit text with voice command
-  *English language
+* Format and edit text with voice command
+  *  English language
   *English sub-language
-*Download in:
-  *Pdf files
-  *Txt files
-*Send with:
-  *email (to yourself until google+integration)
+* Download in:
+  * Pdf files
+  * Txt files
+* Send with:
+  * email (to yourself until google+integration)
 
 ## Dependencies:
 * Install the package.json `npm install`
