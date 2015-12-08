@@ -87,6 +87,8 @@ if ('webkitSpeechRecognition' in window) {
   	 function restart(){
   		setTimeout(function(){toggleStartStop() ;}, 400);}
 
+	 }else{
+		 window.open("/oups");
 	 }
    
 
