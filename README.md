@@ -7,8 +7,8 @@ For information about the code contact jpbeaudet84@gmail.com
 
 ## Features:
 * Format and edit text with voice command
-  *  English language
-  *English sub-language
+  * English language
+  * English sub-language
 * Download in:
   * Pdf files
   * Txt files
