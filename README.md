@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # diction.js:
 Hands free notes with voice command formatting
 ## Contributors are welcome !
@@ -16,7 +15,7 @@ For information about the code contact jpbeaudet84@gmail.com
     *email (to yourself until google+integration)
 
 ## Dependencies:
-1. Install the package.json `npm install`
+* Install the package.json `npm install`
   * express:3.3.4
   * jade: 0.34.1
   * passport: 0.1.18
