@@ -41,6 +41,7 @@ For information about the code contact jpbeaudet84@gmail.com
   3. data.js 
 3. Start mongodb in a screen `./mongod`
 4. Run in home directory of the project `node app.js`
+
 ## TODO :
 * Things to add and/or change
   * Add congig file on server side
