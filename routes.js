@@ -36,7 +36,7 @@ module.exports = function (app) {
        var errors = req.validationErrors();
 
        if (errors) {
-           return res.render("register", {errors: errors});
+           return res.render("register", {errors: " You need a valid email and password. The password must contain letter and numver and at leastt a capital. "});
        }else{ 
      Account.register(new Account({ username : req.body.username }), req.body.password, function(err, account) {
   

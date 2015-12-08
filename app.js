@@ -99,7 +99,7 @@ app.post('/login', function(req, res,next) {
     var errors = req.validationErrors();
 
     if (errors) {
-        return res.render("login", {errors: errors});
+        return res.render("login", {errors: "Your email and password did not match. Please enter a valid email and password. "});
     }
 	username = req.body.username;
 	console.log(username);

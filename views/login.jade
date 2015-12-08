@@ -15,10 +15,10 @@ html
   body
    .container(style='padding:10px;')
     center
-     h3 Login to smartnotes !
+     h2 Login to smartnotes !
      br
      if errors != null
-       h2 #{errors}
+       h3 #{errors}
      form(role='form', action="/login",method="post", style='max-width: 750px;')
        .form-group
            input.form-control(type='text', name="username", placeholder='Enter Email')

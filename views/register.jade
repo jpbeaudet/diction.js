@@ -15,7 +15,9 @@ html
  body
   .container(style='padding:10px;')
    center
-    h3 Register an account for Smartnotes !   
+    h2 Register an account for Smartnotes ! 
+    if errors != null
+      h3 #{errors}      
     p You must enter a valid email to be registered. Once registered you will be directly redirected to Smarnotes and ready to start!
     br
     form(role='form', action="/register",method="post", style='max-width: 750px;')
