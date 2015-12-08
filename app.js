@@ -108,12 +108,10 @@ app.post('/login', function(req, res,next) {
 }, passport.authenticate('local', {
 
     successRedirect : '/home', // redirect to the secure account section
-    failureRedirect : '/badlogin' ,// redirect back to the signup page if there is an error
+    failureRedirect : '/login' ,// redirect back to the signup page if there is an error
     failureFlash : true // allow flash messages
 }));
-app.get('/badlogin', function(req, res){
-    res.render('login', {message:" You email and password did not match. Please try again. " });
-});
+
 app.get('/download', function(req, res){
 	  var MEMORY = mongoose.model('memory', memoryDb);
 	  var path = require('path');

@@ -17,8 +17,8 @@ html
     center
      h3 Login to smartnotes !
      br
-     if message
-       h2 #{message}
+     if errors != null
+       h2 #{errors}
      form(role='form', action="/login",method="post", style='max-width: 750px;')
        .form-group
            input.form-control(type='text', name="username", placeholder='Enter Email')
