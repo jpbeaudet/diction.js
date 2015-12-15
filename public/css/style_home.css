@@ -101,7 +101,8 @@ footer {
     overflow:hidden;
 }
 @media 
-only screen and (max-width: 760px){
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {	
 body {
 	height:100%;
     margin: 10px;
