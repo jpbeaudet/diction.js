@@ -51,8 +51,8 @@ body {
 }
 #help {
   position: absolute;
-  height:100%;
-  margin-top: 2cm;
+  height:75%;
+  top: 0;
   left: 0;
   border: 2px grey solid;
   padding: 10px;        
@@ -64,8 +64,8 @@ body {
 }
 #settingsMenu {
   position: absolute;
-  height:100%;
-  margin-top: 2cm;
+  height:75%;
+  top: 0;
   left: 0;
   border: 2px grey;
   padding: 10px;        
@@ -77,8 +77,8 @@ body {
 }
 #panelmenu {
   position: absolute;
-  height:100%;
-  margin-top: 2cm;
+  height:75%;
+  top: 0;
   left: 0;
   border: 2px grey;
   padding: 10px;        
