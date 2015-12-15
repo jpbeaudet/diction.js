@@ -26,6 +26,17 @@ body {
     height: 256mm;
     outline: 2cm #749DFC solid;
 }
+.nopage {
+	font-size:16px;
+    width: 90%;
+    height: 65%;
+    padding: 2%;
+    background: white;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+}
+.nosubpage {	
+    height: 64%;
+}
 .nav {
   position: absolute;
   height:100%;
