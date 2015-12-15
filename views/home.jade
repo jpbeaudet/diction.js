@@ -13,9 +13,9 @@ head
     script(src='js/jquery-1.11.1.min.js')
     
   body
-   .container(style='font-family: Arial Black; font-size: 20px; color: black;padding: 10px;')
+   .container(style='font-family: Arial Black; color: black;padding: 10px;')
     center
-     span#welcome_span(style='color: grey; font-size: 15px;')
+     span#welcome_span(style='color: grey; font-size: 12px;')
      &nbsp;&nbsp;&nbsp;&nbsp; 
      a(href="/logout")
        img(src='images/logout20.png', width='32', height='32',alt="Logout")
@@ -28,14 +28,16 @@ head
      &nbsp;&nbsp;&nbsp;&nbsp;     
      a#panel(href='#')
        img(src='images/menu29.png', width='32', height='32',alt="Panel")
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-     span#language_span(style='color: grey; font-size: 16px;')
+     br
+     span#language_span(style='color: grey; font-size: 10px;')
                        
    .container
     center
-     br 
-     a#button(href='javascript:toggleStartStop();')     
      br
+     .container(style='padding:10%;) 
+      center
+       a#button(href='javascript:toggleStartStop();')     
+       br
                
     .nopage
      left     

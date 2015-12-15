@@ -2,7 +2,6 @@ body {
 	height:100%;
     margin: 0;
     padding: 0;
-    background-color: #FAFAFA;
     font: 12pt "Tahoma";
 }
 * {
@@ -30,7 +29,7 @@ body {
 	font-size:16px;
     width: 90%;
     height: 65%;
-    padding: 2%;
+    padding: 5%;
     background: white;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
 }
@@ -58,7 +57,7 @@ body {
   border: 2px grey solid;
   padding: 10px;        
   background-color: #D8D8D8 ;  
-  width: 25%;
+  width: 50%;
   transform: translate(0px, 0px);
   transition: all 1s ease-out;
   
@@ -71,7 +70,7 @@ body {
   border: 2px grey;
   padding: 10px;        
   background-color: #D0D0D0  ;  
-  width: 25%;
+  width: 50%;
   transform: translate(0px, 0px);
   transition: all 1s ease-out;
   
