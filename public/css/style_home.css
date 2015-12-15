@@ -103,7 +103,7 @@ body {
 }
 footer {
     background-color: white;
-    position: absolute;
+    position: relative;
     left: 0;
     bottom: 0;
     height: 5%;
