@@ -68,7 +68,7 @@ if ('webkitSpeechRecognition' in window) {
     function reset() {
     button = document.getElementById("button");
   	  recognizing = false;
-  	  button.innerHTML = "<a href='#' id='button' class='btn btn-block btn-lg btn-success'><span class='glyphicon glyphicon-record'></span> Start Now ! </a>";
+  	  button.innerHTML = "<a href='javascript:toggleStartStop(); id='button' class='btn btn-block btn-lg btn-success'><span class='glyphicon glyphicon-record'></span> Start Now ! </a>";
   	}
 
   	function toggleStartStop() {
@@ -80,7 +80,7 @@ if ('webkitSpeechRecognition' in window) {
   	  } else {
   	    recognition.start();
   	    recognizing = true;
-  	    button.innerHTML = "<a href='#' id='button' class='btn btn-block btn-lg btn-danger'><span class='glyphicon glyphicon-stop'></span> Stop !</a>";
+  	    button.innerHTML = "<a href='javascript:toggleStartStop(); id='button' class='btn btn-block btn-lg btn-danger'><span class='glyphicon glyphicon-stop'></span> Stop !</a>";
 
   	  } };
   	  
