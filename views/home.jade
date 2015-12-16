@@ -15,11 +15,13 @@ head
     
   body
    .page-header
+    .container('align='left')  
       strong   
-       span#welcome_span(style='color: grey;' align='left') 
+       span#welcome_span(style='color: grey;') 
        &nbsp;&nbsp;
-      span#language_span(style='color: grey; font-style: italic;')
-      a.btn.btn-sm.btn-default(href='/logout' align='right')
+      span#language_span(style='color: grey; font-style: italic;') 
+    .container('align='right')      
+      a.btn.btn-sm.btn-default(href='/logout')
         span.glyphicon.glyphicon-log-out
         |  Logout         
    .mainmenu       
