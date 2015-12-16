@@ -20,7 +20,8 @@ html
      if errors != null
        h3 #{errors}
      form(role='form', action="/login",method="post", style='max-width: 750px;')
-       .form-group
+       .input-group
+           span#basic-addon1.input-group-addon @
            input.form-control(type='text', name="username", placeholder='Enter Email')
        br    
        .form-group
