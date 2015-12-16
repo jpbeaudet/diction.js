@@ -13,14 +13,13 @@ head
     script(src='js/jquery-1.11.1.min.js')
     
   body
-   .mainmenu
-    left
-     &nbsp;&nbsp;&nbsp;&nbsp;    
-     span#welcome_span(style='color: grey;') 
-     br
-     &nbsp;&nbsp;&nbsp;&nbsp;
-     span#language_span(style='color: grey; font-style: italic;')
-     br        
+   .alert.alert-info
+      strong   
+       span#welcome_span(style='color: grey;') 
+       &nbsp;&nbsp;
+      span#language_span(style='color: grey; font-style: italic;')
+      br    
+   .mainmenu       
     center
      &nbsp;&nbsp;&nbsp;&nbsp; 
      a(href="/logout")
