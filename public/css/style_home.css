@@ -144,8 +144,9 @@ body {
 #help {
   position: absolute;
   height:100%;
+  margin: auto;  
   font-size:20px;
-  top: 25%;
+  top: 30%;
   left: 0;
   border: 1px grey solid;
   padding: 5px;        
@@ -158,8 +159,9 @@ body {
 #settingsMenu {
   position: absolute;
   height:100%;
+  margin: auto;  
   font-size:20px;
-  top: 25%;
+  top: 30%;
   left: 0;
   border: 1px grey;
   padding: 5px;        
@@ -172,8 +174,9 @@ body {
 #panelmenu {
   position: absolute;
   height:100%;
+  margin: auto;  
   font-size:20px;
-  top: 25;
+  top: 30%;
   left: 0;
   border: 1px grey;
   padding: 5px;        
