@@ -172,8 +172,8 @@ body {
   
 }
 #panelmenu {
-  position: absolute;
-  height:100%;
+  position: relative;
+  height:25%;
   margin: auto;  
   font-size:20px;
   top: 75%;
