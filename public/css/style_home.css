@@ -142,13 +142,13 @@ body {
 
 }	
 #help {
-  position: relative;
-  margin: auto;   
-  height:75%;
-  top: 0;
+  position: absolute;
+  height:100%;
+  font-size:20px;
+  top: 25%;
   left: 0;
-  border: 2px grey solid;
-  padding: 10px;        
+  border: 1px grey solid;
+  padding: 5px;        
   background-color: #D8D8D8 ;  
   width: 90%;
   transform: translate(0px, 0px);
@@ -156,13 +156,13 @@ body {
   
 }
 #settingsMenu {
-  position: relative;
-  margin: auto;  
-  height:75%;
-  top: 0;
+  position: absolute;
+  height:100%;
+  font-size:20px;
+  top: 25%;
   left: 0;
-  border: 2px grey;
-  padding: 10px;        
+  border: 1px grey;
+  padding: 5px;        
   background-color: #D0D0D0  ;  
   width: 90%;
   transform: translate(0px, 0px);
@@ -170,13 +170,13 @@ body {
   
 }
 #panelmenu {
-  position: relative;
-  margin: auto;   
-  height:75%;
-  top: 0;
+  position: absolute;
+  height:100%;
+  font-size:20px;
+  top: 25;
   left: 0;
-  border: 2px grey;
-  padding: 10px;        
+  border: 1px grey;
+  padding: 5px;        
   background-color: #D0D0D0  ;  
   width: 90%;
   transform: translate(0px, 0px);
