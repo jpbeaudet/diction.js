@@ -27,6 +27,7 @@ body {
 }
 .nopage {
 	font-size:16px;
+	margin:auto;
     width: 90%;
     height: 65%;
     padding: 5%;
