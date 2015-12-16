@@ -13,6 +13,29 @@ head
     script(src='js/jquery-1.11.1.min.js')
     
   body
+    nav.navbar.navbar-default.sidebar(role='navigation')
+      .container-fluid
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-sidebar-navbar-collapse-1')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+        #bs-sidebar-navbar-collapse-1.collapse.navbar-collapse
+          ul.nav.navbar-nav
+            li.active
+              a#commandlist(href='#')
+                | Help
+                span.pull-right.hidden-xs.showopacity.glyphicon.glyphicon-home(style='font-size:16px;')
+            li
+              a#settings(href='#')
+                | Settings
+                span.pull-right.hidden-xs.showopacity.glyphicon.glyphicon-th-list(style='font-size:16px;')
+            li
+              a#panel(href='#')
+                | Manual panel
+                span.pull-right.hidden-xs.showopacity.glyphicon.glyphicon-tags(style='font-size:16px;')
+  
    .alert.alert-info
       strong   
        span#welcome_span(style='color: grey;') 
