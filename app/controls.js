@@ -1105,7 +1105,7 @@ $.confirm({
  	 		removeHelp();
  	 	}
         var markupS = [
-                      '<div id="settingsMenu">',
+                      '<div class="alert alert-warning" id="settingsMenu">',
                       '<h2>',"Settings",'</h2>',
                       '<p>','Here you can changes settings and preferences','</p>',                       
                       '<div id="preference">',
