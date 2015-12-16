@@ -22,10 +22,13 @@ html
       h3 You must enter a valid email to be registered. Once registered you will be directly redirected to Smarnotes and ready to start!
     br
     form(role='form', action="/register",method="post", style='max-width: 750px;')
-      .form-group
+      .input-group
+          span#basic-addon1.input-group-addon @
           input.form-control(type='text', name="username", placeholder='Enter A Valid Email')
       br    
-      .form-group
+      .input-group
+          span#basic-addon1.input-group-addon 
+            span.glyphicon.glyphicon-lock
           input.form-control(type='password', name="password", placeholder='Password')
       br  
       button.btn-4(type='submit') Submit
