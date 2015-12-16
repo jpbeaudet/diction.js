@@ -14,15 +14,16 @@ head
     script(src='js/jquery-1.11.1.min.js')
     
   body
-   .alert.alert-info
+   .page-header
+    left
       strong   
        span#welcome_span(style='color: grey;') 
        &nbsp;&nbsp;
       span#language_span(style='color: grey; font-style: italic;')
-      right
-       a.btn.btn-sm.btn-default(href='/logout')
-         span.glyphicon.glyphicon-log-out
-         |  Logout         
+    right
+      a.btn.btn-sm.btn-default(href='/logout')
+        span.glyphicon.glyphicon-log-out
+        |  Logout         
    .mainmenu       
     center
      &nbsp;&nbsp; 
