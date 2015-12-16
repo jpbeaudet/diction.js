@@ -43,6 +43,13 @@ body {
 	font-size: 12px;
 	left:10%;
 }
+.logindiv {
+	position: relative;
+	margin:auto;
+	top:25%;
+}		
+	
+	
 .nav {
   position: absolute;
   height:100%;
@@ -153,7 +160,12 @@ body {
 	color: black;
 	padding: 10px;
 	font-size: 16px;
-}	
+}
+.logindiv {
+	position: relative;
+	margin:auto;
+	top:25%;
+}
 #help {
   position: absolute;
   height:100%;
