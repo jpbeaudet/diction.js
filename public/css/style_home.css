@@ -36,6 +36,12 @@ body {
 .nosubpage {	
     height: 64%;
 }
+.mainmenu {
+	font-family: Arial Black;
+	color: black;
+	padding: 10px;
+	font-size: 12px;
+}
 .nav {
   position: absolute;
   height:100%;
@@ -140,6 +146,12 @@ body {
     padding: 1%;
     height: 59%;
 
+}
+.mainmenu {
+	font-family: Arial Black;
+	color: black;
+	padding: 10px;
+	font-size: 16px;
 }	
 #help {
   position: absolute;
