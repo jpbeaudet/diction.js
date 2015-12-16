@@ -1067,7 +1067,7 @@ $.confirm({
  	 	 	removeSettings();
  	 	}
         var markup = [
-                      '<div id="help">',
+                      '<div class="alert alert-warning" id="help">',
                       '<h2>',"Help",'</h2>',
                       '<p>','Just click the speak button and you can dictate your text!','</p>',                       
                       '<div id="command">',
@@ -1156,7 +1156,7 @@ $.confirm({
  	 	 	removeSettings();
  	 	}
         var markup = [
-                      '<div id="panelmenu">',
+                      '<div  class="alert alert-warning" id="panelmenu">',
                       '<h2>',"Panel",'</h2>',                       
                       '<div id="panel">',
                       '<h3>',"Controls Pad",'</h3>',
