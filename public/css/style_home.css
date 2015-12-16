@@ -142,43 +142,43 @@ body {
 
 }	
 #help {
-  position: absolute;
-  height:100%;
-  font-size:20px;
+  position: relative;
+  margin: auto;   
+  height:75%;
   top: 0;
   left: 0;
-  border: 1px grey solid;
-  padding: 5px;        
+  border: 2px grey solid;
+  padding: 10px;        
   background-color: #D8D8D8 ;  
-  width: 55%;
+  width: 90%;
   transform: translate(0px, 0px);
   transition: all 1s ease-out;
   
 }
 #settingsMenu {
-  position: absolute;
-  height:100%;
-  font-size:20px;
+  position: relative;
+  margin: auto;  
+  height:75%;
   top: 0;
   left: 0;
-  border: 1px grey;
-  padding: 5px;        
+  border: 2px grey;
+  padding: 10px;        
   background-color: #D0D0D0  ;  
-  width: 55%;
+  width: 90%;
   transform: translate(0px, 0px);
   transition: all 1s ease-out;
   
 }
 #panelmenu {
-  position: absolute;
-  height:100%;
-  font-size:20px;
+  position: relative;
+  margin: auto;   
+  height:75%;
   top: 0;
   left: 0;
-  border: 1px grey;
-  padding: 5px;        
+  border: 2px grey;
+  padding: 10px;        
   background-color: #D0D0D0  ;  
-  width: 55%;
+  width: 90%;
   transform: translate(0px, 0px);
   transition: all 1s ease-out;
   
