@@ -1067,7 +1067,7 @@ $.confirm({
  	 	 	removeSettings();
  	 	}
         var markup = [
-                      '<div class="alert alert-warning" id="help">',
+                      '<div class="alert alert-info" id="help">',
                       '<h2>',"Help",'</h2>',
                       '<p>','Just click the speak button and you can dictate your text!','</p>',                       
                       '<div id="command">',
@@ -1105,7 +1105,7 @@ $.confirm({
  	 		removeHelp();
  	 	}
         var markupS = [
-                      '<div class="alert alert-warning" id="settingsMenu">',
+                      '<div class="alert alert-info" id="settingsMenu">',
                       '<h2>',"Settings",'</h2>',
                       '<p>','Here you can changes settings and preferences','</p>',                       
                       '<div id="preference">',
@@ -1156,7 +1156,7 @@ $.confirm({
  	 	 	removeSettings();
  	 	}
         var markup = [
-                      '<div  class="alert alert-warning" id="panelmenu">',
+                      '<div  class="alert alert-info" id="panelmenu">',
                       '<h2>',"Panel",'</h2>',                       
                       '<div id="panel">',
                       '<h3>',"Controls Pad",'</h3>',
